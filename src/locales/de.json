@@ -220,7 +220,15 @@
           "SCSS",
           "Multilingual"
         ],
-        "thumb": "editorial"
+        "thumb": "editorial",
+        "url": "https://wickie.io/",
+        "case": {
+          "hero": "/case-studies/wickie/hero.png",
+          "screenshots": [],
+          "challenge": "<challenge text coming>",
+          "solution": "<solution text coming>",
+          "outcome": "<outcome text coming>"
+        }
       },
       {
         "id": "brauhaus",
@@ -421,6 +429,17 @@
         "network": "Netzwerkfehler. Bitte Verbindung prüfen.",
         "config": "Das Formular ist gerade nicht verfügbar."
       }
+    }
+  },
+  "caseStudy": {
+    "backToProjects": "← Zurück zu Projekten",
+    "visitLiveSite": "Live ansehen",
+    "notFound": "Projekt nicht gefunden.",
+    "sections": {
+      "challenge": "Herausforderung",
+      "solution": "Lösung",
+      "today": "Heute",
+      "stack": "Stack"
     }
   },
   "footer": {

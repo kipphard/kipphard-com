@@ -1,0 +1,206 @@
+@use 'variables' as *;
+
+.case-study {
+  padding-block: 80px;
+}
+
+// ── Breadcrumb ─────────────────────────────────────────────────────────────
+
+.case-breadcrumb {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--fg-muted);
+  text-decoration: none;
+  margin-bottom: 48px;
+  letter-spacing: 0.04em;
+
+  &:hover {
+    color: var(--fg);
+  }
+}
+
+// ── Hero block ─────────────────────────────────────────────────────────────
+
+.case-meta {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+  margin-bottom: 16px;
+}
+
+.case-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  margin: 0 0 32px;
+  color: var(--fg);
+}
+
+.case-hero {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  display: block;
+  margin-bottom: 32px;
+  background: var(--bg-elev);
+}
+
+.case-cta {
+  margin-bottom: 64px;
+}
+
+// ── Narrative ──────────────────────────────────────────────────────────────
+
+.case-narrative {
+  max-width: 720px;
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    margin-block: 48px 12px;
+    color: var(--fg);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  p {
+    color: var(--fg-muted);
+    line-height: 1.65;
+    margin-block: 0 16px;
+  }
+}
+
+// ── Stack chips ────────────────────────────────────────────────────────────
+
+.case-stack {
+  margin-top: 48px;
+
+  &__label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--fg-subtle);
+    margin-bottom: 10px;
+  }
+
+  &__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  &__chip {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--bg-sunken);
+    color: var(--fg-muted);
+    border: 1px solid var(--line);
+  }
+}
+
+// ── Screenshot gallery ─────────────────────────────────────────────────────
+
+.case-gallery {
+  margin-top: 80px;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @media (min-width: $bp-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    display: block;
+  }
+
+  &__caption {
+    font-size: 13px;
+    color: var(--fg-subtle);
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+  }
+}
+
+// ── Bottom CTA ─────────────────────────────────────────────────────────────
+
+.case-cta-bottom {
+  margin-top: 80px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
+}
+
+// ── Not-found state ────────────────────────────────────────────────────────
+
+.case-not-found {
+  padding-block: 120px;
+  text-align: center;
+
+  p {
+    color: var(--fg-muted);
+    margin-bottom: 24px;
+  }
+}
+
+// ── Shared button styles (mirrored from existing .btn pattern) ─────────────
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+
+  &-primary {
+    background: var(--accent);
+    color: var(--on-accent);
+  }
+
+  &-ghost {
+    background: transparent;
+    color: var(--fg);
+    border: 1px solid var(--line-strong);
+
+    &:hover {
+      border-color: var(--fg);
+    }
+  }
+}

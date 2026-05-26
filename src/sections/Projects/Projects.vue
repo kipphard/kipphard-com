@@ -21,10 +21,11 @@
       </div>
 
       <div class="work-grid">
-        <a
+        <component
+          :is="item.case ? 'RouterLink' : item.url ? 'a' : 'div'"
           v-for="item in filteredItems"
           :key="item.id"
-          href="#"
+          v-bind="cardBindings(item)"
           :class="['work-card', item.size]"
         >
           <div class="work-thumb">
@@ -46,7 +47,8 @@
           <div class="work-stack">
             <span v-for="s in item.stack" :key="s">{{ s }}</span>
           </div>
-        </a>
+          <span v-if="!item.case && item.url" class="work-card__ext" aria-hidden="true">↗</span>
+        </component>
       </div>
     </div>
   </section>
@@ -67,6 +69,8 @@ interface WorkItem {
   title: string
   desc: string
   stack: string[]
+  url?: string
+  case?: object
 }
 
 interface WorkFilter {
@@ -86,6 +90,16 @@ const filteredItems = computed(() =>
     (i) => filter.value === 'all' || i.filter.includes(filter.value),
   ),
 )
+
+function cardBindings(item: WorkItem): Record<string, string> {
+  if (item.case) {
+    return { to: `/work/${item.id}` }
+  }
+  if (item.url) {
+    return { href: item.url, target: '_blank', rel: 'noopener noreferrer' }
+  }
+  return {}
+}
 </script>
 
 <style lang="scss" scoped src="./Projects.scss" />
