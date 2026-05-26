@@ -1,9 +1,37 @@
 <template>
   <main id="main">
     <section class="section">
-      <div class="container">
+      <div class="container legal-content">
         <h1 class="section-title">Impressum</h1>
-        <p>Content wird in Kürze ergänzt.</p>
+
+        <p>
+          André Kipphard<br />
+          Erlenbusch 12<br />
+          33106 Paderborn
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Telefon: <a href="tel:+491734783577">0173 4783577</a><br />
+          E-Mail: <a href="mailto:andre@kipphard.com">andre@kipphard.com</a>
+        </p>
+
+        <h2>Redaktionell verantwortlich</h2>
+        <p>
+          André Kipphard<br />
+          Erlenbusch 12<br />
+          33106 Paderborn
+        </p>
+
+        <h2>Verbraucher&shy;streit&shy;beilegung / Universal&shy;schlichtungs&shy;stelle</h2>
+        <p>
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
+          vor einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+
+        <p class="legal-source">
+          Quelle: <a href="https://www.e-recht24.de" rel="noopener" target="_blank">eRecht24</a>
+        </p>
       </div>
     </section>
   </main>
