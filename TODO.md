@@ -49,6 +49,7 @@ Tracks work outside the codebase or that needs your input. Code-only follow-ups 
 - [ ] **Real portrait** — replace `public/portrait-placeholder.svg` with an optimized JPEG/WebP (e.g. 600×800 @ ~80 KB). Update `src/sections/Hero/Hero.vue:33` if the filename changes.
 - [ ] **Project case studies** — `src/locales/de.json` → `work.items` currently lists 6 invented projects. Replace with real ones (or remove the section until you have material).
 - [ ] **Verify accent contrast** — orange (`oklch(0.72 0.15 45)`) is used for the italic "fullstack" word and for `.btn-accent`. Run through [a contrast checker](https://webaim.org/resources/contrastchecker/) against `#111110`. If it doesn't hit 4.5:1, darken the accent or change the hero italic word to a lighter neutral.
+- [ ] **`<html lang>` should be `de`, not `en`** — `index.html` source has `lang="de"`, but the vite-ssg-rendered `dist/index.html` ends up with `lang="en"`. Investigate which step in the SSG pipeline overrides it (likely vue-i18n + a `useHead`/SSG hook defaulting to `en`) and force DE on the pre-rendered shell. DE is the canonical language of this site.
 
 ## Performance follow-ups
 
@@ -62,6 +63,10 @@ Tracks work outside the codebase or that needs your input. Code-only follow-ups 
 - [ ] **Screen reader pass** — VoiceOver (Cmd+F5 on macOS) on Safari, or NVDA on Windows.
 - [ ] **axe DevTools** browser extension — run a scan on the deployed site to catch anything automated rules can flag.
 - [ ] **Reduced-motion verification** — set OS preference to "reduce motion" and confirm transitions don't run.
+
+## Launch gate (currently in place)
+
+- [ ] **Remove HTTP Basic Auth** — site is currently behind `auth_basic` in `deploy/nginx/kipphard.com.conf` (creds in `/etc/nginx/.htpasswd-kipphard` on `hetzner-vb`). Remove the two `auth_basic*` lines from the vhost AND delete the htpasswd file once: (a) Impressum + Datenschutz are live, (b) placeholder content (invented projects, placeholder portrait) is replaced, (c) `<html lang>` is fixed to `de`. Then push to redeploy and the site is public.
 
 ## Misc
 
