@@ -25,13 +25,24 @@ ln -s /etc/nginx/sites-available/kipphard.com /etc/nginx/sites-enabled/kipphard.
 nginx -t && systemctl reload nginx
 ```
 
-## 3. Cloudflare DNS
+## 3. Cloudflare DNS + origin certificate
 
 In the Cloudflare dashboard for `kipphard.com`:
 
 - Add an A record: `kipphard.com` → `YOUR_SERVER_IP`, proxied (orange cloud)
 - Add an A record: `www.kipphard.com` → `YOUR_SERVER_IP`, proxied (orange cloud)
-- SSL/TLS mode: **Full** (not Full Strict — the origin serves plain HTTP on port 80)
+- SSL/TLS → Origin Server → **Create Certificate** for `kipphard.com, *.kipphard.com` (default 15-year validity). Install on the box:
+
+```sh
+ssh hetzner-vb
+mkdir -p /etc/ssl/kipphard.com
+# Paste the certificate body into:
+${EDITOR:-vim} /etc/ssl/kipphard.com/origin.crt   # chmod 644
+# Paste the private key into:
+${EDITOR:-vim} /etc/ssl/kipphard.com/origin.key   # chmod 600
+```
+
+- SSL/TLS mode: **Full (Strict)** — the Origin Certificate is trusted by CF's edge, so Strict works. Plain "Full" also works but is weaker.
 
 ## 4. GitHub secret
 
