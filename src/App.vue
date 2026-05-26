@@ -3,14 +3,7 @@
 
   <Header />
 
-  <main id="main">
-    <Hero />
-    <About />
-    <Services />
-    <Projects />
-    <Pricing />
-    <Contact />
-  </main>
+  <RouterView />
 
   <Footer />
 </template>
@@ -18,12 +11,6 @@
 <script setup lang="ts">
 import Header from '@/components/layout/Header/Header.vue'
 import Footer from '@/components/layout/Footer/Footer.vue'
-import Hero from '@/sections/Hero/Hero.vue'
-import About from '@/sections/About/About.vue'
-import Services from '@/sections/Services/Services.vue'
-import Projects from '@/sections/Projects/Projects.vue'
-import Pricing from '@/sections/Pricing/Pricing.vue'
-import Contact from '@/sections/Contact/Contact.vue'
 </script>
 
 <style lang="scss">

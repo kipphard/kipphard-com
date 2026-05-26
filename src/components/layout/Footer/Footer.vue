@@ -8,10 +8,10 @@
         </div>
         <div class="foot-col">
           <h3>{{ t('footer.quick') }}</h3>
-          <a href="#about">{{ t('nav.about') }}</a>
-          <a href="#services">{{ t('nav.services') }}</a>
-          <a href="#work">{{ t('nav.work') }}</a>
-          <a href="#pricing">{{ t('nav.pricing') }}</a>
+          <RouterLink to="/#about">{{ t('nav.about') }}</RouterLink>
+          <RouterLink to="/#services">{{ t('nav.services') }}</RouterLink>
+          <RouterLink to="/#work">{{ t('nav.work') }}</RouterLink>
+          <RouterLink to="/#pricing">{{ t('nav.pricing') }}</RouterLink>
         </div>
         <div class="foot-col">
           <h3>{{ t('footer.contact') }}</h3>
@@ -31,8 +31,8 @@
         </div>
         <div class="foot-col">
           <h3>{{ t('footer.legal') }}</h3>
-          <a href="#">{{ t('footer.imprint') }}</a>
-          <a href="#">{{ t('footer.privacy') }}</a>
+          <RouterLink to="/impressum">{{ t('footer.imprint') }}</RouterLink>
+          <RouterLink to="/datenschutz">{{ t('footer.privacy') }}</RouterLink>
         </div>
       </div>
       <div class="foot-bottom">

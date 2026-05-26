@@ -1,16 +1,16 @@
 <template>
   <div :class="['nav-wrap', { scrolled }]">
     <div class="container nav">
-      <a href="#top">
+      <RouterLink to="/">
         <Wordmark variant="v1" />
-      </a>
+      </RouterLink>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="#about">{{ t('nav.about') }}</a>
-        <a href="#services">{{ t('nav.services') }}</a>
-        <a href="#work">{{ t('nav.work') }}</a>
-        <a href="#pricing">{{ t('nav.pricing') }}</a>
-        <a href="#contact">{{ t('nav.contact') }}</a>
+        <RouterLink to="/#about">{{ t('nav.about') }}</RouterLink>
+        <RouterLink to="/#services">{{ t('nav.services') }}</RouterLink>
+        <RouterLink to="/#work">{{ t('nav.work') }}</RouterLink>
+        <RouterLink to="/#pricing">{{ t('nav.pricing') }}</RouterLink>
+        <RouterLink to="/#contact">{{ t('nav.contact') }}</RouterLink>
       </nav>
 
       <div class="nav-right">
@@ -35,10 +35,10 @@
           <Icon :name="theme === 'dark' ? 'sun' : 'moon'" :size="16" />
         </button>
 
-        <a href="#contact" class="btn btn-primary">
+        <RouterLink to="/#contact" class="btn btn-primary">
           {{ t('nav.cta') }}
           <Icon name="arrow" :size="14" class="arrow" />
-        </a>
+        </RouterLink>
       </div>
     </div>
   </div>
