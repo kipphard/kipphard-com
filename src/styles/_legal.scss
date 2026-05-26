@@ -10,13 +10,42 @@
     margin-block: 40px 12px;
   }
 
+  h3 {
+    font-size: 1.0625rem;
+    margin-block: 28px 10px;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-block: 20px 8px;
+  }
+
   p {
     margin-block: 0 16px;
+  }
+
+  ul {
+    margin-block: 0 16px;
+    padding-left: 1.5em;
+
+    li {
+      margin-block: 4px;
+    }
   }
 
   a {
     color: var(--accent, currentColor);
     text-underline-offset: 2px;
+    word-break: break-word;
+  }
+
+  // German legal docs traditionally render rights/objection notices in
+  // all caps for emphasis. We keep the source in normal case (better for
+  // screen readers — caps gets spelled out letter-by-letter) and apply
+  // the visual emphasis via CSS.
+  .legal-emphasis {
+    text-transform: uppercase;
   }
 
   .legal-source {
