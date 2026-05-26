@@ -219,11 +219,19 @@
       "message": "Nachricht",
       "messagePh": "Kurz umreißen, worum es geht — Fristen, vorhandene Materialien, alles was hilft.",
       "submit": "Nachricht senden",
+      "submitting": "Sende…",
       "note": "Antwort innerhalb von 24 Stunden, werktags.",
       "success": "Danke! Ich melde mich innerhalb von 24 Stunden.",
       "successSub": "In der Zwischenzeit — gerne vorab ein paar Arbeiten anschauen.",
       "budgets": ["< 5k", "5–10k", "10–25k", "25k+", "Weiß nicht"],
-      "types": ["Landing", "Website", "Webshop", "Relaunch", "SEO", "Andere"]
+      "types": ["Landing", "Website", "Webshop", "Relaunch", "SEO", "Andere"],
+      "errors": {
+        "captcha": "Bitte bestätige die Sicherheitsabfrage.",
+        "send-failed": "Senden fehlgeschlagen. Bitte versuche es später erneut.",
+        "invalid": "Bitte fülle alle Pflichtfelder korrekt aus.",
+        "network": "Netzwerkfehler. Bitte Verbindung prüfen.",
+        "config": "Das Formular ist gerade nicht verfügbar."
+      }
     }
   },
   "footer": {

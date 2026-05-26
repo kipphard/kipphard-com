@@ -253,4 +253,32 @@
     transform: translateY(-1px);
     box-shadow: var(--shadow-md);
   }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.turnstile-widget {
+  margin-block: 16px 0;
+}
+
+.form-error {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: color-mix(in oklab, red 10%, transparent);
+  color: color-mix(in oklab, red 70%, var(--fg));
+  font-size: 14px;
 }

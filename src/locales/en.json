@@ -219,11 +219,19 @@
       "message": "Message",
       "messagePh": "A sentence or two — timing, existing materials, anything helpful.",
       "submit": "Send message",
+      "submitting": "Sending…",
       "note": "Reply within 24 hours on business days.",
       "success": "Thanks! I'll get back to you within 24 hours.",
       "successSub": "Meanwhile — feel free to browse the work.",
       "budgets": ["< 5k", "5–10k", "10–25k", "25k+", "Not sure"],
-      "types": ["Landing", "Website", "Webshop", "Relaunch", "SEO", "Other"]
+      "types": ["Landing", "Website", "Webshop", "Relaunch", "SEO", "Other"],
+      "errors": {
+        "captcha": "Please complete the security check.",
+        "send-failed": "Send failed. Please try again later.",
+        "invalid": "Please fill in all required fields correctly.",
+        "network": "Network error. Please check your connection.",
+        "config": "The form is temporarily unavailable."
+      }
     }
   },
   "footer": {

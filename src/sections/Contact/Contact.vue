@@ -30,7 +30,7 @@
         </div>
 
         <form class="form" @submit="handleSubmit">
-          <div v-if="submitted" class="success-card" role="status" aria-live="polite">
+          <div v-if="status === 'success'" class="success-card" role="status" aria-live="polite">
             <div class="success-icon">✓</div>
             <div>
               <div class="success-title">{{ t('contact.form.success') }}</div>
@@ -60,6 +60,18 @@
                   aria-required="true"
                 />
               </div>
+            </div>
+
+            <div class="hp-field" aria-hidden="true">
+              <label for="contact-website">Website</label>
+              <input
+                id="contact-website"
+                v-model="form.website"
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+              />
             </div>
 
             <div class="field">
@@ -112,10 +124,20 @@
               />
             </div>
 
+            <div ref="turnstileEl" class="turnstile-widget" />
+
+            <div v-if="status === 'error' && errorKey" class="form-error" role="alert">
+              {{ t(`contact.form.errors.${errorKey}`) }}
+            </div>
+
             <div class="form-foot">
               <div class="form-note">↳ {{ t('contact.form.note') }}</div>
-              <button type="submit" class="btn btn-primary">
-                {{ t('contact.form.submit') }} →
+              <button
+                type="submit"
+                class="btn btn-primary"
+                :disabled="status === 'sending'"
+              >
+                {{ status === 'sending' ? t('contact.form.submitting') : t('contact.form.submit') }} →
               </button>
             </div>
           </template>
@@ -126,7 +148,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, computed } from 'vue'
+import { ref, reactive, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Icon from '@/components/ui/Icon/Icon.vue'
 
@@ -138,10 +160,12 @@ interface ContactLink {
 
 const { t, tm } = useI18n()
 
-const submitted = ref(false)
+const status = ref<'idle' | 'sending' | 'success' | 'error'>('idle')
+const errorKey = ref<string | null>(null)
+
 const selectedBudget = ref<string | null>(null)
 const selectedType = ref<string | null>(null)
-const form = reactive({ name: '', email: '', company: '', message: '' })
+const form = reactive({ name: '', email: '', company: '', message: '', website: '' })
 
 const links = computed(() => tm('contact.links') as ContactLink[])
 const types = computed(() => tm('contact.form.types') as string[])
@@ -155,10 +179,86 @@ const titleParts = computed(() => {
   return [title.slice(0, idx), accent, title.slice(idx + accent.length)]
 })
 
-function handleSubmit(e: Event) {
-  e.preventDefault()
-  submitted.value = true
+const turnstileEl = ref<HTMLDivElement | null>(null)
+const turnstileToken = ref<string | null>(null)
+let turnstileWidgetId: string | null = null
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY ?? ''
+
+onMounted(async () => {
+  if (!TURNSTILE_SITE_KEY) return
+  await loadTurnstileScript()
+  if (!turnstileEl.value || !window.turnstile) return
+  turnstileWidgetId = window.turnstile.render(turnstileEl.value, {
+    sitekey: TURNSTILE_SITE_KEY,
+    callback: (t: string) => { turnstileToken.value = t },
+    'expired-callback': () => { turnstileToken.value = null },
+    'error-callback': () => { turnstileToken.value = null },
+    theme: 'auto',
+    action: 'contact-form',
+  })
+})
+
+function loadTurnstileScript() {
+  return new Promise<void>((resolve, reject) => {
+    if (window.turnstile) return resolve()
+    const existing = document.querySelector('script[data-turnstile]')
+    if (existing) { existing.addEventListener('load', () => resolve()); return }
+    const s = document.createElement('script')
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js'
+    s.async = true; s.defer = true
+    s.dataset.turnstile = 'true'
+    s.onload = () => resolve()
+    s.onerror = () => reject(new Error('turnstile-load-failed'))
+    document.head.appendChild(s)
+  })
 }
+
+async function handleSubmit(e: Event) {
+  e.preventDefault()
+  if (status.value === 'sending') return
+  if (!TURNSTILE_SITE_KEY) {
+    status.value = 'error'; errorKey.value = 'config'; return
+  }
+  if (!turnstileToken.value) {
+    status.value = 'error'; errorKey.value = 'captcha'; return
+  }
+  status.value = 'sending'; errorKey.value = null
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.name.trim(),
+        email: form.email.trim(),
+        company: form.company.trim(),
+        projectType: selectedType.value ?? '',
+        budget: selectedBudget.value ?? '',
+        message: form.message.trim(),
+        website: form.website,
+        turnstileToken: turnstileToken.value,
+      }),
+    })
+    const data = await res.json().catch(() => ({}))
+    if (res.ok && (data as { ok?: boolean }).ok) {
+      status.value = 'success'
+    } else {
+      status.value = 'error'
+      errorKey.value = (data && (data as { error?: string }).error) || 'send-failed'
+      resetTurnstile()
+    }
+  } catch {
+    status.value = 'error'; errorKey.value = 'network'
+    resetTurnstile()
+  }
+}
+
+function resetTurnstile() {
+  if (turnstileWidgetId && window.turnstile) {
+    window.turnstile.reset(turnstileWidgetId)
+  }
+  turnstileToken.value = null
+}
+
 </script>
 
 <style lang="scss" scoped src="./Contact.scss" />

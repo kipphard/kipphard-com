@@ -1,0 +1,13 @@
+name = "kipphard-com-contact"
+main = "src/index.ts"
+compatibility_date = "2026-05-26"
+workers_dev = false
+
+routes = [
+  { pattern = "kipphard.com/api/*", zone_name = "kipphard.com" }
+]
+
+[vars]
+ALLOWED_ORIGIN = "https://kipphard.com"
+CONTACT_TO = "andre@kipphard.com"
+CONTACT_FROM = "kipphard.com Contact <kontakt@kipphard.com>"

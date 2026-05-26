@@ -1,0 +1,13 @@
+{
+  "name": "kipphard-com-contact",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250525.0",
+    "wrangler": "^3.114.0"
+  }
+}

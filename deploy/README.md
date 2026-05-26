@@ -63,6 +63,40 @@ curl -I https://kipphard.com
 
 Check the Actions tab for step-level logs if anything fails.
 
+## Contact form (Worker + Resend)
+
+### Cloudflare Turnstile
+
+Cloudflare dashboard → Turnstile → Add site → domain `kipphard.com` → Widget mode **Managed**.
+
+- **Site key** (public): add as GitHub secret `TURNSTILE_SITE_KEY` (used at build time so the bundle has it). Optionally copy into `.env.local` for local dev.
+- **Secret key**: Worker secret, never committed to git (see Worker deploy below).
+
+### Resend
+
+1. Sign up at resend.com → Add domain `kipphard.com`.
+2. Add the DNS records Resend shows (DKIM TXT, SPF append, optional DMARC) in Cloudflare DNS.
+3. Create an API key → used as Worker secret below.
+
+### Worker deploy (one-time)
+
+```sh
+cd worker
+pnpm install
+pnpm exec wrangler login              # browser auth to Cloudflare
+pnpm exec wrangler secret put TURNSTILE_SECRET_KEY
+pnpm exec wrangler secret put RESEND_API_KEY
+pnpm exec wrangler deploy
+```
+
+### GitHub secrets to add
+
+| Secret | Value |
+|---|---|
+| `TURNSTILE_SITE_KEY` | The public site key from Turnstile (ships in the JS bundle) |
+
+The Worker secrets (`TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`) are set via `wrangler secret put` and are never stored in this repo or in GitHub Actions.
+
 ## Rollback
 
 Re-run an earlier successful workflow via **Actions → deploy → Run workflow** on the
