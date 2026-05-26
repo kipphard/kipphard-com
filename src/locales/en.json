@@ -223,8 +223,24 @@
         "thumb": "editorial",
         "url": "https://wickie.io/",
         "case": {
-          "hero": "/case-studies/wickie/hero.png",
-          "screenshots": [],
+          "hero": "/case-studies/wickie/hero.webp",
+          "screenshots": [
+            {
+              "src": "/case-studies/wickie/language-switcher.webp",
+              "alt": "Language switcher with CH/DE, EN, CH/FR and CH/IT",
+              "caption": "Language switcher — four locales from a single codebase."
+            },
+            {
+              "src": "/case-studies/wickie/features-cards.webp",
+              "alt": "Feature cards: Invest, Crypto, Secure",
+              "caption": "Feature cards — one of 41 reusable ACF Flexible Content blocks."
+            },
+            {
+              "src": "/case-studies/wickie/services-section.webp",
+              "alt": "\"Popular services\" — four service cards",
+              "caption": "Services section — reordered via drag-and-drop, no developer needed."
+            }
+          ],
           "challenge": "A multilingual, heavily regulated fintech platform needs content the marketing team owns end-to-end — down to the order of sections on every page. Off-the-shelf page builders like Elementor or Divi cost performance, lock you out of markup control, and produce HTML a team struggles to maintain or migrate later. On top: geo-specific content (country availability, regulatory disclaimers) and four language versions (DE, EN, FR, IT), each covering dozens of pages.",
           "solution": "Custom Underscores-based theme instead of a page builder — full control over markup, CSS, and JS. ACF Flexible Content delivers a block library of 41 reusable section types (hero variants, feature cards, FAQ, banners, country grid, and more) that the client recombines and reorders on any page via drag-and-drop. For dynamic content — supported/non-supported countries, money transfer calculator — custom shortcodes let the marketing team drop interactive widgets into any text block. SCSS build pipeline with Stylelint and RTL support, separate desktop and mobile header templates for clean per-device navigation, multilingual architecture via WordPress gettext.",
           "outcome": "Launched 2024, ongoing technical maintenance and iteration since. The marketing team builds new landing pages independently from the block library — section order, content, and geo availability are all editable without involving a developer. Even global elements like header navigation, footer links, and social profiles are managed via dedicated ACF Options Pages. Scaled from launch to 30+ pages across 4 languages without restructuring the underlying CMS architecture."
