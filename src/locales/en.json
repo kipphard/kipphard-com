@@ -226,19 +226,24 @@
           "hero": "/case-studies/wickie/hero.webp",
           "screenshots": [
             {
-              "src": "/case-studies/wickie/language-switcher.webp",
-              "alt": "Language switcher with CH/DE, EN, CH/FR and CH/IT",
-              "caption": "Language switcher — four locales from a single codebase."
+              "src": "/case-studies/wickie/get-started.webp",
+              "alt": "Get-started section: three steps to the app",
+              "caption": "Get-started section: the path to the app in three steps."
             },
             {
-              "src": "/case-studies/wickie/features-cards.webp",
-              "alt": "Feature cards: Invest, Crypto, Secure",
-              "caption": "Feature cards — one of 41 reusable ACF Flexible Content blocks."
+              "src": "/case-studies/wickie/crypto-market.webp",
+              "alt": "Live crypto market table with currency and date filter",
+              "caption": "Live crypto market: real-time prices, currency switcher and date filter — a custom shortcode the marketing team drops in wherever needed."
             },
             {
-              "src": "/case-studies/wickie/services-section.webp",
-              "alt": "\"Popular services\" — four service cards",
-              "caption": "Services section — reordered via drag-and-drop, no developer needed."
+              "src": "/case-studies/wickie/features.webp",
+              "alt": "Feature section with highlight cards",
+              "caption": "Feature section: one of 41 reusable ACF Flexible Content blocks."
+            },
+            {
+              "src": "/case-studies/wickie/services.webp",
+              "alt": "Services section with four service cards",
+              "caption": "Services section: reordered via drag-and-drop, no developer needed."
             }
           ],
           "challenge": "A multilingual, heavily regulated fintech platform needs content the marketing team owns end-to-end — down to the order of sections on every page. Off-the-shelf page builders like Elementor or Divi cost performance, lock you out of markup control, and produce HTML a team struggles to maintain or migrate later. On top: geo-specific content (country availability, regulatory disclaimers) and four language versions (DE, EN, FR, IT), each covering dozens of pages.",

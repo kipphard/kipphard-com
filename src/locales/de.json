@@ -226,18 +226,23 @@
           "hero": "/case-studies/wickie/hero.webp",
           "screenshots": [
             {
-              "src": "/case-studies/wickie/language-switcher.webp",
-              "alt": "Sprachumschalter mit CH/DE, EN, CH/FR und CH/IT",
-              "caption": "Sprachumschalter — vier Locales aus einer Codebase."
+              "src": "/case-studies/wickie/get-started.webp",
+              "alt": "Get-Started-Section: drei Schritte zur App",
+              "caption": "Onboarding-Section: der Weg zur App in drei Schritten."
             },
             {
-              "src": "/case-studies/wickie/features-cards.webp",
-              "alt": "Feature-Cards: Investieren, Krypto, Sicher",
-              "caption": "Feature-Cards: einer von 41 wiederverwendbaren ACF-Flexible-Content-Blöcken."
+              "src": "/case-studies/wickie/crypto-market.webp",
+              "alt": "Live-Crypto-Market-Tabelle mit Währungs- und Datums-Filter",
+              "caption": "Live-Crypto-Market: Echtzeit-Kurse, Währungsumschalter und Datums-Filter — Custom-Shortcode, vom Marketing-Team beliebig einsetzbar."
             },
             {
-              "src": "/case-studies/wickie/services-section.webp",
-              "alt": "„Beliebte Dienstleistungen!\" — vier Service-Karten",
+              "src": "/case-studies/wickie/features.webp",
+              "alt": "Feature-Section mit Highlight-Karten",
+              "caption": "Feature-Section: einer der 41 wiederverwendbaren ACF-Flexible-Content-Blöcke."
+            },
+            {
+              "src": "/case-studies/wickie/services.webp",
+              "alt": "Services-Section mit vier Service-Karten",
               "caption": "Service-Section: per Drag-and-Drop neu anordbar, ohne Entwickler."
             }
           ],
