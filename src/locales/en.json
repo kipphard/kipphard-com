@@ -205,7 +205,7 @@
     "titleAccent": "work together",
     "lede": "Got a project in mind? Tell me about it — a no-strings call is the fastest way to see if we're a fit.",
     "links": [
-      { "label": "Email", "value": "hallo@kipphard.com", "href": "mailto:hallo@kipphard.com" },
+      { "label": "Email", "value": "andre@kipphard.com", "href": "mailto:andre@kipphard.com" },
       { "label": "LinkedIn", "value": "linkedin.com/in/kipphard", "href": "#" },
       { "label": "GitHub", "value": "github.com/kipphard", "href": "#" },
       { "label": "Location", "value": "Berlin, Germany", "href": "#" }

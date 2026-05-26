@@ -15,7 +15,7 @@
         </div>
         <div class="foot-col">
           <h3>{{ t('footer.contact') }}</h3>
-          <a href="mailto:hallo@kipphard.com">hallo@kipphard.com</a>
+          <a href="mailto:andre@kipphard.com">andre@kipphard.com</a>
           <a
             href="https://linkedin.com/in/kipphard"
             target="_blank"

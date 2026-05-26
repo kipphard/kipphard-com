@@ -205,7 +205,7 @@
     "titleAccent": "zusammenarbeiten",
     "lede": "Du hast ein Projekt im Kopf? Erzähl mir davon — ein unverbindlicher Call zeigt schnell, ob wir zueinander passen.",
     "links": [
-      { "label": "E-Mail", "value": "hallo@kipphard.com", "href": "mailto:hallo@kipphard.com" },
+      { "label": "E-Mail", "value": "andre@kipphard.com", "href": "mailto:andre@kipphard.com" },
       { "label": "LinkedIn", "value": "linkedin.com/in/kipphard", "href": "#" },
       { "label": "GitHub", "value": "github.com/kipphard", "href": "#" },
       { "label": "Standort", "value": "Berlin, Deutschland", "href": "#" }
