@@ -225,9 +225,9 @@
         "case": {
           "hero": "/case-studies/wickie/hero.png",
           "screenshots": [],
-          "challenge": "<challenge text coming>",
-          "solution": "<solution text coming>",
-          "outcome": "<outcome text coming>"
+          "challenge": "Eine multilinguale, stark regulierte Fintech-Plattform braucht Inhalte, die das Marketing-Team selbständig pflegt — bis hinunter zur Reihenfolge der Sektionen auf jeder Seite. Standard-Page-Builder wie Elementor oder Divi kosten Performance, sperren die Markup-Hoheit und produzieren HTML, das ein Team später schwer warten oder migrieren kann. Dazu kommen geo-spezifische Inhalte (länderbezogene Verfügbarkeiten, regulatorische Hinweise) und vier Sprachversionen (DE, EN, FR, IT), die jeweils dutzende Seiten umfassen.",
+          "solution": "Custom-Theme auf Basis von Underscores statt Page-Builder — volle Kontrolle über Markup, CSS und JS. ACF Flexible Content liefert eine Block-Library aus 41 wiederverwendbaren Section-Typen (Hero-Varianten, Feature-Cards, FAQ, Banner, Country-Grid und mehr), die der Kunde per Drag-and-Drop auf jeder Seite kombiniert und neu anordnet. Für dynamische Inhalte wie verfügbare Länder, regulatorische Sperren oder den Money-Transfer-Calculator: Custom-Shortcodes, die das Marketing-Team direkt in Textblöcke einsetzt. SCSS-Build-Pipeline mit Stylelint und RTL-Vorbereitung, getrennte Desktop- und Mobile-Header-Templates für sauberes Navigations-Design je Device-Klasse, multilinguale Architektur via WordPress-Gettext.",
+          "outcome": "Launch 2024, seitdem laufende technische Betreuung und Weiterentwicklung. Das Marketing-Team baut neue Landingpages eigenständig aus der Block-Library — Reihenfolge der Sektionen, Inhalte, Geo-Verfügbarkeiten lassen sich ohne Entwickler anpassen. Auch globale Elemente wie Header-Navigation, Footer-Links oder Social-Profile pflegt der Kunde über dedizierte ACF Options Pages. Skaliert von Launch bis heute auf 30+ Seiten in 4 Sprachen ohne strukturelle Neugestaltung der CMS-Architektur."
         }
       },
       {
