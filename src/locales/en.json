@@ -23,10 +23,22 @@
     "ctaPrimary": "Start a project",
     "ctaGhost": "See work",
     "stats": [
-      { "num": "8+", "label": "Years experience" },
-      { "num": "40+", "label": "Projects shipped" },
-      { "num": "#1", "label": "E-commerce DE*" },
-      { "num": "100%", "label": "Solo workflow" }
+      {
+        "num": "8+",
+        "label": "Years experience"
+      },
+      {
+        "num": "40+",
+        "label": "Projects shipped"
+      },
+      {
+        "num": "#1",
+        "label": "E-commerce DE*"
+      },
+      {
+        "num": "100%",
+        "label": "Solo workflow"
+      }
     ],
     "statsNote": ""
   },
@@ -37,20 +49,60 @@
     "para2": "No agency pipeline, no middle layer. Design, frontend, backend, SEO, hosting — I do it all myself. Which means shorter loops, transparent communication, and decisions that actually fit the project.",
     "para3": "I work AI-assisted. Not as a gimmick, but because it lets me ship with the care of a team in the time of one person.",
     "credentials": [
-      { "year": "Since 2021", "what": "Senior Frontend Engineer", "where": "E-commerce platform, DE" },
-      { "year": "Since 2019", "what": "Freelance web development", "where": "kipphard.com" },
-      { "year": "2017–2021", "what": "Frontend Developer", "where": "Various agencies" },
-      { "year": "Stack", "what": "Vue · Nuxt · TypeScript · Laravel", "where": "WordPress · Shopify · WooCommerce" }
+      {
+        "year": "Since 2021",
+        "what": "Senior Frontend Engineer",
+        "where": "E-commerce platform, DE"
+      },
+      {
+        "year": "Since 2019",
+        "what": "Freelance web development",
+        "where": "kipphard.com"
+      },
+      {
+        "year": "2017–2021",
+        "what": "Frontend Developer",
+        "where": "Various agencies"
+      },
+      {
+        "year": "Stack",
+        "what": "Vue · Nuxt · TypeScript · Laravel",
+        "where": "WordPress · Shopify · WooCommerce"
+      }
     ],
     "workflowTag": "AI-assisted",
     "workflowTitle": "My workflow",
     "steps": [
-      { "label": "Discovery call", "desc": "30 min — understand the problem, scope.", "ai": false },
-      { "label": "Research & concept", "desc": "Competitors, content, structure.", "ai": true },
-      { "label": "Design in browser", "desc": "No Figma middle layer. Straight to code.", "ai": true },
-      { "label": "Implementation", "desc": "Vue, TypeScript, clean & testable.", "ai": true },
-      { "label": "SEO & performance", "desc": "Core Web Vitals green, structured delivery.", "ai": false },
-      { "label": "Launch & support", "desc": "Hosting, monitoring, still reachable.", "ai": false }
+      {
+        "label": "Discovery call",
+        "desc": "30 min — understand the problem, scope.",
+        "ai": false
+      },
+      {
+        "label": "Research & concept",
+        "desc": "Competitors, content, structure.",
+        "ai": true
+      },
+      {
+        "label": "Design in browser",
+        "desc": "No Figma middle layer. Straight to code.",
+        "ai": true
+      },
+      {
+        "label": "Implementation",
+        "desc": "Vue, TypeScript, clean & testable.",
+        "ai": true
+      },
+      {
+        "label": "SEO & performance",
+        "desc": "Core Web Vitals green, structured delivery.",
+        "ai": false
+      },
+      {
+        "label": "Launch & support",
+        "desc": "Hosting, monitoring, still reachable.",
+        "ai": false
+      }
     ]
   },
   "services": {
@@ -58,12 +110,68 @@
     "title": "What I do.",
     "intro": "From landing page to complex webshop — a complete offering, no handoffs to third parties.",
     "items": [
-      { "icon": "code", "title": "Frontend development", "desc": "Vue 3, Nuxt, TypeScript. Accessible, fast, maintainable.", "tags": ["Vue", "Nuxt", "TypeScript", "Tailwind"] },
-      { "icon": "server", "title": "Backend & APIs", "desc": "Node, Laravel, PHP. Custom solutions over toolkit compromises.", "tags": ["Node", "Laravel", "REST", "GraphQL"] },
-      { "icon": "cart", "title": "E-commerce", "desc": "Shopify, WooCommerce, custom plugins. From small to scaled.", "tags": ["Shopify", "WooCommerce", "Magento"] },
-      { "icon": "wordpress", "title": "WordPress & Elementor", "desc": "Custom themes, ACF, custom blocks. No off-the-shelf templates.", "tags": ["WordPress", "ACF", "Elementor"] },
-      { "icon": "search", "title": "SEO & analytics", "desc": "Technical SEO, structured data, content architecture.", "tags": ["Core Web Vitals", "Schema", "GSC"] },
-      { "icon": "gauge", "title": "Performance", "desc": "Audit and optimization. Sub-second load is not a coincidence.", "tags": ["Lighthouse", "CWV", "CDN"] }
+      {
+        "icon": "code",
+        "title": "Frontend development",
+        "desc": "Vue 3, Nuxt, TypeScript. Accessible, fast, maintainable.",
+        "tags": [
+          "Vue",
+          "Nuxt",
+          "TypeScript",
+          "Tailwind"
+        ]
+      },
+      {
+        "icon": "server",
+        "title": "Backend & APIs",
+        "desc": "Node, Laravel, PHP. Custom solutions over toolkit compromises.",
+        "tags": [
+          "Node",
+          "Laravel",
+          "REST",
+          "GraphQL"
+        ]
+      },
+      {
+        "icon": "cart",
+        "title": "E-commerce",
+        "desc": "Shopify, WooCommerce, custom plugins. From small to scaled.",
+        "tags": [
+          "Shopify",
+          "WooCommerce",
+          "Magento"
+        ]
+      },
+      {
+        "icon": "wordpress",
+        "title": "WordPress & Elementor",
+        "desc": "Custom themes, ACF, custom blocks. No off-the-shelf templates.",
+        "tags": [
+          "WordPress",
+          "ACF",
+          "Elementor"
+        ]
+      },
+      {
+        "icon": "search",
+        "title": "SEO & analytics",
+        "desc": "Technical SEO, structured data, content architecture.",
+        "tags": [
+          "Core Web Vitals",
+          "Schema",
+          "GSC"
+        ]
+      },
+      {
+        "icon": "gauge",
+        "title": "Performance",
+        "desc": "Audit and optimization. Sub-second load is not a coincidence.",
+        "tags": [
+          "Lighthouse",
+          "CWV",
+          "CDN"
+        ]
+      }
     ]
   },
   "work": {
@@ -71,83 +179,135 @@
     "title": "Selected projects.",
     "intro": "A handful from recent years. Confidentiality honored on request — more references available.",
     "filters": [
-      { "id": "all", "label": "All" },
-      { "id": "website", "label": "Website" },
-      { "id": "webshop", "label": "Webshop" },
-      { "id": "plattform", "label": "Platform" },
-      { "id": "seo", "label": "SEO" }
+      {
+        "id": "all",
+        "label": "All"
+      },
+      {
+        "id": "website",
+        "label": "Website"
+      },
+      {
+        "id": "webshop",
+        "label": "Webshop"
+      },
+      {
+        "id": "plattform",
+        "label": "Platform"
+      },
+      {
+        "id": "seo",
+        "label": "SEO"
+      }
     ],
     "items": [
       {
-        "id": "meisterwerk",
+        "id": "wickie",
         "size": "featured",
-        "filter": ["website", "seo"],
-        "year": "2025",
-        "client": "Meisterwerk Furniture",
-        "type": "Website · Relaunch · SEO",
-        "title": "A craft tradition that finally fits online.",
-        "desc": "Full relaunch for a mid-sized furniture manufacturer in Franconia. New information architecture, editorial CMS, catalog of 200+ products. Organic traffic +186% in six months.",
-        "stack": ["Nuxt 3", "Storyblok", "TypeScript", "Schema.org"],
+        "filter": [
+          "website",
+          "seo"
+        ],
+        "year": "Since 2024",
+        "client": "Wickie (GreatIdee AG)",
+        "type": "Website · Multilingual · Custom CMS · Maintenance",
+        "title": "Crypto banking that thinks in four languages.",
+        "desc": "End-to-end web presence for the Swiss crypto and IBAN platform by GreatIdee AG (Zug). Multi-locale in DE, EN, FR and IT with App Store CTAs as the central conversion path, on top of a regulation-heavy content stack (SO-FIT, upcoming MiCA, AML/KYC). A custom WordPress theme — no page builder — paired with ACF Flexible Content delivers a block library that the client rearranges via drag-and-drop and reuses across pages. Ongoing technical maintenance and iteration since launch in 2024.",
+        "stack": [
+          "WordPress",
+          "Custom Theme",
+          "ACF",
+          "SCSS",
+          "Multilingual"
+        ],
         "thumb": "editorial"
       },
       {
         "id": "brauhaus",
         "size": "normal",
-        "filter": ["webshop"],
+        "filter": [
+          "webshop"
+        ],
         "year": "2025",
         "client": "Brauhaus Steinach",
         "type": "Webshop",
         "title": "Regional brewery, direct-to-consumer.",
         "desc": "WooCommerce shop with vintage catalog, subscription flow, and regional delivery checker.",
-        "stack": ["WooCommerce", "Custom Plugin", "Stripe"],
+        "stack": [
+          "WooCommerce",
+          "Custom Plugin",
+          "Stripe"
+        ],
         "thumb": "shop"
       },
       {
         "id": "kanzlei",
         "size": "normal",
-        "filter": ["website"],
+        "filter": [
+          "website"
+        ],
         "year": "2024",
         "client": "Reuter & Partner Law",
         "type": "Website",
         "title": "Law firm with client portal.",
         "desc": "Formal presence with a human touch. Client portal, GDPR-compliant, accessible (WCAG 2.1 AA).",
-        "stack": ["Vue 3", "Laravel", "a11y"],
+        "stack": [
+          "Vue 3",
+          "Laravel",
+          "a11y"
+        ],
         "thumb": "legal"
       },
       {
         "id": "zahnarzt",
         "size": "compact",
-        "filter": ["website", "seo"],
+        "filter": [
+          "website",
+          "seo"
+        ],
         "year": "2024",
         "client": "Dr. Behrens",
         "type": "Website",
         "title": "Dental practice Munich.",
         "desc": "Local SEO, booking.",
-        "stack": ["WordPress", "Local SEO"],
+        "stack": [
+          "WordPress",
+          "Local SEO"
+        ],
         "thumb": "clinic"
       },
       {
         "id": "atelier",
         "size": "compact",
-        "filter": ["webshop"],
+        "filter": [
+          "webshop"
+        ],
         "year": "2024",
         "client": "Atelier Kühn",
         "type": "Shopify",
         "title": "Ceramic atelier.",
         "desc": "Custom theme, one-offs.",
-        "stack": ["Shopify", "Liquid"],
+        "stack": [
+          "Shopify",
+          "Liquid"
+        ],
         "thumb": "atelier"
       },
       {
         "id": "bildung",
         "size": "compact",
-        "filter": ["plattform"],
+        "filter": [
+          "plattform"
+        ],
         "year": "2023",
         "client": "LernHaus e.V.",
         "type": "Platform",
         "title": "Education platform.",
         "desc": "Course system for 4,000 users.",
-        "stack": ["Nuxt", "Laravel"],
+        "stack": [
+          "Nuxt",
+          "Laravel"
+        ],
         "thumb": "edu"
       }
     ]
@@ -205,10 +365,26 @@
     "titleAccent": "work together",
     "lede": "Got a project in mind? Tell me about it — a no-strings call is the fastest way to see if we're a fit.",
     "links": [
-      { "label": "Email", "value": "andre@kipphard.com", "href": "mailto:andre@kipphard.com" },
-      { "label": "LinkedIn", "value": "linkedin.com/in/kipphard", "href": "#" },
-      { "label": "GitHub", "value": "github.com/kipphard", "href": "#" },
-      { "label": "Location", "value": "Berlin, Germany", "href": "#" }
+      {
+        "label": "Email",
+        "value": "andre@kipphard.com",
+        "href": "mailto:andre@kipphard.com"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "linkedin.com/in/kipphard",
+        "href": "#"
+      },
+      {
+        "label": "GitHub",
+        "value": "github.com/kipphard",
+        "href": "#"
+      },
+      {
+        "label": "Location",
+        "value": "Berlin, Germany",
+        "href": "#"
+      }
     ],
     "form": {
       "name": "Name",
@@ -223,8 +399,21 @@
       "note": "Reply within 24 hours on business days.",
       "success": "Thanks! I'll get back to you within 24 hours.",
       "successSub": "Meanwhile — feel free to browse the work.",
-      "budgets": ["< 5k", "5–10k", "10–25k", "25k+", "Not sure"],
-      "types": ["Landing", "Website", "Webshop", "Relaunch", "SEO", "Other"],
+      "budgets": [
+        "< 5k",
+        "5–10k",
+        "10–25k",
+        "25k+",
+        "Not sure"
+      ],
+      "types": [
+        "Landing",
+        "Website",
+        "Webshop",
+        "Relaunch",
+        "SEO",
+        "Other"
+      ],
       "errors": {
         "captcha": "Please complete the security check.",
         "send-failed": "Send failed. Please try again later.",
