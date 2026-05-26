@@ -29,7 +29,17 @@
           :class="['work-card', item.size]"
         >
           <div class="work-thumb">
-            <div :class="['work-thumb__visual', `work-thumb__visual--${item.thumb}`]">
+            <img
+              v-if="item.case && item.case.hero"
+              :src="item.case.hero"
+              :alt="item.client"
+              class="work-thumb__img"
+              loading="lazy"
+            />
+            <div
+              v-else
+              :class="['work-thumb__visual', `work-thumb__visual--${item.thumb}`]"
+            >
               <div class="browser-chrome">
                 <span></span>
                 <span></span>
@@ -70,7 +80,13 @@ interface WorkItem {
   desc: string
   stack: string[]
   url?: string
-  case?: object
+  case?: {
+    hero?: string
+    screenshots?: Array<{ src: string; alt: string; caption?: string }>
+    challenge?: string
+    solution?: string
+    outcome?: string
+  }
 }
 
 interface WorkFilter {

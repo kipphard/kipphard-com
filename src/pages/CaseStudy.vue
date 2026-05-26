@@ -57,10 +57,13 @@
             <!-- Screenshot gallery -->
             <div v-if="item.case.screenshots.length" class="case-gallery">
               <div class="case-gallery__grid">
-                <div
+                <button
                   v-for="(shot, i) in item.case.screenshots"
                   :key="i"
+                  type="button"
                   class="case-gallery__item"
+                  :aria-label="`${t('caseStudy.enlarge')}: ${shot.alt}`"
+                  @click="lightboxIndex = i"
                 >
                   <img
                     :src="shot.src"
@@ -69,7 +72,7 @@
                     loading="lazy"
                   />
                   <p v-if="shot.caption" class="case-gallery__caption">{{ shot.caption }}</p>
-                </div>
+                </button>
               </div>
             </div>
 
@@ -93,11 +96,61 @@
         </div>
       </div>
     </section>
+
+    <!-- Lightbox -->
+    <div
+      v-if="item && item.case && lightboxIndex !== null"
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      :aria-label="t('caseStudy.lightbox')"
+      @click="closeLightbox"
+      @keydown="onLightboxKey"
+      tabindex="-1"
+      ref="lightboxEl"
+    >
+      <button
+        type="button"
+        class="lightbox__close"
+        :aria-label="t('caseStudy.close')"
+        @click.stop="closeLightbox"
+      >
+        ✕
+      </button>
+      <button
+        v-if="item.case.screenshots.length > 1"
+        type="button"
+        class="lightbox__nav lightbox__nav--prev"
+        :aria-label="t('caseStudy.previous')"
+        @click.stop="lightboxIndex = (lightboxIndex! - 1 + item.case.screenshots.length) % item.case.screenshots.length"
+      >
+        ‹
+      </button>
+      <figure class="lightbox__figure" @click.stop>
+        <img
+          :src="item.case.screenshots[lightboxIndex].src"
+          :alt="item.case.screenshots[lightboxIndex].alt"
+          class="lightbox__img"
+        />
+        <figcaption v-if="item.case.screenshots[lightboxIndex].caption" class="lightbox__caption">
+          {{ item.case.screenshots[lightboxIndex].caption }}
+        </figcaption>
+      </figure>
+      <button
+        v-if="item.case.screenshots.length > 1"
+        type="button"
+        class="lightbox__nav lightbox__nav--next"
+        :aria-label="t('caseStudy.next')"
+        @click.stop="lightboxIndex = (lightboxIndex! + 1) % item.case.screenshots.length"
+      >
+        ›
+      </button>
+    </div>
   </main>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -136,6 +189,31 @@ const route = useRoute()
 const slug = computed(() => {
   const segments = route.path.split('/')
   return segments[segments.length - 1]
+})
+
+const lightboxIndex = ref<number | null>(null)
+const lightboxEl = ref<HTMLElement | null>(null)
+
+function closeLightbox() {
+  lightboxIndex.value = null
+}
+
+function onLightboxKey(e: KeyboardEvent) {
+  if (!item.value?.case) return
+  const len = item.value.case.screenshots.length
+  if (e.key === 'Escape') closeLightbox()
+  else if (e.key === 'ArrowRight' && len > 1) lightboxIndex.value = ((lightboxIndex.value ?? 0) + 1) % len
+  else if (e.key === 'ArrowLeft' && len > 1) lightboxIndex.value = ((lightboxIndex.value ?? 0) - 1 + len) % len
+}
+
+watch(lightboxIndex, async (i) => {
+  if (i !== null) {
+    await nextTick()
+    lightboxEl.value?.focus()
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
 })
 
 const item = computed(() => {

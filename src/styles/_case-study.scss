@@ -59,7 +59,7 @@
 // ── Narrative ──────────────────────────────────────────────────────────────
 
 .case-narrative {
-  max-width: 720px;
+  max-width: 960px;
 
   h2 {
     font-family: var(--font-display);
@@ -202,5 +202,128 @@
     &:hover {
       border-color: var(--fg);
     }
+  }
+}
+
+// ── Gallery items as buttons (click to enlarge) ────────────────────────────
+
+.case-gallery__item {
+  // reset button defaults so the figure looks identical to before
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: zoom-in;
+  display: block;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: var(--radius);
+  }
+
+  .case-gallery__img {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover .case-gallery__img {
+    transform: scale(1.01);
+  }
+}
+
+// ── Lightbox ───────────────────────────────────────────────────────────────
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  outline: 0;
+
+  &__figure {
+    max-width: min(100%, 1600px);
+    max-height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: calc(100vh - 120px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  }
+
+  &__caption {
+    color: var(--fg);
+    font-size: 0.875rem;
+    text-align: center;
+    max-width: 720px;
+    margin: 0;
+    opacity: 0.85;
+  }
+
+  &__close,
+  &__nav {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--fg);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    width: 44px;
+    height: 44px;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.16);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  }
+
+  &__close {
+    top: 20px;
+    right: 20px;
+  }
+
+  &__nav {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+
+    &--prev { left: 20px; }
+    &--next { right: 20px; }
+  }
+
+  @media (max-width: 640px) {
+    padding: 16px;
+
+    &__close { top: 12px; right: 12px; }
+    &__nav { width: 36px; height: 36px; }
+    &__nav--prev { left: 8px; }
+    &__nav--next { right: 8px; }
   }
 }

@@ -461,7 +461,12 @@
       "solution": "Lösung",
       "today": "Heute",
       "stack": "Stack"
-    }
+    },
+    "lightbox": "Vollbild-Galerie",
+    "close": "Schließen",
+    "previous": "Vorheriges Bild",
+    "next": "Nächstes Bild",
+    "enlarge": "Vergrößern"
   },
   "footer": {
     "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",

@@ -161,7 +161,17 @@
   }
 }
 
-// ── WorkThumb visual ───────────────────────────────────────────────────────
+// ── WorkThumb image (real screenshot) ──────────────────────────────────────
+
+.work-thumb__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+// ── WorkThumb visual (CSS placeholder fallback) ────────────────────────────
 
 .work-thumb__visual {
   width: 100%;
