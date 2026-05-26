@@ -1,0 +1,35 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.headline {
+  font-family: var(--font-display);
+  color: var(--fg);
+  line-height: 1.05;
+  font-weight: 500;
+
+  &--xl {
+    font-size: clamp(48px, 9vw, 136px);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    line-height: 0.92;
+  }
+
+  &--lg {
+    font-size: clamp(32px, 4.5vw, 56px);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+  }
+
+  &--md {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  &--sm {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+}

@@ -1,0 +1,53 @@
+<template>
+  <footer>
+    <div class="container">
+      <div class="foot-grid">
+        <div class="foot-col">
+          <Wordmark variant="v1" />
+          <p class="foot-tagline">{{ t('footer.tagline') }}</p>
+        </div>
+        <div class="foot-col">
+          <h3>{{ t('footer.quick') }}</h3>
+          <a href="#about">{{ t('nav.about') }}</a>
+          <a href="#services">{{ t('nav.services') }}</a>
+          <a href="#work">{{ t('nav.work') }}</a>
+          <a href="#pricing">{{ t('nav.pricing') }}</a>
+        </div>
+        <div class="foot-col">
+          <h3>{{ t('footer.contact') }}</h3>
+          <a href="mailto:hallo@kipphard.com">hallo@kipphard.com</a>
+          <a
+            href="https://linkedin.com/in/kipphard"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn-Profil von André Kipphard (öffnet in neuem Tab)"
+          >LinkedIn</a>
+          <a
+            href="https://github.com/kipphard"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub-Profil von André Kipphard (öffnet in neuem Tab)"
+          >GitHub</a>
+        </div>
+        <div class="foot-col">
+          <h3>{{ t('footer.legal') }}</h3>
+          <a href="#">{{ t('footer.imprint') }}</a>
+          <a href="#">{{ t('footer.privacy') }}</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>{{ t('footer.copy') }}</span>
+        <span>{{ t('footer.built') }}</span>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import Wordmark from '@/components/ui/Wordmark/Wordmark.vue'
+
+const { t } = useI18n()
+</script>
+
+<style lang="scss" scoped src="./Footer.scss" />

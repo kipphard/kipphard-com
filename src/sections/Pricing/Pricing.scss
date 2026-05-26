@@ -1,0 +1,235 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.section {
+  padding: 120px 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 80px;
+}
+
+.container {
+  @include container;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 48px;
+  margin-bottom: 64px;
+  align-items: end;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-subtle);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  margin: 0;
+}
+
+.section-intro {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--fg-muted);
+  margin: 0;
+}
+
+// Shared button base (scoped to this section for tier CTAs)
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--line-strong);
+
+  &:hover {
+    background: var(--bg-elev);
+    border-color: var(--fg);
+  }
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--on-accent);
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+// Pricing grid
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tier {
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &.featured {
+    border-color: var(--fg);
+    background: var(--fg);
+    color: var(--bg);
+
+    .tier-price .currency,
+    .tier-price .from,
+    .tier-desc,
+    .tier-feat svg {
+      color: color-mix(in oklab, var(--bg) 70%, var(--fg));
+    }
+
+    .tier-name {
+      color: color-mix(in oklab, var(--bg) 70%, var(--fg));
+    }
+  }
+}
+
+.tier-badge {
+  position: absolute;
+  top: -11px;
+  left: 32px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  letter-spacing: 0.06em;
+}
+
+.tier-name {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: 20px;
+}
+
+.tier-price {
+  font-family: var(--font-display);
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+
+  .currency {
+    font-size: 20px;
+    color: var(--fg-muted);
+    font-weight: 400;
+  }
+
+  .from {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--fg-muted);
+    font-weight: 400;
+    margin-right: 2px;
+  }
+}
+
+.tier-desc {
+  color: var(--fg-muted);
+  font-size: 14.5px;
+  margin-bottom: 28px;
+  min-height: 42px;
+}
+
+.tier-feat {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14.5px;
+
+  li {
+    display: grid;
+    grid-template-columns: 18px 1fr;
+    gap: 10px;
+    align-items: start;
+  }
+
+  svg {
+    margin-top: 4px;
+    color: var(--accent);
+  }
+}
+
+.tier-cta {
+  margin-top: auto;
+}
+
+// Pricing note
+.pricing-note {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  background: var(--bg-sunken);
+  font-size: 14px;
+  color: var(--fg-muted);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  .mono-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: var(--bg-elev);
+    border: 1px solid var(--line);
+    color: var(--fg);
+    white-space: nowrap;
+  }
+}

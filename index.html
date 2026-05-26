@@ -1,10 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" data-theme="dark" data-accent="orange">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>André Kipphard</title>
+
+    <!-- Primary SEO -->
+    <title>André Kipphard — Frontend Engineer &amp; Web Developer in Berlin</title>
+    <meta name="description" content="Freelance Frontend Engineer aus Berlin. Schnelle, durchdachte Webseiten, Shops und individuelle Web-Applikationen — End-to-End aus einer Hand." />
+    <meta name="author" content="André Kipphard" />
+    <meta name="theme-color" content="#111110" />
+    <link rel="canonical" href="https://kipphard.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:title" content="André Kipphard — Frontend Engineer &amp; Web Developer in Berlin" />
+    <meta property="og:description" content="Freelance Frontend Engineer aus Berlin. Schnelle, durchdachte Webseiten, Shops und individuelle Web-Applikationen — End-to-End aus einer Hand." />
+    <meta property="og:url" content="https://kipphard.com/" />
+    <meta property="og:image" content="https://kipphard.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="André Kipphard — Frontend Engineer &amp; Web Developer in Berlin" />
+    <meta name="twitter:description" content="Freelance Frontend Engineer aus Berlin. Schnelle, durchdachte Webseiten, Shops und individuelle Web-Applikationen — End-to-End aus einer Hand." />
+    <meta name="twitter:image" content="https://kipphard.com/og-image.png" />
+
+    <!-- hreflang (single-URL, locale toggled in-place) -->
+    <link rel="alternate" hreflang="de" href="https://kipphard.com/" />
+    <link rel="alternate" hreflang="en" href="https://kipphard.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://kipphard.com/" />
+
+    <!-- Favicons & manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Fonts: preconnect + preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://kipphard.com/#person",
+      "name": "André Kipphard",
+      "url": "https://kipphard.com/",
+      "email": "mailto:hallo@kipphard.com",
+      "jobTitle": "Frontend Engineer & Web Developer",
+      "address": { "@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE" },
+      "knowsAbout": ["Frontend Development", "Vue.js", "React", "TypeScript", "E-Commerce", "SEO", "Web Performance", "Accessibility"],
+      "sameAs": ["https://github.com/kipphard", "https://linkedin.com/in/kipphard"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://kipphard.com/#website",
+      "url": "https://kipphard.com/",
+      "name": "André Kipphard",
+      "publisher": { "@id": "https://kipphard.com/#person" },
+      "inLanguage": ["de", "en"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "name": "André Kipphard — Web Development",
+      "url": "https://kipphard.com/",
+      "areaServed": "DE",
+      "founder": { "@id": "https://kipphard.com/#person" }
+    }
+  ]
+}
+    </script>
   </head>
   <body>
     <div id="app"></div>

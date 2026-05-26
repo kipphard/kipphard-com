@@ -1,0 +1,98 @@
+@use '@/styles/variables' as *;
+
+.nav-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: saturate(140%) blur(12px);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  background: color-mix(in oklab, var(--bg) 78%, transparent);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease, background 0.3s ease;
+
+  &.scrolled {
+    border-bottom-color: var(--line);
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 4px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px;
+  box-shadow: var(--shadow-sm);
+
+  a {
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    color: var(--fg-muted);
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      color: var(--fg);
+      background: color-mix(in oklab, var(--fg) 5%, transparent);
+    }
+  }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--fg-muted);
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: var(--fg);
+    border-color: var(--line-strong);
+  }
+}
+
+.pill-toggle {
+  display: inline-flex;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+
+  button {
+    border: 0;
+    background: transparent;
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: var(--fg-muted);
+    letter-spacing: 0.04em;
+
+    &.active {
+      background: var(--fg);
+      color: var(--bg);
+    }
+  }
+}

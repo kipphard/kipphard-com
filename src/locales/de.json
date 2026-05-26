@@ -1,0 +1,240 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "services": "Leistungen",
+    "work": "Projekte",
+    "pricing": "Preise",
+    "contact": "Kontakt",
+    "cta": "Anfragen",
+    "langLabel": "Sprache",
+    "themeLight": "Zum hellen Design wechseln",
+    "themeDark": "Zum dunklen Design wechseln"
+  },
+  "hero": {
+    "status": "Verfügbar ab Juni 2026 · Berlin / Remote",
+    "location": "DE · REMOTE",
+    "year": "2026",
+    "title1": "Frontend",
+    "title2": "Engineer &",
+    "title3": "fullstack",
+    "title4": "developer.",
+    "accentWord": "fullstack",
+    "lede": "Ich baue <strong>schnelle, durchdachte Webseiten und Shops</strong> — von der ersten Skizze bis zum Deployment. Alles aus einer Hand, mit einem KI-gestützten Workflow, der aus Wochen Tage macht.",
+    "ctaPrimary": "Projekt anfragen",
+    "ctaGhost": "Arbeiten ansehen",
+    "stats": [
+      { "num": "8+", "label": "Jahre Erfahrung" },
+      { "num": "40+", "label": "Projekte live" },
+      { "num": "#1", "label": "E-Commerce DE*" },
+      { "num": "100%", "label": "Solo-Workflow" }
+    ],
+    "statsNote": ""
+  },
+  "about": {
+    "eyebrow": "01 / Über mich",
+    "title": "Ein Entwickler. Ein Ansprechpartner. Der gesamte Stack.",
+    "intro": "Hallo, ich bin André. Seit über acht Jahren baue ich Webseiten und Shops — hauptberuflich als Senior Frontend Engineer bei Deutschlands größter E-Commerce-Plattform, nebenbei als Freelancer für Unternehmen, die einen verlässlichen Partner suchen.",
+    "para2": "Keine Agentur-Pipeline, keine Zwischenebenen. Design, Frontend, Backend, SEO, Hosting — ich mache alles selbst. Das bedeutet kürzere Wege, transparente Kommunikation und Entscheidungen, die tatsächlich zum Projekt passen.",
+    "para3": "Ich arbeite KI-gestützt. Nicht als Gimmick, sondern weil es mir erlaubt, mit der Sorgfalt eines Teams in der Zeit einer einzelnen Person zu liefern.",
+    "credentials": [
+      { "year": "Seit 2021", "what": "Senior Frontend Engineer", "where": "E-Commerce-Plattform, DE" },
+      { "year": "Seit 2019", "what": "Freelance Web Development", "where": "kipphard.com" },
+      { "year": "2017–2021", "what": "Frontend Developer", "where": "Verschiedene Agenturen" },
+      { "year": "Stack", "what": "Vue · Nuxt · TypeScript · Laravel", "where": "WordPress · Shopify · WooCommerce" }
+    ],
+    "workflowTag": "KI-gestützt",
+    "workflowTitle": "Mein Workflow",
+    "steps": [
+      { "label": "Discovery-Call", "desc": "30 Min. — Problem verstehen, Scope klären.", "ai": false },
+      { "label": "Research & Konzept", "desc": "Wettbewerber, Inhalte, Struktur.", "ai": true },
+      { "label": "Design im Browser", "desc": "Keine Figma-Zwischenebene. Direkt im Code.", "ai": true },
+      { "label": "Implementation", "desc": "Vue, TypeScript, sauber & testbar.", "ai": true },
+      { "label": "SEO & Performance", "desc": "Core Web Vitals grün, strukturiert ausgeliefert.", "ai": false },
+      { "label": "Launch & Support", "desc": "Hosting, Monitoring, weiterhin erreichbar.", "ai": false }
+    ]
+  },
+  "services": {
+    "eyebrow": "02 / Leistungen",
+    "title": "Was ich anbiete.",
+    "intro": "Von der Landingpage bis zum komplexen Webshop — ein ganzheitliches Angebot, ohne Weiterreichen an Dritte.",
+    "items": [
+      { "icon": "code", "title": "Frontend Development", "desc": "Vue 3, Nuxt, TypeScript. Barrierefrei, schnell, wartbar.", "tags": ["Vue", "Nuxt", "TypeScript", "Tailwind"] },
+      { "icon": "server", "title": "Backend & APIs", "desc": "Node, Laravel, PHP. Custom-Lösungen statt Baukasten-Kompromisse.", "tags": ["Node", "Laravel", "REST", "GraphQL"] },
+      { "icon": "cart", "title": "E-Commerce", "desc": "Shopify, WooCommerce, Custom-Plugins. Von klein bis skaliert.", "tags": ["Shopify", "WooCommerce", "Magento"] },
+      { "icon": "wordpress", "title": "WordPress & Elementor", "desc": "Individuelle Themes, ACF, Custom-Blocks. Keine Standard-Templates.", "tags": ["WordPress", "ACF", "Elementor"] },
+      { "icon": "search", "title": "SEO & Analytics", "desc": "Technisches SEO, strukturierte Daten, Content-Struktur.", "tags": ["Core Web Vitals", "Schema", "GSC"] },
+      { "icon": "gauge", "title": "Performance", "desc": "Audit und Optimierung. Ladezeit < 1s ist kein Zufall.", "tags": ["Lighthouse", "CWV", "CDN"] }
+    ]
+  },
+  "work": {
+    "eyebrow": "03 / Arbeiten",
+    "title": "Ausgewählte Projekte.",
+    "intro": "Eine Auswahl aus den letzten Jahren. Vertraulichkeit wird auf Wunsch gewahrt — weitere Referenzen auf Anfrage.",
+    "filters": [
+      { "id": "all", "label": "Alle" },
+      { "id": "website", "label": "Website" },
+      { "id": "webshop", "label": "Webshop" },
+      { "id": "plattform", "label": "Plattform" },
+      { "id": "seo", "label": "SEO" }
+    ],
+    "items": [
+      {
+        "id": "meisterwerk",
+        "size": "featured",
+        "filter": ["website", "seo"],
+        "year": "2025",
+        "client": "Meisterwerk Möbelmanufaktur",
+        "type": "Website · Relaunch · SEO",
+        "title": "Eine Handwerkstradition, die endlich online passt.",
+        "desc": "Vollständiger Relaunch für eine mittelständische Möbelmanufaktur aus Franken. Neue Informationsarchitektur, redaktionelles CMS, Katalog mit über 200 Produkten. Organischer Traffic +186 % innerhalb von 6 Monaten.",
+        "stack": ["Nuxt 3", "Storyblok", "TypeScript", "Schema.org"],
+        "thumb": "editorial"
+      },
+      {
+        "id": "brauhaus",
+        "size": "normal",
+        "filter": ["webshop"],
+        "year": "2025",
+        "client": "Brauhaus Steinach",
+        "type": "Webshop",
+        "title": "Regional-Brauerei mit D2C-Shop.",
+        "desc": "WooCommerce-Shop mit Jahrgangs-Katalog, Abo-Funktion und regionalem Lieferbereich-Check.",
+        "stack": ["WooCommerce", "Custom Plugin", "Stripe"],
+        "thumb": "shop"
+      },
+      {
+        "id": "kanzlei",
+        "size": "normal",
+        "filter": ["website"],
+        "year": "2024",
+        "client": "Kanzlei Reuter & Partner",
+        "type": "Website",
+        "title": "Anwaltskanzlei mit Mandantenportal.",
+        "desc": "Formale Präsenz mit persönlicher Note. Integriertes Mandantenportal, DSGVO-konform, barrierefrei (WCAG 2.1 AA).",
+        "stack": ["Vue 3", "Laravel", "a11y"],
+        "thumb": "legal"
+      },
+      {
+        "id": "zahnarzt",
+        "size": "compact",
+        "filter": ["website", "seo"],
+        "year": "2024",
+        "client": "Dr. Behrens",
+        "type": "Website",
+        "title": "Zahnarztpraxis München.",
+        "desc": "Lokales SEO, Terminbuchung.",
+        "stack": ["WordPress", "Local SEO"],
+        "thumb": "clinic"
+      },
+      {
+        "id": "atelier",
+        "size": "compact",
+        "filter": ["webshop"],
+        "year": "2024",
+        "client": "Atelier Kühn",
+        "type": "Shopify",
+        "title": "Keramik-Atelier.",
+        "desc": "Custom Theme, Unikate.",
+        "stack": ["Shopify", "Liquid"],
+        "thumb": "atelier"
+      },
+      {
+        "id": "bildung",
+        "size": "compact",
+        "filter": ["plattform"],
+        "year": "2023",
+        "client": "LernHaus e.V.",
+        "type": "Plattform",
+        "title": "Bildungsplattform.",
+        "desc": "Kursverwaltung für 4.000 Nutzer.",
+        "stack": ["Nuxt", "Laravel"],
+        "thumb": "edu"
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "04 / Preise",
+    "title": "Klar kalkuliert.",
+    "intro": "Feste Startpreise pro Projekttyp. Individuelle Umfänge werden nach gemeinsamem Discovery-Call angepasst.",
+    "tiers": [
+      {
+        "name": "Landing",
+        "price": "2.400",
+        "desc": "Einzelseite für Kampagnen, Launches oder Solopreneure.",
+        "features": [
+          "Bis zu 4 Sektionen, individuell gestaltet",
+          "Kontaktformular & Analytics",
+          "Hosting-Setup & Deployment",
+          "Lieferung in 1–2 Wochen"
+        ],
+        "cta": "Anfragen"
+      },
+      {
+        "name": "Website",
+        "price": "6.800",
+        "desc": "Vollständige Unternehmenswebsite mit Redaktions-CMS.",
+        "featured": true,
+        "badge": "Am beliebtesten",
+        "features": [
+          "Bis zu 10 Seiten, CMS-basiert",
+          "Individuelles Design, kein Template",
+          "SEO-Grundlage & strukturierte Daten",
+          "2 Monate Support nach Launch"
+        ],
+        "cta": "Anfragen"
+      },
+      {
+        "name": "Webshop",
+        "price": "12.500",
+        "desc": "Shop auf WooCommerce, Shopify oder Custom — inkl. Integrationen.",
+        "features": [
+          "Bis zu 50 Produkte migriert / aufgesetzt",
+          "Zahlung, Versand, Steuer konfiguriert",
+          "Custom-Plugins wenn nötig",
+          "3 Monate Support inklusive"
+        ],
+        "cta": "Anfragen"
+      }
+    ],
+    "note": "Stundensatz für Wartung, kleinere Aufgaben oder Retainer:",
+    "rate": "120 €/h"
+  },
+  "contact": {
+    "eyebrow": "05 / Kontakt",
+    "title": "Lass uns zusammenarbeiten.",
+    "titleAccent": "zusammenarbeiten",
+    "lede": "Du hast ein Projekt im Kopf? Erzähl mir davon — ein unverbindlicher Call zeigt schnell, ob wir zueinander passen.",
+    "links": [
+      { "label": "E-Mail", "value": "hallo@kipphard.com", "href": "mailto:hallo@kipphard.com" },
+      { "label": "LinkedIn", "value": "linkedin.com/in/kipphard", "href": "#" },
+      { "label": "GitHub", "value": "github.com/kipphard", "href": "#" },
+      { "label": "Standort", "value": "Berlin, Deutschland", "href": "#" }
+    ],
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Unternehmen (optional)",
+      "budget": "Budget-Rahmen",
+      "type": "Projekttyp",
+      "message": "Nachricht",
+      "messagePh": "Kurz umreißen, worum es geht — Fristen, vorhandene Materialien, alles was hilft.",
+      "submit": "Nachricht senden",
+      "note": "Antwort innerhalb von 24 Stunden, werktags.",
+      "success": "Danke! Ich melde mich innerhalb von 24 Stunden.",
+      "successSub": "In der Zwischenzeit — gerne vorab ein paar Arbeiten anschauen.",
+      "budgets": ["< 5k", "5–10k", "10–25k", "25k+", "Weiß nicht"],
+      "types": ["Landing", "Website", "Webshop", "Relaunch", "SEO", "Andere"]
+    }
+  },
+  "footer": {
+    "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",
+    "quick": "Schnell",
+    "contact": "Kontakt",
+    "social": "Social",
+    "legal": "Rechtliches",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "copy": "© 2026 André Kipphard. Alle Rechte vorbehalten.",
+    "built": "Built with Nuxt, Vue & caffeine."
+  }
+}

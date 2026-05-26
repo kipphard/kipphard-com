@@ -1,0 +1,16 @@
+// Breakpoints (used in @media queries and respond-to mixin)
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+
+// Spacing scale
+$spacing-xs: 0.5rem;   //  8px
+$spacing-sm: 1rem;     // 16px
+$spacing-md: 2rem;     // 32px
+$spacing-lg: 4rem;     // 64px
+$spacing-xl: 8rem;     // 128px
+
+// Layout
+$container-max: 1240px;
+$nav-height: 72px;

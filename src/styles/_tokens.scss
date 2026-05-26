@@ -1,0 +1,61 @@
+// CSS custom property tokens — spec sections 1.1–1.4
+
+:root {
+  // Base colors (light mode defaults)
+  --bg: #FAFAF7;
+  --bg-elev: #FFFFFF;
+  --bg-sunken: #F2F1EC;
+  --fg: #141412;
+  --fg-muted: #5B5A54;
+  --fg-subtle: #8A8A82;
+  --line: #E5E3DC;
+  --line-strong: #D1CEC4;
+
+  // Accent (set by data-accent; these are the orange defaults)
+  --accent: oklch(0.72 0.15 45);
+  --accent-ink: oklch(0.38 0.10 45);
+  --on-accent: #141412;
+  --accent-hue: 45;
+  --accent-soft: oklch(0.95 0.04 45);
+
+  // Border radii
+  --radius: 14px;
+  --radius-lg: 22px;
+  --radius-sm: 8px;
+
+  // Shadows (light mode)
+  --shadow-sm: 0 1px 0 rgba(20,20,18,.03), 0 1px 2px rgba(20,20,18,.04);
+  --shadow-md: 0 2px 6px rgba(20,20,18,.04), 0 12px 30px -12px rgba(20,20,18,.10);
+
+  // Font families
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+// Dark theme overrides
+html[data-theme="dark"] {
+  --bg: #111110;
+  --bg-elev: #1A1A18;
+  --bg-sunken: #0B0B0A;
+  --fg: #F2F0EA;
+  --fg-muted: #A6A49B;
+  --fg-subtle: #888884;
+  --line: #26251F;
+  --line-strong: #35342C;
+  --accent-soft: oklch(0.28 0.06 var(--accent-hue, 45));
+  --shadow-sm: 0 1px 0 rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.4);
+  --shadow-md: 0 2px 6px rgba(0,0,0,.4), 0 20px 40px -16px rgba(0,0,0,.6);
+}
+
+// Accent color variants
+html[data-accent="orange"] { --accent: oklch(0.72 0.15 45);  --accent-ink: oklch(0.38 0.10 45);  --accent-hue: 45; }
+html[data-accent="moss"]   { --accent: oklch(0.64 0.11 145); --accent-ink: oklch(0.32 0.08 145); --accent-hue: 145; }
+html[data-accent="clay"]   { --accent: oklch(0.65 0.13 25);  --accent-ink: oklch(0.34 0.09 25);  --accent-hue: 25; }
+html[data-accent="violet"] { --accent: oklch(0.60 0.15 295); --accent-ink: oklch(0.34 0.10 295); --accent-hue: 295; }
+
+// Light-mode accent-soft overrides
+html[data-theme="light"][data-accent="orange"] { --accent-soft: oklch(0.95 0.04 45); }
+html[data-theme="light"][data-accent="moss"]   { --accent-soft: oklch(0.94 0.04 145); }
+html[data-theme="light"][data-accent="clay"]   { --accent-soft: oklch(0.94 0.04 25); }
+html[data-theme="light"][data-accent="violet"] { --accent-soft: oklch(0.95 0.03 295); }

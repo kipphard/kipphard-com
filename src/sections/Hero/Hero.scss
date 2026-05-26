@@ -1,0 +1,166 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.hero {
+  padding: 80px 0 120px;
+  position: relative;
+}
+
+// Two-column layout wrapper at lg+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-md;
+
+  @include respond-to(lg) {
+    grid-template-columns: 1fr 400px;
+    gap: $spacing-lg;
+    align-items: start;
+  }
+}
+
+// Left content column (stacks meta + title + sub)
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  color: var(--fg-subtle);
+  font-family: var(--font-mono);
+  font-size: 12px;
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #34c759;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 0 3px color-mix(in oklab, #34c759 25%, transparent);
+  }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(48px, 9vw, 136px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  margin: 0;
+
+  .soft {
+    color: var(--fg-muted);
+    font-weight: 400;
+  }
+
+  .accent-word {
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 500;
+  }
+}
+
+.hero-sub {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.hero-lede {
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.5;
+  color: var(--fg-muted);
+  max-width: 48ch;
+  margin: 0;
+
+  strong {
+    color: var(--fg);
+    font-weight: 500;
+  }
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+// Photo block — right column on lg+, below sub on smaller screens
+.hero-photo {
+  order: 1; // below content on mobile
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  max-width: 400px;
+  width: 100%;
+  margin: $spacing-md auto 0;
+
+  @include respond-to(lg) {
+    order: 0;
+    margin: 0;
+    // Vertically center the photo against the hero text column
+    align-self: center;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  // CSS gradient fallback while portrait-placeholder.jpg doesn't exist yet
+  &--placeholder &__img {
+    background: linear-gradient(
+      160deg,
+      var(--bg-sunken) 0%,
+      var(--bg-elev) 100%
+    );
+  }
+}
+
+// Stats row — full width, below both columns
+.hero-stats {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+
+  @media (max-width: 720px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-subtle);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-stats-note {
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-subtle);
+  letter-spacing: 0.02em;
+}
