@@ -1,0 +1,61 @@
+@use '@/styles/variables' as *;
+
+.stats-section {
+  // No own padding; the grid borders provide structure
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+}
+
+@media (min-width: 700px) {
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat {
+  padding: var(--sp-5) var(--gutter);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+// Reset the inner gutter so cells line up with the container
+@media (min-width: 700px) {
+  .stat {
+    border-bottom: none;
+    padding-inline: var(--sp-5);
+  }
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+// Mobile: 2x2, kill rightmost / bottom borders to avoid double-bordering
+@media (max-width: 699px) {
+  .stat:nth-child(2n) {
+    border-right: none;
+  }
+  .stat:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
+
+.stat .v {
+  font-size: var(--fs-2xl);
+  letter-spacing: -0.03em;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: var(--sp-3);
+}
+
+.stat .k {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
