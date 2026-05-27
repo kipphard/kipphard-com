@@ -82,5 +82,5 @@ Tracks work outside the codebase or that needs your input. Code-only follow-ups 
 - [ ] **Favicon set** — currently only `favicon.svg` (hand-written AK monogram). Add `favicon.ico` (legacy IE/old browsers) and PNG sizes (16, 32) if you want full coverage.
 - [ ] **Favicon Manrope-as-paths** — current `favicon.svg` references `font-family="Manrope"`, but browsers render favicon SVGs in isolation without access to the page's `@font-face` webfonts, so "AK" renders in the system sans-serif fallback. Convert the letters to SVG paths if pixel-perfect Manrope matters.
 - [ ] **404 page** — once the host is set up, add a `dist/404.html` that the server serves on missing routes.
-- [ ] **GH Actions: Node 20 → Node 24** — `actions/setup-node@v4` and `pnpm/action-setup@v4` are deprecated; GitHub forces Node 24 default starting 2026-06-02, removes Node 20 entirely 2026-09-16. Bump the action versions before then.
+- [x] **GH Actions: Node 20 → Node 24** — bumped `pnpm/action-setup@v4 → v6` and `actions/setup-node@v4 → v6`. Both v6 majors ship with `node24` runtime, ahead of the 2026-06-02 cutoff. `.node-version` stays at 22 (LTS); `cache: pnpm` still supported in setup-node v6.
 - [ ] **README** — write a project README with setup, scripts, deploy instructions.
