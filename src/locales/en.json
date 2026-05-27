@@ -18,6 +18,11 @@
   "topbar": {
     "right": "DE · REMOTE / 2026"
   },
+  "home": {
+    "aboutLink": "More about my workflow",
+    "servicesLink": "See all services",
+    "workLink": "See all projects"
+  },
   "hero": {
     "status": "Available from June 2026 · Berlin / Remote",
     "location": "DE · REMOTE",
@@ -57,7 +62,7 @@
     "statsNote": ""
   },
   "about": {
-    "eyebrow": "01 / About",
+    "eyebrow": "02 / About",
     "title": "One developer. One contact. The full stack.",
     "intro": "Hi, I'm André. For eight years I've been building websites and shops — as Senior Frontend Engineer at Germany's largest e-commerce platform by day, and as a freelancer for companies that want a reliable partner.",
     "para2": "No agency pipeline, no middle layer. Design, frontend, backend, SEO, hosting — I do it all myself. Which means shorter loops, transparent communication, and decisions that actually fit the project.",
@@ -120,7 +125,7 @@
     ]
   },
   "services": {
-    "eyebrow": "02 / Services",
+    "eyebrow": "03 / Services",
     "title": "What I do.",
     "intro": "From landing page to complex webshop — a complete offering, no handoffs to third parties.",
     "items": [
@@ -189,7 +194,7 @@
     ]
   },
   "work": {
-    "eyebrow": "03 / Work",
+    "eyebrow": "04 / Work",
     "title": "Selected projects.",
     "intro": "A handful from recent years. Confidentiality honored on request — more references available.",
     "filters": [
@@ -356,7 +361,7 @@
     ]
   },
   "pricing": {
-    "eyebrow": "04 / Pricing",
+    "eyebrow": "05 / Pricing",
     "title": "Priced up front.",
     "intro": "Fixed starting prices per project type. Individual scope adjusted after a shared discovery call.",
     "tiers": [
@@ -400,10 +405,29 @@
       }
     ],
     "note": "Hourly rate for maintenance, small tasks or retainer:",
-    "rate": "€120/h"
+    "rate": "€120/h",
+    "faqTitle": "Frequent questions",
+    "faq": [
+      {
+        "q": "How do payments work?",
+        "a": "30 % deposit on signing, 70 % at launch. 14-day payment terms, bank transfer or direct debit."
+      },
+      {
+        "q": "What's not included?",
+        "a": "Domain and hosting fees, licenses for premium plugins or stock photography, and ongoing maintenance after the included support window."
+      },
+      {
+        "q": "How long does a project take?",
+        "a": "Landing in 1–2 weeks, full website 4–6 weeks, webshop 6–10 weeks. Exact timeline after the discovery call."
+      },
+      {
+        "q": "What happens after launch?",
+        "a": "2–3 months of support included depending on tier. After that, optional maintenance retainer or hourly billing."
+      }
+    ]
   },
   "contact": {
-    "eyebrow": "05 / Contact",
+    "eyebrow": "06 / Contact",
     "title": "Let's work together.",
     "titleAccent": "work together",
     "lede": "Got a project in mind? Tell me about it — a no-strings call is the fastest way to see if we're a fit.",
@@ -510,7 +534,31 @@
     "wickie": {
       "title": "Wickie — Case Study — André Kipphard",
       "description": "End-to-end web presence for the Swiss crypto and IBAN platform. Multilingual (DE/EN/FR/IT), custom WordPress theme, ACF block library. Since 2024."
+    },
+    "about": {
+      "title": "About — André Kipphard",
+      "description": "Senior Frontend Engineer based in Berlin. 8+ years of experience, AI-assisted workflow, end-to-end from concept to deployment."
+    },
+    "services": {
+      "title": "Services — André Kipphard",
+      "description": "Frontend, backend, e-commerce, WordPress, SEO and performance — a complete offering from a single source."
+    },
+    "work": {
+      "title": "Work — André Kipphard",
+      "description": "Selected projects from recent years. Websites, shops and platforms — multilingual, performant, maintainable."
+    },
+    "pricing": {
+      "title": "Pricing — André Kipphard",
+      "description": "Clear fixed prices for landing, website and webshop. Hourly rate for maintenance and retainers."
+    },
+    "contact": {
+      "title": "Contact — André Kipphard",
+      "description": "Start a project or schedule a no-strings discovery call. Reply within 24 hours, weekdays."
     }
+  },
+  "cta": {
+    "title": "Ready for your next project? A discovery call is 30 minutes.",
+    "button": "Start a project"
   },
   "footer": {
     "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",

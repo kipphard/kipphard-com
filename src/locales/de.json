@@ -18,6 +18,11 @@
   "topbar": {
     "right": "DE · REMOTE / 2026"
   },
+  "home": {
+    "aboutLink": "Mehr über meinen Workflow",
+    "servicesLink": "Alle Leistungen ansehen",
+    "workLink": "Alle Projekte ansehen"
+  },
   "hero": {
     "status": "Verfügbar ab Juni 2026 · Berlin / Remote",
     "location": "DE · REMOTE",
@@ -57,7 +62,7 @@
     "statsNote": ""
   },
   "about": {
-    "eyebrow": "01 / Über mich",
+    "eyebrow": "02 / Über mich",
     "title": "Ein Entwickler. Ein Ansprechpartner. Der gesamte Stack.",
     "intro": "Hallo, ich bin André. Seit über acht Jahren baue ich Webseiten und Shops — hauptberuflich als Senior Frontend Engineer bei Deutschlands größter E-Commerce-Plattform, nebenbei als Freelancer für Unternehmen, die einen verlässlichen Partner suchen.",
     "para2": "Keine Agentur-Pipeline, keine Zwischenebenen. Design, Frontend, Backend, SEO, Hosting — ich mache alles selbst. Das bedeutet kürzere Wege, transparente Kommunikation und Entscheidungen, die tatsächlich zum Projekt passen.",
@@ -120,7 +125,7 @@
     ]
   },
   "services": {
-    "eyebrow": "02 / Leistungen",
+    "eyebrow": "03 / Leistungen",
     "title": "Was ich anbiete.",
     "intro": "Von der Landingpage bis zum komplexen Webshop — ein ganzheitliches Angebot, ohne Weiterreichen an Dritte.",
     "items": [
@@ -189,7 +194,7 @@
     ]
   },
   "work": {
-    "eyebrow": "03 / Arbeiten",
+    "eyebrow": "04 / Arbeiten",
     "title": "Ausgewählte Projekte.",
     "intro": "Eine Auswahl aus den letzten Jahren. Vertraulichkeit wird auf Wunsch gewahrt — weitere Referenzen auf Anfrage.",
     "filters": [
@@ -356,7 +361,7 @@
     ]
   },
   "pricing": {
-    "eyebrow": "04 / Preise",
+    "eyebrow": "05 / Preise",
     "title": "Klar kalkuliert.",
     "intro": "Feste Startpreise pro Projekttyp. Individuelle Umfänge werden nach gemeinsamem Discovery-Call angepasst.",
     "tiers": [
@@ -400,10 +405,29 @@
       }
     ],
     "note": "Stundensatz für Wartung, kleinere Aufgaben oder Retainer:",
-    "rate": "120 €/h"
+    "rate": "120 €/h",
+    "faqTitle": "Häufige Fragen",
+    "faq": [
+      {
+        "q": "Wie laufen Zahlungen?",
+        "a": "30 % Anzahlung bei Auftragserteilung, 70 % bei Launch. Rechnungen mit 14 Tagen Zahlungsziel, Überweisung oder Lastschrift."
+      },
+      {
+        "q": "Was ist nicht enthalten?",
+        "a": "Domain- und Hosting-Kosten, Lizenzen für Premium-Plugins oder Stock-Fotografie, sowie laufende Wartung nach der inkludierten Supportphase."
+      },
+      {
+        "q": "Wie lange dauert ein Projekt?",
+        "a": "Landing in 1–2 Wochen, vollständige Website 4–6 Wochen, Webshop 6–10 Wochen. Genaue Timeline nach dem Discovery-Call."
+      },
+      {
+        "q": "Was passiert nach dem Launch?",
+        "a": "Je nach Tier 2–3 Monate Support inklusive. Danach optional Wartungs-Retainer oder Abrechnung nach Stundensatz."
+      }
+    ]
   },
   "contact": {
-    "eyebrow": "05 / Kontakt",
+    "eyebrow": "06 / Kontakt",
     "title": "Lass uns zusammenarbeiten.",
     "titleAccent": "zusammenarbeiten",
     "lede": "Du hast ein Projekt im Kopf? Erzähl mir davon — ein unverbindlicher Call zeigt schnell, ob wir zueinander passen.",
@@ -510,7 +534,31 @@
     "wickie": {
       "title": "Wickie — Case Study — André Kipphard",
       "description": "Vollständiger Webauftritt für die Schweizer Krypto- und IBAN-Plattform. Multilingual (DE/EN/FR/IT), Custom WordPress-Theme, ACF-Block-Library. Seit 2024."
+    },
+    "about": {
+      "title": "Über mich — André Kipphard",
+      "description": "Senior Frontend Engineer aus Berlin. 8+ Jahre Erfahrung, KI-gestützter Workflow, End-to-End vom Konzept zum Deployment."
+    },
+    "services": {
+      "title": "Leistungen — André Kipphard",
+      "description": "Frontend, Backend, E-Commerce, WordPress, SEO und Performance — ein ganzheitliches Angebot aus einer Hand."
+    },
+    "work": {
+      "title": "Arbeiten — André Kipphard",
+      "description": "Ausgewählte Projekte aus den letzten Jahren. Websites, Shops und Plattformen — multilingual, performant, wartbar."
+    },
+    "pricing": {
+      "title": "Preise — André Kipphard",
+      "description": "Klare Festpreise für Landing, Website und Webshop. Stundensatz für Wartung und Retainer."
+    },
+    "contact": {
+      "title": "Kontakt — André Kipphard",
+      "description": "Projekt anfragen oder unverbindlichen Discovery-Call vereinbaren. Antwort innerhalb von 24 Stunden, werktags."
     }
+  },
+  "cta": {
+    "title": "Bereit für ein nächstes Projekt? Ein Discovery-Call kostet 30 Minuten.",
+    "button": "Projekt anfragen"
   },
   "footer": {
     "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",

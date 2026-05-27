@@ -1,0 +1,316 @@
+@use '@/styles/variables' as *;
+
+// ─── Page head ────────────────────────────────────────────────────────────
+.page-head {
+  padding: var(--sp-7) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (min-width: 768px) {
+  .page-head { padding: var(--sp-8) 0; }
+}
+
+.page-head .label { margin-bottom: var(--sp-4); }
+
+.page-head h1 {
+  font-size: clamp(36px, 8vw, var(--fs-3xl));
+  letter-spacing: -0.035em;
+  font-weight: 500;
+  margin: 0 0 var(--sp-5);
+  max-width: 18ch;
+}
+
+.page-head .lede {
+  font-size: var(--fs-md);
+  color: var(--fg-muted);
+  max-width: 60ch;
+  margin: 0;
+}
+
+// ─── Section wrapper (top border, vertical rhythm) ────────────────────────
+.section {
+  padding: var(--sp-8) 0;
+}
+
+@media (min-width: 768px) {
+  .section { padding: var(--sp-9) 0; }
+}
+
+// ─── Contact grid ─────────────────────────────────────────────────────────
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-7);
+}
+
+@media (min-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: var(--sp-8);
+  }
+}
+
+// ─── Contact info (definition list) ───────────────────────────────────────
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+}
+
+.contact-row {
+  display: block;
+}
+
+.contact-info dt {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--sp-1);
+}
+
+.contact-info dd {
+  font-size: var(--fs-md);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: var(--sp-4);
+  margin: 0;
+}
+
+.contact-info dd a {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+  color: var(--fg);
+}
+
+.contact-info dd a:hover {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+// ─── Form ─────────────────────────────────────────────────────────────────
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (min-width: 600px) {
+  .form-row--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+  .form-row--2 .field:first-child {
+    border-right: 1px solid var(--line);
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  padding: var(--sp-4) var(--sp-5);
+}
+
+.field label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  padding: 0 0 6px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  border: none;
+  background: transparent;
+  padding: 6px 0;
+  font-size: var(--fs-md);
+  width: 100%;
+  outline: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s var(--ease);
+  color: var(--fg);
+  font-family: inherit;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--fg-subtle);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-bottom-color: var(--accent);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+// ─── Choice pills (project type, budget) ──────────────────────────────────
+.choice-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.choice {
+  position: relative;
+  cursor: pointer;
+}
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice span {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease),
+    border-color 0.2s var(--ease);
+  color: var(--fg);
+}
+
+.choice input:checked + span {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.choice:hover span {
+  border-color: var(--fg);
+}
+
+.choice input:focus-visible + span {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+// ─── Form actions row ─────────────────────────────────────────────────────
+.form-actions {
+  padding: var(--sp-5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.form-actions .note {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+// Solid action button — same shape as the rest of the design's .btn
+.form-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border: 1px solid var(--fg);
+  background: var(--fg);
+  color: var(--bg);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.form-actions .btn:hover:not(:disabled) {
+  background: transparent;
+  color: var(--fg);
+}
+
+.form-actions .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-actions .btn .arrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  transition: transform 0.25s var(--ease);
+}
+
+.form-actions .btn:hover:not(:disabled) .arrow {
+  transform: translateX(3px);
+}
+
+// ─── Spam honeypot (hidden) ───────────────────────────────────────────────
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+// ─── Turnstile widget ─────────────────────────────────────────────────────
+.turnstile-widget {
+  padding: var(--sp-4) var(--sp-5);
+  border-bottom: 1px solid var(--line);
+}
+
+// ─── Error / success ──────────────────────────────────────────────────────
+.form-error {
+  padding: var(--sp-3) var(--sp-5);
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  background: var(--bg-alt);
+}
+
+.success-card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-6) var(--sp-5);
+}
+
+.success-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.success-title {
+  font-size: var(--fs-md);
+  font-weight: 500;
+  margin-bottom: var(--sp-1);
+}
+
+.success-sub {
+  font-size: var(--fs-sm);
+  color: var(--fg-muted);
+}

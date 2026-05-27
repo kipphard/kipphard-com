@@ -1,0 +1,232 @@
+// Pricing page styles — tokens from _tokens.scss, selectors ported from design mockup.
+
+.page-head {
+  padding: var(--sp-7) 0;
+  border-bottom: 1px solid var(--line);
+
+  @media (min-width: 768px) {
+    padding: var(--sp-8) 0;
+  }
+
+  // .label is global — no override needed here
+
+  h1 {
+    font-size: clamp(36px, 8vw, var(--fs-3xl));
+    letter-spacing: -0.035em;
+    font-weight: 500;
+    margin-bottom: var(--sp-5);
+    max-width: 18ch;
+  }
+
+  .lede {
+    font-size: var(--fs-md);
+    color: var(--fg-muted);
+    max-width: 60ch;
+  }
+}
+
+.pricing-section {
+  padding-top: var(--sp-7);
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.price {
+  padding: var(--sp-6) var(--sp-5);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  position: relative;
+  background: var(--bg);
+
+  &--featured {
+    background: var(--fg);
+    color: var(--bg);
+    border-color: var(--fg);
+
+    // muted sub-elements invert on dark card
+    :deep(.label),
+    .from,
+    .price-meta {
+      color: var(--bg);
+      opacity: 0.7;
+    }
+
+    .price-list li {
+      border-color: rgba(255, 255, 255, 0.15);
+
+      &::before {
+        color: var(--bg);
+        opacity: 0.7;
+      }
+    }
+
+    .btn {
+      background: var(--bg);
+      color: var(--fg);
+      border-color: var(--bg);
+
+      &:hover {
+        background: transparent;
+        color: var(--bg);
+      }
+    }
+  }
+
+  // .label override inside .price (flex row)
+  .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .name {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .badge {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    border: 1px solid currentColor;
+    padding: 2px 6px;
+    opacity: 0.6;
+  }
+
+  .amount {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+  }
+
+  .from {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+  }
+
+  .num {
+    font-size: var(--fs-3xl);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1;
+
+    .cur {
+      font-size: 0.5em;
+      vertical-align: top;
+      margin-right: 4px;
+      font-weight: 400;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.price-meta {
+  font-size: var(--fs-sm);
+  color: var(--fg-muted);
+}
+
+.price-list {
+  flex: 1;
+
+  li {
+    font-size: var(--fs-sm);
+    padding: var(--sp-3) 0;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "+";
+      position: absolute;
+      left: 0;
+      font-family: var(--font-mono);
+      color: var(--fg-muted);
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.price-note {
+  padding: var(--sp-5) var(--gutter);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-sm);
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+
+  // .label is global — margin reset
+  .label {
+    margin: 0;
+  }
+
+  .rate {
+    font-family: var(--font-mono);
+    font-size: var(--fs-lg);
+    font-weight: 500;
+  }
+}
+
+// FAQ reuses .timeline styling from design system
+.timeline {
+  border-top: 1px solid var(--line);
+
+  li {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: var(--sp-4);
+    padding: var(--sp-4) 0;
+    border-bottom: 1px solid var(--line);
+
+    @media (min-width: 600px) {
+      grid-template-columns: 140px 1fr;
+    }
+  }
+
+  .when {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    padding-top: 4px;
+  }
+
+  .role {
+    display: block;
+    font-weight: 500;
+    font-size: var(--fs-md);
+  }
+
+  .org {
+    display: block;
+    color: var(--fg-muted);
+    font-size: var(--fs-sm);
+    margin-top: 2px;
+  }
+}

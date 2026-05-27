@@ -12,6 +12,11 @@ import '@fontsource/jetbrains-mono/400.css'
 import '@fontsource/jetbrains-mono/500.css'
 import './styles/main.scss'
 import Home from './pages/Home.vue'
+import About from './pages/About.vue'
+import Services from './pages/Services.vue'
+import Work from './pages/Work.vue'
+import Pricing from './pages/Pricing.vue'
+import Contact from './pages/Contact.vue'
 import Impressum from './pages/Impressum.vue'
 import Datenschutz from './pages/Datenschutz.vue'
 import CaseStudy from './pages/CaseStudy.vue'
@@ -19,6 +24,11 @@ import NotFound from './pages/NotFound.vue'
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/about', component: About },
+  { path: '/services', component: Services },
+  { path: '/work', component: Work },
+  { path: '/pricing', component: Pricing },
+  { path: '/contact', component: Contact },
   { path: '/impressum', component: Impressum },
   { path: '/datenschutz', component: Datenschutz },
   { path: '/work/wickie', component: CaseStudy },

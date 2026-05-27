@@ -14,11 +14,11 @@
         <div class="footer-col">
           <h4>{{ t('footer.pagesTitle') }}</h4>
           <ul>
-            <li><RouterLink to="/#about">{{ t('nav.about') }}</RouterLink></li>
-            <li><RouterLink to="/#services">{{ t('nav.services') }}</RouterLink></li>
-            <li><RouterLink to="/#work">{{ t('nav.work') }}</RouterLink></li>
-            <li><RouterLink to="/#pricing">{{ t('nav.pricing') }}</RouterLink></li>
-            <li><RouterLink to="/#contact">{{ t('nav.contact') }}</RouterLink></li>
+            <li><RouterLink to="/about">{{ t('nav.about') }}</RouterLink></li>
+            <li><RouterLink to="/services">{{ t('nav.services') }}</RouterLink></li>
+            <li><RouterLink to="/work">{{ t('nav.work') }}</RouterLink></li>
+            <li><RouterLink to="/pricing">{{ t('nav.pricing') }}</RouterLink></li>
+            <li><RouterLink to="/contact">{{ t('nav.contact') }}</RouterLink></li>
           </ul>
         </div>
 

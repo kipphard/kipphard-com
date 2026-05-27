@@ -1,0 +1,159 @@
+// Work page — scoped styles.
+// Selectors copied verbatim from design mockup; hardcoded values replaced with project tokens.
+
+.page-head {
+  padding: var(--sp-7) 0;
+  border-bottom: 1px solid var(--line);
+
+  @media (min-width: 768px) {
+    padding: var(--sp-8) 0;
+  }
+
+  // .label is global — no override needed here.
+
+  h1 {
+    font-size: clamp(36px, 8vw, var(--fs-3xl));
+    letter-spacing: -0.035em;
+    font-weight: 500;
+    margin-bottom: var(--sp-5);
+    max-width: 18ch;
+  }
+
+  .lede {
+    font-size: var(--fs-md);
+    color: var(--fg-muted);
+    max-width: 60ch;
+  }
+}
+
+.work-section {
+  padding-top: 0;
+  border-top: 1px solid var(--line);
+}
+
+.work-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: var(--sp-5) 0;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: var(--sp-6);
+}
+
+.filter {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: all 0.2s var(--ease);
+  background: transparent;
+
+  &:hover {
+    color: var(--fg);
+    border-color: var(--fg);
+  }
+
+  &[aria-pressed='true'] {
+    background: var(--fg);
+    color: var(--bg);
+    border-color: var(--fg);
+  }
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+  padding: var(--sp-6) 0;
+  border-bottom: 1px solid var(--line);
+  transition: padding 0.25s var(--ease);
+  text-decoration: none;
+  color: inherit;
+
+  @media (min-width: 800px) {
+    grid-template-columns: 1fr 1.2fr 100px;
+    gap: var(--sp-6);
+    align-items: start;
+
+    &:hover {
+      padding-left: var(--sp-4);
+    }
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+  }
+
+  h3 {
+    font-size: var(--fs-lg);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: var(--sp-2);
+  }
+
+  .desc {
+    color: var(--fg-muted);
+    font-size: var(--fs-sm);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: var(--sp-3);
+  }
+
+  .year {
+    font-family: var(--font-mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+
+    @media (min-width: 800px) {
+      text-align: right;
+    }
+  }
+}
+
+// Featured project (Wickie) — larger headline treatment.
+.project--featured {
+  h3 {
+    font-size: var(--fs-xl);
+    margin-bottom: var(--sp-3);
+  }
+
+  .desc {
+    font-size: var(--fs-base);
+    color: var(--fg-muted);
+    max-width: 60ch;
+  }
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+  border: 1px solid var(--line);
+  padding: 3px 8px;
+  color: var(--fg);
+}
