@@ -139,17 +139,20 @@
   }
 }
 
-// Portrait — right column on desktop, modest size below CTAs on mobile
+// Portrait — right column on desktop, modest size below CTAs on mobile.
+// Uses the uncropped 2:3 source, so aspect-ratio matches naturally and
+// the full sitting portrait stays visible at all sizes.
 .hero-photo {
   width: 100%;
-  max-width: 200px;
+  max-width: 180px;
   margin: 0 auto;
 
   img {
     display: block;
     width: 100%;
-    aspect-ratio: 3 / 4;
-    object-fit: cover;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: contain;
     filter: grayscale(0.1);
   }
 }
@@ -161,7 +164,7 @@
     justify-self: end;
 
     img {
-      max-width: 380px;
+      max-width: 340px;
     }
   }
 }

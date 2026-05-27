@@ -27,8 +27,8 @@
           <img
             src="/portrait.webp"
             alt="André Kipphard"
-            width="600"
-            height="800"
+            width="800"
+            height="1200"
             loading="eager"
             decoding="async"
             fetchpriority="high"
