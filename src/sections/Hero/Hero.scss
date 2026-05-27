@@ -115,15 +115,6 @@
     aspect-ratio: 3 / 4;
     object-fit: cover;
   }
-
-  // CSS gradient fallback while portrait-placeholder.jpg doesn't exist yet
-  &--placeholder &__img {
-    background: linear-gradient(
-      160deg,
-      var(--bg-sunken) 0%,
-      var(--bg-elev) 100%
-    );
-  }
 }
 
 // Stats row — full width, below both columns

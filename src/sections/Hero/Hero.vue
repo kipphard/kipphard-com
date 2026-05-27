@@ -26,14 +26,14 @@
           </div>
         </div>
 
-        <!-- Right column: photo placeholder -->
-        <div class="hero-photo hero-photo--placeholder">
+        <!-- Right column: photo -->
+        <div class="hero-photo">
           <img
             class="hero-photo__img"
-            src="/portrait-placeholder.svg"
+            src="/portrait.webp"
             alt="André Kipphard"
-            width="300"
-            height="400"
+            width="600"
+            height="800"
             loading="eager"
             decoding="async"
             fetchpriority="high"
