@@ -44,13 +44,13 @@ Tracks work outside the codebase or that needs your input. Code-only follow-ups 
 
 ## SEO & content
 
-- [ ] **Open Graph image** — `public/og-image.png` (1200×630). Designs the social card preview. Should include name + tagline + portrait.
-- [ ] **Apple touch icon** — `public/apple-touch-icon.png` (180×180). iOS home-screen icon.
-- [ ] **Real portrait** — replace `public/portrait-placeholder.svg` with an optimized JPEG/WebP (e.g. 600×800 @ ~80 KB). Update `src/sections/Hero/Hero.vue:33` if the filename changes.
-- [ ] **Project case studies** — `src/locales/de.json` → `work.items` currently lists 6 invented projects. Replace with real ones (or remove the section until you have material).
-- [ ] **Verify accent contrast** — orange (`oklch(0.72 0.15 45)`) is used for the italic "fullstack" word and for `.btn-accent`. Run through [a contrast checker](https://webaim.org/resources/contrastchecker/) against `#111110`. If it doesn't hit 4.5:1, darken the accent or change the hero italic word to a lighter neutral.
-- [ ] **Per-route `<title>` + `<meta name="description">`** — now that `/impressum` and `/datenschutz` exist as routes, they inherit the home page's title/description. Add a `useHead`-style hook (or @vueuse/head) so each route sets its own. Pre-rendered HTML must reflect this for SEO.
-- [ ] **`<html lang>` should be `de`, not `en`** — `index.html` source has `lang="de"`, but the vite-ssg-rendered `dist/index.html` ends up with `lang="en"`. Investigate which step in the SSG pipeline overrides it (likely vue-i18n + a `useHead`/SSG hook defaulting to `en`) and force DE on the pre-rendered shell. DE is the canonical language of this site.
+- [x] **Open Graph image** — `public/og-image.png` (1200×630). Portrait-left + text-right composition rendered via PIL using `_tokens.scss` colors and Manrope from `node_modules/@fontsource/manrope/files/`.
+- [x] **Apple touch icon** — `public/apple-touch-icon.png` (180×180). Tight face crop of `andre.jpg`.
+- [x] **Real portrait** — `public/portrait.webp` (600×800, ~22 KB, head + shoulders, no t-shirt logo). Wired in `src/sections/Hero/Hero.vue:33`.
+- [ ] **Project case studies** — `src/locales/de.json` → `work.items` currently lists Wickie + 5 placeholders. Replace `work.items[1..5]` with real ones (or remove the unused slots until you have material).
+- [ ] **Verify accent contrast** — orange (`oklch(0.72 0.15 45)` ≈ `#F0834E`) is used for the italic "fullstack" word and for `.btn-accent`. Run through [a contrast checker](https://webaim.org/resources/contrastchecker/) against `#111110`. If it doesn't hit 4.5:1, darken the accent or change the hero italic word to a lighter neutral.
+- [x] **Per-route `<title>` + `<meta name="description">`** — wired via `@unhead/vue` (transitively bundled by vite-ssg, now an explicit dep). Titles + descriptions live in `pages.*` namespace in `src/locales/{de,en}.json`. Home uses `useSeoMeta` for OG/Twitter; other pages use plain `useHead`.
+- [x] **`<html lang>` should be `de`, not `en`** — unhead's init seed `htmlAttrs.lang="en"` was overriding `index.html` during SSG. Fixed by pushing `head?.push({ htmlAttrs: { lang: 'de' } })` in the ViteSSG callback in `src/main.ts:45`.
 
 ## Performance follow-ups
 
@@ -67,12 +67,20 @@ Tracks work outside the codebase or that needs your input. Code-only follow-ups 
 
 ## Launch gate (currently in place)
 
-- [ ] **Kontaktformular vor Launch verdrahten ODER ausblenden** — `src/sections/Contact/Contact.vue` ist sichtbar, aber Submit setzt nur einen Vue-State (keine echte Übertragung). Die Datenschutzerklärung wird trotzdem schon eine Kontaktformular-Klausel enthalten (siehe DSGVO-Drafting). Vor Launch muss das tatsächliche Verhalten zur Klausel passen: entweder Wiring fertig (Formspree / Worker / eigener Endpoint) oder das Formular aus der Hero/Contact-Section entfernen. Sonst suggerieren wir Verarbeitung, die nicht stattfindet — irreführend.
-- [ ] **Remove HTTP Basic Auth** — site is currently behind `auth_basic` in `deploy/nginx/kipphard.com.conf` (creds in `/etc/nginx/.htpasswd-kipphard` on `hetzner-vb`). Remove the two `auth_basic*` lines from the vhost AND delete the htpasswd file once: (a) Impressum + Datenschutz are live, (b) placeholder content (invented projects, placeholder portrait) is replaced, (c) `<html lang>` is fixed to `de`. Then push to redeploy and the site is public.
+- [x] **Kontaktformular vor Launch verdrahten ODER ausblenden** — Done. Contact form posts to Cloudflare Worker `kipphard-com-contact`, validates + sends via Resend, end-to-end tested.
+- [ ] **Remove HTTP Basic Auth** — site is currently behind `auth_basic` in `deploy/nginx/kipphard.com.conf` (creds in `/etc/nginx/.htpasswd-kipphard` on `hetzner-vb`). Remove the two `auth_basic*` lines from the vhost AND delete the htpasswd file once:
+  - [x] (a) Impressum + Datenschutz are live
+  - [ ] (b) Placeholder `work.items[1..5]` replaced by 3 more real case studies (Wickie is in, 3 more needed)
+  - [x] (c) `<html lang>` is fixed to `de`
+  - [x] (d) Real portrait, favicon, apple-touch, OG image in place
+
+  Also rotate before lifting: Basic Auth password, Turnstile secret key, Resend API key (all sat in chat history during setup).
 
 ## Misc
 
-- [ ] **Replace placeholder project thumbnails** — `src/sections/Projects/Projects.scss` has CSS-only stand-ins for the 6 thumb kinds. Real screenshots will look better.
-- [ ] **Favicon set** — currently only `favicon.svg`. Add `favicon.ico` (legacy IE/old browsers) and PNG sizes (16, 32) if you want full coverage.
+- [ ] **Replace placeholder project thumbnails** — `src/sections/Projects/Projects.scss` has CSS-only stand-ins for the 6 thumb kinds. Real screenshots will look better. (Wickie already uses `case.hero` as a real `<img>` — same pattern when the other 3 case studies land.)
+- [ ] **Favicon set** — currently only `favicon.svg` (hand-written AK monogram). Add `favicon.ico` (legacy IE/old browsers) and PNG sizes (16, 32) if you want full coverage.
+- [ ] **Favicon Manrope-as-paths** — current `favicon.svg` references `font-family="Manrope"`, but browsers render favicon SVGs in isolation without access to the page's `@font-face` webfonts, so "AK" renders in the system sans-serif fallback. Convert the letters to SVG paths if pixel-perfect Manrope matters.
 - [ ] **404 page** — once the host is set up, add a `dist/404.html` that the server serves on missing routes.
+- [ ] **GH Actions: Node 20 → Node 24** — `actions/setup-node@v4` and `pnpm/action-setup@v4` are deprecated; GitHub forces Node 24 default starting 2026-06-02, removes Node 20 entirely 2026-09-16. Bump the action versions before then.
 - [ ] **README** — write a project README with setup, scripts, deploy instructions.
