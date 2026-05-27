@@ -1,14 +1,22 @@
 {
   "nav": {
+    "home": "Home",
     "about": "About",
     "services": "Services",
     "work": "Work",
     "pricing": "Pricing",
     "contact": "Contact",
     "cta": "Get in touch",
+    "ctaShort": "Start a project",
     "langLabel": "Language",
     "themeLight": "Switch to light mode",
-    "themeDark": "Switch to dark mode"
+    "themeDark": "Switch to dark mode",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "mobileMenuLabel": "Mobile navigation"
+  },
+  "topbar": {
+    "right": "DE · REMOTE / 2026"
   },
   "hero": {
     "status": "Available from June 2026 · Berlin / Remote",
@@ -500,13 +508,16 @@
   },
   "footer": {
     "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",
-    "quick": "Quick",
-    "contact": "Contact",
-    "social": "Social",
-    "legal": "Legal",
+    "kontaktTitle": "Contact",
+    "kontaktLede": "Tell me about your project. Reply within 24 hours, weekdays.",
+    "pagesTitle": "Pages",
+    "profilesTitle": "Profiles",
+    "locationTitle": "Location",
+    "locationCity": "Berlin, Germany",
+    "locationRemote": "Remote worldwide",
     "imprint": "Imprint",
     "privacy": "Privacy",
-    "copy": "© 2026 André Kipphard. All rights reserved.",
-    "built": "Built with Nuxt, Vue & caffeine."
+    "copy": "© 2026 André Kipphard · All rights reserved",
+    "version": "v2.0 · Built solo"
   }
 }

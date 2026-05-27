@@ -1,76 +1,131 @@
 @use '@/styles/variables' as *;
 
-.nav-wrap {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: saturate(140%) blur(12px);
-  -webkit-backdrop-filter: saturate(140%) blur(12px);
-  background: color-mix(in oklab, var(--bg) 78%, transparent);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease, background 0.3s ease;
-
-  &.scrolled {
-    border-bottom-color: var(--line);
-  }
+// ─── Topbar ───────────────────────────────────────────────────────────────
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
 }
 
-.nav {
+.topbar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 28px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
 }
 
-.nav-links {
-  display: flex;
-  gap: 4px;
-  background: var(--bg-elev);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 5px;
-  box-shadow: var(--shadow-sm);
-
-  a {
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-size: 14px;
-    color: var(--fg-muted);
-    transition: background 0.2s ease, color 0.2s ease;
-
-    &:hover {
-      color: var(--fg);
-      background: color-mix(in oklab, var(--fg) 5%, transparent);
-    }
-  }
-
-  @media (max-width: 900px) {
-    display: none;
-  }
-}
-
-.nav-right {
-  display: flex;
+.topbar .status {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
 }
 
-.icon-btn {
-  width: 36px;
-  height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-elev);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--fg-muted);
-  transition: all 0.2s ease;
+.topbar .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+  display: inline-block;
+}
 
-  &:hover {
-    color: var(--fg);
-    border-color: var(--line-strong);
-  }
+.topbar .right {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .topbar .right { display: inline; }
+}
+
+// ─── Nav ──────────────────────────────────────────────────────────────────
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-h);
+  gap: var(--sp-4);
+}
+
+.brand {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: var(--fs-md);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  color: var(--fg);
+}
+
+.brand .mark {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  border: 1px solid var(--line-strong);
+  padding: 2px 6px;
+  letter-spacing: 0.02em;
+  color: var(--fg);
+}
+
+.brand .name {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .brand .name { display: inline; }
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: var(--sp-5);
+}
+
+@media (min-width: 900px) {
+  .nav-links { display: flex; }
+}
+
+.nav-links a {
+  font-size: var(--fs-sm);
+  color: var(--fg-muted);
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.2s var(--ease);
+}
+
+.nav-links a:hover,
+.nav-links a.router-link-active,
+.nav-links a.router-link-exact-active {
+  color: var(--fg);
+}
+
+// Accent underline on the active route. Hash links (/#about) all match
+// path "/" so they'd all light up on Home — exclude them. When Phase 4
+// lands real routes (/about etc.), this starts indicating real state.
+.nav-links a.router-link-exact-active:not([href*="#"])::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  height: 1px;
+  background: var(--accent);
+}
+
+// ─── Right cluster: lang, theme, CTA, hamburger ───────────────────────────
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
 }
 
 .pill-toggle {
@@ -80,19 +135,182 @@
   border-radius: 999px;
   padding: 3px;
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: var(--fs-xs);
 
   button {
     border: 0;
     background: transparent;
-    padding: 6px 10px;
+    padding: 5px 9px;
     border-radius: 999px;
     color: var(--fg-muted);
     letter-spacing: 0.04em;
-
-    &.active {
-      background: var(--fg);
-      color: var(--bg);
-    }
+    transition: background 0.2s var(--ease), color 0.2s var(--ease);
   }
+
+  button.active {
+    background: var(--fg);
+    color: var(--bg);
+  }
+}
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--fg-muted);
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+
+  &:hover {
+    color: var(--fg);
+    border-color: var(--line-strong);
+  }
+}
+
+.nav-cta {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid var(--fg);
+  background: var(--fg);
+  color: var(--bg);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+@media (min-width: 900px) {
+  .nav-cta { display: inline-flex; }
+}
+
+.nav-cta:hover {
+  background: transparent;
+  color: var(--fg);
+}
+
+.nav-cta .arrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  transition: transform 0.25s var(--ease);
+}
+
+.nav-cta:hover .arrow {
+  transform: translateX(3px);
+}
+
+// ─── Hamburger ────────────────────────────────────────────────────────────
+.menu-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  margin-right: -10px;
+  background: transparent;
+  border: 0;
+}
+
+@media (min-width: 900px) {
+  .menu-toggle { display: none; }
+}
+
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--fg);
+  transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
+}
+
+.menu-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+// ─── Mobile drawer ────────────────────────────────────────────────────────
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  top: calc(var(--nav-h) + 28px);  // sit below topbar+nav
+  background: var(--bg);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-100%);
+  transition: transform 0.35s var(--ease), visibility 0.35s var(--ease);
+  visibility: hidden;
+  border-top: 1px solid var(--line);
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+@media (min-width: 900px) {
+  .mobile-menu { display: none; }
+}
+
+.mobile-menu ol {
+  counter-reset: nav;
+  padding: var(--sp-3) 0;
+  list-style: none;
+}
+
+.mobile-menu li {
+  counter-increment: nav;
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-menu a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: var(--sp-5) var(--gutter);
+  font-size: var(--fs-xl);
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.mobile-menu a::before {
+  content: "0" counter(nav);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  color: var(--fg-muted);
+  margin-right: var(--sp-4);
+}
+
+.mobile-menu .arrow {
+  font-family: var(--font-mono);
+  color: var(--fg-muted);
+  font-size: var(--fs-sm);
+}
+
+.mobile-controls {
+  display: flex;
+  gap: var(--sp-2);
+  align-items: center;
+  padding: var(--sp-4) var(--gutter);
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-menu .meta {
+  padding: var(--sp-5) var(--gutter);
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  display: flex;
+  justify-content: space-between;
 }

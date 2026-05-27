@@ -1,14 +1,22 @@
 {
   "nav": {
+    "home": "Start",
     "about": "Über mich",
     "services": "Leistungen",
     "work": "Projekte",
     "pricing": "Preise",
     "contact": "Kontakt",
     "cta": "Anfragen",
+    "ctaShort": "Projekt anfragen",
     "langLabel": "Sprache",
     "themeLight": "Zum hellen Design wechseln",
-    "themeDark": "Zum dunklen Design wechseln"
+    "themeDark": "Zum dunklen Design wechseln",
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schließen",
+    "mobileMenuLabel": "Hauptnavigation (mobil)"
+  },
+  "topbar": {
+    "right": "DE · REMOTE / 2026"
   },
   "hero": {
     "status": "Verfügbar ab Juni 2026 · Berlin / Remote",
@@ -500,13 +508,16 @@
   },
   "footer": {
     "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",
-    "quick": "Schnell",
-    "contact": "Kontakt",
-    "social": "Social",
-    "legal": "Rechtliches",
+    "kontaktTitle": "Kontakt",
+    "kontaktLede": "Erzähl mir von deinem Projekt. Antwort innerhalb von 24 Stunden, werktags.",
+    "pagesTitle": "Seiten",
+    "profilesTitle": "Profile",
+    "locationTitle": "Standort",
+    "locationCity": "Berlin, Deutschland",
+    "locationRemote": "Remote weltweit",
     "imprint": "Impressum",
     "privacy": "Datenschutz",
-    "copy": "© 2026 André Kipphard. Alle Rechte vorbehalten.",
-    "built": "Built with Nuxt, Vue & caffeine."
+    "copy": "© 2026 André Kipphard · Alle Rechte vorbehalten",
+    "version": "v2.0 · Built solo"
   }
 }
