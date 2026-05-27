@@ -15,12 +15,14 @@ import Home from './pages/Home.vue'
 import Impressum from './pages/Impressum.vue'
 import Datenschutz from './pages/Datenschutz.vue'
 import CaseStudy from './pages/CaseStudy.vue'
+import NotFound from './pages/NotFound.vue'
 
 const routes = [
   { path: '/', component: Home },
   { path: '/impressum', component: Impressum },
   { path: '/datenschutz', component: Datenschutz },
   { path: '/work/wickie', component: CaseStudy },
+  { path: '/404', component: NotFound },
 ]
 
 export const createApp = ViteSSG(

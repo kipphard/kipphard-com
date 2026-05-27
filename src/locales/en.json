@@ -468,7 +468,17 @@
     "next": "Next image",
     "enlarge": "Enlarge"
   },
+  "notFound": {
+    "eyebrow": "404",
+    "title": "This page isn't where you expected it.",
+    "lede": "Maybe renamed, maybe never existed. Either way — head back home.",
+    "cta": "Back to home"
+  },
   "pages": {
+    "notFound": {
+      "title": "404 — Page not found — André Kipphard",
+      "description": "The requested page does not exist. Back to kipphard.com home."
+    },
     "home": {
       "title": "André Kipphard — Frontend Engineer & Web Developer in Berlin",
       "description": "Freelance Frontend Engineer based in Berlin. Fast, thoughtful websites, shops and custom web apps — end-to-end, from one person.",
