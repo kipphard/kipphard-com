@@ -6,13 +6,12 @@
         <span class="hide-narrow">{{ t('hero.tagRight') }}</span>
       </div>
 
-      <h1 id="hero-title" class="hero-title">
-        {{ t('hero.titleLine1') }}<br>
-        <span class="em">{{ t('hero.titleAmp') }}</span>&nbsp;<span class="accent">{{ t('hero.titleAccent') }}</span>&nbsp;{{ t('hero.titleTail') }}
-      </h1>
-
       <div class="hero-grid">
         <div class="hero-left">
+          <h1 id="hero-title" class="hero-title">
+            {{ t('hero.titleLine1') }}<br>
+            <span class="em">{{ t('hero.titleAmp') }}</span>&nbsp;<span class="accent">{{ t('hero.titleAccent') }}</span>&nbsp;{{ t('hero.titleTail') }}
+          </h1>
           <p class="hero-lede" v-html="t('hero.lede')" />
           <div class="hero-ctas">
             <a href="#contact" class="btn">

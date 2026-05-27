@@ -32,14 +32,17 @@
   .hide-narrow { display: inline; }
 }
 
-// Big editorial title
+// Big editorial title — sits inside the left column so font-size has
+// to stay within ~700px column width on desktop. Capped at fs-3xl
+// (48/64/72 across breakpoints) so "& Fullstack Developer." doesn't
+// overflow.
 .hero-title {
   font-family: var(--font-display);
-  font-size: clamp(40px, 11vw, var(--fs-4xl));
+  font-size: clamp(36px, 6vw, var(--fs-3xl));
   font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 1.02;
-  margin: 0 0 var(--sp-5);
+  margin: 0;
   max-width: 14ch;
 
   .em {
@@ -55,7 +58,7 @@
   }
 }
 
-// Two-column area beneath the title — text + portrait
+// Two-column: title + lede + CTAs on left, portrait on right
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -65,8 +68,9 @@
 
 @media (min-width: 900px) {
   .hero-grid {
-    grid-template-columns: 1fr minmax(260px, 380px);
+    grid-template-columns: 1.4fr minmax(240px, 340px);
     gap: var(--sp-7);
+    align-items: center;
   }
 }
 
@@ -139,12 +143,11 @@
   }
 }
 
-// Portrait — right column on desktop, modest size below CTAs on mobile.
-// Uses the uncropped 2:3 source, so aspect-ratio matches naturally and
-// the full sitting portrait stays visible at all sizes.
+// Portrait — right column on desktop, modestly sized below text on mobile.
+// Uses the uncropped 2:3 source; rounded corners to match the chrome.
 .hero-photo {
   width: 100%;
-  max-width: 180px;
+  max-width: 260px;
   margin: 0 auto;
 
   img {
@@ -153,6 +156,7 @@
     height: auto;
     aspect-ratio: 2 / 3;
     object-fit: contain;
+    border-radius: 16px;
     filter: grayscale(0.1);
   }
 }
