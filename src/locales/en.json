@@ -468,6 +468,26 @@
     "next": "Next image",
     "enlarge": "Enlarge"
   },
+  "pages": {
+    "home": {
+      "title": "André Kipphard — Frontend Engineer & Web Developer in Berlin",
+      "description": "Freelance Frontend Engineer based in Berlin. Fast, thoughtful websites, shops and custom web apps — end-to-end, from one person.",
+      "ogTitle": "André Kipphard — Frontend Engineer & Web Developer in Berlin",
+      "ogDescription": "Freelance Frontend Engineer based in Berlin. Fast, thoughtful websites, shops and custom web apps — end-to-end, from one person."
+    },
+    "impressum": {
+      "title": "Imprint — André Kipphard",
+      "description": "Legal notice and provider identification pursuant to §5 TMG."
+    },
+    "datenschutz": {
+      "title": "Privacy Policy — André Kipphard",
+      "description": "Privacy policy for the website kipphard.com."
+    },
+    "wickie": {
+      "title": "Wickie — Case Study — André Kipphard",
+      "description": "End-to-end web presence for the Swiss crypto and IBAN platform. Multilingual (DE/EN/FR/IT), custom WordPress theme, ACF block library. Since 2024."
+    }
+  },
   "footer": {
     "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",
     "quick": "Quick",

@@ -33,7 +33,7 @@ export const createApp = ViteSSG(
       return { top: 0 }
     },
   },
-  ({ app }) => {
+  ({ app, head }) => {
     const i18n = createI18n({
       legacy: false,
       locale: 'de',
@@ -41,6 +41,8 @@ export const createApp = ViteSSG(
       messages: { de, en },
     })
     app.use(i18n)
+
+    head?.push({ htmlAttrs: { lang: 'de' } })
 
     // Sync <html lang> on locale change — guard for SSR where document is absent
     if (typeof document !== 'undefined') {

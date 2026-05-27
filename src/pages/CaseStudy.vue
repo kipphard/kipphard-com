@@ -151,6 +151,7 @@
 
 <script setup lang="ts">
 import { computed, nextTick, ref, watch } from 'vue'
+import { useHead } from '@unhead/vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -189,6 +190,13 @@ const route = useRoute()
 const slug = computed(() => {
   const segments = route.path.split('/')
   return segments[segments.length - 1]
+})
+
+useHead({
+  title: () => t(`pages.${slug.value}.title`),
+  meta: [
+    { name: 'description', content: () => t(`pages.${slug.value}.description`) },
+  ],
 })
 
 const lightboxIndex = ref<number | null>(null)
