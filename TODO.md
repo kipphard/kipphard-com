@@ -81,6 +81,6 @@ Tracks work outside the codebase or that needs your input. Code-only follow-ups 
 - [ ] **Replace placeholder project thumbnails** — `src/sections/Projects/Projects.scss` has CSS-only stand-ins for the 6 thumb kinds. Real screenshots will look better. (Wickie already uses `case.hero` as a real `<img>` — same pattern when the other 3 case studies land.)
 - [ ] **Favicon set** — currently only `favicon.svg` (hand-written AK monogram). Add `favicon.ico` (legacy IE/old browsers) and PNG sizes (16, 32) if you want full coverage.
 - [ ] **Favicon Manrope-as-paths** — current `favicon.svg` references `font-family="Manrope"`, but browsers render favicon SVGs in isolation without access to the page's `@font-face` webfonts, so "AK" renders in the system sans-serif fallback. Convert the letters to SVG paths if pixel-perfect Manrope matters.
-- [ ] **404 page** — once the host is set up, add a `dist/404.html` that the server serves on missing routes.
+- [x] **404 page** — `src/pages/NotFound.vue` registered at `/404` so vite-ssg emits `dist/404.html`. Nginx vhost has `error_page 404 /404.html;`. i18n-driven (de/en), `noindex`, back-to-home CTA.
 - [x] **GH Actions: Node 20 → Node 24** — bumped `pnpm/action-setup@v4 → v6` and `actions/setup-node@v4 → v6`. Both v6 majors ship with `node24` runtime, ahead of the 2026-06-02 cutoff. `.node-version` stays at 22 (LTS); `cache: pnpm` still supported in setup-node v6.
 - [ ] **README** — write a project README with setup, scripts, deploy instructions.
