@@ -355,22 +355,47 @@
         }
       },
       {
-        "id": "zahnarzt",
-        "size": "compact",
+        "id": "pigmentfrei",
+        "size": "standard",
         "filter": [
-          "website",
-          "seo"
+          "website"
         ],
-        "year": "2024",
-        "client": "Dr. Behrens",
-        "type": "Website",
-        "title": "Zahnarztpraxis München.",
-        "desc": "Lokales SEO, Terminbuchung.",
+        "year": "Seit 2023",
+        "client": "Pigmentfrei (Augusta-Praxis Oldenburg)",
+        "type": "Website · WordPress · Elementor Pro · Wartung",
+        "title": "Wo Elementor reicht — und wo die Plattform-Story begann.",
+        "desc": "Tattoo-Laser- und PMU-Entfernungs-Zentrum in Oldenburg, erste Web-Identität der Augusta-Praxis-Gruppe. Bewusst auf Hello Elementor + Elementor Pro aufgesetzt: enger Scope, eine fokussierte Landing-Page, Time-to-Launch wichtig. Die Erfahrungen mit Elementor-Performance und Gestaltungs-Grenzen prägten die Custom-Theme-Entscheidung für die nächsten Projekte der Gruppe (Augusta Beauty, Lipold).",
         "stack": [
           "WordPress",
-          "Local SEO"
+          "Hello Elementor",
+          "Elementor Pro",
+          "Custom CSS"
         ],
-        "thumb": "clinic"
+        "thumb": "editorial",
+        "url": "https://pigmentfrei.de/",
+        "case": {
+          "hero": "/case-studies/pigmentfrei/hero.webp",
+          "screenshots": [
+            {
+              "src": "/case-studies/pigmentfrei/laser.webp",
+              "alt": "Pikosekundenlaser-Section mit Geräte-Foto und Tech-Beschreibung",
+              "caption": "Pikosekundenlaser-Sektion: Tech-Detail-Block mit Geräte-Foto und Beschreibung — aus Elementor-Pro-Widgets zusammengesetzt, Custom-CSS für die Augusta-Praxis-Brand-Farben."
+            },
+            {
+              "src": "/case-studies/pigmentfrei/process.webp",
+              "alt": "Behandlungsablauf als Accordion mit sechs Schritten",
+              "caption": "Behandlungsablauf als Elementor-Accordion (6 Schritte). Genau dieser Use-Case inspirierte später die Akkordeon-Block-Ergänzung im Custom-Theme der Schwester-Site Lipold."
+            },
+            {
+              "src": "/case-studies/pigmentfrei/contact.webp",
+              "alt": "Testimonial-Karussell und Kontaktformular",
+              "caption": "Testimonial-Karussell und Kontaktformular — beides als Elementor-Pro-Widget eingebaut, im Augusta-Praxis-Brand-Look."
+            }
+          ],
+          "challenge": "Die Augusta-Praxis-Gruppe braucht ihre erste eigene Web-Identität für ihr Tattoo-Laser- und PMU-Entfernungs-Angebot. Scope: eine fokussierte Landing-Page-Site, klare Conversion-Pfade (Beratungstermin, WhatsApp, Telefon), Self-Service-Pflege durch das Klinik-Team. Time-to-Launch wichtig — der Markt-Eintritt soll nicht warten. Kein Multi-Locale, keine komplexe Multi-Page-Struktur zu diesem Zeitpunkt nötig.",
+          "solution": "Hello Elementor als Parent-Theme + Elementor Pro. Schnelle Implementierung über die Elementor-Block-Library: Hero-Carousel, Feature-Sections, Accordion für den Behandlungsablauf, Testimonial-Karussell, Preisliste, Kontaktformular. Custom-CSS für die Augusta-Praxis-Brand-Farben (Rose-Gold-Akzente, helle Beige-Töne). Das Klinik-Team pflegt Inhalte direkt über die Elementor-UI — Sektionen verschieben, Texte aktualisieren, neue FAQ-Punkte oder Preise ergänzen.",
+          "outcome": "Live seit 2023, das Klinik-Team pflegt eigenständig. Die Site erfüllt ihren Job für den definierten Scope. Im laufenden Betrieb wurden zwei Limits sichtbar, die spätere Stack-Entscheidungen geprägt haben: (1) Performance-Footprint — Elementor + Elementor Pro bringen relevant viel JS, Asset-Requests und DOM-Komplexität mit, was bei einer einzelnen Landing-Page noch tragbar ist, bei einer Multi-Page-Architektur mit fünf Service-Kategorien aber teuer würde. (2) Gestaltungs-Grenzen — Elementor's Widget-API ist rigide; ungewöhnliche Layouts (etwa ein dynamischer DE/EN-Sprachumschalter, ein vollständig anpassbarer Multi-Email-Form-Handler mit hCaptcha) sind nur mit Custom-Widget-Plugins oder Specificity-Battles im CSS umsetzbar. Aus diesen Erfahrungen folgte für die nächsten Projekte der Augusta-Praxis-Gruppe (Augusta Beauty 2023, Lipold 2024) der Wechsel zu einem Custom-Theme auf Underscores + ACF Flexible Content — gleiche Self-Service-Convenience für das Klinik-Team, ohne die Page-Builder-Kosten. Pigmentfrei läuft weiter auf Elementor: Migration wäre möglich, für den aktuellen Scope aber nicht zwingend."
+        }
       },
       {
         "id": "atelier",
@@ -610,6 +635,10 @@
     "lipold": {
       "title": "Lipold — Case Study — André Kipphard",
       "description": "Institut für Liposuktion und Lipödem-Behandlung in Oldenburg. Zweisprachiges WordPress-Theme auf dem Augusta-Fundament — 17 ACF-Blocks, klinisches Branding, DE/EN. Seit 2024."
+    },
+    "pigmentfrei": {
+      "title": "Pigmentfrei — Case Study — André Kipphard",
+      "description": "Tattoo-Laser- und PMU-Entfernungs-Zentrum in Oldenburg. Erste Web-Identität der Augusta-Praxis-Gruppe auf Hello Elementor + Elementor Pro. Der Erstaufschlag, aus dem die Custom-Theme-Plattform entstand."
     }
   },
   "cta": {

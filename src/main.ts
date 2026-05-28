@@ -34,6 +34,7 @@ const routes = [
   { path: '/work/wickie', component: CaseStudy },
   { path: '/work/augusta-beauty', component: CaseStudy },
   { path: '/work/lipold', component: CaseStudy },
+  { path: '/work/pigmentfrei', component: CaseStudy },
   { path: '/404', component: NotFound },
 ]
 
