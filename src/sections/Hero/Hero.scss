@@ -101,48 +101,6 @@
   gap: var(--sp-3);
 }
 
-// Buttons scoped to Hero (global button set lands when interior pages do)
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 22px;
-  border: 1px solid var(--fg);
-  background: var(--fg);
-  color: var(--bg);
-  font-size: var(--fs-sm);
-  font-weight: 500;
-  letter-spacing: -0.005em;
-  text-decoration: none;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease);
-  white-space: nowrap;
-
-  &:hover {
-    background: var(--bg);
-    color: var(--fg);
-  }
-
-  .arrow {
-    font-family: var(--font-mono);
-    font-size: var(--fs-sm);
-    transition: transform 0.25s var(--ease);
-  }
-
-  &:hover .arrow {
-    transform: translateX(3px);
-  }
-}
-
-.btn--ghost {
-  background: transparent;
-  color: var(--fg);
-
-  &:hover {
-    background: var(--fg);
-    color: var(--bg);
-  }
-}
-
 // Portrait — right column on desktop, modestly sized below text on mobile.
 // Uses the uncropped 2:3 source; rounded corners to match the chrome.
 .hero-photo {

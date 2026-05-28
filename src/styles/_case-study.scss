@@ -168,43 +168,6 @@
   }
 }
 
-// ── Shared button styles (mirrored from existing .btn pattern) ─────────────
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  cursor: pointer;
-  border: none;
-
-  &:hover {
-    opacity: 0.85;
-    transform: translateY(-1px);
-  }
-
-  &-primary {
-    background: var(--accent);
-    color: var(--on-accent);
-  }
-
-  &-ghost {
-    background: transparent;
-    color: var(--fg);
-    border: 1px solid var(--line-strong);
-
-    &:hover {
-      border-color: var(--fg);
-    }
-  }
-}
-
 // ── Gallery items as buttons (click to enlarge) ────────────────────────────
 
 .case-gallery__item {

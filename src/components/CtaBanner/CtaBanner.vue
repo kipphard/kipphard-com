@@ -3,7 +3,7 @@
     <div class="container">
       <div class="grid">
         <h2>{{ t('cta.title') }}</h2>
-        <RouterLink to="/contact" class="btn">
+        <RouterLink to="/contact" class="btn btn--inverted">
           {{ t('cta.button') }}
           <span class="arrow" aria-hidden="true">→</span>
         </RouterLink>

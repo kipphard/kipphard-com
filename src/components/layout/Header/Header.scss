@@ -173,35 +173,10 @@
 
 .nav-cta {
   display: none;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 14px;
-  border: 1px solid var(--fg);
-  background: var(--fg);
-  color: var(--bg);
-  font-size: var(--fs-xs);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease);
 }
 
 @media (min-width: 900px) {
   .nav-cta { display: inline-flex; }
-}
-
-.nav-cta:hover {
-  background: transparent;
-  color: var(--fg);
-}
-
-.nav-cta .arrow {
-  font-family: var(--font-mono);
-  font-size: var(--fs-sm);
-  transition: transform 0.25s var(--ease);
-}
-
-.nav-cta:hover .arrow {
-  transform: translateX(3px);
 }
 
 // ─── Hamburger ────────────────────────────────────────────────────────────

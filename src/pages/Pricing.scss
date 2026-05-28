@@ -73,16 +73,6 @@
       }
     }
 
-    .btn {
-      background: var(--bg);
-      color: var(--fg);
-      border-color: var(--bg);
-
-      &:hover {
-        background: transparent;
-        color: var(--bg);
-      }
-    }
   }
 
   // .label override inside .price (flex row)
@@ -135,10 +125,6 @@
     }
   }
 
-  .btn {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 .price-meta {

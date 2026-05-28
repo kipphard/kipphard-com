@@ -24,7 +24,7 @@
                 :href="item.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-primary"
+                class="btn"
               >
                 {{ t('caseStudy.visitLiveSite') }} ↗
               </a>
@@ -82,7 +82,7 @@
                 :href="item.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-primary"
+                class="btn"
               >
                 {{ t('caseStudy.visitLiveSite') }} ↗
               </a>
@@ -92,7 +92,7 @@
 
         <div v-else class="case-not-found">
           <p>{{ t('caseStudy.notFound') }}</p>
-          <RouterLink to="/" class="btn btn-ghost">← Home</RouterLink>
+          <RouterLink to="/" class="btn btn--ghost">← Home</RouterLink>
         </div>
       </div>
     </section>

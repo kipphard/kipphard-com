@@ -28,7 +28,10 @@
             <ul class="price-list">
               <li v-for="(feature, j) in tier.features" :key="j">{{ feature }}</li>
             </ul>
-            <RouterLink to="/contact" class="btn">{{ tier.cta }} →</RouterLink>
+            <RouterLink
+              to="/contact"
+              :class="['btn', 'btn--block', { 'btn--inverted': tier.featured }]"
+            >{{ tier.cta }} →</RouterLink>
           </article>
         </div>
 

@@ -31,34 +31,3 @@
   margin: 0;
 }
 
-// Inverted button — bg/fg are swapped here because the banner uses
-// the inverse color scheme. On hover, it punches through to a ghost.
-.cta-banner .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 22px;
-  background: var(--bg);
-  color: var(--fg);
-  border: 1px solid var(--bg);
-  font-size: var(--fs-sm);
-  font-weight: 500;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease);
-
-  &:hover {
-    background: transparent;
-    color: var(--bg);
-  }
-
-  .arrow {
-    font-family: var(--font-mono);
-    font-size: var(--fs-sm);
-    transition: transform 0.25s var(--ease);
-  }
-
-  &:hover .arrow {
-    transform: translateX(3px);
-  }
-}
