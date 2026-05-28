@@ -264,22 +264,49 @@
         }
       },
       {
-        "id": "brauhaus",
-        "size": "normal",
+        "id": "augusta-beauty",
+        "size": "standard",
         "filter": [
-          "webshop"
+          "website"
         ],
-        "year": "2025",
-        "client": "Brauhaus Steinach",
-        "type": "Webshop",
-        "title": "Regional-Brauerei mit D2C-Shop.",
-        "desc": "WooCommerce-Shop mit Jahrgangs-Katalog, Abo-Funktion und regionalem Lieferbereich-Check.",
+        "year": "Seit 2023",
+        "client": "Augusta Beauty Kosmetikinstitut",
+        "type": "Website · WordPress · Custom CMS · Wartung",
+        "title": "Ein Beauty-Studio, das seine Website selbst bespielt.",
+        "desc": "Kosmetikinstitut in Oldenburg, Teil der Augusta-Praxis-Familie. Custom-WordPress-Theme auf Underscores statt Page-Builder — aber Page-Builder-Komfort durch ACF Flexible Content: 16 wiederverwendbare Section-Typen, die das Studio-Team selbst kombiniert, neu anordnet und mit Inhalten füllt. Dynamisches Theming via ACF Options Pages, eigener Kontaktformular-Handler mit hCaptcha. Launch 2023, seitdem laufende Wartung.",
         "stack": [
-          "WooCommerce",
-          "Custom Plugin",
-          "Stripe"
+          "WordPress",
+          "Custom Theme",
+          "ACF Flexible Content",
+          "Bootstrap 5",
+          "Swiper.js",
+          "SCSS"
         ],
-        "thumb": "shop"
+        "thumb": "editorial",
+        "url": "https://augustabeauty.de/",
+        "case": {
+          "hero": "/case-studies/augusta-beauty/hero.webp",
+          "screenshots": [
+            {
+              "src": "/case-studies/augusta-beauty/team.webp",
+              "alt": "Team-Vorstellung und Content-Card-Grid mit Behandlungen",
+              "caption": "Team-Sektion und Content-Cards: zwei verschiedene ACF-Blöcke, vom Studio im Backend nach Bedarf arrangiert."
+            },
+            {
+              "src": "/case-studies/augusta-beauty/services.webp",
+              "alt": "Leistungsspektrum: vier Service-Spalten mit Behandlungslisten",
+              "caption": "Leistungsspektrum-Section aus dem ACF-Service-Grid-Block — Spalten- und Listenstruktur, vollständig vom Studio gepflegt."
+            },
+            {
+              "src": "/case-studies/augusta-beauty/contact.webp",
+              "alt": "Kontaktformular mit hCaptcha und Footer-Block",
+              "caption": "Kontaktformular mit eigenem PHP-Handler: HTML5-Validierung clientseitig, hCaptcha-Verifizierung serverseitig, dualer HTML-Mail-Versand (Studio + Auto-Reply)."
+            }
+          ],
+          "challenge": "Ein Kosmetikinstitut in Oldenburg — Teil der Augusta-Praxis-Familie — braucht eine Website, die die Studio-Crew selbst pflegt: Behandlungsbeschreibungen aktualisieren, saisonale Hero-Bilder austauschen, neue Service-Pakete anlegen, Sektionen umordnen, ohne Entwickler. Standard-Salon-Templates wirken austauschbar. Page-Builder wie Elementor liefern zwar Self-Service, kosten aber Performance (JS-Bloat, viele Asset-Requests) und sperren Gestaltungsfreiheit (rigide Widget-API, Specificity-Battles bei Custom-Styling). Diese Limits hatten sich auf dem Vorgängerprojekt der gleichen Klinikgruppe bereits gezeigt. Hinzu kommen DSGVO-konforme Kontaktformulare ohne reCAPTCHA, WhatsApp- und Terminvereinbarungs-Integration als primäre Conversion-Pfade sowie dynamisches Branding, das sich ohne Code-Eingriff anpassen lässt.",
+          "solution": "Custom-Theme auf Basis von Underscores — kein Page-Builder, aber Page-Builder-Komfort durch ACF Flexible Content. Das Studio bekommt eine eigene Block-Library mit 16 wiederverwendbaren Section-Typen, die sich per Backend-UI neu anordnen und mit eigenen Inhalten füllen lassen: Hero-Carousel, Service-Grid, Content-Cards, Bild-Slider mit Swiper 9, Testimonial-Carousel, Text-Video-Box (YouTube, selbstgehostet, Instagram-Embed), Banner, Kontaktbereich, Akkordeon, Grid-Layouts. Inhalt und Sektions-Reihenfolge pflegt das Team eigenständig, kleine Design-Anpassungen (Primary-/Secondary-Color, Logo, Footer-Inhalte, Social-Links) laufen über dedizierte ACF Options Pages — Farben werden als CSS-Custom-Properties direkt im Header injiziert, ein Branding-Wechsel braucht keinen Entwickler. Bewusst als wiederverwendbare Plattform angelegt. Bespoke Kontaktformular-Handler in functions.php: HTML5-Validierung clientseitig, hCaptcha-Verifizierung serverseitig, dualer HTML-Mail-Versand (Benachrichtigung ans Studio plus Auto-Reply an den Kunden). Bootstrap-5-Grid plus Swiper-9-Carousel, RTL-vorbereitete SCSS-Pipeline mit node-sass, individuelle deutsche Breadcrumb-Navigation, integrierter WhatsApp-Direkteinstieg.",
+          "outcome": "Launch 2023, seitdem laufende technische Betreuung. Das Studio-Team pflegt sämtliche Inhalte eigenständig — von Behandlungsbeschreibungen über saisonale Hero-Carousels bis zu Team-Vorstellungen — über die ACF-Section-Library. Die fünf Service-Kategorien (Kosmetik⁺, HydraFacial, Sugaring, Nail Couture, Wimpern & Augenbrauen) sind jeweils aus derselben Block-Bibliothek komponiert, jeweils mit eigenem Mega-Menü-Eintrag. Kontaktformular, WhatsApp-Direkteinstieg und Terminvereinbarungs-Buttons liefern parallel laufende Conversion-Pfade. Das Theme-Fundament wurde anschließend für das nächste Projekt der Klinikgruppe weiterverwendet — gleiche Block-Library, gleiche Build-Pipeline, gleicher Form-Handler, jeweils eigenes Branding (Farben, Logo, Inhalte). Updates am Kern wandern in beide Sites gleichzeitig."
+        }
       },
       {
         "id": "kanzlei",
@@ -547,6 +574,10 @@
     "contact": {
       "title": "Kontakt — André Kipphard",
       "description": "Projekt anfragen oder unverbindlichen Discovery-Call vereinbaren. Antwort innerhalb von 24 Stunden, werktags."
+    },
+    "augusta-beauty": {
+      "title": "Augusta Beauty — Case Study — André Kipphard",
+      "description": "Kosmetikinstitut in Oldenburg. Custom WordPress-Theme auf Underscores statt Page-Builder — ACF Flexible Content liefert 16 Section-Typen für vollständiges Self-Service-Management. Seit 2023."
     }
   },
   "cta": {

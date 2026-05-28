@@ -264,22 +264,49 @@
         }
       },
       {
-        "id": "brauhaus",
-        "size": "normal",
+        "id": "augusta-beauty",
+        "size": "standard",
         "filter": [
-          "webshop"
+          "website"
         ],
-        "year": "2025",
-        "client": "Brauhaus Steinach",
-        "type": "Webshop",
-        "title": "Regional brewery, direct-to-consumer.",
-        "desc": "WooCommerce shop with vintage catalog, subscription flow, and regional delivery checker.",
+        "year": "Since 2023",
+        "client": "Augusta Beauty Kosmetikinstitut",
+        "type": "Website · WordPress · Custom CMS · Maintenance",
+        "title": "A beauty studio that runs its own website end-to-end.",
+        "desc": "Beauty institute in Oldenburg, part of the Augusta-Praxis family. Custom WordPress theme on Underscores instead of a page builder — but with page-builder convenience via ACF Flexible Content: 16 reusable section types the studio team combines, reorders, and fills with content themselves. Dynamic theming via ACF Options Pages, custom contact form handler with hCaptcha. Live since 2023, ongoing maintenance.",
         "stack": [
-          "WooCommerce",
-          "Custom Plugin",
-          "Stripe"
+          "WordPress",
+          "Custom Theme",
+          "ACF Flexible Content",
+          "Bootstrap 5",
+          "Swiper.js",
+          "SCSS"
         ],
-        "thumb": "shop"
+        "thumb": "editorial",
+        "url": "https://augustabeauty.de/",
+        "case": {
+          "hero": "/case-studies/augusta-beauty/hero.webp",
+          "screenshots": [
+            {
+              "src": "/case-studies/augusta-beauty/team.webp",
+              "alt": "Team intro and content-card grid with treatment teasers",
+              "caption": "Team section and content cards: two different ACF blocks, arranged by the studio in the WP backend as needed."
+            },
+            {
+              "src": "/case-studies/augusta-beauty/services.webp",
+              "alt": "Service spectrum: four-column grid with treatment lists",
+              "caption": "Service-spectrum section from the ACF service-grid block — columns and lists fully maintained by the studio."
+            },
+            {
+              "src": "/case-studies/augusta-beauty/contact.webp",
+              "alt": "Contact form with hCaptcha and footer",
+              "caption": "Contact form with a bespoke PHP handler: HTML5 client-side validation, server-side hCaptcha verification, dual HTML mail dispatch (studio notification plus customer auto-reply)."
+            }
+          ],
+          "challenge": "A beauty institute in Oldenburg — part of the Augusta-Praxis clinic family — needed a website the studio team could fully maintain themselves: update treatment descriptions, swap seasonal hero images, add service packages, reorder sections, all without a developer. Off-the-shelf salon templates feel interchangeable. Page builders like Elementor offer self-service but cost performance (JS bloat, lots of asset requests) and limit design freedom (rigid widget APIs, specificity battles for custom styling). Those limits had already shown up on the clinic group's previous project. On top of that: GDPR-compliant contact forms (no reCAPTCHA), WhatsApp and appointment booking as primary conversion paths, and dynamic branding adjustable without touching code.",
+          "solution": "Custom theme on Underscores — not a page builder, but page-builder convenience via ACF Flexible Content. The studio gets its own block library of 16 reusable section types, re-arrangeable through the WP admin UI and fillable with its own content: hero carousel, service grid, content cards, Swiper-9 image slider, testimonial carousel, text-video box (YouTube, self-hosted, Instagram embed), banner, contact section, accordion, grid layouts. The team maintains content and section order itself; small design changes (primary/secondary color, logo, footer content, social links) flow through dedicated ACF Options Pages — colors are injected as CSS custom properties straight into the header, so a brand-switch needs no developer. Deliberately built as a reusable platform. Custom contact form handler in functions.php: HTML5 client-side validation, server-side hCaptcha verification, dual HTML mail dispatch (studio notification plus customer auto-reply). Bootstrap 5 grid plus Swiper 9 carousel, RTL-prepared SCSS pipeline via node-sass, custom German breadcrumb navigation, integrated WhatsApp direct link.",
+          "outcome": "Launched 2023, with ongoing technical maintenance since. The studio team maintains all content independently — treatment descriptions, seasonal hero carousels, team introductions — via the ACF section library. The five service categories (Kosmetik⁺, HydraFacial, Sugaring, Nail Couture, Lashes & Brows) are each composed from the same block library, each with their own mega-menu entry. Contact form, direct WhatsApp link, and appointment-booking buttons offer parallel conversion paths. The theme foundation has since been reused for the clinic group's next project — same block library, same build pipeline, same form handler, with its own branding (colors, logo, content). Core updates flow into both sites simultaneously."
+        }
       },
       {
         "id": "kanzlei",
@@ -547,6 +574,10 @@
     "contact": {
       "title": "Contact — André Kipphard",
       "description": "Start a project or schedule a no-strings discovery call. Reply within 24 hours, weekdays."
+    },
+    "augusta-beauty": {
+      "title": "Augusta Beauty — Case Study — André Kipphard",
+      "description": "Beauty institute in Oldenburg. Custom WordPress theme on Underscores instead of a page builder — ACF Flexible Content provides 16 section types for full self-service content management. Live since 2023."
     }
   },
   "cta": {

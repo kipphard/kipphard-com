@@ -32,6 +32,7 @@ const routes = [
   { path: '/impressum', component: Impressum },
   { path: '/datenschutz', component: Datenschutz },
   { path: '/work/wickie', component: CaseStudy },
+  { path: '/work/augusta-beauty', component: CaseStudy },
   { path: '/404', component: NotFound },
 ]
 
