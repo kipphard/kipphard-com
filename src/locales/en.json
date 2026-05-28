@@ -309,22 +309,50 @@
         }
       },
       {
-        "id": "kanzlei",
-        "size": "normal",
+        "id": "lipold",
+        "size": "standard",
         "filter": [
           "website"
         ],
-        "year": "2024",
-        "client": "Reuter & Partner Law",
-        "type": "Website",
-        "title": "Law firm with client portal.",
-        "desc": "Formal presence with a human touch. Client portal, GDPR-compliant, accessible (WCAG 2.1 AA).",
+        "year": "Since 2024",
+        "client": "Lipold (Augusta-Praxis Oldenburg)",
+        "type": "Website · Multilingual · WordPress · Custom CMS · Maintenance",
+        "title": "A liposuction institute in two languages — same theme, new context.",
+        "desc": "Liposuction and lipedema institute in Oldenburg, part of the Augusta-Praxis family. Built on the same custom-theme foundation as augustabeauty.de — with three targeted extensions for the clinical context: accordion block added, DE/EN multilingual layer in the header, clinical branding toggled via ACF Options Pages. Shows the theme platform grows with the client rather than staying frozen.",
         "stack": [
-          "Vue 3",
-          "Laravel",
-          "a11y"
+          "WordPress",
+          "Custom Theme",
+          "ACF Flexible Content",
+          "Multilingual",
+          "Bootstrap 5",
+          "Swiper.js",
+          "SCSS"
         ],
-        "thumb": "legal"
+        "thumb": "editorial",
+        "url": "https://www.lipold.de/",
+        "case": {
+          "hero": "/case-studies/lipold/hero.webp",
+          "screenshots": [
+            {
+              "src": "/case-studies/lipold/services.webp",
+              "alt": "Service spectrum: four treatment categories as image cards",
+              "caption": "Service-spectrum section from the ACF service-grid block — same pattern as on augustabeauty.de, re-composed for the medical context."
+            },
+            {
+              "src": "/case-studies/lipold/patient-guides.webp",
+              "alt": "Patient-guide section with two specialist books on lipedema",
+              "caption": "Patient guides: bibliographic content with ISBN data as an ACF content block — maintained by the clinic team, no developer needed."
+            },
+            {
+              "src": "/case-studies/lipold/contact.webp",
+              "alt": "Contact form with hCaptcha and footer cross-links to sister sites",
+              "caption": "Footer cross-links to the sister sites of the Augusta-Praxis family — augustapraxis.de, augustabeauty.de, pigmentfrei.de, augenlidchirurgie.com."
+            }
+          ],
+          "challenge": "After Augusta Beauty, the next project in the Augusta-Praxis family came up: a dedicated web presence for the Lipold institute — specialists for liposuction and lipedema treatment. Different audience than the cosmetic sister brand: clinical-medical context, longer patient journeys, more trust-building content. Plus a second language (English) for international patients, stage-specific treatment descriptions, anatomical service categories, patient testimonials, patient-guide books, multiple specialists. Platform requirement: the same content-management comfort as on augustabeauty.de — arrange sections yourself, maintain content yourself — but now bilingual and with additional section types the Augusta theme didn't yet have, foremost a FAQ accordion for stage explanations and treatment-flow steps.",
+          "solution": "Augusta theme platform as the foundation — same 16-block library as starting point, same build pipeline, same contact form handler. Three targeted extensions for the Lipold context: (1) accordion block added for FAQ sections, stage explanations, and treatment-flow steps — 17 blocks total. (2) DE/EN multilingual layer in the header: language switcher, translated mega-menus, localized form labels. (3) Clinical branding: teal primary instead of charcoal, same gold secondary as Augusta — toggled exclusively via ACF Options Pages, no code changes. Content is maintained by the clinic team through the same WP admin UI as on augustabeauty.de. Footer cross-links to the sister sites of the Augusta-Praxis family. Evidence the theme foundation matures: same comfort guarantee for the editorial team, new capabilities for the use case.",
+          "outcome": "Live since 2024. The clinic team maintains bilingual content independently — treatment descriptions, stage explanations, patient-guide listings, testimonials — via the ACF section library. Treatment categories (lipedema, liposuction, skin tightening, and more) are composed from the same block library. The theme foundation now runs on two Augusta-Praxis sites in parallel: core updates are maintained centrally, form handler and SCSS pipeline shared. The accordion block extension stays in the Lipold repository but is written so it can be ported back into the Augusta theme whenever FAQ sections are needed there."
+        }
       },
       {
         "id": "zahnarzt",
@@ -578,6 +606,10 @@
     "augusta-beauty": {
       "title": "Augusta Beauty — Case Study — André Kipphard",
       "description": "Beauty institute in Oldenburg. Custom WordPress theme on Underscores instead of a page builder — ACF Flexible Content provides 16 section types for full self-service content management. Live since 2023."
+    },
+    "lipold": {
+      "title": "Lipold — Case Study — André Kipphard",
+      "description": "Liposuction and lipedema institute in Oldenburg. Bilingual WordPress theme on the Augusta foundation — 17 ACF blocks, clinical branding, DE/EN. Live since 2024."
     }
   },
   "cta": {

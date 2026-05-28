@@ -33,6 +33,7 @@ const routes = [
   { path: '/datenschutz', component: Datenschutz },
   { path: '/work/wickie', component: CaseStudy },
   { path: '/work/augusta-beauty', component: CaseStudy },
+  { path: '/work/lipold', component: CaseStudy },
   { path: '/404', component: NotFound },
 ]
 
