@@ -396,40 +396,6 @@
           "solution": "Hello Elementor as parent theme + Elementor Pro. Quick implementation via the Elementor block library: hero carousel, feature sections, accordion for the treatment process, testimonial carousel, price list, contact form. Custom CSS for the Augusta-Praxis brand colors (rose-gold accents, soft beige tones). The clinic team maintains content directly through the Elementor UI — move sections, update text, add new FAQ items or prices.",
           "outcome": "Live since 2023, the clinic team maintains the site independently. It does its job for the defined scope. During day-to-day operation two limits became visible that shaped later stack decisions: (1) Performance footprint — Elementor + Elementor Pro bring noticeable JS, asset requests, and DOM complexity, which is tolerable for a single landing page but would get expensive on a multi-page architecture with five service categories. (2) Design limits — Elementor's widget API is rigid; unusual layouts (e.g. a dynamic DE/EN language switcher, a fully customisable multi-email form handler with hCaptcha) are only achievable via custom widget plugins or CSS specificity battles. From those experiences came the move, for the group's next projects (Augusta Beauty 2023, Lipold 2024), to a custom theme on Underscores + ACF Flexible Content — same self-service comfort for the clinic team, without the page-builder costs. Pigmentfrei keeps running on Elementor: migration would be possible but isn't strictly necessary for the current scope."
         }
-      },
-      {
-        "id": "atelier",
-        "size": "compact",
-        "filter": [
-          "webshop"
-        ],
-        "year": "2024",
-        "client": "Atelier Kühn",
-        "type": "Shopify",
-        "title": "Ceramic atelier.",
-        "desc": "Custom theme, one-offs.",
-        "stack": [
-          "Shopify",
-          "Liquid"
-        ],
-        "thumb": "atelier"
-      },
-      {
-        "id": "bildung",
-        "size": "compact",
-        "filter": [
-          "plattform"
-        ],
-        "year": "2023",
-        "client": "LernHaus e.V.",
-        "type": "Platform",
-        "title": "Education platform.",
-        "desc": "Course system for 4,000 users.",
-        "stack": [
-          "Nuxt",
-          "Laravel"
-        ],
-        "thumb": "edu"
       }
     ]
   },
