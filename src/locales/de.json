@@ -24,7 +24,7 @@
     "workLink": "Alle Projekte ansehen"
   },
   "hero": {
-    "status": "Verfügbar ab Juni 2026 · Berlin / Remote",
+    "status": "Jetzt verfügbar · Paderborn / Remote",
     "tagLeft": "01 / Start",
     "tagRight": "Frontend · Fullstack · SEO",
     "titleLine1": "Frontend Engineer",
@@ -44,12 +44,12 @@
         "label": "Projekte live"
       },
       {
-        "num": "#1",
-        "label": "E-Commerce DE*"
+        "num": "< 1s",
+        "label": "Ladezeit"
       },
       {
-        "num": "100%",
-        "label": "Solo-Workflow"
+        "num": "24h",
+        "label": "Antwortzeit"
       }
     ],
     "statsNote": ""
@@ -57,13 +57,13 @@
   "about": {
     "eyebrow": "02 / Über mich",
     "title": "Ein Entwickler. Ein Ansprechpartner. Der gesamte Stack.",
-    "intro": "Hallo, ich bin André. Seit über acht Jahren baue ich Webseiten und Shops — hauptberuflich als Senior Frontend Engineer bei Deutschlands größter E-Commerce-Plattform, nebenbei als Freelancer für Unternehmen, die einen verlässlichen Partner suchen.",
+    "intro": "Hallo, ich bin André. Seit über acht Jahren baue ich Webseiten und Shops — hauptberuflich als Frontend Engineer bei Deutschlands größter E-Commerce-Plattform, nebenbei als Freelancer für Unternehmen, die einen verlässlichen Partner suchen.",
     "para2": "Keine Agentur-Pipeline, keine Zwischenebenen. Design, Frontend, Backend, SEO, Hosting — ich mache alles selbst. Das bedeutet kürzere Wege, transparente Kommunikation und Entscheidungen, die tatsächlich zum Projekt passen.",
     "para3": "Ich arbeite KI-gestützt. Nicht als Gimmick, sondern weil es mir erlaubt, mit der Sorgfalt eines Teams in der Zeit einer einzelnen Person zu liefern.",
     "credentials": [
       {
         "year": "Seit 2021",
-        "what": "Senior Frontend Engineer",
+        "what": "Frontend Engineer",
         "where": "E-Commerce-Plattform, DE"
       },
       {
@@ -86,8 +86,8 @@
     "workflowTitle": "Mein Workflow",
     "steps": [
       {
-        "label": "Discovery-Call",
-        "desc": "30 Min. — Problem verstehen, Scope klären.",
+        "label": "Kennenlernen",
+        "desc": "Per E-Mail oder kurzem Call — Problem verstehen, Scope klären.",
         "ai": false
       },
       {
@@ -402,11 +402,11 @@
   "pricing": {
     "eyebrow": "05 / Preise",
     "title": "Klar kalkuliert.",
-    "intro": "Feste Startpreise pro Projekttyp. Individuelle Umfänge werden nach gemeinsamem Discovery-Call angepasst.",
+    "intro": "Feste Startpreise pro Projekttyp. Individuelle Umfänge passen wir nach kurzer Abstimmung an.",
     "tiers": [
       {
         "name": "Landing",
-        "price": "2.400",
+        "price": "900",
         "desc": "Einzelseite für Kampagnen, Launches oder Solopreneure.",
         "features": [
           "Bis zu 4 Sektionen, individuell gestaltet",
@@ -418,7 +418,7 @@
       },
       {
         "name": "Website",
-        "price": "6.800",
+        "price": "2.400",
         "desc": "Vollständige Unternehmenswebsite mit Redaktions-CMS.",
         "featured": true,
         "badge": "Am beliebtesten",
@@ -432,7 +432,7 @@
       },
       {
         "name": "Webshop",
-        "price": "12.500",
+        "price": "4.900",
         "desc": "Shop auf WooCommerce, Shopify oder Custom — inkl. Integrationen.",
         "features": [
           "Bis zu 50 Produkte migriert / aufgesetzt",
@@ -444,24 +444,36 @@
       }
     ],
     "note": "Stundensatz für Wartung, kleinere Aufgaben oder Retainer:",
-    "rate": "120 €/h",
+    "rate": "45 €/h",
     "faqTitle": "Häufige Fragen",
     "faq": [
       {
         "q": "Wie laufen Zahlungen?",
-        "a": "30 % Anzahlung bei Auftragserteilung, 70 % bei Launch. Rechnungen mit 14 Tagen Zahlungsziel, Überweisung oder Lastschrift."
+        "a": "Meist 100 % im Voraus. Bei größeren Projekten auf Wunsch auch 50 / 50 — die Hälfte zum Start, die Hälfte zum Launch. Rechnung mit kurzer Zahlungsfrist, klassisch per Überweisung."
       },
       {
-        "q": "Was ist nicht enthalten?",
-        "a": "Domain- und Hosting-Kosten, Lizenzen für Premium-Plugins oder Stock-Fotografie, sowie laufende Wartung nach der inkludierten Supportphase."
+        "q": "Müssen wir telefonieren?",
+        "a": "Nein. Wenn du magst, klären wir alles in einem kurzen Call — genauso gut geht es per E-Mail. Ganz wie es dir lieber ist."
       },
       {
         "q": "Wie lange dauert ein Projekt?",
-        "a": "Landing in 1–2 Wochen, vollständige Website 4–6 Wochen, Webshop 6–10 Wochen. Genaue Timeline nach dem Discovery-Call."
+        "a": "Sehr flexibel — von wenigen Tagen bis wenige Wochen, je nach Umfang, Zahlung und meiner Auslastung. Bei klarem Scope und Dringlichkeit geht auch mal über Nacht. Konkrete Timeline nach kurzer Abstimmung."
+      },
+      {
+        "q": "Arbeitest du mit KI?",
+        "a": "Ja, durchgängig. KI ist fester Teil meines Workflows — von Research über Code bis Testing. Das macht mich schneller und damit günstiger, ohne Abstriche bei Qualität, Sicherheit oder Wartbarkeit. Den Code prüfe und verantworte ich selbst."
+      },
+      {
+        "q": "Gehört mir der Code?",
+        "a": "Ja. Nach Bezahlung gehört dir alles — Code, Design, Inhalte. Kein Vendor-Lock-in, kein Abo-Zwang. Du kannst selbst hosten und pflegen oder mich weiter beauftragen."
+      },
+      {
+        "q": "Was ist nicht enthalten?",
+        "a": "Domain- und Hosting-Kosten, Lizenzen für Premium-Plugins oder Stock-Fotografie sowie laufende Wartung nach der inkludierten Supportphase."
       },
       {
         "q": "Was passiert nach dem Launch?",
-        "a": "Je nach Tier 2–3 Monate Support inklusive. Danach optional Wartungs-Retainer oder Abrechnung nach Stundensatz."
+        "a": "Je nach Projekt etwas Support inklusive. Danach optional ein Wartungs-Retainer oder Abrechnung nach Stundensatz — ganz nach Bedarf."
       }
     ]
   },
@@ -469,7 +481,7 @@
     "eyebrow": "06 / Kontakt",
     "title": "Lass uns zusammenarbeiten.",
     "titleAccent": "zusammenarbeiten",
-    "lede": "Du hast ein Projekt im Kopf? Erzähl mir davon — ein unverbindlicher Call zeigt schnell, ob wir zueinander passen.",
+    "lede": "Du hast ein Projekt im Kopf? Erzähl mir davon — per E-Mail oder Call, ganz wie du magst.",
     "links": [
       {
         "label": "E-Mail",
@@ -488,7 +500,7 @@
       },
       {
         "label": "Standort",
-        "value": "Berlin, Deutschland",
+        "value": "Paderborn, Deutschland",
         "href": "#"
       }
     ],
@@ -506,10 +518,11 @@
       "success": "Danke! Ich melde mich innerhalb von 24 Stunden.",
       "successSub": "In der Zwischenzeit — gerne vorab ein paar Arbeiten anschauen.",
       "budgets": [
-        "< 5k",
+        "< 1k",
+        "1–3k",
+        "3–5k",
         "5–10k",
-        "10–25k",
-        "25k+",
+        "10k+",
         "Weiß nicht"
       ],
       "types": [
@@ -530,6 +543,7 @@
     }
   },
   "caseStudy": {
+    "viewCase": "Case Study",
     "backToProjects": "← Zurück zu Projekten",
     "visitLiveSite": "Live ansehen",
     "notFound": "Projekt nicht gefunden.",
@@ -557,10 +571,10 @@
       "description": "Die angeforderte Seite existiert nicht. Zurück zur Startseite von kipphard.com."
     },
     "home": {
-      "title": "André Kipphard — Frontend Engineer & Web Developer in Berlin",
-      "description": "Freelance Frontend Engineer aus Berlin. Schnelle, durchdachte Webseiten, Shops und individuelle Web-Applikationen — End-to-End aus einer Hand.",
-      "ogTitle": "André Kipphard — Frontend Engineer & Web Developer in Berlin",
-      "ogDescription": "Freelance Frontend Engineer aus Berlin. Schnelle, durchdachte Webseiten, Shops und individuelle Web-Applikationen — End-to-End aus einer Hand."
+      "title": "André Kipphard — Frontend Engineer & Web Developer in Paderborn",
+      "description": "Freelance Frontend Engineer aus Paderborn. Schnelle, durchdachte Webseiten, Shops und individuelle Web-Applikationen — End-to-End aus einer Hand.",
+      "ogTitle": "André Kipphard — Frontend Engineer & Web Developer in Paderborn",
+      "ogDescription": "Freelance Frontend Engineer aus Paderborn. Schnelle, durchdachte Webseiten, Shops und individuelle Web-Applikationen — End-to-End aus einer Hand."
     },
     "impressum": {
       "title": "Impressum — André Kipphard",
@@ -576,7 +590,7 @@
     },
     "about": {
       "title": "Über mich — André Kipphard",
-      "description": "Senior Frontend Engineer aus Berlin. 8+ Jahre Erfahrung, KI-gestützter Workflow, End-to-End vom Konzept zum Deployment."
+      "description": "Frontend Engineer aus Paderborn. 8+ Jahre Erfahrung, KI-gestützter Workflow, End-to-End vom Konzept zum Deployment."
     },
     "services": {
       "title": "Leistungen — André Kipphard",
@@ -592,7 +606,7 @@
     },
     "contact": {
       "title": "Kontakt — André Kipphard",
-      "description": "Projekt anfragen oder unverbindlichen Discovery-Call vereinbaren. Antwort innerhalb von 24 Stunden, werktags."
+      "description": "Projekt anfragen — per E-Mail oder kurzem Call. Antwort meist am selben Tag."
     },
     "augusta-beauty": {
       "title": "Augusta Beauty — Case Study — André Kipphard",
@@ -608,17 +622,17 @@
     }
   },
   "cta": {
-    "title": "Bereit für ein nächstes Projekt? Ein Discovery-Call kostet 30 Minuten.",
+    "title": "Bereit für dein nächstes Projekt? Schreib mir — unkompliziert, Antwort meist am selben Tag.",
     "button": "Projekt anfragen"
   },
   "footer": {
-    "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",
+    "tagline": "Frontend Engineer & fullstack web developer. Made in Paderborn.",
     "kontaktTitle": "Kontakt",
     "kontaktLede": "Erzähl mir von deinem Projekt. Antwort innerhalb von 24 Stunden, werktags.",
     "pagesTitle": "Seiten",
     "profilesTitle": "Profile",
     "locationTitle": "Standort",
-    "locationCity": "Berlin, Deutschland",
+    "locationCity": "Paderborn, Deutschland",
     "locationRemote": "Remote weltweit",
     "imprint": "Impressum",
     "privacy": "Datenschutz",

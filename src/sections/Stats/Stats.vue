@@ -1,10 +1,10 @@
 <template>
-  <section class="stats-section" aria-label="Kennzahlen">
+  <section class="section--tight" aria-label="Kennzahlen">
     <div class="container">
       <div class="stats">
         <div v-for="(stat, i) in stats" :key="i" class="stat">
-          <div class="v">{{ stat.num }}</div>
-          <div class="k">{{ stat.label }}</div>
+          <div class="stat__num">{{ stat.num }}</div>
+          <div class="stat__label">{{ stat.label }}</div>
         </div>
       </div>
     </div>
@@ -18,5 +18,3 @@ const { tm } = useI18n()
 
 const stats = tm('hero.stats') as Array<{ num: string; label: string }>
 </script>
-
-<style lang="scss" scoped src="./Stats.scss" />

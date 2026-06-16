@@ -1,12 +1,12 @@
 <template>
-  <section class="cta-banner">
+  <section class="section--tight">
     <div class="container">
-      <div class="grid">
+      <div class="cta-panel">
         <h2>{{ t('cta.title') }}</h2>
-        <RouterLink to="/contact" class="btn btn--inverted">
+        <a :href="href" class="btn btn--primary">
           {{ t('cta.button') }}
           <span class="arrow" aria-hidden="true">→</span>
-        </RouterLink>
+        </a>
       </div>
     </div>
   </section>
@@ -14,7 +14,10 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+
+withDefaults(defineProps<{ href?: string }>(), {
+  href: '/#contact',
+})
+
 const { t } = useI18n()
 </script>
-
-<style lang="scss" scoped src="./CtaBanner.scss" />

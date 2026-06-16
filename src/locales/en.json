@@ -24,7 +24,7 @@
     "workLink": "See all projects"
   },
   "hero": {
-    "status": "Available from June 2026 · Berlin / Remote",
+    "status": "Available now · Paderborn / Remote",
     "tagLeft": "01 / Start",
     "tagRight": "Frontend · Fullstack · SEO",
     "titleLine1": "Frontend Engineer",
@@ -44,12 +44,12 @@
         "label": "Projects shipped"
       },
       {
-        "num": "#1",
-        "label": "E-commerce DE*"
+        "num": "< 1s",
+        "label": "Load time"
       },
       {
-        "num": "100%",
-        "label": "Solo workflow"
+        "num": "24h",
+        "label": "Response time"
       }
     ],
     "statsNote": ""
@@ -57,13 +57,13 @@
   "about": {
     "eyebrow": "02 / About",
     "title": "One developer. One contact. The full stack.",
-    "intro": "Hi, I'm André. For eight years I've been building websites and shops — as Senior Frontend Engineer at Germany's largest e-commerce platform by day, and as a freelancer for companies that want a reliable partner.",
+    "intro": "Hi, I'm André. For eight years I've been building websites and shops — as a Frontend Engineer at Germany's largest e-commerce platform by day, and as a freelancer for companies that want a reliable partner.",
     "para2": "No agency pipeline, no middle layer. Design, frontend, backend, SEO, hosting — I do it all myself. Which means shorter loops, transparent communication, and decisions that actually fit the project.",
     "para3": "I work AI-assisted. Not as a gimmick, but because it lets me ship with the care of a team in the time of one person.",
     "credentials": [
       {
         "year": "Since 2021",
-        "what": "Senior Frontend Engineer",
+        "what": "Frontend Engineer",
         "where": "E-commerce platform, DE"
       },
       {
@@ -86,8 +86,8 @@
     "workflowTitle": "My workflow",
     "steps": [
       {
-        "label": "Discovery call",
-        "desc": "30 min — understand the problem, scope.",
+        "label": "First contact",
+        "desc": "By email or a quick call — understand the problem, scope.",
         "ai": false
       },
       {
@@ -402,11 +402,11 @@
   "pricing": {
     "eyebrow": "05 / Pricing",
     "title": "Priced up front.",
-    "intro": "Fixed starting prices per project type. Individual scope adjusted after a shared discovery call.",
+    "intro": "Fixed starting prices per project type. Individual scope adjusted after a quick chat.",
     "tiers": [
       {
         "name": "Landing",
-        "price": "2,400",
+        "price": "900",
         "desc": "Single page for campaigns, launches, or solo founders.",
         "features": [
           "Up to 4 custom sections",
@@ -418,7 +418,7 @@
       },
       {
         "name": "Website",
-        "price": "6,800",
+        "price": "2,400",
         "desc": "Full company website with editorial CMS.",
         "featured": true,
         "badge": "Most popular",
@@ -432,7 +432,7 @@
       },
       {
         "name": "Webshop",
-        "price": "12,500",
+        "price": "4,900",
         "desc": "Shop on WooCommerce, Shopify or custom — integrations included.",
         "features": [
           "Up to 50 products migrated / set up",
@@ -444,24 +444,36 @@
       }
     ],
     "note": "Hourly rate for maintenance, small tasks or retainer:",
-    "rate": "€120/h",
+    "rate": "€45/h",
     "faqTitle": "Frequent questions",
     "faq": [
       {
         "q": "How do payments work?",
-        "a": "30 % deposit on signing, 70 % at launch. 14-day payment terms, bank transfer or direct debit."
+        "a": "Usually 100 % up front. For larger projects, 50 / 50 on request — half to start, half at launch. Invoiced with short payment terms, by bank transfer."
+      },
+      {
+        "q": "Do we have to get on a call?",
+        "a": "No. If you'd like, we'll hop on a quick call — but email works just as well. Whatever suits you."
+      },
+      {
+        "q": "How long does a project take?",
+        "a": "Very flexible — from a few days to a few weeks, depending on scope, payment and my availability. With a clear scope and some urgency, overnight is possible too. Exact timeline after a quick chat."
+      },
+      {
+        "q": "Do you work with AI?",
+        "a": "Yes, throughout. AI is a core part of my workflow — from research to code to testing. It makes me faster and therefore cheaper, with no compromise on quality, security or maintainability. I review and own the code myself."
+      },
+      {
+        "q": "Do I own the code?",
+        "a": "Yes. Once paid, everything is yours — code, design, content. No vendor lock-in, no forced subscription. Host and maintain it yourself, or keep me on."
       },
       {
         "q": "What's not included?",
         "a": "Domain and hosting fees, licenses for premium plugins or stock photography, and ongoing maintenance after the included support window."
       },
       {
-        "q": "How long does a project take?",
-        "a": "Landing in 1–2 weeks, full website 4–6 weeks, webshop 6–10 weeks. Exact timeline after the discovery call."
-      },
-      {
         "q": "What happens after launch?",
-        "a": "2–3 months of support included depending on tier. After that, optional maintenance retainer or hourly billing."
+        "a": "Some support included depending on the project. After that, an optional maintenance retainer or hourly billing — whatever you need."
       }
     ]
   },
@@ -469,7 +481,7 @@
     "eyebrow": "06 / Contact",
     "title": "Let's work together.",
     "titleAccent": "work together",
-    "lede": "Got a project in mind? Tell me about it — a no-strings call is the fastest way to see if we're a fit.",
+    "lede": "Got a project in mind? Tell me about it — by email or call, whatever you prefer.",
     "links": [
       {
         "label": "Email",
@@ -488,7 +500,7 @@
       },
       {
         "label": "Location",
-        "value": "Berlin, Germany",
+        "value": "Paderborn, Germany",
         "href": "#"
       }
     ],
@@ -506,10 +518,11 @@
       "success": "Thanks! I'll get back to you within 24 hours.",
       "successSub": "Meanwhile — feel free to browse the work.",
       "budgets": [
-        "< 5k",
+        "< 1k",
+        "1–3k",
+        "3–5k",
         "5–10k",
-        "10–25k",
-        "25k+",
+        "10k+",
         "Not sure"
       ],
       "types": [
@@ -530,6 +543,7 @@
     }
   },
   "caseStudy": {
+    "viewCase": "Case study",
     "backToProjects": "← Back to projects",
     "visitLiveSite": "Visit live site",
     "notFound": "Project not found.",
@@ -557,10 +571,10 @@
       "description": "The requested page does not exist. Back to kipphard.com home."
     },
     "home": {
-      "title": "André Kipphard — Frontend Engineer & Web Developer in Berlin",
-      "description": "Freelance Frontend Engineer based in Berlin. Fast, thoughtful websites, shops and custom web apps — end-to-end, from one person.",
-      "ogTitle": "André Kipphard — Frontend Engineer & Web Developer in Berlin",
-      "ogDescription": "Freelance Frontend Engineer based in Berlin. Fast, thoughtful websites, shops and custom web apps — end-to-end, from one person."
+      "title": "André Kipphard — Frontend Engineer & Web Developer in Paderborn",
+      "description": "Freelance Frontend Engineer based in Paderborn. Fast, thoughtful websites, shops and custom web apps — end-to-end, from one person.",
+      "ogTitle": "André Kipphard — Frontend Engineer & Web Developer in Paderborn",
+      "ogDescription": "Freelance Frontend Engineer based in Paderborn. Fast, thoughtful websites, shops and custom web apps — end-to-end, from one person."
     },
     "impressum": {
       "title": "Imprint — André Kipphard",
@@ -576,7 +590,7 @@
     },
     "about": {
       "title": "About — André Kipphard",
-      "description": "Senior Frontend Engineer based in Berlin. 8+ years of experience, AI-assisted workflow, end-to-end from concept to deployment."
+      "description": "Frontend Engineer based in Paderborn. 8+ years of experience, AI-assisted workflow, end-to-end from concept to deployment."
     },
     "services": {
       "title": "Services — André Kipphard",
@@ -592,7 +606,7 @@
     },
     "contact": {
       "title": "Contact — André Kipphard",
-      "description": "Start a project or schedule a no-strings discovery call. Reply within 24 hours, weekdays."
+      "description": "Start a project — by email or a quick call. Usually a same-day reply."
     },
     "augusta-beauty": {
       "title": "Augusta Beauty — Case Study — André Kipphard",
@@ -608,17 +622,17 @@
     }
   },
   "cta": {
-    "title": "Ready for your next project? A discovery call is 30 minutes.",
+    "title": "Ready for your next project? Drop me a line — usually a same-day reply.",
     "button": "Start a project"
   },
   "footer": {
-    "tagline": "Frontend Engineer & fullstack web developer. Made in Berlin.",
+    "tagline": "Frontend Engineer & fullstack web developer. Made in Paderborn.",
     "kontaktTitle": "Contact",
     "kontaktLede": "Tell me about your project. Reply within 24 hours, weekdays.",
     "pagesTitle": "Pages",
     "profilesTitle": "Profiles",
     "locationTitle": "Location",
-    "locationCity": "Berlin, Germany",
+    "locationCity": "Paderborn, Germany",
     "locationRemote": "Remote worldwide",
     "imprint": "Imprint",
     "privacy": "Privacy",

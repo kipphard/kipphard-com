@@ -1,43 +1,25 @@
 <template>
-  <!-- Topbar: thin strip above the sticky nav, scrolls away with the page -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span class="status">
-        <span class="dot" aria-hidden="true"></span>
-        {{ t('hero.status') }}
-      </span>
-      <span class="right">{{ t('topbar.right') }}</span>
-    </div>
-  </div>
-
-  <!-- Sticky nav -->
   <header class="nav">
-    <div class="container nav-inner">
+    <div class="container nav__inner">
       <RouterLink to="/" class="brand" :aria-label="t('nav.home')">
-        <span class="mark" aria-hidden="true">AK</span>
-        <span class="name">André Kipphard</span>
+        <span class="brand__mark" aria-hidden="true">AK</span>
+        <span>André Kipphard</span>
       </RouterLink>
 
-      <nav class="nav-links" :aria-label="t('nav.mobileMenuLabel')">
-        <RouterLink to="/about">{{ t('nav.about') }}</RouterLink>
-        <RouterLink to="/services">{{ t('nav.services') }}</RouterLink>
-        <RouterLink to="/work">{{ t('nav.work') }}</RouterLink>
-        <RouterLink to="/pricing">{{ t('nav.pricing') }}</RouterLink>
-        <RouterLink to="/contact">{{ t('nav.contact') }}</RouterLink>
+      <nav class="nav__links" :aria-label="t('nav.mobileMenuLabel')">
+        <RouterLink to="/#about">{{ t('nav.about') }}</RouterLink>
+        <RouterLink to="/#services">{{ t('nav.services') }}</RouterLink>
+        <RouterLink to="/#work">{{ t('nav.work') }}</RouterLink>
+        <RouterLink to="/#pricing">{{ t('nav.pricing') }}</RouterLink>
+        <RouterLink to="/#contact">{{ t('nav.contact') }}</RouterLink>
       </nav>
 
-      <div class="nav-controls">
-        <div class="pill-toggle" role="group" :aria-label="t('nav.langLabel')">
-          <button
-            :class="{ active: locale === 'de' }"
-            :aria-pressed="locale === 'de'"
-            @click="locale = 'de'"
-          >DE</button>
-          <button
-            :class="{ active: locale === 'en' }"
-            :aria-pressed="locale === 'en'"
-            @click="locale = 'en'"
-          >EN</button>
+      <div class="nav__spacer"></div>
+
+      <div class="nav__tools">
+        <div class="lang-toggle" role="group" :aria-label="t('nav.langLabel')">
+          <button :class="{ active: locale === 'de' }" :aria-pressed="locale === 'de'" @click="locale = 'de'">DE</button>
+          <button :class="{ active: locale === 'en' }" :aria-pressed="locale === 'en'" @click="locale = 'en'">EN</button>
         </div>
 
         <button
@@ -45,10 +27,10 @@
           @click="toggleTheme"
           :aria-label="theme === 'dark' ? t('nav.themeLight') : t('nav.themeDark')"
         >
-          <Icon :name="theme === 'dark' ? 'sun' : 'moon'" :size="16" />
+          <Icon :name="theme === 'dark' ? 'sun' : 'moon'" :size="18" />
         </button>
 
-        <RouterLink to="/contact" class="btn btn--sm nav-cta">
+        <RouterLink to="/#contact" class="btn btn--primary btn--sm nav-cta">
           {{ t('nav.ctaShort') }}
           <span class="arrow" aria-hidden="true">→</span>
         </RouterLink>
@@ -66,7 +48,7 @@
     </div>
   </header>
 
-  <!-- Slide-down mobile drawer -->
+  <!-- Mobile drawer -->
   <div
     :class="['mobile-menu', { open: menuOpen }]"
     id="mobile-menu"
@@ -74,16 +56,15 @@
     :aria-label="t('nav.mobileMenuLabel')"
   >
     <ol>
-      <li><RouterLink to="/" @click="menuOpen = false">{{ t('nav.home') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/about" @click="menuOpen = false">{{ t('nav.about') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/services" @click="menuOpen = false">{{ t('nav.services') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/work" @click="menuOpen = false">{{ t('nav.work') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/pricing" @click="menuOpen = false">{{ t('nav.pricing') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/contact" @click="menuOpen = false">{{ t('nav.contact') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink to="/#about" @click="menuOpen = false">{{ t('nav.about') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink to="/#services" @click="menuOpen = false">{{ t('nav.services') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink to="/#work" @click="menuOpen = false">{{ t('nav.work') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink to="/#pricing" @click="menuOpen = false">{{ t('nav.pricing') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink to="/#contact" @click="menuOpen = false">{{ t('nav.contact') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
     </ol>
 
     <div class="mobile-controls">
-      <div class="pill-toggle" role="group" :aria-label="t('nav.langLabel')">
+      <div class="lang-toggle" role="group" :aria-label="t('nav.langLabel')">
         <button :class="{ active: locale === 'de' }" :aria-pressed="locale === 'de'" @click="locale = 'de'">DE</button>
         <button :class="{ active: locale === 'en' }" :aria-pressed="locale === 'en'" @click="locale = 'en'">EN</button>
       </div>
@@ -92,13 +73,13 @@
         @click="toggleTheme"
         :aria-label="theme === 'dark' ? t('nav.themeLight') : t('nav.themeDark')"
       >
-        <Icon :name="theme === 'dark' ? 'sun' : 'moon'" :size="16" />
+        <Icon :name="theme === 'dark' ? 'sun' : 'moon'" :size="18" />
       </button>
     </div>
 
     <div class="meta">
       <span>andre@kipphard.com</span>
-      <span>Berlin · 2026</span>
+      <span>Paderborn · Remote</span>
     </div>
   </div>
 </template>
@@ -126,7 +107,7 @@ function onKey(e: KeyboardEvent) {
 }
 
 function onResize() {
-  if (window.innerWidth >= 900 && menuOpen.value) menuOpen.value = false
+  if (window.innerWidth >= 981 && menuOpen.value) menuOpen.value = false
 }
 
 // Lock body scroll while the drawer is open.
@@ -139,11 +120,14 @@ watch(menuOpen, (open) => {
 watch(() => route.fullPath, () => { menuOpen.value = false })
 
 onMounted(() => {
+  // Precedence: ?theme= override (shareable links) → stored preference → dark default.
+  const param = new URLSearchParams(window.location.search).get('theme')
   const stored = localStorage.getItem('ak-theme')
-  if (stored === 'dark' || stored === 'light') {
-    theme.value = stored
+  if (param === 'dark' || param === 'light') {
+    theme.value = param
+    localStorage.setItem('ak-theme', param)
   } else {
-    theme.value = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    theme.value = stored === 'light' ? 'light' : 'dark'
   }
   document.documentElement.setAttribute('data-theme', theme.value)
 
@@ -157,5 +141,3 @@ onUnmounted(() => {
   if (typeof document !== 'undefined') document.documentElement.style.overflow = ''
 })
 </script>
-
-<style lang="scss" scoped src="./Header.scss" />
