@@ -1,0 +1,15 @@
+{
+  "category": "wordpress",
+  "tags": ["WordPress", "ACF", "CMS"],
+  "publishedAt": "2026-06-29",
+  "de": {
+    "title": "ACF Flexible Content: eine wartbare Block-Library statt Page-Builder",
+    "description": "Mit ACF Flexible Content eine wartbare WordPress Block-Library bauen: Redakteure bekommen Page-Builder-Freiheit ohne die Performance-Nachteile.",
+    "excerpt": "Wie du mit ACF Flexible Content eine Block-Library baust, die Redakteuren volle Flexibilität gibt – ohne Page-Builder-Ballast."
+  },
+  "en": {
+    "title": "ACF Flexible Content Block Library: Page-Builder Freedom Without the Bloat",
+    "description": "How to build a maintainable ACF Flexible Content block library in WordPress so editors can rearrange sections without a page builder.",
+    "excerpt": "Build an ACF Flexible Content block library that gives editors real flexibility while keeping full control over markup and performance."
+  }
+}

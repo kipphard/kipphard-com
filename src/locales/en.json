@@ -4,6 +4,7 @@
     "about": "About",
     "services": "Services",
     "work": "Work",
+    "blog": "Blog",
     "pricing": "Pricing",
     "contact": "Contact",
     "cta": "Get in touch",
@@ -17,6 +18,30 @@
   },
   "topbar": {
     "right": "DE · REMOTE / 2026"
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Notes on web, WordPress & performance",
+    "intro": "Hands-on lessons from real projects: WordPress without page-builder bloat, fast frontends with Vue & Nuxt, e-commerce automation and SEO. Short, concrete, no marketing fluff.",
+    "allCategories": "All",
+    "categoriesTitle": "Categories",
+    "recentTitle": "Recent posts",
+    "relatedTitle": "You might also like",
+    "readMore": "Read more",
+    "readingTime": "{min} min read",
+    "backToBlog": "← Back to blog",
+    "empty": "New posts coming soon.",
+    "notFound": "This post could not be found or is not published yet.",
+    "ctaTitle": "Got a project in mind?",
+    "ctaText": "I help with WordPress, performance and custom web apps.",
+    "ctaButton": "Start a project",
+    "categories": {
+      "wordpress": "WordPress",
+      "performance": "Performance",
+      "frontend": "Frontend",
+      "seo": "SEO",
+      "ecommerce": "E-Commerce"
+    }
   },
   "home": {
     "aboutLink": "More about my workflow",
@@ -654,6 +679,10 @@
     "work": {
       "title": "Work — André Kipphard",
       "description": "Selected projects from recent years. Websites, shops and platforms — multilingual, performant, maintainable."
+    },
+    "blog": {
+      "title": "Blog — André Kipphard",
+      "description": "Hands-on articles on WordPress, web performance, Vue/Nuxt, e-commerce and SEO — by freelance developer André Kipphard, Paderborn."
     },
     "pricing": {
       "title": "Pricing — André Kipphard",

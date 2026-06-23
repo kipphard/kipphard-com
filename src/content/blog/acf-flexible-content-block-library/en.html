@@ -1,0 +1,55 @@
+<h2>ACF Flexible Content Block Library: The Maintainable Alternative to Page Builders</h2>
+
+<p>When clients ask for a WordPress site, the request often sounds like this: "We want it to be easy to manage, and we'd like to update content ourselves." In practice, that conversation leads quickly to page builders — Elementor, Divi, WPBakery. The appeal is obvious: drag-and-drop, visual editing, instant feedback. The tradeoff is less obvious but very real: page builders are compromises. They produce bloated HTML, load JavaScript and CSS for features you'll never use, and often make custom designs <em>harder</em> to implement, not easier.</p>
+
+<p>ACF Flexible Content is a different approach. There's no visual drag-and-drop editor, but it gives editors genuine flexibility while letting the developer maintain full control over markup, styling, and performance.</p>
+
+<h2>The Concept: Predefined Blocks Instead of a Blank Canvas</h2>
+
+<p>The core idea is straightforward. Instead of handing an editor a free-form text area — or an infinite palette of drag-and-drop widgets — you define a library of section types upfront: hero section, text-with-image, testimonials, FAQ, contact form, team overview, and so on. Each section type has exactly the fields it needs: image upload, heading, body text, links.</p>
+
+<p>In the WordPress admin, editors see an ordered list of these blocks. They can add new ones, reorder existing ones, deactivate or duplicate sections. The order determines what appears on the page. That's the flexibility clients actually want — and it's structured enough that no one accidentally breaks the layout by tweaking a margin value in the wrong place.</p>
+
+<h2>How Blocks Map to Template Parts</h2>
+
+<p>On the development side, each section type maps to a PHP template part. The main loop is minimal:</p>
+
+<pre><code>if ( have_rows( 'sections' ) ) :
+  while ( have_rows( 'sections' ) ) : the_row();
+    $layout = get_row_layout();
+    get_template_part( 'template-parts/sections/' . $layout );
+  endwhile;
+endif;
+</code></pre>
+
+<p>Each <code>sections/hero.php</code>, <code>sections/text-image.php</code>, and so on is a self-contained file. It reads its ACF fields, renders its HTML, and does nothing else. That makes templates easy to test, easy to maintain, and easy to extend.</p>
+
+<h2>Reusability Across Pages</h2>
+
+<p>One of the biggest practical advantages over page builders: the same block library works across every page on the site. Build a "Testimonials" block once, and it's available on the homepage, the about page, and the services overview — with identical markup and identical styles. With page builders, you often end up in a situation where every page is built slightly differently because different people used different elements at different times.</p>
+
+<p>A defined block library means there's a single source of truth for each section type. A change to the template immediately affects every page that uses that block. That kind of consistency is invaluable when maintaining a site a year or two after launch.</p>
+
+<h2>Performance and Markup Control</h2>
+
+<p>Page builders generate HTML that has to be generic enough to accommodate any configuration — which produces deeply nested <code>&lt;div&gt;</code> structures, inline styles, and JavaScript dependencies. With your own templates, you write exactly the HTML you need. No more, no less.</p>
+
+<p>The performance impact is direct: no builder JavaScript, no builder CSS, no global grid definitions included on pages that don't need them. Core Web Vitals scores reflect this.</p>
+
+<h2>In Practice: 41 Section Types and 16 Blocks</h2>
+
+<p>I've applied this approach at different scales in real client projects. For the <a href="/work/wickie">Wickie project</a> — a multilingual fintech website in German, English, French, and Italian — the block library contains 41 distinct section types. Everything from simple text-hero sections to complex comparison tables and interactive feature overviews. Each is a clean template that editors can combine in any order.</p>
+
+<p>For <a href="/work/augusta-beauty">Augusta Beauty</a>, the focus was different: a smaller beauty studio site with 16 blocks, where the primary goal was giving the client self-sufficiency. The owner can add sections, swap text and images, and restructure pages without needing a developer for every small change.</p>
+
+<h2>The Editor Experience</h2>
+
+<p>A common objection: "Isn't ACF Flexible Content more complicated than a visual editor?" In practice, no — if the fields are named clearly and each layout has a preview image. ACF Pro lets you add a description and a screenshot to each section type. Editors see at a glance what they're adding.</p>
+
+<p>What they <em>can't</em> do is override font sizes, colors, or spacing manually. That sounds like a limitation. It's actually a feature. It means the site looks the same after a year of editor use as it did on launch day.</p>
+
+<h2>ACF Flexible Content Block Library: Worth Building Right</h2>
+
+<p>If you're building a WordPress site intended to be maintained long-term, an ACF Flexible Content block library is the cleaner path. Editors get real flexibility — add sections, reorder, deactivate — without you giving up control over markup, performance, or design consistency.</p>
+
+<p>If you're planning a new WordPress project or looking to move away from a page builder, I'm happy to help figure out the right approach. <a href="/#contact">Get in touch.</a></p>

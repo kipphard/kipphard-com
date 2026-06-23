@@ -1,0 +1,90 @@
+<p>Wenn du digitale Produkte über Digistore24 verkaufst, wirst du schnell feststellen: eine richtige API gibt es nicht. Kein SDK, keine Bibliothek, kein OAuth-Flow. Was Digistore24 bietet, ist ein IPN — ein <strong>Digistore24 Webhook</strong>, der bei Verkauf, Refund oder Chargeback an eine URL deiner Wahl feuert. Für das Projekt <a href="/work/profit-prime">Profit Prime</a> habe ich darauf eine vollständige Fulfillment-Logik aufgebaut: Kurszugänge anlegen, Multi-Tier-Affiliate-Provisionen verwalten und Refunds mit Clawback verarbeiten. Hier ist, wie das funktioniert — und wo die Fallstricke sind.</p>
+
+<h2>Den Digistore24 Webhook empfangen</h2>
+
+<p>Digistore24 schickt einen HTTP-POST an deine Endpoint-URL, wenn ein definiertes Event eintritt. Du registrierst die URL in deinem Vendor-Account unter "IPN-Einstellungen". Die Payload kommt als <code>application/x-www-form-urlencoded</code> — kein JSON, was viele überrascht.</p>
+
+<p>Als WordPress-Entwickler registrierst du einen Custom REST Endpoint:</p>
+
+<pre><code>add_action( 'rest_api_init', function () {
+    register_rest_route( 'myplugin/v1', '/digistore-ipn', [
+        'methods'             =&gt; 'POST',
+        'callback'            =&gt; 'handle_digistore_ipn',
+        'permission_callback' =&gt; '__return_true',
+    ] );
+} );</code></pre>
+
+<p>Keine WordPress-Nonce, keine Cookie-Auth — das Request kommt von Digistore24, nicht von einem Browser. <code>__return_true</code> ist hier korrekt, die Absicherung läuft über die Signaturprüfung.</p>
+
+<p>Digistore24 signiert die Payload mit einem SHA-512-HMAC. Prüfe die Signatur als allererstes, bevor du irgendetwas anderes tust:</p>
+
+<pre><code>$secret     = get_option( 'digistore_ipn_secret' );
+$body       = file_get_contents( 'php://input' );
+$given_sig  = $_SERVER['HTTP_X_IPN_SIGNATURE'] ?? '';
+$expected   = hash_hmac( 'sha512', $body, $secret );
+
+if ( ! hash_equals( $expected, $given_sig ) ) {
+    status_header( 403 );
+    exit;
+}</code></pre>
+
+<p>Ohne diese Prüfung kann jeder beliebige Request Zugänge anlegen.</p>
+
+<h2>Was du bei einem Verkauf tust</h2>
+
+<p>Das Event <code>ipn_action = 'paid'</code> signalisiert einen erfolgreichen Kauf. Deine Aufgaben:</p>
+
+<ol>
+  <li>Käufer-E-Mail aus der Payload auslesen</li>
+  <li>WordPress-User anlegen oder vorhandenen finden</li>
+  <li>MasterStudy LMS: Kurs-Enrollment hinzufügen</li>
+  <li>AffiliateWP: Provision für den Affiliate eintragen (mit korrektem Referral-Betrag)</li>
+  <li>Transaktion in eigener Tabelle loggen</li>
+</ol>
+
+<p>Für Multi-Tier-Affiliate musst du die Affiliate-Hierarchie selbst traversieren — AffiliateWP bietet dafür keine native Lösung out of the box. Das geht über eine rekursive Abfrage der Affiliate-Eltern-Beziehung, wobei du für jede Tier-Stufe einen eigenen Referral-Eintrag anlegst.</p>
+
+<h2>Idempotenz: Wie du mit Retries umgehst</h2>
+
+<p>Digistore24 sendet Webhooks erneut, wenn dein Endpoint nicht mit 200 antwortet — oder auch wenn es Netzwerkprobleme gibt. Du kannst denselben IPN mehrfach erhalten. Ohne Schutz dagegen legst du doppelte Accounts an, buchst Provisionen mehrfach oder gibst Zugang, der bereits existiert.</p>
+
+<p>Die Lösung ist eine Idempotenz-Tabelle. Speichere <code>order_id</code> + <code>ipn_action</code> als zusammengesetzten Schlüssel und verarbeite das Event nur einmal:</p>
+
+<pre><code>$key = $order_id . '_' . $ipn_action;
+
+if ( get_transient( 'ds_ipn_processed_' . md5( $key ) ) ) {
+    wp_send_json_success( [ 'status' =&gt; 'already_processed' ] );
+    exit;
+}
+
+set_transient( 'ds_ipn_processed_' . md5( $key ), true, DAY_IN_SECONDS * 30 );</code></pre>
+
+<p>Transients sind schnell, aber bei parallelen Requests auf stark frequentierten Endpoints besser mit einem Datenbank-Lock arbeiten. Für die meisten Projekte reichen Transients völlig aus.</p>
+
+<h2>Refunds und Chargebacks — Revoke und Clawback</h2>
+
+<p>Bei <code>ipn_action = 'refund'</code> oder <code>'chargeback'</code> musst du rückabwickeln:</p>
+
+<ul>
+  <li><strong>Kurszugang entziehen:</strong> MasterStudy LMS Enrollment entfernen</li>
+  <li><strong>Provision rückbuchen:</strong> Bestehenden AffiliateWP-Referral auf "Rejected" setzen oder einen negativen Ausgleichs-Referral anlegen (je nachdem, ob der Affiliate bereits ausgezahlt wurde)</li>
+  <li><strong>Multi-Tier-Clawback:</strong> Alle Tier-Ebenen rückabwickeln, nicht nur die erste</li>
+</ul>
+
+<p>Für den Clawback gilt dieselbe Idempotenz-Logik. Ein Refund-Event darf den Zugang nur einmal entziehen, auch wenn Digistore24 es dreimal sendet.</p>
+
+<h2>Logging und warum du immer 200 zurückgibst</h2>
+
+<p>Log jede eingehende IPN mit Payload, Timestamp und Verarbeitungsstatus. Wenn etwas schiefgeht, willst du wissen was — und zwar nicht erst, wenn sich ein Käufer beschwert, der keinen Zugang bekommen hat.</p>
+
+<p>Gib immer HTTP 200 zurück, solange die Signatur gültig ist — auch wenn die Verarbeitung intern fehlschlägt. Wenn du einen Fehler-Statuscode zurückgibst, schickt Digistore24 denselben IPN erneut, was du mit Idempotenz zwar absichern kannst, aber unnötige Retries erzeugt. Die korrekte Fehlerbehandlung ist: loggen, 200 antworten, und den Fehlerfall asynchron nachbearbeiten (z. B. über eine WordPress Queue oder einen Cron-Job).</p>
+
+<pre><code>// Am Ende des Handlers immer:
+wp_send_json_success( [ 'status' =&gt; 'ok' ] );
+exit;</code></pre>
+
+<h2>Fazit</h2>
+
+<p>Kein offizielles API bedeutet nicht, dass Automatisierung unmöglich ist. Der Digistore24 IPN-Webhook ist robust genug, um darauf vollständiges Fulfillment, Refund-Handling und Affiliate-Logik aufzubauen — wenn du Signaturprüfung, Idempotenz und sauberes Logging von Anfang an einbaust. Wer das nachrüstet, macht mehr Arbeit als wer es von vorne richtig macht.</p>
+
+<p>Du baust gerade ein ähnliches System oder willst die Architektur einmal durchdenken? <a href="/#contact">Schreib mir</a> — ich helfe dir dabei, die richtigen Entscheidungen früh zu treffen.</p>

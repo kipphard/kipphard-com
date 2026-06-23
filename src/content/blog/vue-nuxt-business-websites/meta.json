@@ -1,0 +1,15 @@
+{
+  "category": "frontend",
+  "tags": ["Vue", "Nuxt", "SSG"],
+  "publishedAt": "2026-07-08",
+  "de": {
+    "title": "Vue 3 und Nuxt für Business-Websites: Wann sich SSG oder SPA wirklich lohnt",
+    "description": "Vue Nuxt Business Website oder doch WordPress? Ich zeige, wann ein statischer Site-Generator oder SSR die bessere Wahl ist – und wann nicht.",
+    "excerpt": "Vue und Nuxt bieten echte Vorteile für Business-Sites – aber sie sind nicht immer die richtige Wahl. Hier erkläre ich, wann sich der Aufwand lohnt."
+  },
+  "en": {
+    "title": "Vue 3 and Nuxt for Business Websites: When SSG or SPA Actually Pays Off",
+    "description": "Vue Nuxt for business websites – or stick with WordPress? I break down when static-site generation or SSR is the right call, and when it is not.",
+    "excerpt": "Vue and Nuxt offer real advantages for business sites – but they are not always the right tool. Here is when the investment makes sense."
+  }
+}

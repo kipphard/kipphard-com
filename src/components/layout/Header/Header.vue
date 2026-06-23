@@ -10,6 +10,7 @@
         <RouterLink to="/#about">{{ t('nav.about') }}</RouterLink>
         <RouterLink to="/#services">{{ t('nav.services') }}</RouterLink>
         <RouterLink to="/#work">{{ t('nav.work') }}</RouterLink>
+        <RouterLink to="/blog">{{ t('nav.blog') }}</RouterLink>
         <RouterLink to="/#pricing">{{ t('nav.pricing') }}</RouterLink>
         <RouterLink to="/#contact">{{ t('nav.contact') }}</RouterLink>
       </nav>
@@ -59,6 +60,7 @@
       <li><RouterLink to="/#about" @click="menuOpen = false">{{ t('nav.about') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink to="/#services" @click="menuOpen = false">{{ t('nav.services') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink to="/#work" @click="menuOpen = false">{{ t('nav.work') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink to="/blog" @click="menuOpen = false">{{ t('nav.blog') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink to="/#pricing" @click="menuOpen = false">{{ t('nav.pricing') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink to="/#contact" @click="menuOpen = false">{{ t('nav.contact') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
     </ol>

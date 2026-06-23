@@ -4,6 +4,7 @@
     "about": "Über mich",
     "services": "Leistungen",
     "work": "Projekte",
+    "blog": "Blog",
     "pricing": "Preise",
     "contact": "Kontakt",
     "cta": "Anfragen",
@@ -17,6 +18,30 @@
   },
   "topbar": {
     "right": "DE · REMOTE / 2026"
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "title": "Notizen zu Web, WordPress & Performance",
+    "intro": "Praxiswissen aus echten Projekten: WordPress ohne Page-Builder-Ballast, schnelle Frontends mit Vue & Nuxt, E-Commerce-Automatisierung und SEO. Kurz, konkret, ohne Marketing-Geschwätz.",
+    "allCategories": "Alle",
+    "categoriesTitle": "Kategorien",
+    "recentTitle": "Neueste Beiträge",
+    "relatedTitle": "Das könnte dich auch interessieren",
+    "readMore": "Weiterlesen",
+    "readingTime": "{min} Min. Lesezeit",
+    "backToBlog": "← Zurück zum Blog",
+    "empty": "Hier erscheinen bald neue Beiträge.",
+    "notFound": "Dieser Beitrag wurde nicht gefunden oder ist noch nicht veröffentlicht.",
+    "ctaTitle": "Projekt im Kopf?",
+    "ctaText": "Ich unterstütze bei WordPress, Performance und individuellen Web-Apps.",
+    "ctaButton": "Projekt anfragen",
+    "categories": {
+      "wordpress": "WordPress",
+      "performance": "Performance",
+      "frontend": "Frontend",
+      "seo": "SEO",
+      "ecommerce": "E-Commerce"
+    }
   },
   "home": {
     "aboutLink": "Mehr über meinen Workflow",
@@ -654,6 +679,10 @@
     "work": {
       "title": "Arbeiten — André Kipphard",
       "description": "Ausgewählte Projekte aus den letzten Jahren. Websites, Shops und Plattformen — multilingual, performant, wartbar."
+    },
+    "blog": {
+      "title": "Blog — André Kipphard",
+      "description": "Praxiswissen zu WordPress, Web-Performance, Vue/Nuxt, E-Commerce und SEO — von Freelance-Entwickler André Kipphard aus Paderborn."
     },
     "pricing": {
       "title": "Preise — André Kipphard",

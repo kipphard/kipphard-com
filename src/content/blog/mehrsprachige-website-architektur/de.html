@@ -1,0 +1,66 @@
+<p>Eine <strong>mehrsprachige Website</strong> klingt nach einer Plugin-Frage. In Wirklichkeit ist es zuerst eine Architekturentscheidung — und die solltest du treffen, bevor du auch nur einen Beitrag schreibst. Ich habe das für <a href="/work/wickie">Wickie</a> in vier Sprachen (DE, EN, FR, IT) und für <a href="/work/lipold">Lipold</a> in zwei Sprachen (DE, EN) durchgezogen. Hier ist, was ich dabei gelernt habe.</p>
+
+<h2>URL-Struktur: Subdomain oder Unterverzeichnis?</h2>
+
+<p>Die häufigste Frage zuerst. Du hast drei echte Optionen:</p>
+
+<ul>
+  <li><strong>Unterverzeichnis</strong> (<code>example.com/de/</code>, <code>example.com/en/</code>) — empfohlen für die meisten Projekte</li>
+  <li><strong>Subdomain</strong> (<code>de.example.com</code>, <code>en.example.com</code>) — vertretbar, aber SEO-technisch aufwendiger</li>
+  <li><strong>Separate Domain</strong> (<code>example.de</code>, <code>example.com</code>) — sinnvoll nur bei wirklich eigenständigen Marken</li>
+</ul>
+
+<p>Google behandelt Subdomains als eigenständige Websites. Das bedeutet, Link-Autorität verteilt sich auf mehrere Hosts, und du brauchst für jede Subdomain eine eigene Search Console Property. Unterverzeichnisse teilen sich Domain-Autorität, sind einfacher zu konfigurieren und bei den meisten Setups die bessere Wahl. Für Wickie und Lipold war Unterverzeichnis gesetzt — keine Diskussion.</p>
+
+<h2>hreflang: Das unterschätzte Pflichtfeld</h2>
+
+<p>hreflang teilt Suchmaschinen mit, welche Seite für welche Sprache und Region gedacht ist. Die Fehlerquote hier ist erschreckend hoch — selbst bei Projekten, die sonst sauber aufgebaut sind.</p>
+
+<p>Die häufigsten Fehler:</p>
+
+<ul>
+  <li><strong>Einseitige hreflang-Tags:</strong> Wenn Seite A auf Seite B zeigt, muss Seite B auch auf Seite A zurückzeigen. Fehlt die Gegenseite, ignoriert Google das Tag.</li>
+  <li><strong>x-default fehlt:</strong> Wenn ein Nutzer aus einer Region kommt, für die keine Sprachvariante existiert, brauchst du ein Fallback. Ohne <code>x-default</code> würfelt Google.</li>
+  <li><strong>Inkonsistente URLs:</strong> hreflang mit Trailing Slash, kanonische URL ohne — das gibt Konflikte.</li>
+</ul>
+
+<p>WPML und Polylang generieren hreflang automatisch. Bei einem Gettext-Ansatz bist du selbst dafür verantwortlich.</p>
+
+<h2>WPML vs. Polylang vs. Gettext — der echte Tradeoff</h2>
+
+<p>Diese Frage hat keine universelle Antwort, aber eine klare Entscheidungslogik:</p>
+
+<p><strong>WPML</strong> ist mächtig und gut gepflegt. Es deckt WooCommerce, Custom Post Types, Taxonomien, Strings in Themes und Plugins ab — alles out of the box. Der Preis ist real (ca. 99 EUR/Jahr für Multilingual CMS), und WPML schreibt eigene Datenbankstrukturen, die Migrationen komplizieren können. Für Kundenwebsites mit Redakteuren, die nicht technisch sind, ist WPML trotzdem oft die vernünftigste Wahl.</p>
+
+<p><strong>Polylang</strong> ist günstiger (kostenloses Core-Plugin, PRO für ~99 EUR/Jahr für volle String-Translation). Es ist schlanker als WPML, hat aber Lücken bei komplexen String-Übersetzungen aus Plugins. Für Projekte ohne WooCommerce und ohne viele Plugin-Strings ist Polylang vollkommen ausreichend.</p>
+
+<p><strong>Gettext / Theme-Level-Übersetzungen</strong> — also <code>.pot</code>-Dateien, <code>__( )</code>-Aufrufe im Theme-Code und Sprachdateien — funktionieren ohne Plugin und ohne Datenbank-Overhead. Das ist der saubere Ansatz für Theme-Strings, Buttons und UI-Labels. Für redaktionelle Inhalte (Beiträge, Seiten, ACF-Felder) reicht es aber nicht allein.</p>
+
+<p>Mein Ansatz bei Wickie und Lipold war eine Kombination: Polylang für Post/Page-Übersetzungen, Gettext für Theme-Strings. Das hält die Plugin-Abhängigkeit klein und gibt Redakteuren trotzdem ein sauberes Interface.</p>
+
+<h2>Übersetzungs-Workflow für Redakteure</h2>
+
+<p>Technik ist die eine Hälfte, Workflow die andere. Was ich empfehle:</p>
+
+<ul>
+  <li>Originalsprache ist immer die Hauptquelle. Übersetzungen sind Ableitungen — nie umgekehrt.</li>
+  <li>ACF-Felder müssen explizit für Übersetzungen konfiguriert sein (WPML: Field Groups synchronisieren; Polylang: Custom Fields in den Einstellungen freigeben).</li>
+  <li>Permalinks pro Sprache übersetzen — <code>/de/ueber-uns/</code> statt <code>/de/about/</code>. Das ist SEO-Aufwand, aber Benutzer und Suchmaschinen danken es.</li>
+  <li>Einen "Translations pending"-Status oder zumindest eine Checkliste einrichten, damit nichts auf Englisch live geht, das auf Französisch stehen soll.</li>
+</ul>
+
+<h2>SEO-Fallstricke, die ich konkret gesehen habe</h2>
+
+<p><strong>Duplicate Content durch fehlende Kanonisierung:</strong> Wenn dein Plugin beide Sprachversionen einer Seite ohne korrekte <code>rel=canonical</code> und hreflang indexiert, kämpfen sie gegeneinander.</p>
+
+<p><strong>Sitemaps:</strong> Jede Sprachvariante muss in der Sitemap stehen, idealerweise mit hreflang-Annotation. Yoast SEO und RankMath machen das automatisch, wenn das Sprachplugin korrekt integriert ist.</p>
+
+<p><strong>Robots.txt und Staging:</strong> Wenn du Sprachverzeichnisse auf Staging-Umgebungen mit <code>noindex</code> blockierst, prüf sorgfältig, dass das in Produktion nicht versehentlich stehen bleibt.</p>
+
+<p><strong>Performance:</strong> Mehrsprachige Plugins, insbesondere WPML, können DB-Abfragen vervielfachen. Caching (z. B. WP Rocket mit sprachspezifischen Cache-Verzeichnissen) ist bei mehrsprachigen Sites keine Option, sondern Pflicht.</p>
+
+<h2>Fazit</h2>
+
+<p>Eine saubere mehrsprachige Website ist lösbar — aber die Entscheidungen am Anfang (URL-Struktur, Plugin-Wahl, hreflang-Implementierung) bestimmen, wie viel Schmerz du später hast. Wer diese Entscheidungen nachlässig trifft, verbringt Monate damit, SEO-Probleme zu debuggen, die von Anfang an vermeidbar gewesen wären.</p>
+
+<p>Wenn du ein mehrsprachiges WordPress-Projekt planst und eine ehrliche Einschätzung deiner Optionen willst, <a href="/#contact">schreib mir gerne</a>. Ich helfe dir, die richtige Architektur für dein konkretes Setup zu finden — ohne Umwege.</p>

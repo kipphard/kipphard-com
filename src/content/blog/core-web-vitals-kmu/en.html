@@ -1,0 +1,73 @@
+<h2>How to Improve Core Web Vitals on Small Business Websites</h2>
+
+<p>Core Web Vitals show up in every SEO conversation since Google started using them as a ranking signal. The problem is that most explanations are written for developers. But these three metrics — LCP, CLS, and INP — directly affect whether your site ranks well and whether visitors actually stick around after clicking through from search.</p>
+
+<p>Here's a plain-language breakdown of what each metric means, why it matters for your business, and what concrete fixes look like.</p>
+
+<h2>What Are Core Web Vitals?</h2>
+
+<p>Core Web Vitals are three measurements Google uses to assess real user experience on a page. The data comes from actual Chrome users (not just synthetic lab tests) and is surfaced in <strong>Search Console</strong>, <strong>PageSpeed Insights</strong>, and <strong>Lighthouse</strong>.</p>
+
+<ul>
+  <li><strong>LCP – Largest Contentful Paint</strong>: How long until the biggest visible element is loaded?</li>
+  <li><strong>CLS – Cumulative Layout Shift</strong>: Does the layout jump around while loading?</li>
+  <li><strong>INP – Interaction to Next Paint</strong>: How quickly does the page respond to clicks and input?</li>
+</ul>
+
+<p>Google's thresholds: LCP under 2.5 seconds, CLS under 0.1, INP under 200 milliseconds. Pages that miss these targets by a significant margin can lose ground in rankings — particularly in competitive niches.</p>
+
+<h2>LCP: Your Hero Image Is Loading Too Slowly</h2>
+
+<p>In most cases, LCP is determined by the hero image — the large image at the top of your homepage. If it loads slowly, visitors wait.</p>
+
+<p>The most common causes and their fixes:</p>
+
+<ul>
+  <li><strong>Unoptimized image size</strong>: A 4 MB JPEG hero doesn't work. WebP or AVIF with proper compression can get that under 200 KB with no visible quality loss.</li>
+  <li><strong>No preload</strong>: Browsers often discover the hero image late in the loading process. A <code>&lt;link rel="preload"&gt;</code> in the <code>&lt;head&gt;</code> starts the download earlier.</li>
+  <li><strong>Slow server or no CDN</strong>: If your server is physically far from your visitors, every request pays a latency tax. A CDN serves static assets from a nearby node.</li>
+  <li><strong>Render-blocking resources</strong>: JavaScript and CSS that block the browser from rendering anything. Scripts that aren't needed immediately should be loaded with <code>defer</code> or <code>async</code>.</li>
+</ul>
+
+<h2>CLS: Layout Jumps That Drive Visitors Away</h2>
+
+<p>You know the feeling — you're about to click a link, and the content shifts down at the last moment. That's CLS. It happens when the browser has to make room for elements whose dimensions it doesn't know in advance.</p>
+
+<p>The usual culprits:</p>
+
+<ul>
+  <li><strong>Images without explicit dimensions</strong>: Every <code>&lt;img&gt;</code> tag should have <code>width</code> and <code>height</code> attributes. The browser can then calculate layout before the image finishes downloading.</li>
+  <li><strong>Late-loading web fonts</strong>: When a page swaps from a system fallback font to a custom web font, the text reflows. Using <code>font-display: optional</code> or <code>swap</code> together with font preloading reduces the shift.</li>
+  <li><strong>Dynamically injected content</strong>: Cookie banners, ads, and embeds that pop in after the page renders push everything else down. Reserve space before they appear.</li>
+</ul>
+
+<h2>INP: The Page Feels Sluggish to Interact With</h2>
+
+<p>INP replaced the older FID metric in 2024 and measures how quickly a page responds to all interactions — not just the first one. A high INP feels like a laggy application: you click something, and nothing happens for a moment.</p>
+
+<p>The root cause is almost always too much JavaScript running on the browser's main thread. Practical fixes:</p>
+
+<ul>
+  <li><strong>Reduce JavaScript payload</strong>: Unused code from plugins and themes is common on WordPress sites. Chrome DevTools' <em>Coverage</em> panel shows exactly how much JS is actually being used.</li>
+  <li><strong>Code splitting</strong>: Instead of loading everything upfront, load only what's needed for the current page.</li>
+  <li><strong>Offload heavy computation</strong>: Web Workers can move intensive tasks off the main thread, keeping it free to handle interactions.</li>
+  <li><strong>Audit your page builder</strong>: Many WordPress page builders load JavaScript globally — even for features not present on a given page. This adds up fast.</li>
+</ul>
+
+<h2>Measuring: Where to Start</h2>
+
+<p>Before optimizing anything, establish a baseline:</p>
+
+<ol>
+  <li><strong>PageSpeed Insights</strong> (<em>pagespeed.web.dev</em>): Shows both lab data (simulated) and field data (real users), when enough traffic data is available.</li>
+  <li><strong>Google Search Console</strong>: The Core Web Vitals report under "Experience" lists URLs rated as "Poor" or "Needs improvement" — good for identifying the worst offenders.</li>
+  <li><strong>Lighthouse</strong>: Available directly in Chrome DevTools under the Lighthouse tab. Useful for quick local checks during development.</li>
+</ol>
+
+<p>One important note: always look at <em>field data</em> if it's available. Lab data can diverge significantly from real-world performance — especially on sites with heavy third-party scripts like analytics, chat widgets, or ad networks.</p>
+
+<h2>Improving Core Web Vitals Is Worth the Effort</h2>
+
+<p>Better Core Web Vitals aren't just about rankings. A site that loads fast, stays visually stable, and responds instantly to interaction converts better — regardless of any algorithmic benefit. For small business websites built on tight budgets, targeted performance work is high leverage: you get more out of the same traffic.</p>
+
+<p>I help small and medium businesses identify exactly where their site loses points and implement the fixes that matter most. If you want to improve Core Web Vitals on your site, <a href="/#contact">get in touch</a>. You can also see the full range of what I offer on my <a href="/#services">services page</a>.</p>

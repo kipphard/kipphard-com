@@ -1,0 +1,15 @@
+{
+  "category": "seo",
+  "tags": ["DSGVO", "Google Analytics", "Consent"],
+  "publishedAt": "2026-07-11",
+  "de": {
+    "title": "Google Analytics DSGVO-konform einbinden: Consent richtig umsetzen",
+    "description": "Google Analytics DSGVO-konform einbinden: Opt-in Consent, kein Laden vor Zustimmung, Consent Mode erklärt – so mache ich es auf kipphard.com.",
+    "excerpt": "Google Analytics und DSGVO geht zusammen – aber nur mit echtem Opt-in. Ich zeige, worauf es ankommt und wie ich es selbst umgesetzt habe."
+  },
+  "en": {
+    "title": "GDPR-Compliant Google Analytics: How to Implement Consent Correctly",
+    "description": "GDPR-compliant Google Analytics on a German site: opt-in consent, Consent Mode vs. load-after-consent, IP handling in GA4 – practical implementation guide.",
+    "excerpt": "GDPR-compliant Google Analytics is achievable – but only with genuine opt-in consent. Here is exactly how I handle it on my own site."
+  }
+}

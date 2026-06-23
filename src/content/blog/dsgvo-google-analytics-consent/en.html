@@ -1,0 +1,77 @@
+<h2>GDPR-Compliant Google Analytics: The Legal Starting Point</h2>
+
+<p>Google Analytics sets cookies and transmits IP addresses to US servers. That constitutes access to the user's end device – which under § 25 TDDDG (the German Telecommunications Digital Services Data Protection Act) requires prior, informed consent. In parallel, Art. 6(1)(a) GDPR requires a valid legal basis for processing personal data.</p>
+
+<p>In practice, this means: legitimate interest (Art. 6(1)(f) GDPR) is not sufficient for tracking tools like GA4 in Germany. The European Data Protection Board and German data protection authorities are unambiguous on this point. You need opt-in – not opt-out, not "continued browsing equals consent".</p>
+
+<h2>Two Approaches: Load-after-Consent vs. Google Consent Mode</h2>
+
+<p>When deploying GDPR-compliant Google Analytics, there are two main technical paths:</p>
+
+<h3>Load-after-Consent (stricter, cleaner)</h3>
+
+<p>You do not load <code>gtag.js</code> until the user has explicitly agreed. Until then, no Google script runs, no cookie is set, no IP is transmitted. This is the cleanest approach and what I use on this site.</p>
+
+<pre><code>// Only call after explicit consent
+function loadGoogleAnalytics(measurementId) {
+  const script = document.createElement('script');
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+  script.async = true;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', measurementId);
+}
+</code></pre>
+
+<h3>Google Consent Mode v2</h3>
+
+<p>Here you load <code>gtag.js</code> immediately but send consent signals that tell Google what is permitted. Google then uses modelling (machine learning) to fill in gaps from users who decline. This is technically sophisticated, but legally harder to defend: the script runs before the user consents, and whether that satisfies § 25 TDDDG is disputed among German legal experts. Consent Mode is better suited for scenarios where you connect GA with Google Ads and need conversion modelling.</p>
+
+<h2>Building a Legally Sound Cookie Consent Banner</h2>
+
+<p>A consent banner that holds up legally must meet these requirements:</p>
+
+<ul>
+  <li><strong>Real choice:</strong> Declining must be as easy as accepting – no buried "reject" link, no dark patterns</li>
+  <li><strong>Granularity:</strong> Analytics cookies must be separated from technically necessary cookies</li>
+  <li><strong>No pre-ticked boxes:</strong> GA tracking must not be enabled by default</li>
+  <li><strong>Revocability:</strong> Users must be able to withdraw consent at any time – a footer link is the minimum</li>
+  <li><strong>Auditability:</strong> You should be able to record when and to what version someone consented (consent timestamp, version string)</li>
+</ul>
+
+<p>Libraries like <code>vanilla-cookieconsent</code> take care of much of this, as long as you configure them correctly. If you prefer building it yourself: a <code>localStorage</code> entry with a timestamp and consent version is a solid starting point.</p>
+
+<h2>IP Addresses in GA4: What Changed</h2>
+
+<p>Google states that GA4 anonymises IP addresses server-side before storing them. Unlike Universal Analytics, there is no separate <code>anonymize_ip</code> flag – anonymisation is supposed to be on by default. That is an improvement over GA3, but it does not remove the consent obligation: transmitting data to US servers (even without a full IP) remains a cross-border transfer that requires a legal basis. Since 2023, the EU-US Data Privacy Framework provides that basis for certified organisations – as long as Google maintains its certification.</p>
+
+<h2>Privacy Policy: What Must Be Documented</h2>
+
+<p>Your <a href="/datenschutz">privacy policy</a> must fully document GA4 usage:</p>
+
+<ul>
+  <li>Name and provider of the tool (Google Ireland Ltd. / Google LLC)</li>
+  <li>Purpose of processing (website analytics, reach measurement)</li>
+  <li>Legal basis: Art. 6(1)(a) GDPR (consent)</li>
+  <li>Third-country transfer to the US and the applicable safeguard (EU-US DPF)</li>
+  <li>Data retention period in GA4 (configurable; default is 14 months)</li>
+  <li>Link to Google's privacy policy and to the browser opt-out mechanism</li>
+  <li>How users can withdraw their consent</li>
+</ul>
+
+<p>If anything changes – new measurement ID, different retention setting – the privacy policy needs to be updated immediately.</p>
+
+<h2>How I Implemented It on kipphard.com</h2>
+
+<p>On this site, GA4 is loaded exclusively after explicit consent. The <code>gtag.js</code> script is absent from the HTML until the user actively agrees to tracking. Consent status is stored in <code>localStorage</code> so returning visitors are not asked again – unless they revoke consent. The privacy policy documents this in full.</p>
+
+<p>The result: no uninvited network requests to Google, no unnecessary legal exposure – and complete analytics data from visitors who do agree.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>Running GDPR-compliant Google Analytics is not complicated, but it requires careful implementation. The safe path: get consent first, then load the script. Consent Mode is an option for specific scenarios, but not a free pass.</p>
+
+<p>If you need help setting up analytics in a GDPR-compliant way or building a consent banner, <a href="/#contact">feel free to reach out</a>. I will look at your specific setup and give you a straight answer.</p>

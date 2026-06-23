@@ -1,0 +1,57 @@
+<h2>WordPress page builder performance — the problem has a clear cause</h2>
+
+<p>When a WordPress site is slow and a page builder is in the stack, that's rarely a coincidence. Tools like Elementor, WPBakery, or Divi are the default first choice on many projects — but they introduce structural performance problems that are hard to fix after the fact.</p>
+
+<p>Here's why that happens, how to measure the actual damage, and what genuinely helps in practice.</p>
+
+<h2>Why page builders hurt WordPress performance</h2>
+
+<p>Page builders create performance drag at several levels simultaneously:</p>
+
+<ul>
+  <li><strong>JS and CSS bloat:</strong> Elementor Pro loads stylesheets and scripts for every available widget — including the ones not used on the current page. That's easily 300–500 KB of uncompressed CSS and multiple JS bundles before your actual content has rendered.</li>
+  <li><strong>Render-blocking assets:</strong> Most builders load their resources synchronously in the <code>&lt;head&gt;</code>. The browser can't start rendering until those files are fully downloaded and parsed. This hits LCP (Largest Contentful Paint) directly.</li>
+  <li><strong>Bloated DOM:</strong> A typical Elementor layout wraps every piece of content in three to five nested divs. A page with 20 sections can easily reach 800–1,200 DOM nodes. That's parsing overhead and increased TBT (Total Blocking Time).</li>
+  <li><strong>Too many HTTP requests:</strong> Google Fonts, Font Awesome icons, external widget scripts — page builders pull resources from multiple domains. Every additional request adds latency, especially on mobile connections.</li>
+  <li><strong>Generic markup:</strong> Inline styles, missing semantic elements, no optimized image formats by default — this is the baseline, not a worst-case scenario.</li>
+</ul>
+
+<h2>How to measure the damage</h2>
+
+<p>Before you start optimizing, you need numbers. These tools are free and sufficient for a solid diagnosis:</p>
+
+<ul>
+  <li><strong>Lighthouse:</strong> In Chrome DevTools under "Performance" — gives you LCP, TBT, CLS and points directly at which resources are blocking render.</li>
+  <li><strong>PageSpeed Insights:</strong> Adds Core Web Vitals from real Chrome user data (CrUX). That's more meaningful than lab data alone, because it reflects actual visitor experience.</li>
+  <li><strong>WebPageTest:</strong> Lets you test with a real browser at a defined connection speed. The waterfall view shows exactly which requests are blocking each other.</li>
+</ul>
+
+<p>Focus on LCP (target: under 2.5 seconds), TBT (under 200 ms), and CLS (under 0.1). If you're seeing LCP above 4 seconds with a page builder, that's not a settings problem — it's a structural one.</p>
+
+<h2>What actually helps — and what doesn't</h2>
+
+<p>I'll be direct: most "optimize page builder performance" guides recommend things that don't address the root cause. A caching plugin can improve TTFB, but it doesn't remove 400 KB of unused CSS. Here's what makes a real difference:</p>
+
+<h3>Short-term measures (without replacing the builder)</h3>
+
+<ul>
+  <li><strong>Elementor's improved asset loading:</strong> From Elementor 3.x onwards, an option loads only widget-relevant CSS. It helps, but doesn't solve everything.</li>
+  <li><strong>Caching:</strong> WP Rocket or LiteSpeed Cache compress HTML, combine scripts, and serve cached pages. Not a substitute for lean code, but a meaningful layer on top.</li>
+  <li><strong>Image optimization:</strong> WebP format, correct sizes via <code>srcset</code>, lazy loading for below-the-fold images — these are fast wins with measurable impact.</li>
+  <li><strong>Fonts:</strong> Host Google Fonts locally instead of loading them via an external request. Set <code>font-display: swap</code> so text is visible immediately.</li>
+  <li><strong>Critical CSS:</strong> Inline above-the-fold styles and defer the rest. This improves LCP noticeably without touching the builder itself.</li>
+</ul>
+
+<h3>The long-term fix: reduce or replace the builder</h3>
+
+<p>The honest answer: if WordPress page builder performance genuinely matters for a project, a lean custom theme is almost always the right call. I've taken that route on several projects — most recently for <a href="/work/augusta-beauty">Augusta Beauty</a>, where a fully custom theme was the foundation from the start. The result: strong Core Web Vitals scores, no unused CSS, no external font requests, full control over every asset.</p>
+
+<p>It's more work upfront. But it's the only solution that fixes the structural problem instead of masking it.</p>
+
+<h2>WordPress performance is a build decision</h2>
+
+<p>Most WordPress performance problems aren't created in production — they're baked in during the build. A page builder can get a site live quickly, but it brings structural overhead that you can't configure away later.</p>
+
+<p>If you're running a page-builder site and your Core Web Vitals aren't where they need to be, it's worth an honest audit: what can be optimized in the short term, and at what point does a rebuild become the more cost-effective decision?</p>
+
+<p>If you want to think through that for your project, <a href="/#contact">get in touch</a> — I offer <a href="/#services">web performance consulting</a> and am happy to look at specific sites.</p>

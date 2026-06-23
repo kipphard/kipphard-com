@@ -1,0 +1,15 @@
+{
+  "category": "performance",
+  "tags": ["Core Web Vitals", "Performance", "SEO"],
+  "publishedAt": "2026-06-26",
+  "de": {
+    "title": "Core Web Vitals verbessern: LCP, CLS und INP für KMU-Websites",
+    "description": "Core Web Vitals verbessern für kleine und mittelständische Unternehmen: LCP, CLS und INP verständlich erklärt, mit konkreten Fixes und Messtools.",
+    "excerpt": "Wie du LCP, CLS und INP als KMU-Betreiber konkret verbesserst – ohne Entwickler-Chinesisch, mit echten Maßnahmen."
+  },
+  "en": {
+    "title": "Improve Core Web Vitals: LCP, CLS and INP for Small Business Websites",
+    "description": "How to improve Core Web Vitals for small and medium business sites: plain-language explanation of LCP, CLS and INP with actionable fixes and measurement tools.",
+    "excerpt": "A practical guide to improving LCP, CLS and INP on SMB websites — plain language, real fixes, no agency fluff."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "category": "ecommerce",
+  "tags": ["E-Commerce", "Digistore24", "Webhooks"],
+  "publishedAt": "2026-07-05",
+  "de": {
+    "title": "Digistore24 ohne Schnittstelle: Verkäufe per Webhook automatisieren",
+    "description": "Digistore24 Webhook empfangen, Zugänge automatisch anlegen, Refunds zurückbuchen — so funktioniert Fulfillment ohne offizielle API, zuverlässig und idempotent.",
+    "excerpt": "Digistore24 hat keine richtige API — aber einen IPN-Webhook. Ich zeige, wie du darauf Fulfillment, Refunds und Affiliate-Logik aufbaust, ohne ins Chaos zu geraten."
+  },
+  "en": {
+    "title": "Digistore24 Webhook Automation: Fulfillment Without an Official API",
+    "description": "Digistore24 webhook automation for digital product fulfillment: receive IPNs, provision access, handle refunds and chargebacks, and stay idempotent under retries.",
+    "excerpt": "Digistore24 has no real API — but it does fire webhooks. Here's how to build reliable fulfillment, refund handling, and affiliate logic on top of those IPNs."
+  }
+}

@@ -10,6 +10,10 @@ export default defineConfig({
     __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false,
     __VUE_I18N_FULL_INSTALL__: true,
     __VUE_I18N_LEGACY_API__: false,
+    // Build timestamp — the blog uses this as the publish-date cutoff so SSG and
+    // client hydration agree on which posts are live. The daily server rebuild
+    // advances it, which is what makes scheduled posts go live on their date.
+    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   },
   resolve: {
     alias: {

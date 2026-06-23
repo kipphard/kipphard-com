@@ -1,0 +1,51 @@
+<h2>Elementor vs custom WordPress theme — the question I hear constantly</h2>
+
+<p>Almost every new WordPress project starts with the same question from the client: "Can we just use Elementor for this?" Sometimes yes, often no — and the right answer depends on factors that can't be resolved in a single sentence.</p>
+
+<p>I've taken both paths. <a href="/work/pigmentfrei">Pigmentfrei</a>, a Munich clinic for permanent makeup, was built on Hello Elementor and Elementor Pro. It was a deliberate choice at the time, given the limited scope. What I learned from that project shaped how I've approached every WordPress build since.</p>
+
+<h2>What page builders genuinely offer</h2>
+
+<p>I don't want to dismiss Elementor — it has real strengths:</p>
+
+<ul>
+  <li><strong>Fast time-to-launch:</strong> You build layouts visually without writing a single CSS rule. For simple landing pages, that's a genuine advantage.</li>
+  <li><strong>Client self-service:</strong> Non-technical clients can update text and images without involving a developer — a key selling point for smaller projects.</li>
+  <li><strong>No blank canvas:</strong> Starter templates let you reach a presentable result without a designer on the team.</li>
+</ul>
+
+<p>For the right use case, all of that holds up. But page builders come bundled with trade-offs you need to understand before you commit.</p>
+
+<h2>Where Elementor vs custom WordPress theme tips toward custom</h2>
+
+<p>With Pigmentfrei, I ran into the classic page-builder ceiling: the designer wanted a specific layout that Elementor couldn't render cleanly. You end up fighting the tool instead of building with it. On top of that, Elementor Pro generates markup full of unnecessary wrapper divs and inline styles — not exactly what Lighthouse wants to see.</p>
+
+<ul>
+  <li><strong>Performance overhead:</strong> Elementor loads JS and CSS for every widget type, even the ones you're not using. External requests for fonts and icon libraries add up fast. LCP and TBT scores take a measurable hit.</li>
+  <li><strong>Limited markup control:</strong> You can't influence the generated HTML structure. Semantic elements, ARIA roles, precise class names — all out of reach.</li>
+  <li><strong>Vendor lock-in:</strong> Page content is stored as Elementor-specific metadata, not clean HTML. If you ever want to switch, you're rebuilding from scratch.</li>
+  <li><strong>Long-term cost:</strong> Annual Elementor Pro license, plus the breaking changes that come with major updates — it adds up over time.</li>
+</ul>
+
+<h2>Why I moved to custom themes after Pigmentfrei</h2>
+
+<p>The lessons from that project led me to take a different approach for the sister clinics. <a href="/work/augusta-beauty">Augusta Beauty</a> and later Lipold both got fully custom themes built around an ACF Flexible Content block library. That meant more upfront investment — but also complete control over every pixel, every class, every line of markup.</p>
+
+<p>The outcome: cleaner HTML, noticeably better Lighthouse scores, and layouts that match the design exactly. Clients can still manage their own content — through ACF fields rather than a drag-and-drop editor, which turns out to be more approachable than it sounds.</p>
+
+<h2>Decision criteria for your project</h2>
+
+<p>Here's how I frame the choice today:</p>
+
+<ol>
+  <li><strong>Scope:</strong> A single landing page with three or four sections? Elementor can work fine. A multi-page business site with complex layouts? Custom theme.</li>
+  <li><strong>Performance requirements:</strong> If Google rankings or Core Web Vitals matter, a lean custom theme is almost always the better technical choice.</li>
+  <li><strong>Who edits content?</strong> Clients who need genuine layout flexibility and are in the CMS daily: a page builder has a case. Clients who mainly swap text and images: ACF fields in a custom theme are more comfortable than they sound, and far more robust.</li>
+  <li><strong>Budget horizon:</strong> Elementor costs less to start. Over three to five years — factoring in license renewals, plugin conflicts, and redesigns — a custom theme often comes out cheaper.</li>
+</ol>
+
+<h2>Neither tool is always the right answer</h2>
+
+<p>Choosing between Elementor vs a custom WordPress theme isn't a matter of dogma. It's a technical decision that depends on the specific project. Some clients run Elementor sites for years without issues — when the scope fits and performance isn't critical, it's a reasonable call. For everything else, a custom theme is the cleaner, more sustainable path.</p>
+
+<p>If you're not sure which approach fits your project, <a href="/#contact">get in touch</a> — I'll look at the context and give you a straight answer.</p>

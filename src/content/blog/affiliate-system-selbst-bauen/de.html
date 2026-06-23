@@ -1,0 +1,87 @@
+<p>Wenn du ein Produkt über Partner vertreibst, stoßen Standard-Plugins schnell an ihre Grenzen. Genau das war der Ausgangspunkt, als ich das Affiliate-System für <a href="/work/profit-prime">Profit Prime</a> gebaut habe — eine Online-Lernplattform, die Kurse über Digistore24 verkauft. Die Anforderungen: mehrstufige Provisionen, konfigurierbare Provisionssätze, Rückbuchungslogik und ein Partnernetzwerk, das keine Endlosschleifen zulässt. In diesem Artikel zeige ich dir, wie ich das gelöst habe und was du beim Aufbau eines solchen <strong>Affiliate-Systems mit WordPress</strong> wirklich beachten musst.</p>
+
+<h2>Warum ein fertiges Plugin oft nicht reicht</h2>
+
+<p>AffiliateWP ist das solideste Affiliate-Plugin für WordPress. Es ist gut dokumentiert, hat eine vernünftige REST-API und lässt sich mit Add-ons erweitern. Aber sobald du über einfache Einzel-Provisionen hinausgehst, merkst du schnell, wo die Grenzen liegen:</p>
+
+<ul>
+  <li>Mehrstufige Provisionen (Partner verweist auf Partner, der wiederum verkauft) erfordern das Add-on <em>Multi-Tier Commissions</em> — und auch das hat eine feste Tiefe.</li>
+  <li>Externe Payment-Provider wie Digistore24 haben keine native AffiliateWP-Integration. Du brauchst einen eigenen Webhook-Endpunkt.</li>
+  <li>Rückbuchungen müssen aktiv behandelt werden: Provision rückgängig machen, Kurs-Zugang entziehen, Partnerstatus korrigieren.</li>
+  <li>Idempotenz ist kein Luxus. Webhooks kommen doppelt, Timeouts passieren — dein System muss das aushalten.</li>
+</ul>
+
+<p>Das bedeutet nicht, dass du alles selbst schreiben musst. Aber du musst verstehen, wo AffiliateWP aufhört und dein eigener Code anfängt.</p>
+
+<h2>Die Basis: AffiliateWP und das Multi-Tier-Add-on</h2>
+
+<p>AffiliateWP übernimmt die Verwaltung der Partner, ihre Auszahlungen und die grundlegende Provisionsverfolgung. Das Add-on <em>Multi-Tier Commissions</em> erlaubt es, Provisionen an mehrere Ebenen der Partnerhierarchie weiterzuleiten — also nicht nur an den direkten Werber, sondern auch an dessen Werber, und so weiter.</p>
+
+<p>Die Konfiguration der Provisionssätze passiert im WordPress-Admin: du kannst globale Sätze pro Ebene setzen oder partnerspezifische Überschreibungen vergeben. Das ist flexibel genug für die meisten Setups. Für Profit Prime habe ich progressive Sätze genutzt: Ebene 1 bekommt den höchsten Anteil, jede weitere Ebene deutlich weniger. Das hält das System für Partner attraktiv, ohne die Marge zu ruinieren.</p>
+
+<h2>Referral-Tracking und Attribution</h2>
+
+<p>AffiliateWP setzt beim Klick auf einen Affiliate-Link ein Cookie. Dieses Cookie enthält die Partner-ID und bleibt standardmäßig 24 Stunden aktiv — du kannst das auf 30 oder 90 Tage verlängern, je nach deinem Geschäftsmodell.</p>
+
+<p>Weil Digistore24 keine direkte AffiliateWP-Integration hat, läuft die Attribution so:</p>
+
+<ol>
+  <li>Kunde klickt auf Affiliate-Link, Cookie wird gesetzt.</li>
+  <li>Kunde kauft auf der Digistore24-Checkout-Seite (externer Prozess).</li>
+  <li>Digistore24 feuert einen Webhook an meinen Custom-Endpunkt (<code>POST /wp-json/profit-prime/v1/digistore-webhook</code>).</li>
+  <li>Der Endpunkt liest die gespeicherte Partner-ID aus der Session/dem Cookie-Mapping und erzeugt die Referral-Einträge in AffiliateWP manuell über die PHP-API.</li>
+</ol>
+
+<p>Das Cookie-Mapping ist der knifflige Teil: weil der eigentliche Kauf auf einer Fremdseite stattfindet, musst du die Partner-ID vorher serverseitig speichern (z. B. in einem transient oder einer eigenen DB-Tabelle), verknüpft mit einem Session-Token, den du in der Digistore-URL als Parameter mitschickst.</p>
+
+<h2>Mehrstufige Provisionen berechnen</h2>
+
+<p>Wenn ein Referral erzeugt wird, läuft intern folgendes ab: AffiliateWP schaut in der Partnerhierarchie nach oben und verteilt Provisionen über die konfigurierten Ebenen. Mit dem Multi-Tier-Add-on passiert das weitgehend automatisch — du rufst <code>affwp_add_referral()</code> für den direkten Partner auf, und das Add-on erzeugt die übergeordneten Referrals selbst.</p>
+
+<p>Was du selbst sicherstellen musst: die Provisionssätze stimmen. Ich habe eine Hilfsfunktion geschrieben, die den Satz pro Ebene aus einer eigenen Option-Struktur liest, damit er im Admin editierbar bleibt ohne Code-Deployment. Außerdem solltest du prüfen, ob der jeweilige Partner überhaupt aktiv und freigegeben ist — inaktive Partner sollten keine Provisionen erhalten, auch nicht auf höheren Ebenen.</p>
+
+<h2>Das Schwierige: Rückbuchungen, Idempotenz und Cycle Detection</h2>
+
+<h3>Rückbuchungen und Chargebacks</h3>
+
+<p>Wenn Digistore24 eine Rückbuchung meldet, muss dein System drei Dinge tun:</p>
+
+<ul>
+  <li>Alle zugehörigen Referrals auf <code>rejected</code> setzen — das verhindert Auszahlung.</li>
+  <li>Den MasterStudy-Kurs-Zugang des Käufers entziehen.</li>
+  <li>Den Chargeback-Status im eigenen Datensatz festhalten, damit Folge-Webhooks erkannt werden.</li>
+</ul>
+
+<p>AffiliateWP bietet <code>affwp_set_referral_status()</code> zum Setzen des Status. Wenn eine Provision bereits ausgezahlt wurde, ist das komplizierter — dann brauchst du entweder manuelle Eingriffe oder eine Gutschrift gegen zukünftige Provisionen.</p>
+
+<h3>Idempotenz</h3>
+
+<p>Webhooks kommen mehrfach. Digistore sendet manchmal denselben Event zwei- oder dreimal, besonders wenn dein Server langsam antwortet. Jeder eingehende Webhook braucht deshalb eine eindeutige Event-ID, die du in einer eigenen Tabelle speicherst. Bevor du irgendetwas verarbeitest, prüfst du: <em>Kenne ich diese Event-ID schon?</em> Wenn ja, 200 zurückgeben und nichts tun.</p>
+
+<pre><code>// Pseudocode
+$event_id = sanitize_text_field( $payload['event_id'] );
+if ( pp_event_already_processed( $event_id ) ) {
+    wp_send_json_success( [ 'status' => 'already_processed' ] );
+    exit;
+}
+pp_mark_event_processed( $event_id );
+// ... weitere Verarbeitung
+</code></pre>
+
+<h3>Zirkuläre Referral-Schleifen verhindern</h3>
+
+<p>In einem mehrstufigen System kann es passieren, dass Partner A Partner B wirbt, und B wirbt später A. Das erzeugt eine Schleife, die bei der Provisionsberechnung zu einer Endlosrekursion führt — oder zumindest zu falschen Daten.</p>
+
+<p>Beim Anlegen eines neuen Partnerlinks prüfe ich deshalb die gesamte Aufwärtskette: Wenn der neue Partner bereits Vorfahre des Werbers ist, wird die Verbindung abgelehnt. Das ist ein klassischer Cycle-Check in einem gerichteten Graphen — du traversierst die Parent-Pointer nach oben und prüfst bei jedem Schritt, ob du den neuen Knoten schon gesehen hast.</p>
+
+<h2>Auszahlungen und operative Sauberkeit</h2>
+
+<p>AffiliateWP bietet manuelle und automatisierte Auszahlungen über PayPal oder Banküberweisung. Für Profit Prime nutzen wir manuellen Batch-Export, weil die Auszahlungsfrequenz moderat ist und ein manueller Review sinnvoll bleibt.</p>
+
+<p>Wichtiger als die Auszahlungsmethode ist, dass dein System sauber zwischen <em>pending</em>, <em>unpaid</em> und <em>paid</em> unterscheidet und Rückbuchungen in diesem Zustandsautomat konsistent abbildet. Ein Dashboard, das den Provisionsstand pro Partner in Echtzeit zeigt, reduziert Support-Anfragen erheblich.</p>
+
+<h2>Was ich das nächste Mal anders machen würde</h2>
+
+<p>Mehr Logging von Anfang an. Webhook-Payloads vollständig in eine Custom-Tabelle schreiben, bevor du irgendetwas verarbeitest — das rettet dich bei der Fehlersuche. Außerdem würde ich die Ebenenlogik von Anfang an als eigenen Service isolieren, statt sie im Webhook-Handler zu verschachteln. Das macht Testing deutlich einfacher.</p>
+
+<p>Wenn du ein ähnliches System baust und an einem bestimmten Punkt feststeckst — ob bei der Webhook-Integration, der Provisionslogik oder der Rückbuchungsbehandlung — <a href="/#contact">meld dich gerne</a>. Ich schaue mir das gerne mit dir zusammen an.</p>

@@ -1,0 +1,73 @@
+<h2>Core Web Vitals verbessern: Was KMU-Betreiber wirklich wissen müssen</h2>
+
+<p>Seit Google die Core Web Vitals als Rankingfaktor eingeführt hat, tauchen die drei Abkürzungen LCP, CLS und INP in jedem SEO-Gespräch auf. Das Problem: Die meisten Erklärungen richten sich an Entwickler. Dabei entscheiden diese Metriken letztlich darüber, ob deine Website bei Google weiter oben auftaucht – und ob Besucher nach dem ersten Klick auch bleiben.</p>
+
+<p>In diesem Artikel erkläre ich dir, was die drei Kennzahlen bedeuten, warum sie für dein Geschäft relevant sind, und was du – oder jemand wie ich – konkret dagegen tun kann.</p>
+
+<h2>Was sind Core Web Vitals?</h2>
+
+<p>Core Web Vitals sind drei Messwerte, mit denen Google die tatsächliche Nutzererfahrung auf einer Seite bewertet. Google erhebt die Werte aus echten Chrome-Nutzern (nicht aus Labor-Tests) und zeigt sie im <strong>Search Console Bericht zu den Nutzererfahrungsberichten</strong> an. Du findest sie außerdem in <strong>PageSpeed Insights</strong> und <strong>Lighthouse</strong>.</p>
+
+<ul>
+  <li><strong>LCP – Largest Contentful Paint</strong>: Wann wird das größte sichtbare Element geladen?</li>
+  <li><strong>CLS – Cumulative Layout Shift</strong>: Springt das Layout während des Ladens?</li>
+  <li><strong>INP – Interaction to Next Paint</strong>: Wie schnell reagiert die Seite auf Klicks und Eingaben?</li>
+</ul>
+
+<p>Google empfiehlt: LCP unter 2,5 Sekunden, CLS unter 0,1, INP unter 200 Millisekunden. Seiten, die diese Schwellen deutlich verfehlen, können im Ranking zurückfallen – besonders in hart umkämpften Nischen.</p>
+
+<h2>LCP: Das Hero-Bild lädt zu langsam</h2>
+
+<p>Der LCP-Wert wird in den meisten Fällen durch das Hero-Bild bestimmt – das große Bild ganz oben auf deiner Startseite. Lädt es langsam, wartet der Besucher.</p>
+
+<p>Die häufigsten Ursachen und ihre Fixes:</p>
+
+<ul>
+  <li><strong>Bildgröße nicht optimiert</strong>: Ein 4 MB JPEG als Hero funktioniert nicht. WebP oder AVIF mit richtiger Komprimierung kann die Dateigröße auf unter 200 KB drücken – ohne sichtbaren Qualitätsverlust.</li>
+  <li><strong>Kein Preload</strong>: Browser erkennen das Hero-Bild oft erst spät. Mit <code>&lt;link rel="preload"&gt;</code> im <code>&lt;head&gt;</code> lässt sich der Download früher anstoßen.</li>
+  <li><strong>Langsamer Hosting-Server oder kein CDN</strong>: Liegt dein Server physisch weit vom Besucher entfernt, kostet das Zeit. Ein CDN (Content Delivery Network) liefert statische Inhalte aus einem nahen Knotenpunkt.</li>
+  <li><strong>Render-blocking Resources</strong>: JavaScript und CSS, die den Browser blockieren, bevor er irgendetwas rendern kann. Nicht benötigte Scripts sollte man verzögert laden (<code>defer</code> oder <code>async</code>).</li>
+</ul>
+
+<h2>CLS: Layout-Sprünge, die Besucher vertreiben</h2>
+
+<p>Kennst du das Gefühl, auf einen Link klicken zu wollen, und genau in dem Moment springt der Inhalt einen Zentimeter nach unten? Das ist CLS. Es passiert, wenn Browser Platz für Elemente reservieren müssen, deren Größe er vorher nicht kennt.</p>
+
+<p>Die häufigsten Ursachen:</p>
+
+<ul>
+  <li><strong>Bilder ohne definierte Dimensionen</strong>: Jedes <code>&lt;img&gt;</code>-Tag sollte <code>width</code> und <code>height</code> haben. Der Browser kann dann das Layout schon berechnen, bevor das Bild fertig geladen ist.</li>
+  <li><strong>Schriften, die nachgeladen werden</strong>: Wechselt eine Seite von einer System-Fallback-Schrift auf die eigentliche Web-Schrift, verschiebt sich der Text. <code>font-display: optional</code> oder <code>swap</code> zusammen mit Preloading der Schriftdatei hilft.</li>
+  <li><strong>Ads, Embeds und Banner</strong>: Inhalte, die nachträglich injiziert werden (Cookies, Werbebanner), verschieben den Rest der Seite. Space reservieren, bevor sie erscheinen.</li>
+</ul>
+
+<h2>INP: Die Seite reagiert zu langsam auf Klicks</h2>
+
+<p>INP hat 2024 den alten FID-Wert abgelöst und misst, wie schnell eine Seite auf alle Interaktionen reagiert – nicht nur den ersten Klick. Ein hoher INP fühlt sich an wie eine träge Anwendung: du klickst auf etwas, und es passiert erstmal nichts.</p>
+
+<p>Die Hauptursache ist fast immer zu viel JavaScript auf dem Haupt-Thread des Browsers. Konkrete Maßnahmen:</p>
+
+<ul>
+  <li><strong>JavaScript-Menge reduzieren</strong>: Nicht genutzter Code aus Plugins und Themes schleppt viele Sites mit. Tools wie <em>Coverage</em> in den Chrome DevTools zeigen, wie viel JS tatsächlich verwendet wird.</li>
+  <li><strong>Code splitting</strong>: Statt alles auf einmal zu laden, nur das laden, was gerade benötigt wird.</li>
+  <li><strong>Schwere Berechnungen auslagern</strong>: Web Workers können rechenintensive Aufgaben in einen Hintergrund-Thread verschieben, damit der Haupt-Thread für Interaktionen frei bleibt.</li>
+  <li><strong>Page Builder evaluieren</strong>: Viele WordPress-Page-Builder laden standardmäßig sehr viel JavaScript – auch für Elemente, die auf einer bestimmten Seite gar nicht vorkommen.</li>
+</ul>
+
+<h2>Messen: Wo du anfängst</h2>
+
+<p>Bevor du anfängst, irgendwas zu optimieren, schau dir die Ist-Werte an:</p>
+
+<ol>
+  <li><strong>PageSpeed Insights</strong> (<em>pagespeed.web.dev</em>): Zeigt sowohl Lab-Daten (simuliert) als auch echte Nutzerdaten (Field Data), wenn genug Besucher vorhanden sind.</li>
+  <li><strong>Google Search Console</strong>: Im Bereich "Nutzererfahrung" findest du den Core Web Vitals Report mit Seiten-URLs, die als "schlecht" oder "muss verbessert werden" eingestuft sind.</li>
+  <li><strong>Lighthouse</strong>: Direkt im Chrome Browser unter DevTools → Lighthouse – gut für schnelle lokale Tests während der Entwicklung.</li>
+</ol>
+
+<p>Wichtig: Schau dir immer die <em>Field Data</em> an, wenn sie vorhanden ist. Lab-Daten (simulierte Tests) können die Realität verzerren – besonders bei Seiten mit vielen Third-Party-Skripten.</p>
+
+<h2>Core Web Vitals verbessern lohnt sich</h2>
+
+<p>Gute Core Web Vitals sind kein Selbstzweck. Eine Seite, die schnell lädt, nicht springt und sofort auf Klicks reagiert, konvertiert besser – ganz unabhängig vom Ranking-Effekt. Für KMU-Websites, die oft mit schmalem Budget entwickelt werden, ist gezielte Optimierung deshalb besonders wertvoll: du bekommst mehr aus dem gleichen Traffic heraus.</p>
+
+<p>Ich helfe KMU-Betreibern dabei, Core Web Vitals konkret zu verbessern – von der Diagnose bis zur Umsetzung. Wenn du wissen möchtest, wo deine Website steht und was sich sinnvoll optimieren lässt, melde dich gern: <a href="/#contact">Kontakt aufnehmen</a>. Was ich an Leistungen anbiete, findest du unter <a href="/#services">meinen Services</a>.</p>

@@ -14,8 +14,11 @@ import Home from './pages/Home.vue'
 import Impressum from './pages/Impressum.vue'
 import Datenschutz from './pages/Datenschutz.vue'
 import CaseStudy from './pages/CaseStudy.vue'
+import Blog from './pages/Blog.vue'
+import BlogPost from './pages/BlogPost.vue'
 import NotFound from './pages/NotFound.vue'
 import { trackPageview } from './lib/consent'
+import { publishedPosts } from './lib/blog'
 
 const routes = [
   { path: '/', component: Home },
@@ -26,6 +29,8 @@ const routes = [
   { path: '/work/augusta-beauty', component: CaseStudy },
   { path: '/work/lipold', component: CaseStudy },
   { path: '/work/pigmentfrei', component: CaseStudy },
+  { path: '/blog', component: Blog },
+  { path: '/blog/:slug', component: BlogPost },
   { path: '/404', component: NotFound },
   { path: '/:pathMatch(.*)*', component: NotFound },
 ]
@@ -66,3 +71,13 @@ export const createApp = ViteSSG(
     }
   },
 )
+
+// vite-ssg picks up this named export to enumerate which routes to pre-render.
+// Param routes (/blog/:slug) can't auto-enumerate, so emit one static page per
+// PUBLISHED blog post — future-dated posts are excluded until a rebuild on
+// their date reveals them (and adds them to the sitemap).
+export function includedRoutes(paths: string[]): string[] {
+  const staticPaths = paths.filter((p) => !p.includes(':'))
+  const blogPaths = publishedPosts().map((p) => `/blog/${p.slug}`)
+  return [...staticPaths, ...blogPaths]
+}

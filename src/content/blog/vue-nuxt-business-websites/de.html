@@ -1,0 +1,70 @@
+<h2>Vue Nuxt Business Website: wann lohnt sich der Umstieg von WordPress?</h2>
+
+<p>Ich bekomme diese Frage regelmäßig: "Wir wollen eine neue Website – soll das Vue oder WordPress werden?" Die ehrliche Antwort ist: es kommt drauf an. Aber da diese Antwort nie besonders hilfreich ist, zeige ich dir hier, wie ich die Entscheidung selbst treffe – und warum diese Seite (kipphard.com) mit Vue 3 und vite-ssg gebaut ist.</p>
+
+<h2>Was SSG und SSR für SEO und Performance bedeuten</h2>
+
+<p>Der häufigste Einwand gegen JavaScript-basierte Sites lautet: "Wird das überhaupt von Google gecrawlt?" Bei einem reinen Client-Side-Rendered SPA ohne Prerendering ist das eine berechtigte Sorge. Bei SSG (Static Site Generation) oder SSR (Server-Side Rendering) ist es keins.</p>
+
+<p>Mit Nuxt oder vite-ssg wird jede Route beim Build-Prozess zu vollständigem HTML vorgerendert. Der Crawler sieht sofort semantisches Markup, Metatags und Inhalte – genauso wie bei einer klassischen HTML-Seite. Das Ergebnis:</p>
+
+<ul>
+  <li>Volle Crawlbarkeit ohne JavaScript-Abhängigkeit</li>
+  <li>Core Web Vitals profitieren vom statischen HTML – keine render-blockierenden JS-Bundles mehr</li>
+  <li>Hosting auf CDN möglich: weltweite Auslieferung in unter 50 ms</li>
+  <li>Keine Datenbankabfragen zur Laufzeit, keine Server-Kaltstartverzögerung</li>
+</ul>
+
+<p>Bei SSR (z. B. Nuxt mit Node-Server) bekommst du zusätzlich dynamische Daten pro Request, während das HTML trotzdem serverseitig gerendert wird. Das ist der Sweet Spot für Shops oder Portale mit nutzerspezifischen Inhalten.</p>
+
+<h2>Developer Experience und Wartbarkeit</h2>
+
+<p>Vue 3 mit Composition API und TypeScript macht Spaß. Das klingt wie Marketing, ist aber ein handfestes Argument für Projekte, die über Jahre gepflegt werden. Du bekommst:</p>
+
+<ul>
+  <li>Strikte Typisierung, die Fehler zur Entwicklungszeit aufdeckt statt im Produktiv-Log</li>
+  <li>Hot Module Replacement, das in Millisekunden reagiert</li>
+  <li>Komponenten-Architektur, die Wiederverwendung erzwingt statt ermöglicht</li>
+  <li>Ein Ökosystem (Pinia, VueUse, Nuxt Modules), das für fast jeden Use Case eine solide Lösung bietet</li>
+</ul>
+
+<p>Bei WordPress hast du nach drei Jahren oft ein Plugin-Dschungel, bei dem niemand mehr weiß, was welches Plugin tut. Bei einer Vue/Nuxt-App ist der Code dein Code – nachvollziehbar, testbar, refaktorierbar.</p>
+
+<h2>Wann ein Headless- oder Custom-App-Ansatz sich bezahlt macht</h2>
+
+<p>Ein Vue/Nuxt-Frontend macht besonders dann Sinn, wenn:</p>
+
+<ul>
+  <li>Die Website stark interaktiv ist: Konfiguratoren, Filter, Echtzeit-Daten, komplexe Formulare</li>
+  <li>Du eine bestehende API oder ein bestehendes Backend anbinden willst (REST, GraphQL, Supabase, Directus)</li>
+  <li>Performance und Lighthouse-Score geschäftskritisch sind – z. B. bei Google Ads Landeseiten</li>
+  <li>Die Site Teil eines größeren App-Ökosystems ist und Code geteilt werden soll</li>
+  <li>Du ein individuelles Design umsetzen willst, das in Themen-basierten Systemen nur mit Trickserei funktioniert</li>
+</ul>
+
+<p>Schau dir meine <a href="/#services">Leistungsübersicht</a> an: Vue 3, Nuxt und TypeScript bilden den Kern meiner täglichen Arbeit. Die meisten meiner Kundenprojekte profitieren direkt davon.</p>
+
+<h2>Wann WordPress die bessere Wahl ist – und ich das klar so sage</h2>
+
+<p>Ja, es gibt Situationen, in denen ich WordPress empfehle. Nicht weil es technisch überlegen wäre, sondern weil es pragmatisch die richtige Entscheidung ist:</p>
+
+<ul>
+  <li><strong>Content-heavy Sites mit vielen Autoren:</strong> Gutenberg oder ein ACF-basiertes Backend ist für Nicht-Entwickler einfach zugänglicher als jedes Headless-CMS</li>
+  <li><strong>Knappes Budget und Zeitdruck:</strong> Ein gutes WordPress-Theme kann in einer Woche live sein. Eine Vue-App braucht mehr Vorlaufzeit.</li>
+  <li><strong>Viele Plugins out-of-the-box:</strong> WooCommerce, Events Manager, Membership-Plugins – das Ökosystem ist riesig</li>
+  <li><strong>Kein Entwickler langfristig eingeplant:</strong> WordPress kann der Kunde selbst pflegen; eine Vue-App nicht ohne Grundkenntnisse</li>
+</ul>
+
+<p>Diese Ehrlichkeit kostet mich vielleicht den einen oder anderen Auftrag. Aber ein Projekt in der falschen Technologie zu bauen hilft niemandem.</p>
+
+<h2>kipphard.com als konkretes Beispiel</h2>
+
+<p>Diese Website ist in Vue 3 und vite-ssg umgesetzt. Jede Seite wird beim Build zu statischem HTML generiert, über ein CDN ausgeliefert und lädt in unter einer Sekunde. vue-i18n liefert German und English aus derselben Codebasis. Es gibt keine Datenbank, keinen Server, keine Angriffsfläche – und der Lighthouse-Score liegt konstant im grünen Bereich.</p>
+
+<p>Für eine Portfolio-Site mit klarem Fokus auf Performance und SEO war das die offensichtliche Wahl. Für eine Bäckerei mit täglich wechselnden Angeboten und einem Inhaber, der selbst Texte pflegen will, wäre WordPress sinnvoller gewesen.</p>
+
+<h2>Fazit: Die Technologie folgt dem Use Case</h2>
+
+<p>Vue 3 und Nuxt sind mächtige Werkzeuge für Business-Websites – wenn du Performance, individuelles Design, komplexe Interaktivität oder langfristige Wartbarkeit brauchst. Sie sind kein Selbstzweck und kein Statussymbol.</p>
+
+<p>Wenn du unsicher bist, welche Technologie für dein Projekt passt, <a href="/#contact">sprich mich an</a>. Ich schaue mir deinen Use Case an und gebe dir eine ehrliche Einschätzung – ohne Vorverkauf.</p>

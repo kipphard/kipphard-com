@@ -1,0 +1,94 @@
+<p>Off-the-shelf affiliate plugins cover the common case well. But the moment you need multi-tier commissions, a third-party payment provider with no native integration, chargeback clawback, and a partner hierarchy that can not loop back on itself — you are writing custom code. That was exactly the situation when I built the affiliate engine for <a href="/work/profit-prime">Profit Prime</a>, an e-learning platform selling courses through Digistore24. This post walks through how I approached building a <strong>custom WordPress affiliate system</strong> on top of AffiliateWP, and the edge cases that are easy to miss until they bite you in production.</p>
+
+<h2>Why a custom WordPress affiliate system is often necessary</h2>
+
+<p>AffiliateWP is the most production-ready affiliate plugin for WordPress. Its codebase is clean, it has a usable PHP API, and the add-on ecosystem covers a lot of ground. But here is what it does not handle out of the box:</p>
+
+<ul>
+  <li>External payment processors like Digistore24, Paddle, or Lemon Squeezy have no native integration. You need a custom webhook endpoint.</li>
+  <li>Multi-tier commissions require the <em>Multi-Tier Commissions</em> add-on, and even then, cascading beyond two or three levels means custom logic.</li>
+  <li>Refund and chargeback handling is left to you. AffiliateWP can mark a referral rejected, but it does not know a chargeback happened unless you tell it.</li>
+  <li>Idempotency is your responsibility. Webhooks fire multiple times — your handler needs to be safe to call twice with the same payload.</li>
+</ul>
+
+<p>None of this means you ditch AffiliateWP and roll everything from scratch. It means you treat it as infrastructure and build the business logic on top.</p>
+
+<h2>Foundation: AffiliateWP and the Multi-Tier Commissions add-on</h2>
+
+<p>AffiliateWP manages affiliate accounts, commission records, payout state, and reporting. The Multi-Tier Commissions add-on extends this so that when a referral is created for a direct affiliate, it automatically creates commission entries for every affiliate up the referral chain, up to a configurable depth.</p>
+
+<p>Commission rates per tier are configured in the WordPress admin — either as global defaults or per-affiliate overrides. For Profit Prime I used progressive rates: the direct referring affiliate gets the largest share, with each upstream tier receiving a progressively smaller cut. This keeps the system attractive for partners at every level without eroding margins.</p>
+
+<p>One thing to configure carefully: what happens when an affiliate in the chain is inactive or suspended. My rule is simple — inactive affiliates are skipped rather than having their commission passed up to the next level. Skipping is predictable; passing up creates confusion.</p>
+
+<h2>Referral tracking and attribution across an external checkout</h2>
+
+<p>The trickiest part of the Profit Prime setup is that the actual purchase happens on Digistore24 — an external domain. AffiliateWP's cookie-based tracking works fine when the checkout is on the same WordPress install, but falls apart the moment the buyer leaves your domain.</p>
+
+<p>The approach I used:</p>
+
+<ol>
+  <li>Affiliate link click sets an AffiliateWP cookie as usual, and my code also writes the affiliate ID to a server-side record keyed by a short session token.</li>
+  <li>The Digistore24 checkout URL is built dynamically and includes that session token as a URL parameter (<code>?pp_session=abc123</code>).</li>
+  <li>Digistore24 passes custom parameters through to the thank-you page and the webhook payload.</li>
+  <li>My webhook handler reads the session token from the payload, looks up the affiliate ID, and calls <code>affwp_add_referral()</code> with the correct affiliate and amount.</li>
+</ol>
+
+<p>The session token approach is more reliable than trying to persist cookie values across domains. It also makes debugging straightforward: you can look up any order by session token and see exactly which affiliate was attributed.</p>
+
+<h2>Multi-tier commission cascades in practice</h2>
+
+<p>Once you call <code>affwp_add_referral()</code> for the direct affiliate, the Multi-Tier add-on handles creating the upstream referral records automatically. What you still need to handle yourself:</p>
+
+<ul>
+  <li><strong>Rate calculation:</strong> I wrote a small helper that reads tier rates from a custom options structure, so rates are editable in the admin without a deployment.</li>
+  <li><strong>Status validation:</strong> Before the cascade fires, check that each affiliate in the chain is active. The add-on does not do this by default.</li>
+  <li><strong>Correct referral amounts:</strong> Make sure you are passing the commission amount for each tier explicitly rather than relying on percentage calculations that might round differently at each level.</li>
+</ul>
+
+<h2>The hard parts: chargeback clawback, idempotency, and cycle detection</h2>
+
+<h3>Chargeback clawback</h3>
+
+<p>When Digistore24 fires a chargeback or refund event, three things need to happen atomically:</p>
+
+<ul>
+  <li>All referral records for the order must be set to <code>rejected</code> using <code>affwp_set_referral_status()</code>.</li>
+  <li>The buyer's course access in MasterStudy LMS must be revoked.</li>
+  <li>The order's chargeback state must be persisted so subsequent webhook retries are recognised and ignored.</li>
+</ul>
+
+<p>If a commission has already been paid out when the chargeback arrives, you have a harder problem — either manual recovery or a credit against future commissions. Build a clear policy for this before your first real chargeback, not after.</p>
+
+<h3>Idempotency</h3>
+
+<p>Digistore24 can and does fire duplicate webhook events, especially if your server is slow to respond. Every incoming event needs a unique ID. Before doing any processing, check whether you have already handled that ID:</p>
+
+<pre><code>$event_id = sanitize_text_field( $payload['event_id'] );
+if ( pp_event_already_processed( $event_id ) ) {
+    wp_send_json_success( [ 'status' => 'already_processed' ] );
+    exit;
+}
+pp_mark_event_processed( $event_id );
+// safe to process now
+</code></pre>
+
+<p>I store processed event IDs in a custom table with a unique index on the event ID column. Inserts race-safely: if two requests with the same ID arrive simultaneously, one will get a database constraint violation, which I catch and treat as "already processed."</p>
+
+<h3>Circular referral loop prevention</h3>
+
+<p>In a multi-tier network, it is possible for affiliate A to refer affiliate B, and B to later refer A — creating a cycle. Left unchecked, this breaks commission cascade traversal.</p>
+
+<p>When registering a new referral relationship, I walk the parent chain upward from the proposed parent affiliate and check at each step whether we encounter the new affiliate's ID. If we do, the relationship is rejected with a clear error message. This is a standard directed graph cycle check, and it needs to run at registration time — fixing circular data after the fact is painful.</p>
+
+<h2>Payouts and keeping the books straight</h2>
+
+<p>AffiliateWP handles payout tracking and supports PayPal mass payouts or manual bank transfer exports. For Profit Prime we use manual batch exports — the payout volume makes this manageable, and a human review step before every payout is worth the overhead.</p>
+
+<p>More important than the payout mechanism is keeping referral status accurate: <em>pending</em> while the refund window is open, <em>unpaid</em> after it closes, <em>paid</em> once settled. Chargebacks should move a referral from any of those states back to <em>rejected</em>. A simple state machine diagram, written down before you start, will save you a lot of debugging later.</p>
+
+<h2>What I would do differently</h2>
+
+<p>Log more, earlier. Write the full webhook payload to a custom table before any processing happens. When something goes wrong two months later, you want the raw data. I would also isolate the tier cascade logic as its own class from day one rather than letting it grow inside the webhook handler — it makes unit testing significantly easier.</p>
+
+<p>If you are building something similar and hitting a wall — whether it is webhook attribution, commission logic, or chargeback handling — <a href="/#contact">get in touch</a>. I am happy to take a look at what you are working with.</p>

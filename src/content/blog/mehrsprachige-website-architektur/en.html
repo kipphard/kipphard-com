@@ -1,0 +1,66 @@
+<p>A <strong>multilingual website architecture</strong> looks like a plugin question on the surface. It's actually an architectural decision that needs to happen before you publish a single post. I've built this out for <a href="/work/wickie">Wickie</a> across four languages (DE, EN, FR, IT) and for <a href="/work/lipold">Lipold</a> in two (DE, EN). Here's the thinking I bring to every multilingual build.</p>
+
+<h2>URL Structure: Subdirectory, Subdomain, or Separate Domain?</h2>
+
+<p>You have three real options:</p>
+
+<ul>
+  <li><strong>Subdirectory</strong> (<code>example.com/de/</code>, <code>example.com/en/</code>) — recommended for most projects</li>
+  <li><strong>Subdomain</strong> (<code>de.example.com</code>) — viable, but more SEO overhead</li>
+  <li><strong>Separate domain</strong> (<code>example.de</code>, <code>example.com</code>) — only makes sense for genuinely independent brands</li>
+</ul>
+
+<p>Google treats subdomains as separate websites. That means link authority is split across multiple hosts, and you need a separate Search Console property per subdomain. Subdirectories share domain authority and are simpler to configure. For both Wickie and Lipold, subdirectory was the obvious call.</p>
+
+<h2>hreflang: The Overlooked Requirement</h2>
+
+<p>hreflang tells search engines which page targets which language and region. The error rate here is surprisingly high — even on otherwise well-built sites.</p>
+
+<p>The most common mistakes:</p>
+
+<ul>
+  <li><strong>One-sided hreflang:</strong> If page A references page B, page B must reference page A back. If the return pointer is missing, Google ignores the tag.</li>
+  <li><strong>Missing x-default:</strong> Without a fallback for users from regions you haven't explicitly targeted, Google guesses. Add an <code>x-default</code> tag.</li>
+  <li><strong>Inconsistent URLs:</strong> hreflang with a trailing slash, canonical without — that creates a conflict that tools will flag but plugins won't always catch.</li>
+</ul>
+
+<p>WPML and Polylang generate hreflang automatically. With a pure gettext approach, you're responsible for it yourself.</p>
+
+<h2>WPML vs. Polylang vs. Gettext — the Real Tradeoffs</h2>
+
+<p>There's no universal answer here, but there is a clear decision logic:</p>
+
+<p><strong>WPML</strong> is powerful and well-maintained. It handles WooCommerce, custom post types, taxonomies, and strings in themes and third-party plugins — all out of the box. The cost is real (around €99/year for Multilingual CMS), and WPML writes its own database structures that can complicate migrations later. For client sites with non-technical editors, though, WPML is often the most pragmatic choice.</p>
+
+<p><strong>Polylang</strong> is cheaper (free core plugin, PRO around €99/year for full string translation). It's leaner than WPML but has gaps with complex string translations from plugins. For projects without WooCommerce and without heavy plugin string requirements, Polylang is completely adequate.</p>
+
+<p><strong>Gettext / theme-level translations</strong> — <code>.pot</code> files, <code>__( )</code> calls in theme code, language files — work without a plugin and without database overhead. This is the clean approach for theme strings, buttons, and UI labels. But for editorial content (posts, pages, ACF fields), it doesn't scale on its own.</p>
+
+<p>My approach on Wickie and Lipold combined both: Polylang for post and page translations, gettext for theme strings. That keeps the plugin surface small while giving editors a clean translation interface.</p>
+
+<h2>Translation Workflow for Editors</h2>
+
+<p>The tech is one half, workflow the other. What I recommend:</p>
+
+<ul>
+  <li>The source language is always the master. Translations are derivatives — never the reverse.</li>
+  <li>ACF fields must be explicitly configured for translation (WPML: sync field groups; Polylang: enable custom fields in settings).</li>
+  <li>Translate permalinks per language — <code>/about-us/</code> in English, <code>/ueber-uns/</code> in German. It's extra effort but both users and search engines notice.</li>
+  <li>Set up a 'translations pending' status or at least a checklist, so nothing goes live in the wrong language.</li>
+</ul>
+
+<h2>SEO Pitfalls I've Seen in Practice</h2>
+
+<p><strong>Duplicate content from missing canonicalization:</strong> If your plugin indexes both language versions of a page without correct <code>rel=canonical</code> and hreflang, they compete against each other in search results.</p>
+
+<p><strong>Sitemaps:</strong> Every language variant needs to appear in the sitemap, ideally with hreflang annotation. Yoast SEO and RankMath handle this automatically when the language plugin is properly integrated.</p>
+
+<p><strong>Robots.txt and staging environments:</strong> If you block language directories on staging with <code>noindex</code>, double-check that it doesn't carry over to production by accident.</p>
+
+<p><strong>Performance:</strong> Multilingual plugins — especially WPML — can multiply database queries. Caching (e.g. WP Rocket with language-specific cache directories) isn't optional on multilingual sites; it's mandatory.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>Multilingual website architecture is solvable, but the early decisions — URL structure, plugin choice, hreflang implementation — determine how much pain you carry later. Get them wrong and you spend months debugging SEO problems that were avoidable from the start.</p>
+
+<p>If you're planning a multilingual WordPress project and want an honest assessment of your options, <a href="/#contact">get in touch</a>. I'll help you find the right architecture for your specific setup — without unnecessary detours.</p>

@@ -1,0 +1,15 @@
+{
+  "category": "ecommerce",
+  "tags": ["E-Commerce", "AffiliateWP", "WordPress"],
+  "publishedAt": "2026-07-14",
+  "de": {
+    "title": "Ein mehrstufiges Affiliate-System selbst bauen mit AffiliateWP",
+    "description": "Wie du ein benutzerdefiniertes Affiliate-System WordPress mit AffiliateWP aufbaust: mehrstufige Provisionen, Rückbuchungen und Idempotenz praxisnah erklärt.",
+    "excerpt": "Standard-Plugins reichen oft nicht. Hier zeige ich, wie ich für Profit Prime ein vollständiges Multi-Tier-Affiliate-System auf WordPress gebaut habe."
+  },
+  "en": {
+    "title": "Building a Custom Multi-Tier Affiliate System with AffiliateWP",
+    "description": "How to build a custom WordPress affiliate system with AffiliateWP: multi-tier commissions, chargeback clawback, idempotency, and circular referral prevention.",
+    "excerpt": "Off-the-shelf plugins rarely cover every edge case. Here is how I built a full multi-tier affiliate engine on WordPress for a real e-learning platform."
+  }
+}

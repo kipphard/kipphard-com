@@ -1,0 +1,55 @@
+<h2>ACF Flexible Content: Warum das besser ist als jeder Page-Builder</h2>
+
+<p>Wenn Kunden eine WordPress-Website in Auftrag geben, kommen sie oft mit dem Wunsch: "Die Seite soll einfach zu bedienen sein, und wir wollen Inhalte selbst anpassen." Das führt in der Praxis schnell zu Page-Buildern wie Elementor, Divi oder WPBakery. Die Idee ist verlockend – drag-and-drop, alles visuell, sofort sichtbar. Das Problem: Page-Builder sind Kompromisse. Sie erzeugen aufgeblähten HTML-Output, laden JavaScript und CSS für Funktionen, die du nie nutzt, und machen Custom-Designs oft schwieriger, nicht einfacher.</p>
+
+<p>ACF Flexible Content ist ein anderer Ansatz. Kein visueller Editor, aber eine strukturierte, wartbare Lösung, die Redakteuren tatsächliche Flexibilität gibt – während du als Entwickler die volle Kontrolle über Markup und Performance behältst.</p>
+
+<h2>Das Konzept: Blöcke statt Freitext</h2>
+
+<p>Das Grundprinzip ist einfach. Statt einem Editor ein leeres Textfeld zu geben – oder eine endlose Palette von Drag-and-drop-Elementen –, definierst du vorab eine Bibliothek von Sektionstypen: Hero-Bereich, Textblock mit Bild, Testimonials, FAQ, Kontaktformular, Team-Übersicht und so weiter. Jeder Sektionstyp hat genau die Felder, die er braucht: Bild-Upload, Überschrift, Text, Links.</p>
+
+<p>Im WordPress-Backend sieht der Redakteur dann eine geordnete Liste dieser Blöcke. Er kann neue hinzufügen, vorhandene verschieben, deaktivieren oder duplizieren. Die Reihenfolge bestimmt, was auf der Seite zu sehen ist. Das ist die Flexibilität, die Kunden sich wünschen – ohne dass jemand aus Versehen das Layout zerschießen kann.</p>
+
+<h2>Wie Blöcke auf Template-Teile mappen</h2>
+
+<p>Auf der Entwicklerseite entspricht jeder Sektionstyp einem PHP-Template-Part. Die Hauptschleife ist minimal:</p>
+
+<pre><code>if ( have_rows( 'sections' ) ) :
+  while ( have_rows( 'sections' ) ) : the_row();
+    $layout = get_row_layout();
+    get_template_part( 'template-parts/sections/' . $layout );
+  endwhile;
+endif;
+</code></pre>
+
+<p>Jede <code>sections/hero.php</code>, <code>sections/text-image.php</code> und so weiter ist eine eigenständige Datei. Sie liest ihre ACF-Felder aus, rendert ihr HTML und kümmert sich um nichts anderes. Das macht die Templates einfach zu testen, einfach zu warten und einfach zu erweitern.</p>
+
+<h2>Wiederverwendbarkeit über mehrere Seiten hinweg</h2>
+
+<p>Einer der größten Vorteile gegenüber Page-Buildern: dieselbe Block-Library lässt sich seitenübergreifend nutzen. Einmal ein "Testimonial"-Block gebaut, steht er auf der Startseite, der Über-uns-Seite und der Leistungsübersicht zur Verfügung – mit identischem Markup und identischen Styles. Bei Page-Buildern landet man schnell in der Situation, dass jede Seite leicht anders gebaut ist, weil verschiedene Mitarbeiter zu unterschiedlichen Zeiten unterschiedliche Elemente verwendet haben.</p>
+
+<p>Mit einer definierten Block-Library gibt es nur eine "Wahrheit" pro Sektionstyp. Änderungen am Template wirken sich sofort auf alle Seiten aus, die diesen Block nutzen. Das ist bei der Wartung unbezahlbar.</p>
+
+<h2>Performance und Markup-Kontrolle</h2>
+
+<p>Page-Builder erzeugen HTML, das sie für alle denkbaren Konfigurationen generisch halten müssen – das führt zu tief verschachtelten <code>&lt;div&gt;</code>-Strukturen, Inline-Styles und JavaScript-Abhängigkeiten. Mit eigenen Templates schreibst du genau das HTML, das du brauchst. Nicht mehr, nicht weniger.</p>
+
+<p>Das wirkt sich direkt auf die Ladezeit aus: kein Builder-JavaScript, kein Builder-CSS, keine globalen Grid-Definitionen, die nur auf einer einzigen Seite gebraucht werden. Die Core Web Vitals danken es.</p>
+
+<h2>Praxis: 41 Sektionstypen und 16 Blöcke</h2>
+
+<p>Ich habe diesen Ansatz in realen Projekten in unterschiedlicher Größenordnung umgesetzt. Beim <a href="/work/wickie">Wickie-Projekt</a> – einer mehrsprachigen Fintech-Website mit Versionen in Deutsch, Englisch, Französisch und Italienisch – umfasst die Block-Library 41 verschiedene Sektionstypen. Von einfachen Text-Hero-Sektionen bis hin zu komplexen Tabellen-Layouts und interaktiven Feature-Übersichten. Jeder Sektionstyp ist ein sauberes Template, das Redakteure in beliebiger Reihenfolge kombinieren können.</p>
+
+<p>Bei <a href="/work/augusta-beauty">Augusta Beauty</a> war der Fokus ein anderer: eine kleinere Beauty-Studio-Website mit 16 Blöcken, deren Kernziel die Selbständigkeit des Kunden war. Der Betreiber kann Sektionen selbst hinzufügen, Text und Bilder austauschen und Seiten neu aufbauen – ohne Agentur, ohne Entwickler für jede kleine Änderung.</p>
+
+<h2>Die Editor-Erfahrung</h2>
+
+<p>Ein häufiges Gegenargument: "Ist ACF Flexible Content nicht komplizierter als ein visueller Editor?" In der Praxis nicht – wenn die Felder sinnvoll benannt und die Vorschau-Bilder für jeden Block hinterlegt sind. ACF Pro erlaubt es, jedem Sektionstyp eine Beschreibung und einen Layout-Screenshot zu geben. Redakteure sehen auf einen Blick, welchen Block sie hinzufügen.</p>
+
+<p>Was sie <em>nicht</em> tun können: Schriftgrößen, Farben oder Abstände manuell überschreiben. Das klingt nach Einschränkung, ist aber ein Feature. Es stellt sicher, dass die Seite nach einem Jahr Redakteursbetrieb noch genauso aussieht wie am ersten Tag.</p>
+
+<h2>ACF Flexible Content ist die wartbare Alternative</h2>
+
+<p>Wenn du eine WordPress-Website baust, die langfristig gepflegt werden soll, ist ACF Flexible Content der sauberere Weg. Du gibst Redakteuren echte Flexibilität – Sektionen hinzufügen, umsortieren, deaktivieren – ohne dabei Kontrolle über Markup, Performance und Design abzugeben.</p>
+
+<p>Wenn du eine neue WordPress-Website planst oder eine bestehende von einem Page-Builder ablösen möchtest, berate ich dich gern zum richtigen Ansatz: <a href="/#contact">Schreib mir</a>.</p>

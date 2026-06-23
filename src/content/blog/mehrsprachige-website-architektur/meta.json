@@ -1,0 +1,15 @@
+{
+  "category": "wordpress",
+  "tags": ["WordPress", "Multilingual", "i18n"],
+  "publishedAt": "2026-07-02",
+  "de": {
+    "title": "Mehrsprachige Website richtig aufbauen — ohne Plugin-Wildwuchs",
+    "description": "Mehrsprachige Website in WordPress aufbauen: URL-Struktur, hreflang, WPML vs Polylang vs Gettext — und wie du typische SEO-Fallstricke vermeidest.",
+    "excerpt": "Subdomain oder Unterverzeichnis? WPML oder Polylang? Ich zeige, wie du eine mehrsprachige Website sauber architektierst — ohne späteren Plugin-Schmerz."
+  },
+  "en": {
+    "title": "Multilingual Website Architecture in WordPress — Done Right",
+    "description": "Multilingual website architecture in WordPress: URL structure, hreflang, WPML vs Polylang vs gettext — and how to avoid common duplicate-content pitfalls.",
+    "excerpt": "Subdirectory or subdomain? WPML or Polylang? Here's how to architect a multilingual WordPress site cleanly, without painting yourself into a corner later."
+  }
+}
