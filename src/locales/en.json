@@ -264,6 +264,57 @@
         }
       },
       {
+        "id": "profit-prime",
+        "size": "featured",
+        "filter": [
+          "plattform",
+          "webshop"
+        ],
+        "year": "Since 2026",
+        "client": "Profit Prime",
+        "type": "Platform · LMS · Affiliate System · Digistore Integration",
+        "title": "Courses, access, commissions — a learning platform that runs itself.",
+        "desc": "Online learning platform for premium courses (e-commerce, dropshipping, AI, social media, UGC). Sales run through Digistore24 — which offers no interface for automatic course provisioning or a multi-tier partner commission model. So the entire integration layer was built from scratch: a WordPress REST webhook receives every Digistore event (purchase, refund, chargeback), creates accounts, unlocks the right MasterStudy courses, books affiliate commissions across multiple tiers, and sends the matching emails — idempotent, with automatic clawback on refund. Plus custom admin tools for commission rates and email management.",
+        "stack": [
+          "WordPress",
+          "Digistore24 Webhooks",
+          "MasterStudy LMS",
+          "AffiliateWP Multi-Tier",
+          "Elementor Pro",
+          "PHP / REST API"
+        ],
+        "thumb": "editorial",
+        "url": "https://profit-prime.com/",
+        "case": {
+          "hero": "/case-studies/profit-prime/hero.webp",
+          "screenshots": [
+            {
+              "src": "/case-studies/profit-prime/courses.webp",
+              "alt": "Course catalogue “Wähle deinen Weg” with six premium courses and prices",
+              "caption": "Course catalogue: each course is a Digistore product. A product-ID mapping tells the platform which MasterStudy courses to unlock after purchase — bundles included."
+            },
+            {
+              "src": "/case-studies/profit-prime/course-page.webp",
+              "alt": "Course detail page “Werde Prime Partner” with Digistore buy button and programme description",
+              "caption": "Course page with a Digistore checkout button. The referring partner from the tracking cookie is appended to the checkout URL via JavaScript, so the sale is later attributed to the correct commission tier."
+            },
+            {
+              "src": "/case-studies/profit-prime/lesson.webp",
+              "alt": "Course player for the e-commerce lesson with curriculum sidebar, video and progress bar",
+              "caption": "The learning environment on MasterStudy LMS: curriculum, video lessons, progress tracking. Access is granted only after a verified Digistore purchase."
+            },
+            {
+              "src": "/case-studies/profit-prime/affiliate.webp",
+              "alt": "Partner area with personal referral link and multi-tier network visualisation",
+              "caption": "The custom-built partner area: personal referral link and a multi-tier network. Commissions cascade up the partner hierarchy — with cycle protection when linking and clawback on refund."
+            }
+          ],
+          "challenge": "Profit Prime sells premium online courses through Digistore24 — payment, invoicing, VAT, all outsourced. The catch: Digistore offers no interface to trigger the right things automatically after a purchase. And a lot needs to happen. The buyer needs an account and access to exactly the courses they bought, instantly. At the same time a multi-tier partner programme runs: whoever refers a buyer earns a commission — and whoever referred that partner earns too, across multiple tiers. Refunds and chargebacks have to revoke access again and reverse commissions already credited. None of this is manageable by hand during live sales, and no off-the-shelf plugin fully covers the Digistore integration together with the multi-tier commission logic.",
+          "solution": "A fully custom integration layer on WordPress that connects Digistore to the learning platform. At its core is a dedicated REST webhook endpoint that receives and orchestrates every Digistore IPN event. On a purchase it creates a WordPress account if needed (passwordless: the user gets a set-password link rather than a plaintext password), unlocks the matching MasterStudy LMS courses via a product-ID-to-course mapping (bundles included), with membership levels running in parallel through Paid Memberships Pro. The affiliate system builds on AffiliateWP and its Multi-Tier add-on but is orchestrated by custom code: the referral is booked with the right type so the commission cascade fires cleanly across partner tiers, custom progressive commission rates are applied (freely configurable in the admin), and a cycle check prevents infinite loops when building the partner hierarchy. On refund, chargeback or missed payment the same endpoint revokes course access and marks the commission as “rejected” (clawback). Every transactional email — access, course unlock, partner welcome, commission credit — is in German and idempotent. Plus custom admin pages: commission rates, a tool to re-send individual emails, and granular notification settings. The pages themselves are built with Hello Elementor + Elementor Pro — all the business logic lives in the theme code behind them.",
+          "outcome": "Live since 2026. Every sale through Digistore runs fully automatically: account, course unlock, commission distribution across all tiers, and email delivery all happen within seconds of purchase, with no manual step. The integration is built for continuous operation — Digistore's repeated IPN calls are processed idempotently with multiple safeguards (no duplicate account, no duplicate course, no duplicate commission), and every step is written to an access-protected log that triggers an admin notification on failure. Refunds and chargebacks pull access and commissions back automatically. Commission rates and notifications are all adjustable without touching code via the custom admin pages. The result: a self-built backend carrying a business model the market had no off-the-shelf solution for — from the first payment to a third-tier commission."
+        }
+      },
+      {
         "id": "augusta-beauty",
         "size": "standard",
         "filter": [
@@ -587,6 +638,10 @@
     "wickie": {
       "title": "Wickie — Case Study — André Kipphard",
       "description": "End-to-end web presence for the Swiss crypto and IBAN platform. Multilingual (DE/EN/FR/IT), custom WordPress theme, ACF block library. Since 2024."
+    },
+    "profit-prime": {
+      "title": "Profit Prime — Case Study — André Kipphard",
+      "description": "Online learning platform with a custom-built Digistore24 integration: a REST webhook unlocks courses and books multi-tier affiliate commissions. WordPress, MasterStudy LMS, AffiliateWP. Since 2026."
     },
     "about": {
       "title": "About — André Kipphard",

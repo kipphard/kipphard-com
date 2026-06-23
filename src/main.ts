@@ -21,6 +21,7 @@ const routes = [
   { path: '/impressum', component: Impressum },
   { path: '/datenschutz', component: Datenschutz },
   { path: '/work/wickie', component: CaseStudy },
+  { path: '/work/profit-prime', component: CaseStudy },
   { path: '/work/augusta-beauty', component: CaseStudy },
   { path: '/work/lipold', component: CaseStudy },
   { path: '/work/pigmentfrei', component: CaseStudy },

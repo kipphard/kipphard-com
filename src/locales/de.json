@@ -264,6 +264,57 @@
         }
       },
       {
+        "id": "profit-prime",
+        "size": "featured",
+        "filter": [
+          "plattform",
+          "webshop"
+        ],
+        "year": "Seit 2026",
+        "client": "Profit Prime",
+        "type": "Plattform · LMS · Affiliate-System · Digistore-Integration",
+        "title": "Kurse, Zugänge, Provisionen — eine Lernplattform, die sich selbst verwaltet.",
+        "desc": "Online-Lernplattform für Premium-Kurse (E-Commerce, Dropshipping, KI, Social Media, UGC). Der Verkauf läuft über Digistore24 — das aber keine Schnittstelle für automatische Kursfreischaltung und kein mehrstufiges Partner-Provisionsmodell bietet. Also wurde die gesamte Integrationsschicht selbst entwickelt: ein WordPress-REST-Webhook empfängt jeden Digistore-Event (Kauf, Erstattung, Rückbuchung), legt Konten an, schaltet die passenden MasterStudy-Kurse frei, verbucht Affiliate-Provisionen über mehrere Ebenen und versendet die zugehörigen E-Mails — idempotent und mit automatischem Clawback bei Erstattung. Dazu eigene Admin-Tools für Provisionssätze und E-Mail-Verwaltung.",
+        "stack": [
+          "WordPress",
+          "Digistore24-Webhooks",
+          "MasterStudy LMS",
+          "AffiliateWP Multi-Tier",
+          "Elementor Pro",
+          "PHP / REST-API"
+        ],
+        "thumb": "editorial",
+        "url": "https://profit-prime.com/",
+        "case": {
+          "hero": "/case-studies/profit-prime/hero.webp",
+          "screenshots": [
+            {
+              "src": "/case-studies/profit-prime/courses.webp",
+              "alt": "Kurskatalog „Wähle deinen Weg“ mit sechs Premium-Kursen und Preisen",
+              "caption": "Kurskatalog: Jeder Kurs ist ein Digistore-Produkt. Über eine Produkt-ID-Zuordnung weiß die Plattform nach dem Kauf, welche MasterStudy-Kurse sie freischalten muss — Bundles inklusive."
+            },
+            {
+              "src": "/case-studies/profit-prime/course-page.webp",
+              "alt": "Kursdetailseite „Werde Prime Partner“ mit Digistore-Kaufbutton und Programmbeschreibung",
+              "caption": "Kursseite mit Digistore-Checkout-Button. Der geworbene Partner aus dem Tracking-Cookie wird per JavaScript an die Checkout-URL angehängt, damit der Verkauf später der richtigen Provisions-Ebene zugeordnet wird."
+            },
+            {
+              "src": "/case-studies/profit-prime/lesson.webp",
+              "alt": "Kurs-Player der E-Commerce-Lektion mit Curriculum-Sidebar, Video und Fortschrittsanzeige",
+              "caption": "Die Lernumgebung auf MasterStudy LMS: Curriculum, Video-Lektionen, Fortschritts-Tracking. Zugang gibt es ausschließlich nach einem verifizierten Digistore-Kauf."
+            },
+            {
+              "src": "/case-studies/profit-prime/affiliate.webp",
+              "alt": "Partnerbereich mit persönlichem Empfehlungslink und mehrstufiger Netzwerk-Visualisierung",
+              "caption": "Der selbst gebaute Partnerbereich: persönlicher Empfehlungslink und mehrstufiges Netzwerk. Provisionen kaskadieren über die Partner-Hierarchie nach oben — mit Zyklus-Schutz beim Verknüpfen und Clawback bei Erstattung."
+            }
+          ],
+          "challenge": "Profit Prime verkauft Premium-Onlinekurse über Digistore24 — Zahlung, Rechnung, MwSt., alles ausgelagert. Der Haken: Digistore bietet keine Schnittstelle, um nach einem Kauf automatisch das Richtige auszulösen. Und es soll viel passieren. Der Käufer braucht sofort ein Konto und Zugang zu genau den Kursen, die er gekauft hat. Gleichzeitig läuft ein mehrstufiges Partnerprogramm: Wer einen Käufer wirbt, bekommt Provision — und wer diesen Partner geworben hat, ebenfalls, über mehrere Ebenen. Erstattungen und Rückbuchungen müssen Zugänge wieder entziehen und bereits gutgeschriebene Provisionen zurücknehmen. Bei laufendem Verkauf ist das manuell nicht zu stemmen, und kein Standard-Plugin deckt die Digistore-Anbindung samt mehrstufiger Provisionslogik vollständig ab.",
+          "solution": "Eine komplett selbst gebaute Integrationsschicht auf WordPress, die Digistore mit der Lernplattform verbindet. Kern ist ein eigener REST-Webhook-Endpoint, der jeden Digistore-IPN-Event entgegennimmt und orchestriert. Bei einem Kauf wird — falls nötig — ein WordPress-Konto angelegt (passwortlos: der Nutzer erhält einen Setze-Passwort-Link statt eines Klartext-Passworts), über eine Produkt-ID-zu-Kurs-Zuordnung schaltet das System die passenden MasterStudy-LMS-Kurse frei (Bundles inklusive), parallel laufen Mitgliedschafts-Level über Paid Memberships Pro. Das Affiliate-System setzt auf AffiliateWP plus dessen Multi-Tier-Erweiterung auf, wird aber durch eigenen Code orchestriert: Der Referral wird mit dem richtigen Typ verbucht, damit die Provisions-Kaskade über die Partner-Ebenen sauber auslöst, eigene progressive Provisionssätze werden angewendet (im Admin frei konfigurierbar), und beim Aufbau der Partner-Hierarchie verhindert eine Zyklus-Prüfung Endlosschleifen. Bei Erstattung, Rückbuchung oder geplatzter Zahlung entzieht derselbe Endpoint den Kurszugang und setzt die Provision auf „abgelehnt“ (Clawback). Jede transaktionale E-Mail — Zugang, Kursfreischaltung, Partner-Willkommen, Provisions-Gutschrift — ist deutschsprachig und idempotent. Dazu eigene Admin-Seiten: Provisionssätze, ein Werkzeug zum erneuten Versenden einzelner E-Mails und granulare Benachrichtigungs-Einstellungen. Die Seiten selbst sind mit Hello Elementor + Elementor Pro gebaut — die gesamte Geschäftslogik liegt im Theme-Code dahinter.",
+          "outcome": "Live seit 2026. Jeder Verkauf über Digistore läuft vollautomatisch durch: Konto, Kursfreischaltung, Provisionsverteilung über alle Ebenen und E-Mail-Versand passieren innerhalb von Sekunden nach dem Kauf, ohne manuellen Eingriff. Die Integration ist auf Dauerbetrieb ausgelegt — wiederholte IPN-Aufrufe von Digistore werden mehrfach abgesichert idempotent verarbeitet (kein doppeltes Konto, kein doppelter Kurs, keine doppelte Provision), und jeder Schritt landet in einem zugriffsgeschützten Log, das im Fehlerfall eine Admin-Benachrichtigung auslöst. Erstattungen und Rückbuchungen ziehen Zugänge und Provisionen automatisch zurück. Provisionssätze und Benachrichtigungen lassen sich ohne Code-Eingriff über die eigenen Admin-Seiten steuern. So trägt ein selbst gebautes Backend ein Geschäftsmodell, für das es am Markt keine fertige Lösung gab — von der ersten Zahlung bis zur Provision in dritter Ebene."
+        }
+      },
+      {
         "id": "augusta-beauty",
         "size": "standard",
         "filter": [
@@ -587,6 +638,10 @@
     "wickie": {
       "title": "Wickie — Case Study — André Kipphard",
       "description": "Vollständiger Webauftritt für die Schweizer Krypto- und IBAN-Plattform. Multilingual (DE/EN/FR/IT), Custom WordPress-Theme, ACF-Block-Library. Seit 2024."
+    },
+    "profit-prime": {
+      "title": "Profit Prime — Case Study — André Kipphard",
+      "description": "Online-Lernplattform mit selbst gebauter Digistore24-Integration: ein REST-Webhook schaltet Kurse frei und verbucht mehrstufige Affiliate-Provisionen. WordPress, MasterStudy LMS, AffiliateWP. Seit 2026."
     },
     "about": {
       "title": "Über mich — André Kipphard",
