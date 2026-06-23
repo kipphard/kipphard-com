@@ -691,7 +691,16 @@
     "locationRemote": "Remote worldwide",
     "imprint": "Imprint",
     "privacy": "Privacy",
+    "cookieSettings": "Cookie settings",
     "copy": "© 2026 André Kipphard · All rights reserved",
     "version": "v2.0 · Built solo"
+  },
+  "consent": {
+    "title": "Cookies & analytics",
+    "body": "This site uses Google Analytics to measure usage anonymously — only with your consent. You can change your choice anytime via “Cookie settings” in the footer. More in the",
+    "privacyLink": "privacy policy",
+    "accept": "Accept",
+    "decline": "Decline",
+    "aria": "Cookie consent"
   }
 }

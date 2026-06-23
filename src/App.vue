@@ -6,9 +6,12 @@
   <RouterView />
 
   <Footer />
+
+  <CookieConsent />
 </template>
 
 <script setup lang="ts">
 import Header from '@/components/layout/Header/Header.vue'
 import Footer from '@/components/layout/Footer/Footer.vue'
+import CookieConsent from '@/components/CookieConsent/CookieConsent.vue'
 </script>

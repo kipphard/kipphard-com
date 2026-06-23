@@ -15,6 +15,7 @@ import Impressum from './pages/Impressum.vue'
 import Datenschutz from './pages/Datenschutz.vue'
 import CaseStudy from './pages/CaseStudy.vue'
 import NotFound from './pages/NotFound.vue'
+import { trackPageview } from './lib/consent'
 
 const routes = [
   { path: '/', component: Home },
@@ -39,7 +40,7 @@ export const createApp = ViteSSG(
       return { top: 0 }
     },
   },
-  ({ app, head }) => {
+  ({ app, router, head, isClient }) => {
     const i18n = createI18n({
       legacy: false,
       locale: 'de',
@@ -57,6 +58,11 @@ export const createApp = ViteSSG(
       watch(locale, (val) => {
         document.documentElement.lang = String(val)
       })
+    }
+
+    // Send GA4 page_view on client-side route changes (consent-gated inside).
+    if (isClient) {
+      router.afterEach((to) => trackPageview(to.path))
     }
   },
 )

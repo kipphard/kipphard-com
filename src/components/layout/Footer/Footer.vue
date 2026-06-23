@@ -44,6 +44,7 @@
         <div class="right">
           <RouterLink to="/impressum">{{ t('footer.imprint') }}</RouterLink>
           <RouterLink to="/datenschutz">{{ t('footer.privacy') }}</RouterLink>
+          <button type="button" class="footer__link-btn" @click="openConsentSettings">{{ t('footer.cookieSettings') }}</button>
         </div>
       </div>
     </div>
@@ -52,6 +53,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
+import { openConsentSettings } from '@/lib/consent'
 
 const { t } = useI18n()
 </script>

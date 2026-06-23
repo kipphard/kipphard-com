@@ -19,4 +19,6 @@ interface Window {
     reset(id: string): void
     remove(id: string): void
   }
+  dataLayer?: unknown[]
+  gtag?: (...args: unknown[]) => void
 }
