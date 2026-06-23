@@ -4,6 +4,7 @@
     "about": "About",
     "services": "Services",
     "work": "Work",
+    "labs": "Labs",
     "blog": "Blog",
     "pricing": "Pricing",
     "contact": "Contact",
@@ -42,6 +43,32 @@
       "seo": "SEO",
       "ecommerce": "E-Commerce"
     }
+  },
+  "labs": {
+    "eyebrow": "Labs",
+    "title": "My own products, in progress.",
+    "intro": "Alongside client work I build my own web apps — end to end, from the database to the UI. Try the live demos: your input is private and never saved.",
+    "wip": "Work in progress",
+    "demo": "Live demo",
+    "source": "Code",
+    "items": [
+      {
+        "id": "finance-tracker",
+        "name": "Finance Tracker",
+        "tagline": "A personal finance platform: net worth, cash flow, budgets and debts — plus freelance time tracking, invoicing and German EÜR/income-tax estimation. Built end to end, from the database to the charts.",
+        "stack": ["React", "TypeScript", "FastAPI", "PostgreSQL", "SQLAlchemy"],
+        "demoUrl": "https://finance-tracker.kipphard.com",
+        "repoUrl": "https://github.com/kipphard/finance-tracker"
+      },
+      {
+        "id": "fitness-tracker",
+        "name": "Fitness Tracker",
+        "tagline": "Calorie and macro tracking with a food diary (barcode + photo AI), workout logging, and weight and body-measurement trends — as an installable PWA with offline support.",
+        "stack": ["React", "TypeScript", "FastAPI", "PostgreSQL", "PWA"],
+        "demoUrl": "https://fitness-tracker.kipphard.com",
+        "repoUrl": "https://github.com/kipphard/fitness-tracker"
+      }
+    ]
   },
   "home": {
     "aboutLink": "More about my workflow",

@@ -17,6 +17,7 @@
             <li><RouterLink to="/#about">{{ t('nav.about') }}</RouterLink></li>
             <li><RouterLink to="/#services">{{ t('nav.services') }}</RouterLink></li>
             <li><RouterLink to="/#work">{{ t('nav.work') }}</RouterLink></li>
+            <li><RouterLink to="/#labs">{{ t('nav.labs') }}</RouterLink></li>
             <li><RouterLink to="/blog">{{ t('nav.blog') }}</RouterLink></li>
             <li><RouterLink to="/#pricing">{{ t('nav.pricing') }}</RouterLink></li>
             <li><RouterLink to="/#contact">{{ t('nav.contact') }}</RouterLink></li>

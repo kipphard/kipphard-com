@@ -720,3 +720,37 @@
   .blog-aside--sticky { position: static; }
   .blog-related__grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Labs ---------- */
+.labs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px, 2.5vw, 28px); }
+.labs-card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(20px, 2.5vw, 30px);
+  background: var(--bg-elev);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+.labs-card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+.labs-card__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.labs-card__head h3 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.5rem); }
+.labs-badge {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+.labs-card__desc { margin: 0; color: var(--fg-muted); line-height: 1.6; flex: 1; }
+.labs-card__stack { margin: 0; }
+.labs-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+
+@media (max-width: 760px) {
+  .labs-grid { grid-template-columns: 1fr; }
+}
