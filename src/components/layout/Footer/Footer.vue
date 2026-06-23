@@ -25,7 +25,7 @@
         <div class="footer__col">
           <h4>{{ t('footer.profilesTitle') }}</h4>
           <ul>
-            <li><a href="https://linkedin.com/in/kipphard" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+            <li><a href="https://de.linkedin.com/in/andr%C3%A9-kipphard-2653991b3" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
             <li><a href="https://github.com/kipphard" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
           </ul>
         </div>
