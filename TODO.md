@@ -34,11 +34,8 @@ Tracks work outside the codebase or that needs your input. Code-only follow-ups 
 
 ## Analytics
 
-- [ ] **Pick one** (don't mix):
-  - **Plausible** (paid, EU-hosted, no cookies, GDPR-free) — best fit for a portfolio
-  - **Umami** (self-hosted on Hetzner, no cookies, free)
-  - **Google Analytics 4** — most features but requires a cookie banner and Datenschutz entry. Avoid unless you genuinely need GA's depth.
-- [ ] **Cookie banner** — only needed if you use GA or anything with persistent identifiers. Plausible/Umami skip this entirely.
+- [x] **Picked: Google Analytics 4** (`G-3DGN33PKHG`) — added 2026-06-23, consent-gated (opt-in). `src/lib/consent.ts` injects gtag.js only after Accept and only on the prod host. Plausible/Umami were the cookieless alternatives but GA4 was chosen.
+- [x] **Cookie banner** — done. Opt-in banner (`src/components/CookieConsent`) gates GA4; choice stored in `kipphard_consent` cookie; footer "Cookie-Einstellungen" link to withdraw. Datenschutz has a Google-Analytics section.
 - [ ] **Search Console** — once the domain is live, add it to [Google Search Console](https://search.google.com/search-console) and submit `https://kipphard.com/sitemap.xml`.
 - [ ] **Bing Webmaster Tools** — same idea, smaller traffic but free signal.
 
