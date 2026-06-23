@@ -68,9 +68,9 @@ Tracks work outside the codebase or that needs your input. Code-only follow-ups 
 ## Launch gate (currently in place)
 
 - [x] **Kontaktformular vor Launch verdrahten ODER ausblenden** — Done. Contact form posts to Cloudflare Worker `kipphard-com-contact`, validates + sends via Resend, end-to-end tested.
-- [ ] **Remove HTTP Basic Auth** — site is currently behind `auth_basic` in `deploy/nginx/kipphard.com.conf` (creds in `/etc/nginx/.htpasswd-kipphard` on `hetzner-vb`). Remove the two `auth_basic*` lines from the vhost AND delete the htpasswd file once:
+- [x] **Remove HTTP Basic Auth** — gate lifted 2026-06-23. Removed the two `auth_basic*` lines from `deploy/nginx/kipphard.com.conf` and deleted `/etc/nginx/.htpasswd-kipphard` on `hetzner-vb`. Site is public.
   - [x] (a) Impressum + Datenschutz are live
-  - [ ] (b) Placeholder `work.items[1..5]` replaced by 3 more real case studies (Wickie is in, 3 more needed)
+  - [x] (b) Placeholder `work.items[1..5]` replaced by real case studies (4 live: Wickie + Augusta Beauty + Lipold + Pigmentfrei)
   - [x] (c) `<html lang>` is fixed to `de`
   - [x] (d) Real portrait, favicon, apple-touch, OG image in place
 
