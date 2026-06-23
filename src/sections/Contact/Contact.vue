@@ -13,7 +13,12 @@
           <div v-for="(link, i) in links" :key="i" class="contact__row">
             <dt>{{ link.label }}</dt>
             <dd>
-              <a v-if="link.href !== '#'" :href="link.href">{{ link.value }}</a>
+              <a
+                v-if="link.href !== '#'"
+                :href="link.href"
+                :target="link.href.startsWith('http') ? '_blank' : undefined"
+                :rel="link.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+              >{{ link.value }}</a>
               <span v-else>{{ link.value }}</span>
             </dd>
           </div>
