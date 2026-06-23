@@ -36,8 +36,7 @@
   color: var(--fg-muted);
   transition: color 0.2s var(--ease), background 0.2s var(--ease);
 }
-.nav__links a:hover,
-.nav__links a.router-link-active { color: var(--fg); background: color-mix(in srgb, var(--fg) 12%, transparent); }
+.nav__links a:hover { color: var(--fg); }
 .nav__spacer { margin-left: auto; }
 .nav__tools { display: flex; align-items: center; gap: 8px; }
 
