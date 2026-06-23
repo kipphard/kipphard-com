@@ -4,6 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google tag (gtag.js) — GA4. Loads on the production domain only, so
+         local dev (pnpm dev) and prod-build previews (pnpm preview) on
+         localhost don't pollute analytics. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      if (location.hostname === 'kipphard.com') {
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-3DGN33PKHG';
+        document.head.appendChild(gaScript);
+        gtag('js', new Date());
+        gtag('config', 'G-3DGN33PKHG');
+      }
+    </script>
+
     <!-- Primary SEO -->
     <meta name="author" content="André Kipphard" />
     <meta name="theme-color" content="#111110" />
