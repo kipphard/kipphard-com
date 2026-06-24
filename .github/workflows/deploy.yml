@@ -38,21 +38,21 @@ jobs:
           chmod 700 ~/.ssh
           install -m 600 /dev/null ~/.ssh/deploy_key
           echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/deploy_key
-          ssh-keyscan -H YOUR_SERVER_IP >> ~/.ssh/known_hosts
+          ssh-keyscan -H ${{ secrets.DEPLOY_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy site
         run: |
           rsync -avz --delete \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
-            dist/ root@YOUR_SERVER_IP:/var/www/kipphard.com/
+            dist/ root@${{ secrets.DEPLOY_HOST }}:/var/www/kipphard.com/
 
       - name: Sync nginx vhost
         run: |
           rsync -avz \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes" \
-            deploy/nginx/kipphard.com.conf root@YOUR_SERVER_IP:/etc/nginx/sites-enabled/kipphard.com
+            deploy/nginx/kipphard.com.conf root@${{ secrets.DEPLOY_HOST }}:/etc/nginx/sites-enabled/kipphard.com
 
       - name: Validate and reload nginx
         run: |
-          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes root@YOUR_SERVER_IP \
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=yes root@${{ secrets.DEPLOY_HOST }} \
             'nginx -t && systemctl reload nginx'
