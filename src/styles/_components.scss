@@ -14,9 +14,9 @@
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
-.brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: -0.02em; }
+.brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
 .brand__mark {
   width: 34px; height: 34px;
   display: grid; place-items: center;
@@ -27,13 +27,14 @@
   font-size: 0.95rem;
   letter-spacing: -0.03em;
 }
-.nav__links { display: flex; gap: 4px; margin-left: 14px; }
+.nav__links { display: flex; gap: 2px; margin-left: 6px; }
 .nav__links a {
-  padding: 8px 14px;
+  padding: 8px 12px;
   border-radius: var(--radius-pill);
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--fg-muted);
+  white-space: nowrap;
   transition: color 0.2s var(--ease), background 0.2s var(--ease);
 }
 .nav__links a:hover { color: var(--fg); }

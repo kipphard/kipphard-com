@@ -13,7 +13,6 @@
         <RouterLink to="/#labs">{{ t('nav.labs') }}</RouterLink>
         <RouterLink to="/blog">{{ t('nav.blog') }}</RouterLink>
         <RouterLink to="/#pricing">{{ t('nav.pricing') }}</RouterLink>
-        <RouterLink to="/#contact">{{ t('nav.contact') }}</RouterLink>
       </nav>
 
       <div class="nav__spacer"></div>
