@@ -201,11 +201,21 @@ const slug = computed(() => {
   return segments[segments.length - 1]
 })
 
+const canonical = computed(() => `https://kipphard.com/work/${slug.value}`)
+const ogImage = computed(() => `https://kipphard.com/case-studies/${slug.value}/hero.webp`)
+
 useHead({
   title: () => t(`pages.${slug.value}.title`),
   meta: [
-    { name: 'description', content: () => t(`pages.${slug.value}.description`) },
+    { name: 'description',        content: () => t(`pages.${slug.value}.description`) },
+    { property: 'og:title',       content: () => t(`pages.${slug.value}.title`) },
+    { property: 'og:description', content: () => t(`pages.${slug.value}.description`) },
+    { property: 'og:type',        content: 'article' },
+    { property: 'og:url',         content: () => canonical.value },
+    { property: 'og:image',       content: () => ogImage.value },
+    { name: 'twitter:card',       content: 'summary_large_image' },
   ],
+  link: [{ rel: 'canonical', href: () => canonical.value }],
 })
 
 const lightboxIndex = ref<number | null>(null)

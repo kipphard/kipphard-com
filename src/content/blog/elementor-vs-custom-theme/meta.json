@@ -4,11 +4,13 @@
   "publishedAt": "2026-06-23",
   "de": {
     "title": "Elementor oder eigenes Theme — wann lohnt sich was?",
+    "seoTitle": "Elementor oder eigenes WordPress-Theme?",
     "description": "Elementor oder eigenes Theme: Ein ehrlicher Vergleich aus der Praxis — mit konkreten Entscheidungskriterien zu Performance, Kosten und Wartbarkeit.",
     "excerpt": "Page-Builder sind schnell gestartet, kosten aber Performance und Kontrolle. Wann Elementor sinnvoll ist — und wann ein Custom Theme die bessere Wahl ist."
   },
   "en": {
     "title": "Elementor vs Custom WordPress Theme — When Does Each Make Sense?",
+    "seoTitle": "Elementor vs Custom WordPress Theme",
     "description": "Elementor vs custom WordPress theme: an honest comparison from real projects, with clear decision criteria around performance, cost, and long-term maintainability.",
     "excerpt": "Page builders get you live fast but trade away performance and control. Here's when Elementor makes sense — and when a custom theme is the smarter investment."
   }

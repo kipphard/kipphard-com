@@ -693,7 +693,7 @@
     },
     "profit-prime": {
       "title": "Profit Prime — Case Study — André Kipphard",
-      "description": "Online-Lernplattform mit selbst gebauter Digistore24-Integration: ein REST-Webhook schaltet Kurse frei und verbucht mehrstufige Affiliate-Provisionen. WordPress, MasterStudy LMS, AffiliateWP. Seit 2026."
+      "description": "Online-Lernplattform mit selbst gebauter Digistore24-Integration: ein Webhook schaltet Kurse frei und verbucht mehrstufige Affiliate-Provisionen. Seit 2026."
     },
     "about": {
       "title": "Über mich — André Kipphard",
@@ -721,15 +721,15 @@
     },
     "augusta-beauty": {
       "title": "Augusta Beauty — Case Study — André Kipphard",
-      "description": "Kosmetikinstitut in Oldenburg. Custom WordPress-Theme auf Underscores statt Page-Builder — ACF Flexible Content liefert 16 Section-Typen für vollständiges Self-Service-Management. Seit 2023."
+      "description": "Kosmetikinstitut in Oldenburg. Custom WordPress-Theme auf Underscores statt Page-Builder — ACF Flexible Content liefert 16 Section-Typen. Seit 2023."
     },
     "lipold": {
       "title": "Lipold — Case Study — André Kipphard",
-      "description": "Institut für Liposuktion und Lipödem-Behandlung in Oldenburg. Zweisprachiges WordPress-Theme auf dem Augusta-Fundament — 17 ACF-Blocks, klinisches Branding, DE/EN. Seit 2024."
+      "description": "Institut für Liposuktion und Lipödem-Behandlung in Oldenburg. Zweisprachiges WordPress-Theme auf dem Augusta-Fundament — 17 ACF-Blocks, DE/EN. Seit 2024."
     },
     "pigmentfrei": {
       "title": "Pigmentfrei — Case Study — André Kipphard",
-      "description": "Tattoo-Laser- und PMU-Entfernungs-Zentrum in Oldenburg. Erste Web-Identität der Augusta-Praxis-Gruppe auf Hello Elementor + Elementor Pro. Der Erstaufschlag, aus dem die Custom-Theme-Plattform entstand."
+      "description": "Tattoo-Laser- und PMU-Entfernungs-Zentrum in Oldenburg. Erste Web-Identität der Augusta-Praxis-Gruppe auf Hello Elementor + Elementor Pro."
     }
   },
   "cta": {

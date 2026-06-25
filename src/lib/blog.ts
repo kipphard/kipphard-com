@@ -8,6 +8,10 @@ export type BlogLang = 'de' | 'en'
 
 interface LangMeta {
   title: string
+  /** Optional shorter title used only for the document <title> / SERP; the
+   *  on-page <h1> and JSON-LD headline keep using `title`. Falls back to
+   *  `title` when absent. */
+  seoTitle?: string
   description: string
   excerpt: string
 }

@@ -95,13 +95,19 @@ const jsonLd = computed(() =>
 )
 
 useHead({
-  title: () => (post.value ? `${content.value.title} — André Kipphard` : t('blog.notFound')),
+  title: () =>
+    post.value
+      ? `${post.value[lang.value].seoTitle || post.value[lang.value].title} — André Kipphard`
+      : t('blog.notFound'),
   meta: [
     { name: 'description', content: () => content.value.description },
     { property: 'og:title', content: () => content.value.title },
     { property: 'og:description', content: () => content.value.description },
     { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: () => canonical.value },
+    { property: 'og:image', content: 'https://kipphard.com/og-image.png' },
     { property: 'article:published_time', content: () => post.value?.publishedAt ?? '' },
+    { name: 'twitter:card', content: 'summary_large_image' },
   ],
   link: [{ rel: 'canonical', href: () => canonical.value }],
   script: [{ type: 'application/ld+json', innerHTML: () => jsonLd.value }],

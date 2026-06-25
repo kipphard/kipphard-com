@@ -85,5 +85,6 @@ useHead({
   meta: [
     { name: 'description', content: () => t('pages.datenschutz.description') },
   ],
+  link: [{ rel: 'canonical', href: 'https://kipphard.com/datenschutz' }],
 })
 </script>

@@ -4,11 +4,13 @@
   "publishedAt": "2026-06-23",
   "de": {
     "title": "Warum Page-Builder deine WordPress Performance zerstören — und was wirklich hilft",
+    "seoTitle": "Page-Builder killen WordPress-Performance",
     "description": "WordPress Performance leidet unter Page-Buildern: JS-Bloat, riesige DOMs, render-blocking Assets. Was du messen solltest und was konkret hilft.",
     "excerpt": "Page-Builder sind bequem, aber teuer: Sie liefern aufgeblähten Code, der deine Core Web Vitals versenkt. Hier sind die Ursachen — und was tatsächlich hilft."
   },
   "en": {
     "title": "Why Page Builders Kill WordPress Performance — and What Actually Helps",
+    "seoTitle": "Page Builders Kill WordPress Performance",
     "description": "WordPress page builder performance explained: why builders bloat your site, how to measure the damage with Core Web Vitals, and what actually fixes it.",
     "excerpt": "Page builders are convenient but expensive: they ship bloated code that tanks your Core Web Vitals. Here are the causes — and what genuinely fixes them."
   }

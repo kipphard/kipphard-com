@@ -80,7 +80,15 @@ const visiblePosts = computed(() =>
 
 useHead({
   title: () => t('pages.blog.title'),
-  meta: [{ name: 'description', content: () => t('pages.blog.description') }],
+  meta: [
+    { name: 'description',        content: () => t('pages.blog.description') },
+    { property: 'og:title',       content: () => t('pages.blog.title') },
+    { property: 'og:description', content: () => t('pages.blog.description') },
+    { property: 'og:type',        content: 'website' },
+    { property: 'og:url',         content: 'https://kipphard.com/blog' },
+    { property: 'og:image',       content: 'https://kipphard.com/og-image.png' },
+    { name: 'twitter:card',       content: 'summary_large_image' },
+  ],
   link: [{ rel: 'canonical', href: 'https://kipphard.com/blog' }],
 })
 </script>

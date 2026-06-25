@@ -50,5 +50,6 @@ useHead({
   meta: [
     { name: 'description', content: () => t('pages.impressum.description') },
   ],
+  link: [{ rel: 'canonical', href: 'https://kipphard.com/impressum' }],
 })
 </script>

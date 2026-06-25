@@ -693,7 +693,7 @@
     },
     "profit-prime": {
       "title": "Profit Prime — Case Study — André Kipphard",
-      "description": "Online learning platform with a custom-built Digistore24 integration: a REST webhook unlocks courses and books multi-tier affiliate commissions. WordPress, MasterStudy LMS, AffiliateWP. Since 2026."
+      "description": "Online learning platform with a custom Digistore24 integration: a webhook unlocks courses and books multi-tier affiliate commissions. Since 2026."
     },
     "about": {
       "title": "About — André Kipphard",
@@ -721,15 +721,15 @@
     },
     "augusta-beauty": {
       "title": "Augusta Beauty — Case Study — André Kipphard",
-      "description": "Beauty institute in Oldenburg. Custom WordPress theme on Underscores instead of a page builder — ACF Flexible Content provides 16 section types for full self-service content management. Live since 2023."
+      "description": "Beauty institute in Oldenburg. Custom WordPress theme on Underscores instead of a page builder — ACF Flexible Content delivers 16 section types. Since 2023."
     },
     "lipold": {
       "title": "Lipold — Case Study — André Kipphard",
-      "description": "Liposuction and lipedema institute in Oldenburg. Bilingual WordPress theme on the Augusta foundation — 17 ACF blocks, clinical branding, DE/EN. Live since 2024."
+      "description": "Liposuction and lipedema institute in Oldenburg. Bilingual WordPress theme on the Augusta foundation — 17 ACF blocks, clinical branding, DE/EN."
     },
     "pigmentfrei": {
       "title": "Pigmentfrei — Case Study — André Kipphard",
-      "description": "Tattoo-laser and PMU-removal centre in Oldenburg. First web identity of the Augusta-Praxis group on Hello Elementor + Elementor Pro. The starting point that informed the custom-theme platform."
+      "description": "Tattoo-laser and PMU-removal centre in Oldenburg. First web identity of the Augusta-Praxis group on Hello Elementor + Elementor Pro."
     }
   },
   "cta": {
