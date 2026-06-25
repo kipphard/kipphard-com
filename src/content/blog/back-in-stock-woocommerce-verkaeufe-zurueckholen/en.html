@@ -1,0 +1,60 @@
+<h2>The silent revenue killer: out-of-stock products</h2>
+
+<p>A visitor lands on your product page, likes what they see — and then reads: "Currently out of stock." What happens next? In the vast majority of cases, they leave. Not angry, not determined to find the product elsewhere — just gone. And they almost never come back to check whether it's available again.</p>
+
+<p>This moment barely shows up in most shop analytics. There's no abandoned cart, no abandoned checkout, no churn metric. The visitor simply vanishes without a trace. Yet the cumulative effect can be significant: popular products that regularly sell out can bleed revenue continuously through missing notifications — week after week, month after month.</p>
+
+<p>WooCommerce ships with no solution for this. There's no built-in feature that lets customers leave their email address to be notified when a product is back in stock. Solving this requires a plugin.</p>
+
+<h2>How back-in-stock notifications work</h2>
+
+<p>The concept is straightforward: the moment a product is marked as "out of stock", a small form appears on the product page — an email field, a button, done. Shoppers who genuinely want the product sign up. As soon as you restock and the product switches back to "in stock", the plugin automatically sends a notification email to everyone who subscribed.</p>
+
+<p>Why does this work so well? That customer has already signalled purchase intent. They took an active step. When they receive an email — personal, timely, with a direct link to the product — the conversion probability is dramatically higher than a cold newsletter contact. You're not pulling back random traffic; you're reaching someone who already wanted to buy.</p>
+
+<h2>GDPR: collecting email addresses the right way</h2>
+
+<p>The moment you collect email addresses, you're in GDPR territory. That's not a hurdle to work around — it's a requirement you can meet cleanly without adding friction to the conversion flow.</p>
+
+<p>What you need to handle:</p>
+
+<ul>
+  <li><strong>Consent checkbox:</strong> The form must include an active consent mechanism — not pre-ticked, not implied. The user must explicitly agree that their email address is stored for the purpose of a back-in-stock notification.</li>
+  <li><strong>Purpose limitation:</strong> The email address may only be used for the stated notification. No automatic addition to a newsletter list without a separate consent.</li>
+  <li><strong>Deletion after notification:</strong> Once the notification has been sent, there's no justification to keep the address. A well-built plugin deletes entries after sending, or at the latest after a reasonable retention period.</li>
+  <li><strong>Link to your privacy policy:</strong> The form should include a reference to your privacy policy.</li>
+</ul>
+
+<p>If you want to go one step further on compliance, use <strong>double opt-in</strong>: after signing up, the shopper receives a confirmation email. Only when they click the link is the address actually saved. This is the cleanest approach — and worth it for regulated industries or privacy-conscious audiences.</p>
+
+<h2>Best practices for back-in-stock emails</h2>
+
+<p>Not all notification emails are created equal. A few things that make the difference:</p>
+
+<p><strong>Timing:</strong> The email should fire immediately when stock status changes — not the next time a nightly cron job runs at 3am. The faster the notification, the higher the chance the shopper is still in buying mode.</p>
+
+<p><strong>Direct link to the product:</strong> The email should go straight to the product page — no detour via the homepage, no unnecessary extra click. Make the path to conversion as short as possible.</p>
+
+<p><strong>Clear and distraction-free:</strong> A back-in-stock notification is not a newsletter. No upsell, no catalogue overview, no long paragraphs. One message: the product you were waiting for is back — here's the link.</p>
+
+<p><strong>Variation-level accuracy:</strong> If a customer signed up to be notified when size M is back, they should not receive an email just because size XL is restocked. Per-variation notifications are technically more involved, but essential for shops with clothing, shoes, or any variation-heavy product range.</p>
+
+<p><strong>Avoid notifying too many at once for thin stock:</strong> For very popular products with many subscribers, the new stock can run out before all subscribers get a chance to buy. That's not a plugin flaw — but keep an eye on subscriber counts and communicate accordingly when restocking is limited.</p>
+
+<h2>What to expect from a plugin</h2>
+
+<p>Not every solution on the market is equally suited. When choosing, look for:</p>
+
+<ul>
+  <li><strong>Seamless WooCommerce integration:</strong> The form should appear automatically on out-of-stock product pages, with no manual configuration per product.</li>
+  <li><strong>GDPR-compliant consent:</strong> A checkbox and privacy note must be part of the form — not an afterthought.</li>
+  <li><strong>Automatic send on stock change:</strong> No manual trigger, no waiting for the next cron run. Notification fires the moment "in stock" becomes active.</li>
+  <li><strong>Subscriber overview in the back end:</strong> You should be able to see how many subscribers are waiting for which product — useful when making restocking decisions.</li>
+  <li><strong>Double opt-in (Pro):</strong> Cleaner GDPR compliance and fewer fake entries.</li>
+</ul>
+
+<p>The <a href="/products/wieder-verfuegbar">Wieder verfügbar</a> plugin takes exactly this approach: a lean form that automatically appears on out-of-stock product pages, GDPR-compliant with a consent checkbox, automatic email dispatch on stock change, and a subscriber overview in the back end. The Pro version adds double opt-in, per-variation notifications, and HTML email templates. You can try it directly in the browser via a live WooCommerce demo — no installation required.</p>
+
+<h2>Conclusion</h2>
+
+<p>Back-in-stock notifications are one of the few e-commerce measures where the effort is minimal and the potential return is directly measurable. You capture purchase intent at the moment it's expressed — and act on it precisely when the timing is right again. For WooCommerce shops that regularly sell out products, this isn't a nice-to-have: it's a basic building block of solid inventory management.</p>

@@ -747,6 +747,10 @@
     "angebotsanfrage": {
       "title": "Angebotsanfrage – Request a Quote Plugin for WooCommerce",
       "description": "Request a Quote for WooCommerce: customers collect products on a quote list and send an enquiry instead of buying. Ideal for B2B, wholesale, and price-on-request shops."
+    },
+    "wieder-verfuegbar": {
+      "title": "Wieder verfügbar – Back-in-Stock Plugin for WooCommerce",
+      "description": "Back-in-stock notifications for WooCommerce: 'Notify me' form on out-of-stock products, automatic email on restock. Wins back sales that would otherwise be lost for good."
     }
   },
   "cta": {
@@ -909,6 +913,49 @@
             { "q": "Does it replace the cart?", "a": "You decide: the quote button can appear alongside the cart or replace it per product or category. That way you can mix normal sales and quote-only products." },
             { "q": "What happens with an enquiry?", "a": "It is saved as a back-end entry and emailed to you and the customer. In the Pro version you can convert it into a payable WooCommerce order." },
             { "q": "Is customer data sent to third parties?", "a": "No. There are no external services and no tracking — only what the customer enters in the form is stored." }
+          ]
+        }
+      },
+      {
+        "id": "wieder-verfuegbar",
+        "name": "Wieder verfügbar",
+        "tagline": "Back-in-stock notifications for WooCommerce — win back lost sales.",
+        "category": "WordPress Plugin",
+        "status": "available",
+        "priceFrom": "Free · Pro from 49 EUR/year",
+        "stack": ["WooCommerce", "E-Commerce", "WordPress", "PHP"],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wieder-verfuegbar/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Show a 'Notify me' form on out-of-stock product pages. Shoppers leave their email — and the moment the product is back in stock, they get an automatic notification. That's how you recover sales that would otherwise be gone for good.",
+          "ctaPrimary": "Secure early access",
+          "ctaSecondary": "How it works",
+          "demoNote": "Live demo with WooCommerce in the browser.",
+          "problemTitle": "The problem",
+          "problem": "When a product is out of stock, most visitors leave — and rarely return to check whether it's back. That lost revenue adds up quickly. WooCommerce ships with no back-in-stock notification feature, and most available solutions are bloated or expensive.",
+          "solutionTitle": "The solution",
+          "solution": "A lean 'Notify me' form on every out-of-stock product page. Shoppers drop their email; once you restock, the plugin automatically fires the notification. GDPR-compliant with a consent checkbox — and in the Pro version, with full double opt-in before anything is saved.",
+          "featuresTitle": "What it does",
+          "features": [
+            { "title": "'Notify me' form", "desc": "Appears automatically on out-of-stock product pages — zero configuration needed." },
+            { "title": "Automatic notification", "desc": "The moment stock is replenished, all registered shoppers receive an email notification." },
+            { "title": "Win back lost sales", "desc": "Instead of losing the visitor, you bring them back the moment the product is available again." },
+            { "title": "GDPR-compliant", "desc": "Includes a consent checkbox; Pro adds double opt-in — email confirmation required before the address is saved." },
+            { "title": "Fully customisable", "desc": "Form text, button label, and email content are all freely configurable. HTML emails in the Pro version." },
+            { "title": "Subscriber overview", "desc": "See all subscriptions at a glance. Pro adds CSV export, statistics, and per-variation notifications." }
+          ],
+          "pricingTitle": "Pricing",
+          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricing": [
+            { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["Notify-me form", "Automatic email on restock", "Subscriber overview", "GDPR consent"] },
+            { "name": "Pro", "price": "49 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["Double opt-in", "Per-variation notifications", "HTML email templates", "CSV export & statistics", "Priority support"] },
+            { "name": "Agency", "price": "129 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Up to 10 websites", "Multisite support", "Everything in Pro"] }
+          ],
+          "faqTitle": "Frequently asked questions",
+          "faq": [
+            { "q": "Do I need WooCommerce?", "a": "Yes. Wieder verfügbar extends WooCommerce — without an active WooCommerce installation the plugin shows a notice and stays inactive." },
+            { "q": "When is the notification sent?", "a": "The moment an out-of-stock product switches back to 'in stock', all registered subscribers are automatically notified by email." },
+            { "q": "Is it GDPR-compliant?", "a": "Yes. Only the email address is stored, with explicit consent, and exclusively for the restock notification. The Pro version adds double opt-in for an extra layer of confirmation." },
+            { "q": "Does it work with product variations?", "a": "The free version notifies at the product level. Per-variation notifications (e.g. only size L) are available in the Pro version." }
           ]
         }
       }

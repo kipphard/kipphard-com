@@ -1,0 +1,60 @@
+<h2>Der stille Umsatzkiller: ausverkaufte Produkte</h2>
+
+<p>Ein Besucher landet auf deiner Produktseite, interessiert sich für das Produkt — und liest dann: „Derzeit nicht vorrätig." Was passiert als nächstes? In den allermeisten Fällen verlässt er die Seite. Nicht wütend, nicht entschlossen, das Produkt irgendwo anders zu kaufen — einfach weg. Und kommt nie wieder, um nachzuschauen, ob es wieder da ist.</p>
+
+<p>Dieser Moment wird in den meisten Shop-Analysen gar nicht sichtbar. Es gibt keinen abgebrochenen Warenkorb, keinen verlassenen Checkout, keine Churn-Metrik. Der Besucher verschwindet einfach, ohne eine Spur zu hinterlassen. Dabei kann der kumulative Effekt erheblich sein: Beliebte Produkte, die regelmäßig ausverkaufen, können durch fehlende Benachrichtigungen dauerhaft Umsatz verlieren — Woche für Woche, Monat für Monat.</p>
+
+<p>WooCommerce bietet dafür von Haus aus keine Lösung. Es gibt keine eingebaute Funktion, mit der Kunden ihre E-Mail-Adresse hinterlassen könnten, um bei Wiederverfügbarkeit informiert zu werden. Wer dieses Problem lösen will, braucht ein zusätzliches Plugin.</p>
+
+<h2>Wie Back-in-Stock-Benachrichtigungen funktionieren</h2>
+
+<p>Das Prinzip ist denkbar einfach: Sobald ein Produkt als „nicht vorrätig" markiert ist, erscheint auf der Produktseite ein kleines Formular — ein Feld für die E-Mail-Adresse, ein Button, fertig. Kunden, die das Produkt wirklich wollen, tragen sich ein. Sobald du den Lagerbestand wieder auffüllst und das Produkt auf „auf Lager" wechselt, verschickt das Plugin automatisch eine Benachrichtigungs-E-Mail an alle Interessenten.</p>
+
+<p>Was macht das wertvoll? Dieser Kunde hat Kaufabsicht signalisiert. Er hat aktiv gehandelt. Wenn er jetzt eine E-Mail bekommt — persönlich, zeitnah, mit direktem Link zum Produkt — ist die Conversion-Wahrscheinlichkeit erheblich höher als bei einem kalten Newsletter-Kontakt. Du holst keinen zufälligen Traffic zurück, sondern jemanden, der es schon kaufen wollte.</p>
+
+<h2>DSGVO: E-Mail-Adressen richtig sammeln</h2>
+
+<p>Sobald du E-Mail-Adressen sammelst, bist du im Geltungsbereich der DSGVO. Das ist keine Hürde, die du umgehen solltest — es ist eine Anforderung, die du sauber umsetzen kannst, ohne den Konversionsprozess zu belasten.</p>
+
+<p>Was du beachten musst:</p>
+
+<ul>
+  <li><strong>Einwilligungs-Checkbox:</strong> Im Formular muss eine aktive Einwilligung eingeholt werden — nicht vorausgefüllt, nicht implizit. Der Nutzer muss explizit zustimmen, dass seine E-Mail-Adresse zum Zweck der Wieder-verfügbar-Benachrichtigung gespeichert wird.</li>
+  <li><strong>Zweckbindung:</strong> Die E-Mail-Adresse darf ausschließlich für die angekündigte Benachrichtigung genutzt werden. Kein automatisches Hinzufügen zur Newsletter-Liste ohne separate Einwilligung.</li>
+  <li><strong>Löschung nach Benachrichtigung:</strong> Sobald die Benachrichtigung versendet wurde, gibt es keinen Grund mehr, die Adresse zu speichern. Ein gutes Plugin löscht Einträge nach dem Versand oder spätestens nach einer angemessenen Aufbewahrungsfrist.</li>
+  <li><strong>Datenschutzerklärung verlinken:</strong> Im Formular sollte ein Hinweis auf deine Datenschutzerklärung erscheinen.</li>
+</ul>
+
+<p>Wer die Compliance noch einen Schritt weitertreiben will, setzt auf <strong>Double-Opt-in</strong>: Nach der Eintragung bekommt der Kunde eine Bestätigungs-E-Mail. Erst wenn er darin den Link klickt, wird die Adresse gespeichert. Das ist die sauberste Methode — und bei regulierten Märkten oder besonders datenschutzbewussten Zielgruppen empfehlenswert.</p>
+
+<h2>Best Practices für Back-in-Stock-E-Mails</h2>
+
+<p>Nicht jede Benachrichtigungs-E-Mail ist gleich gut. Ein paar Punkte, die den Unterschied machen:</p>
+
+<p><strong>Timing:</strong> Die E-Mail sollte unmittelbar nach dem Lagerbestand-Wechsel versendet werden — nicht erst nach einem nächtlichen Cron-Job um 3 Uhr. Je schneller die Benachrichtigung, desto höher die Chance, dass der Kunde noch kaufkaufbereit ist.</p>
+
+<p><strong>Direkter Link zum Produkt:</strong> Die E-Mail sollte direkt auf die Produktseite führen — kein Umweg über die Startseite, keinen unnötigen Klick. Der Weg zur Conversion muss so kurz wie möglich sein.</p>
+
+<p><strong>Klar und ohne Ablenkung:</strong> Die Benachrichtigung ist kein Newsletter. Kein Upsell, kein Sortiment-Überblick, keine langen Texte. Einzige Botschaft: Das Produkt, auf das du gewartet hast, ist wieder da — hier ist der Link.</p>
+
+<p><strong>Varianten korrekt abbilden:</strong> Wenn ein Kunde auf die Benachrichtigung für Größe M wartet, sollte er nicht informiert werden, wenn Größe XL wieder lieferbar ist. Varianten-genaue Benachrichtigungen sind technisch aufwändiger, aber für Shops mit Kleidung, Schuhen oder anderen variantenreichen Produkten entscheidend.</p>
+
+<p><strong>Nicht zu viele auf einmal benachrichtigen:</strong> Bei sehr beliebten Produkten mit vielen Interessenten kann es passieren, dass der neue Lagerbestand schneller aufgebraucht ist, als alle Benachrichtigten kaufen können. Das ist kein Fehler des Plugins — aber du solltest die Abonnentenzahl im Blick behalten und bei knappem Bestand entsprechend kommunizieren.</p>
+
+<h2>Was du von einem Plugin erwarten solltest</h2>
+
+<p>Nicht jede Lösung auf dem Markt ist gleich gut geeignet. Bei der Auswahl solltest du auf folgende Punkte achten:</p>
+
+<ul>
+  <li><strong>Nahtlose WooCommerce-Integration:</strong> Das Formular sollte automatisch auf ausverkauften Produktseiten erscheinen, ohne manuelle Konfiguration pro Produkt.</li>
+  <li><strong>DSGVO-konforme Einwilligung:</strong> Checkbox und Datenschutzhinweis müssen Teil des Formulars sein — nicht optional.</li>
+  <li><strong>Automatischer Versand bei Lagerbestand-Wechsel:</strong> Kein manueller Auslöser, kein Warten auf den nächsten Cron-Lauf. Benachrichtigung sofort, wenn „auf Lager" aktiv wird.</li>
+  <li><strong>Übersicht im Backend:</strong> Du solltest sehen, wie viele Interessenten für welches Produkt warten — damit du beim Einkauf Nachschub-Entscheidungen besser triffst.</li>
+  <li><strong>Double-Opt-in (Pro):</strong> Für sauberere DSGVO-Compliance und weniger Fake-Einträge.</li>
+</ul>
+
+<p>Das Plugin <a href="/products/wieder-verfuegbar">Wieder verfügbar</a> setzt genau diesen Ansatz um: Ein schlankes Formular, das automatisch auf ausverkauften Produktseiten erscheint, DSGVO-konform mit Einwilligungs-Checkbox, automatischer E-Mail-Versand bei Lagerbestand-Änderung und Abonnement-Übersicht im Backend. In der Pro-Version kommt Double-Opt-in, Varianten-Benachrichtigungen und HTML-E-Mail-Vorlagen hinzu. Testen kannst du es direkt im Browser — über eine Live-Demo mit WooCommerce, ohne Installation.</p>
+
+<h2>Fazit</h2>
+
+<p>Back-in-Stock-Benachrichtigungen sind eine der wenigen E-Commerce-Maßnahmen, bei denen der Aufwand minimal und der potenzielle Ertrag direkt messbar ist. Du sammelst Kaufabsicht — in dem Moment, in dem sie geäußert wird — und nutzt sie genau dann, wenn das Timing wieder stimmt. Für WooCommerce-Shops, die regelmäßig Produkte kurzzeitig ausverkaufen, ist das kein Nice-to-have, sondern ein Grundbaustein eines funktionierenden Bestands-Managements.</p>

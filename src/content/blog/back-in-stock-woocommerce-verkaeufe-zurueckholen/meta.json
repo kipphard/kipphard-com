@@ -1,0 +1,15 @@
+{
+  "category": "ecommerce",
+  "tags": ["WooCommerce", "Back in Stock", "Wieder verfügbar", "E-Commerce", "Conversion"],
+  "publishedAt": "2026-06-25",
+  "de": {
+    "title": "Ausverkauft und nie mehr zurückgekommen: wie Back-in-Stock-Benachrichtigungen verlorene WooCommerce-Verkäufe retten",
+    "description": "Warum ausverkaufte Produkte stille Umsatzkiller sind — und wie Back-in-Stock-Benachrichtigungen in WooCommerce Besucher zurückbringen. Mit DSGVO-Hinweisen, Double-Opt-in und Praxis-Tipps.",
+    "excerpt": "Ist ein Produkt ausverkauft, ist der Besucher meist weg — und kommt selten zurück. Wie Back-in-Stock-Benachrichtigungen diesen stillen Umsatzverlust stoppen und was DSGVO dabei bedeutet."
+  },
+  "en": {
+    "title": "Out of stock and never coming back: how back-in-stock notifications recover lost WooCommerce sales",
+    "description": "Why out-of-stock products are silent revenue killers — and how back-in-stock notifications in WooCommerce bring shoppers back. With GDPR guidance, double opt-in, and practical tips.",
+    "excerpt": "When a product is out of stock, most visitors leave and rarely return. How back-in-stock notifications stop this silent revenue drain — and what GDPR means for collecting those emails."
+  }
+}

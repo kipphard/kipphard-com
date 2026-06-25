@@ -35,6 +35,7 @@ const routes = [
   { path: '/products/barrierefrei-check', component: ProductDetail },
   { path: '/products/altersverifikation', component: ProductDetail },
   { path: '/products/angebotsanfrage', component: ProductDetail },
+  { path: '/products/wieder-verfuegbar', component: ProductDetail },
   { path: '/blog', component: Blog },
   { path: '/blog/:slug', component: BlogPost },
   { path: '/404', component: NotFound },

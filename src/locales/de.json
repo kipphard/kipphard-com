@@ -747,6 +747,10 @@
     "angebotsanfrage": {
       "title": "Angebotsanfrage – Request a Quote Plugin für WooCommerce",
       "description": "Request-a-Quote für WooCommerce: Kunden sammeln Produkte auf einer Angebotsliste und senden eine Anfrage statt zu kaufen. Ideal für B2B, Großhandel und Preise auf Anfrage."
+    },
+    "wieder-verfuegbar": {
+      "title": "Wieder verfügbar – Back-in-Stock-Plugin für WooCommerce",
+      "description": "Back-in-Stock-Benachrichtigung für WooCommerce: Benachrichtige-mich-Formular auf ausverkauften Produkten, automatische E-Mail bei Verfügbarkeit. Holt verlorene Verkäufe zurück."
     }
   },
   "cta": {
@@ -909,6 +913,49 @@
             { "q": "Ersetzt es den Warenkorb?", "a": "Du entscheidest: Der Angebots-Button kann zusätzlich zum Warenkorb erscheinen oder ihn pro Produkt bzw. Kategorie ersetzen. So mischst du normalen Verkauf und Anfrage-Produkte." },
             { "q": "Was passiert mit einer Anfrage?", "a": "Sie wird als Eintrag im Backend gespeichert und an dich und den Kunden per E-Mail gesendet. In der Pro-Version wandelst du sie in eine bezahlbare WooCommerce-Bestellung um." },
             { "q": "Werden Kundendaten an Dritte gesendet?", "a": "Nein. Es gibt keine externen Dienste und kein Tracking — gespeichert wird nur, was der Kunde im Formular eingibt." }
+          ]
+        }
+      },
+      {
+        "id": "wieder-verfuegbar",
+        "name": "Wieder verfügbar",
+        "tagline": "Back-in-Stock-Benachrichtigung für WooCommerce — verlorene Verkäufe zurückholen.",
+        "category": "WordPress-Plugin",
+        "status": "available",
+        "priceFrom": "Kostenlos · Pro ab 49 EUR/Jahr",
+        "stack": ["WooCommerce", "E-Commerce", "WordPress", "PHP"],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wieder-verfuegbar/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Zeige bei ausverkauften Produkten ein 'Benachrichtige mich'-Formular. Kunden tragen ihre E-Mail ein — und sobald das Produkt wieder lieferbar ist, werden sie automatisch benachrichtigt. So holst du Verkäufe zurück, die sonst verloren gingen.",
+          "ctaPrimary": "Early Access sichern",
+          "ctaSecondary": "So funktioniert's",
+          "demoNote": "Live-Demo mit WooCommerce im Browser.",
+          "problemTitle": "Das Problem",
+          "problem": "Ist ein Produkt ausverkauft, ist der Besucher meist weg — und kommt selten zurück, um zu prüfen, ob es wieder da ist. Dieser verlorene Umsatz summiert sich. WooCommerce bietet von Haus aus keine Wieder-verfügbar-Benachrichtigung, und viele Lösungen sind überladen oder teuer.",
+          "solutionTitle": "Die Lösung",
+          "solution": "Ein schlankes 'Benachrichtige mich'-Formular auf jeder ausverkauften Produktseite. Kunden hinterlassen ihre E-Mail; sobald du den Bestand wieder auffüllst, verschickt das Plugin automatisch die Benachrichtigung. DSGVO-konform mit Einwilligung — in der Pro-Version sogar mit Double-Opt-in.",
+          "featuresTitle": "Was es kann",
+          "features": [
+            { "title": "'Benachrichtige mich'-Formular", "desc": "Erscheint automatisch auf ausverkauften Produktseiten — ohne Konfiguration." },
+            { "title": "Automatische Benachrichtigung", "desc": "Sobald der Bestand wieder verfügbar ist, werden alle Interessenten per E-Mail informiert." },
+            { "title": "Verlorene Verkäufe zurückholen", "desc": "Statt den Besucher zu verlieren, bringst du ihn zurück, wenn das Produkt wieder da ist." },
+            { "title": "DSGVO-konform", "desc": "Mit Einwilligungs-Checkbox; in Pro mit Double-Opt-in (Bestätigung per E-Mail), bevor gespeichert wird." },
+            { "title": "Anpassbar", "desc": "Formular-Texte, Button und E-Mail-Inhalt frei konfigurierbar. HTML-E-Mails in der Pro-Version." },
+            { "title": "Übersicht im Backend", "desc": "Alle Abonnements auf einen Blick. In Pro: CSV-Export, Statistiken und Varianten-Benachrichtigungen." }
+          ],
+          "pricingTitle": "Preise",
+          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricing": [
+            { "name": "Free", "price": "0 EUR", "period": "dauerhaft", "highlighted": false, "cta": "Kostenlos starten", "features": ["Benachrichtige-mich-Formular", "Automatische E-Mail bei Verfügbarkeit", "Abonnement-Übersicht", "DSGVO-Einwilligung"] },
+            { "name": "Pro", "price": "49 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["Double-Opt-in", "Varianten-Benachrichtigungen", "HTML-E-Mail-Vorlagen", "CSV-Export & Statistiken", "Priority-Support"] },
+            { "name": "Agency", "price": "129 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Bis zu 10 Websites", "Multisite-Support", "Alles aus Pro"] }
+          ],
+          "faqTitle": "Häufige Fragen",
+          "faq": [
+            { "q": "Brauche ich WooCommerce?", "a": "Ja. Wieder verfügbar erweitert WooCommerce — ohne aktives WooCommerce zeigt das Plugin einen Hinweis und bleibt inaktiv." },
+            { "q": "Wann wird die Benachrichtigung versendet?", "a": "Sobald ein ausverkauftes Produkt wieder auf 'auf Lager' wechselt, werden alle eingetragenen Interessenten automatisch per E-Mail informiert." },
+            { "q": "Ist es DSGVO-konform?", "a": "Ja. Es wird nur die E-Mail mit Einwilligung gespeichert, ausschließlich für die Benachrichtigung. Die Pro-Version bietet Double-Opt-in für eine zusätzliche Bestätigung." },
+            { "q": "Funktioniert es mit Produktvarianten?", "a": "Die kostenlose Version benachrichtigt auf Produktebene. Varianten-genaue Benachrichtigungen (z. B. nur Größe L) sind in der Pro-Version enthalten." }
           ]
         }
       }
