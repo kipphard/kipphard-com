@@ -1,0 +1,65 @@
+<h2>Warum B2B-Shops nicht wie normale Onlineshops funktionieren</h2>
+
+<p>Ein B2B-Shop oder Großhandel sieht von außen oft aus wie jeder andere Onlineshop — aber hinter den Kulissen läuft das Geschäft anders. Der Preis eines Produkts hängt hier selten einfach von der UVP ab. Er richtet sich nach der bestellten Menge, dem Kunden, dem Rahmenvertrag oder einer vorherigen Verhandlung. Manchmal steht ein Preis schlicht nicht fest, bevor beide Seiten gesprochen haben.</p>
+
+<p>WooCommerce ist für genau diesen Fall nicht gebaut. Der Standard-Warenkorb setzt voraus: Preis steht, Kunde legt in den Warenkorb, Kunde bezahlt. Für B2B-Produkte, Maschinen, Großmengen oder kundenspezifische Konfigurationen ist das der falsche Ablauf. Wenn ein potenzieller Kunde „In den Warenkorb" sieht, aber eigentlich ein Angebot erwartet, springt er ab — nicht weil das Produkt nicht passt, sondern weil der Flow nicht passt.</p>
+
+<h2>Was ein Request-a-Quote-Flow leistet</h2>
+
+<p>Das Konzept ist einfach: Statt sofort zu kaufen, sammelt der Kunde Produkte auf einer Angebotsliste und schickt eine Anfrage. Du erhältst die Anfrage mit allen Produkten, Mengen und Kundendaten, kalkulierst und schickst ein konkretes Angebot zurück. Erst wenn beide Seiten sich einig sind, kommt es zur Bestellung.</p>
+
+<p>Technisch bedeutet das:</p>
+
+<ul>
+  <li>Ein „Angebot anfragen"-Button ersetzt oder ergänzt den „In den Warenkorb"-Button — pro Produkt oder Kategorie steuerbar.</li>
+  <li>Der Kunde füllt ein Formular aus: Name, Firma, E-Mail, Telefon, Nachricht — und die Produktliste hängt automatisch an.</li>
+  <li>Die Anfrage landet als strukturierter Eintrag im WordPress-Backend und wird per E-Mail an dich und den Kunden gesendet.</li>
+  <li>Optional: Preis und Warenkorb werden für „Preis auf Anfrage"-Produkte ausgeblendet — der Kunde sieht nur den Angebots-Button.</li>
+</ul>
+
+<p>Das ist kein exotischer Sonderfall. Für viele B2B-Shops ist genau das der primäre Verkaufsweg.</p>
+
+<h2>Wann du Preise ausblenden solltest — und wann nicht</h2>
+
+<p>Nicht jeder B2B-Shop muss Preise komplett verstecken. Es gibt hier zwei häufige Szenarien:</p>
+
+<p><strong>Gemischter Shop:</strong> Du verkaufst sowohl Standardprodukte zu Festpreisen als auch Sonderartikel, bei denen der Preis vom Auftragsvolumen abhängt. Hier macht es Sinn, den normalen Warenkorb für die Standardprodukte zu behalten und nur bei ausgewählten Kategorien oder einzelnen Produkten auf den Angebots-Flow umzuschalten. Kein globales Umstellen — gezielte Steuerung pro Produkt oder Kategorie.</p>
+
+<p><strong>Reiner Anfragen-Shop:</strong> Du verkaufst ausschließlich auf Anfrage — kein Festpreis, kein direkter Kauf. Hier blendest du Warenkorb und Preise überall aus und führst den Kunden konsequent in den Angebots-Flow. Das funktioniert besonders gut für Großhandel, Maschinen, Individualkonfigurationen oder Produkte mit starken Mengenrabatten.</p>
+
+<p>Der Mittelweg ist oft der klügste: Kunden, die etwas direkt kaufen können, kaufen es sofort. Kunden, die ein Angebot brauchen, bekommen den richtigen Flow. Beides auf einer Plattform.</p>
+
+<h2>Was das mit DSGVO zu tun hat</h2>
+
+<p>Ein Anfrageformular sammelt personenbezogene Daten: Name, E-Mail, Firma, Telefonnummer. Das ist unvermeidbar — ohne diese Daten kann kein sinnvolles Angebot entstehen. Aber es gibt trotzdem einen Unterschied zwischen einem datensparsamen Ansatz und einem leichtfertigen.</p>
+
+<p>Konkret bedeutet das für dich:</p>
+
+<ul>
+  <li>Speichere nur, was du für die Bearbeitung der Anfrage wirklich brauchst — kein automatisches Hinzufügen zur Newsletter-Liste ohne Einwilligung.</li>
+  <li>Lösche Anfragen, die nicht zu Aufträgen werden, nach einer angemessenen Aufbewahrungsfrist.</li>
+  <li>Weise im Formular auf deine Datenschutzerklärung hin und hole eine aktive Einwilligung ein, wenn du die Daten über die Anfrage hinaus verwenden willst.</li>
+  <li>Keine externen Tracking-Dienste im Anfrage-Flow — die Daten sollen nicht in der Cloud eines Drittanbieters landen.</li>
+</ul>
+
+<p>Ein gutes Request-a-Quote-Plugin sendet die Daten nur an dein eigenes WordPress-Backend und deinen E-Mail-Server — keine Weitergabe an externe SaaS-Dienste, kein Tracking der Anfragen.</p>
+
+<h2>Was du bei einem Quote-Plugin achten solltest</h2>
+
+<p>Die bekannteste Lösung auf dem Markt ist das YITH WooCommerce Request a Quote Plugin. Es wird oft empfohlen, aber die Bewertungen sind gemischt (aktuell unter 70 von 100): Die Nutzer bemängeln vor allem Komplexität, Konflikte mit anderen Plugins und einen veralteten Unterbau. Wer Wert auf Einfachheit und Wartbarkeit legt, tut gut daran, Alternativen zu prüfen.</p>
+
+<p>Worauf du bei der Auswahl achten solltest:</p>
+
+<ul>
+  <li><strong>Granulare Steuerung:</strong> Button und Angebots-Flow sollten sich pro Produkt und Kategorie aktivieren lassen — nicht nur global.</li>
+  <li><strong>Backend-Einträge:</strong> Anfragen müssen strukturiert gespeichert werden, nicht nur als E-Mail, die irgendwo verloren geht.</li>
+  <li><strong>Preise ausblenden:</strong> Für reine „Preis auf Anfrage"-Produkte sollte der Preis auf Produkt- und Shopseiten ausgeblendet werden können.</li>
+  <li><strong>Wenig Abhängigkeiten:</strong> Kein aufgeblähter Plugin-Stack, keine externen Dienste, die wegfallen können.</li>
+  <li><strong>Pro-Funktion Angebot zu Bestellung:</strong> Wenn du Anfragen direkt in WooCommerce-Bestellungen umwandeln willst, die der Kunde bezahlen kann, ist das eine wichtige Pro-Funktion.</li>
+</ul>
+
+<p>Das Plugin <a href="/products/angebotsanfrage">Angebotsanfrage</a> setzt genau diesen Ansatz um: schlank, granular steuerbar, mit Backend-Einträgen und E-Mail-Benachrichtigungen. Du kannst es kostenlos testen — direkt im Browser mit einer Live-WooCommerce-Demo, ohne Installation.</p>
+
+<h2>Fazit</h2>
+
+<p>Ein Request-a-Quote-Flow ist kein Komfort-Feature — er ist für viele B2B- und Großhandels-Shops der einzige sinnvolle Verkaufsweg. Der Standard-WooCommerce-Warenkorb reicht nicht aus, wenn Preise verhandelt, Mengen abgestimmt oder Konfigurationen besprochen werden müssen. Wer das mit einem schlanken Plugin löst, das sich nahtlos in WooCommerce einfügt, hat die bessere Grundlage als mit einem überdimensionierten SaaS-Tool.</p>

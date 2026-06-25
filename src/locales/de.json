@@ -743,6 +743,10 @@
     "altersverifikation": {
       "title": "Altersverifikation – Age Gate Plugin für WordPress & WooCommerce",
       "description": "DSGVO-konformes Age-Gate-Plugin für WordPress: Altersabfrage per Bestätigung oder Geburtsdatum, seitenweit oder pro WooCommerce-Kategorie. Keine personenbezogenen Daten verlassen den Browser."
+    },
+    "angebotsanfrage": {
+      "title": "Angebotsanfrage – Request a Quote Plugin für WooCommerce",
+      "description": "Request-a-Quote für WooCommerce: Kunden sammeln Produkte auf einer Angebotsliste und senden eine Anfrage statt zu kaufen. Ideal für B2B, Großhandel und Preise auf Anfrage."
     }
   },
   "cta": {
@@ -862,6 +866,49 @@
             { "q": "Werden personenbezogene Daten gespeichert?", "a": "Nein. Das Geburtsdatum wird ausschließlich im Browser geprüft und nie an den Server gesendet. Gespeichert wird nur ein funktionaler Cookie, der die Bestätigung merkt — DSGVO-konform." },
             { "q": "Funktioniert es mit WooCommerce?", "a": "Ja. In der kostenlosen Version sperrst du die ganze Seite oder einzelne Seiten. In Pro beschränkst du gezielt einzelne Produktkategorien, etwa nur Alkohol." },
             { "q": "Was passiert, wenn JavaScript deaktiviert ist?", "a": "Das Overlay ist standardmäßig per CSS sichtbar — fällt JavaScript aus, bleibt der Inhalt geschützt (fail-safe), statt ungeschützt durchzurutschen." }
+          ]
+        }
+      },
+      {
+        "id": "angebotsanfrage",
+        "name": "Angebotsanfrage",
+        "tagline": "Request a Quote für WooCommerce — Angebotsliste & Anfrage statt Warenkorb.",
+        "category": "WordPress-Plugin",
+        "status": "available",
+        "priceFrom": "Kostenlos · Pro ab 69 EUR/Jahr",
+        "stack": ["WooCommerce", "B2B", "WordPress", "PHP"],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/angebotsanfrage/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Lass Kunden Produkte auf eine Angebotsliste setzen und eine Anfrage senden — statt direkt zu kaufen. Ideal für B2B, Großhandel und Shops mit Preisen auf Anfrage. Jede Anfrage landet im WordPress-Backend und in deinem Postfach.",
+          "ctaPrimary": "Early Access sichern",
+          "ctaSecondary": "So funktioniert's",
+          "demoNote": "Live-Demo mit WooCommerce im Browser.",
+          "problemTitle": "Das Problem",
+          "problem": "B2B- und Großhandels-Shops verkaufen oft nicht per Standard-Warenkorb: Preise hängen von Menge, Kunde oder Verhandlung ab. WooCommerce kennt das von Haus aus nicht — und die bekannteste Request-a-Quote-Erweiterung (YITH) ist unbeliebt (Bewertung 66) und überladen. Kunden, die ein Angebot wollen, springen ab, wenn sie nur 'In den Warenkorb' sehen.",
+          "solutionTitle": "Die Lösung",
+          "solution": "Ein schlanker Angebots-Flow: Kunden sammeln Produkte auf einer Angebotsliste und senden eine Anfrage über ein Formular. Du erhältst die Anfrage als Eintrag im Backend und per E-Mail. Optional blendest du Preis und Warenkorb für ausgewählte Produkte aus und zeigst stattdessen 'Angebot anfragen'.",
+          "featuresTitle": "Was es kann",
+          "features": [
+            { "title": "'Angebot anfragen'-Button", "desc": "Auf Shop- und Produktseiten — zusätzlich zum oder anstelle des Warenkorbs, pro Produkt oder Kategorie." },
+            { "title": "Angebotsliste & Formular", "desc": "Kunden sammeln mehrere Produkte und senden eine Anfrage mit Name, E-Mail, Firma, Telefon und Nachricht." },
+            { "title": "Anfragen im Backend", "desc": "Jede Anfrage wird als Eintrag gespeichert und an dich und den Kunden per E-Mail gesendet — nichts geht verloren." },
+            { "title": "Preise ausblenden", "desc": "Für 'Preis auf Anfrage'-Produkte blendest du Preis und Warenkorb aus und zeigst nur den Angebots-Button." },
+            { "title": "Angebot zu Bestellung (Pro)", "desc": "Wandle eine Anfrage in eine echte WooCommerce-Bestellung um, die der Kunde direkt bezahlen kann." },
+            { "title": "DSGVO-konform & schlank", "desc": "Keine externen Dienste, kein Tracking — nur die Daten, die der Kunde selbst im Formular sendet." }
+          ],
+          "pricingTitle": "Preise",
+          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricing": [
+            { "name": "Free", "price": "0 EUR", "period": "dauerhaft", "highlighted": false, "cta": "Kostenlos starten", "features": ["Angebot-anfragen-Button", "Angebotsliste & Formular", "Anfragen im Backend + E-Mail", "Preise optional ausblenden"] },
+            { "name": "Pro", "price": "69 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["Angebot zu WooCommerce-Bestellung", "PDF-Angebote", "Eigene Formularfelder", "Kategorie-Regeln", "Priority-Support"] },
+            { "name": "Agency", "price": "149 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Bis zu 10 Websites", "Multisite-Support", "Alles aus Pro"] }
+          ],
+          "faqTitle": "Häufige Fragen",
+          "faq": [
+            { "q": "Brauche ich WooCommerce?", "a": "Ja. Angebotsanfrage erweitert WooCommerce — ohne aktives WooCommerce zeigt das Plugin einen Hinweis und bleibt inaktiv." },
+            { "q": "Ersetzt es den Warenkorb?", "a": "Du entscheidest: Der Angebots-Button kann zusätzlich zum Warenkorb erscheinen oder ihn pro Produkt bzw. Kategorie ersetzen. So mischst du normalen Verkauf und Anfrage-Produkte." },
+            { "q": "Was passiert mit einer Anfrage?", "a": "Sie wird als Eintrag im Backend gespeichert und an dich und den Kunden per E-Mail gesendet. In der Pro-Version wandelst du sie in eine bezahlbare WooCommerce-Bestellung um." },
+            { "q": "Werden Kundendaten an Dritte gesendet?", "a": "Nein. Es gibt keine externen Dienste und kein Tracking — gespeichert wird nur, was der Kunde im Formular eingibt." }
           ]
         }
       }

@@ -743,6 +743,10 @@
     "altersverifikation": {
       "title": "Altersverifikation – Age Gate Plugin for WordPress & WooCommerce",
       "description": "GDPR-compliant age gate plugin for WordPress: age verification via confirmation or date of birth, site-wide or per WooCommerce category. No personal data leaves the browser."
+    },
+    "angebotsanfrage": {
+      "title": "Angebotsanfrage – Request a Quote Plugin for WooCommerce",
+      "description": "Request a Quote for WooCommerce: customers collect products on a quote list and send an enquiry instead of buying. Ideal for B2B, wholesale, and price-on-request shops."
     }
   },
   "cta": {
@@ -862,6 +866,49 @@
             { "q": "Is any personal data stored?", "a": "No. The date of birth is evaluated in the browser only and never sent to the server. Only a functional cookie is stored to remember the confirmation — GDPR-compliant." },
             { "q": "Does it work with WooCommerce?", "a": "Yes. In the free version you gate the whole site or individual pages. In Pro you restrict specific product categories — for example, alcohol only." },
             { "q": "What happens if JavaScript is disabled?", "a": "The overlay is visible by default via CSS — if JavaScript fails, the content remains protected (fail-safe) rather than leaking through unguarded." }
+          ]
+        }
+      },
+      {
+        "id": "angebotsanfrage",
+        "name": "Angebotsanfrage",
+        "tagline": "Request a Quote for WooCommerce — quote list & enquiry instead of a cart.",
+        "category": "WordPress Plugin",
+        "status": "available",
+        "priceFrom": "Free · Pro from 69 EUR/year",
+        "stack": ["WooCommerce", "B2B", "WordPress", "PHP"],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/angebotsanfrage/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Let customers add products to a quote list and submit an enquiry — instead of buying directly. Ideal for B2B, wholesale, and shops with price-on-request products. Every enquiry lands in the WordPress back end and your inbox.",
+          "ctaPrimary": "Secure early access",
+          "ctaSecondary": "How it works",
+          "demoNote": "Live demo with WooCommerce in the browser.",
+          "problemTitle": "The problem",
+          "problem": "B2B and wholesale shops often don't sell via the standard cart: prices depend on quantity, customer relationship, or negotiation. WooCommerce has no native support for this — and the best-known Request-a-Quote extension (YITH) is unpopular (rating 66) and bloated. Customers who want a quote abandon when they only see 'Add to cart'.",
+          "solutionTitle": "The solution",
+          "solution": "A lean quote flow: customers collect products on a quote list and submit an enquiry via a form. You receive the enquiry as a back-end entry and by email. Optionally hide price and cart for selected products and show 'Request a quote' instead.",
+          "featuresTitle": "What it does",
+          "features": [
+            { "title": "'Request a quote' button", "desc": "On shop and product pages — in addition to or instead of the cart, per product or category." },
+            { "title": "Quote list & form", "desc": "Customers collect multiple products and submit an enquiry with name, email, company, phone, and message." },
+            { "title": "Enquiries in the back end", "desc": "Every enquiry is saved as a back-end entry and emailed to you and the customer — nothing gets lost." },
+            { "title": "Hide prices", "desc": "For price-on-request products, hide the price and cart button and show only the quote button." },
+            { "title": "Quote to order (Pro)", "desc": "Convert an enquiry into a real WooCommerce order the customer can pay directly." },
+            { "title": "GDPR-compliant & lean", "desc": "No external services, no tracking — only the data the customer enters in the form." }
+          ],
+          "pricingTitle": "Pricing",
+          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricing": [
+            { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["Request-a-quote button", "Quote list & form", "Enquiries in back end + email", "Optionally hide prices"] },
+            { "name": "Pro", "price": "69 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["Quote to WooCommerce order", "PDF quotes", "Custom form fields", "Category rules", "Priority support"] },
+            { "name": "Agency", "price": "149 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Up to 10 websites", "Multisite support", "Everything in Pro"] }
+          ],
+          "faqTitle": "Frequently asked questions",
+          "faq": [
+            { "q": "Do I need WooCommerce?", "a": "Yes. Angebotsanfrage extends WooCommerce — without an active WooCommerce installation the plugin shows a notice and stays inactive." },
+            { "q": "Does it replace the cart?", "a": "You decide: the quote button can appear alongside the cart or replace it per product or category. That way you can mix normal sales and quote-only products." },
+            { "q": "What happens with an enquiry?", "a": "It is saved as a back-end entry and emailed to you and the customer. In the Pro version you can convert it into a payable WooCommerce order." },
+            { "q": "Is customer data sent to third parties?", "a": "No. There are no external services and no tracking — only what the customer enters in the form is stored." }
           ]
         }
       }

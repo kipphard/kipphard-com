@@ -1,0 +1,15 @@
+{
+  "category": "ecommerce",
+  "tags": ["WooCommerce", "B2B", "Request a Quote", "Angebotsanfrage", "Großhandel"],
+  "publishedAt": "2026-06-25",
+  "de": {
+    "title": "Request a Quote für WooCommerce: Warum B2B-Shops einen Angebots-Flow brauchen",
+    "description": "Warum Standard-Warenkorb und B2B-Shops oft nicht zusammenpassen — und wie ein Request-a-Quote-Flow mit Angebotsliste und Formular das löst. Inkl. DSGVO-Hinweise und Plugin-Tipps.",
+    "excerpt": "Preise auf Anfrage, Mengenrabatte, Verhandlung: Warum der WooCommerce-Warenkorb für B2B-Shops allein nicht ausreicht — und was ein guter Angebots-Flow leisten muss."
+  },
+  "en": {
+    "title": "Request a Quote for WooCommerce: Why B2B Shops Need a Quote Flow",
+    "description": "Why a standard cart doesn't fit B2B and wholesale shops — and how a request-a-quote flow with a quote list and form solves it. Includes GDPR notes and plugin guidance.",
+    "excerpt": "Price on request, volume pricing, negotiation: why the WooCommerce cart alone doesn't cut it for B2B shops — and what a good quote flow needs to do."
+  }
+}

@@ -1,0 +1,65 @@
+<h2>Why B2B Shops Don't Work Like Regular Online Stores</h2>
+
+<p>A B2B shop or wholesale operation often looks like any other online store from the outside — but behind the scenes the business works differently. The price of a product rarely simply reflects the RRP. It depends on the quantity ordered, the customer relationship, a framework contract, or a prior negotiation. Sometimes a price isn't fixed until both parties have spoken.</p>
+
+<p>WooCommerce isn't built for this. The standard cart assumes: price is set, customer adds to cart, customer pays. For B2B products, machinery, large quantities, or customer-specific configurations, that's the wrong flow. When a potential customer sees "Add to cart" but expects a quote, they leave — not because the product is wrong, but because the process is wrong.</p>
+
+<h2>What a Request-a-Quote Flow Does</h2>
+
+<p>The concept is straightforward: instead of buying immediately, the customer collects products on a quote list and submits an enquiry. You receive the enquiry with all products, quantities, and customer details, calculate your offer, and send back a concrete quote. Only once both sides agree does an order get placed.</p>
+
+<p>In practice this means:</p>
+
+<ul>
+  <li>A "Request a quote" button replaces or supplements the "Add to cart" button — controllable per product or category.</li>
+  <li>The customer fills in a form: name, company, email, phone, message — with the product list attached automatically.</li>
+  <li>The enquiry lands as a structured entry in the WordPress back end and is emailed to you and the customer.</li>
+  <li>Optionally: price and cart are hidden for price-on-request products — the customer sees only the quote button.</li>
+</ul>
+
+<p>This isn't an exotic edge case. For many B2B shops it's the primary sales channel.</p>
+
+<h2>When to Hide Prices — and When Not To</h2>
+
+<p>Not every B2B shop needs to hide prices completely. There are two common scenarios:</p>
+
+<p><strong>Mixed shop:</strong> You sell both standard products at fixed prices and special items where the price depends on order volume. Here it makes sense to keep the normal cart for standard products and switch only selected categories or individual products to the quote flow. No global override — targeted control per product or category.</p>
+
+<p><strong>Pure enquiry shop:</strong> You sell exclusively on request — no fixed price, no direct purchase. Here you hide cart and prices everywhere and consistently guide the customer into the quote flow. This works particularly well for wholesale, machinery, custom configurations, or products with significant volume discounts.</p>
+
+<p>The middle ground is often the smartest choice: customers who can buy something directly do so immediately. Customers who need a quote get the right flow. Both on one platform.</p>
+
+<h2>What This Has to Do with GDPR</h2>
+
+<p>An enquiry form collects personal data: name, email, company, phone number. That's unavoidable — without this information no meaningful quote can be produced. But there's still a difference between a data-minimising approach and a careless one.</p>
+
+<p>In practice this means:</p>
+
+<ul>
+  <li>Store only what you genuinely need to process the enquiry — no automatic addition to a newsletter list without consent.</li>
+  <li>Delete enquiries that don't convert to orders after a reasonable retention period.</li>
+  <li>Reference your privacy policy in the form and obtain active consent if you want to use the data beyond the enquiry.</li>
+  <li>No external tracking services in the quote flow — the data should not end up in a third-party cloud.</li>
+</ul>
+
+<p>A good request-a-quote plugin sends data only to your own WordPress back end and your email server — no sharing with external SaaS services, no tracking of enquiries.</p>
+
+<h2>What to Look for in a Quote Plugin</h2>
+
+<p>The best-known solution on the market is the YITH WooCommerce Request a Quote plugin. It is often recommended, but reviews are mixed (currently below 70 out of 100): users primarily criticise complexity, conflicts with other plugins, and an ageing codebase. Anyone who values simplicity and maintainability should evaluate alternatives.</p>
+
+<p>What to look for when choosing:</p>
+
+<ul>
+  <li><strong>Granular control:</strong> The button and quote flow should be activatable per product and category — not just globally.</li>
+  <li><strong>Back-end entries:</strong> Enquiries must be saved in a structured way, not just as an email that can get lost somewhere.</li>
+  <li><strong>Hide prices:</strong> For pure price-on-request products, the price should be hideable on product and shop pages.</li>
+  <li><strong>Few dependencies:</strong> No bloated plugin stack, no external services that can disappear.</li>
+  <li><strong>Pro feature — quote to order:</strong> If you want to convert enquiries directly into WooCommerce orders the customer can pay, that's an important Pro feature.</li>
+</ul>
+
+<p>The <a href="/products/angebotsanfrage">Angebotsanfrage</a> plugin takes exactly this approach: lean, granularly controllable, with back-end entries and email notifications. You can try it for free — directly in the browser with a live WooCommerce demo, no installation needed.</p>
+
+<h2>Conclusion</h2>
+
+<p>A request-a-quote flow isn't a convenience feature — for many B2B and wholesale shops it's the only sensible sales path. The standard WooCommerce cart isn't enough when prices need to be negotiated, quantities agreed, or configurations discussed. Solving this with a lean plugin that integrates seamlessly into WooCommerce gives you a better foundation than an oversized SaaS tool.</p>
