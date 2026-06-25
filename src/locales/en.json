@@ -739,6 +739,10 @@
     "barrierefrei-check": {
       "title": "Barrierefrei Check – BFSG & WCAG Plugin for WordPress",
       "description": "WordPress plugin for BFSG and WCAG compliance: honest accessibility audit of your rendered HTML, prioritised issues with fixes, and a generator for your accessibility statement."
+    },
+    "altersverifikation": {
+      "title": "Altersverifikation – Age Gate Plugin for WordPress & WooCommerce",
+      "description": "GDPR-compliant age gate plugin for WordPress: age verification via confirmation or date of birth, site-wide or per WooCommerce category. No personal data leaves the browser."
     }
   },
   "cta": {
@@ -815,6 +819,49 @@
             { "q": "What is BFSG?", "a": "The Barrierefreiheitsstärkungsgesetz implements the EU Directive 2019/882 (European Accessibility Act) in Germany. Since 28 June 2025, many B2C online shops and service providers must be accessible." },
             { "q": "How is it different from overlay tools like UserWay or accessiBe?", "a": "Overlays place a JavaScript layer over your page and mask problems instead of solving them — they are rejected by disability advocacy groups and in court proceedings. Barrierefrei Check audits the actual source code and helps you fix the root causes." },
             { "q": "Do I need coding skills?", "a": "Not for the audit or the accessibility statement. Fixing some issues is easier with basic HTML knowledge and familiarity with your theme — but the guides are written so that editors can handle most fixes themselves." }
+          ]
+        }
+      },
+      {
+        "id": "altersverifikation",
+        "name": "Altersverifikation",
+        "tagline": "Age gate for WordPress & WooCommerce — GDPR-compliant, no data leakage.",
+        "category": "WordPress Plugin",
+        "status": "available",
+        "priceFrom": "Free · Pro from 39 EUR/year",
+        "stack": ["WordPress", "WooCommerce", "JMStV", "PHP"],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/altersverifikation/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Show visitors an age verification prompt before they see your site or specific products — as a simple confirmation or a date-of-birth check. GDPR-compliant: the date of birth is evaluated exclusively in the browser and never leaves your server.",
+          "ctaPrimary": "Secure early access",
+          "ctaSecondary": "How it works",
+          "demoNote": "Live demo in the browser — no installation needed.",
+          "problemTitle": "The problem",
+          "problem": "Shops selling age-restricted products (alcohol, vape, tobacco, adult content) must enforce youth protection rules (JMStV / JuSchG) — violations can result in legal warnings. The most popular free age gate only blocks the entire site, is English-only, and has no WooCommerce category logic. Other options are bloated SaaS tools with ID verification that most shops simply don't need.",
+          "solutionTitle": "The solution",
+          "solution": "A lean, customisable age verification plugin: a full-screen overlay (confirmation or date of birth), activatable site-wide or per page — and in the Pro version, targeted to specific WooCommerce categories only (e.g. alcohol only). GDPR-clean, fail-safe (content stays hidden if JavaScript fails) and fully customisable.",
+          "featuresTitle": "What it does",
+          "features": [
+            { "title": "Confirmation or date of birth", "desc": "Simple 'I am over 18' or a real date-of-birth check with age calculation — your choice." },
+            { "title": "GDPR-compliant", "desc": "The date of birth is evaluated in the browser only. No personal data leaves your server — just a functional cookie." },
+            { "title": "Site-wide or per page", "desc": "Gate the entire website or only selected pages. Confirmation is stored in a cookie, duration is configurable." },
+            { "title": "WooCommerce categories (Pro)", "desc": "Restrict only age-limited product categories — like alcohol only — rather than the whole site." },
+            { "title": "Fully customisable", "desc": "Texts, colours, logo, and rejection action (notice or redirect). Custom CSS in the Pro version." },
+            { "title": "Fail-safe and fast", "desc": "The overlay is visible by default — if JavaScript fails, the content stays protected. No tracking, no bloat." }
+          ],
+          "pricingTitle": "Pricing",
+          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricing": [
+            { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["Confirmation or date of birth", "Site-wide or per page", "Texts, colours, logo", "Remember cookie"] },
+            { "name": "Pro", "price": "39 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["WooCommerce category gating", "Geo-targeting by country", "Custom CSS", "White-label, no branding", "Priority support"] },
+            { "name": "Agency", "price": "99 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Up to 10 websites", "Multisite support", "Everything in Pro"] }
+          ],
+          "faqTitle": "Frequently asked questions",
+          "faq": [
+            { "q": "Is this a legally robust age check?", "a": "A confirmation or date-of-birth check effectively keeps minors out and meets the standard duty of care for most shops — but it is not a hard ID check. An ID/estimation integration for regulated sectors that require identity verification is on the Pro roadmap." },
+            { "q": "Is any personal data stored?", "a": "No. The date of birth is evaluated in the browser only and never sent to the server. Only a functional cookie is stored to remember the confirmation — GDPR-compliant." },
+            { "q": "Does it work with WooCommerce?", "a": "Yes. In the free version you gate the whole site or individual pages. In Pro you restrict specific product categories — for example, alcohol only." },
+            { "q": "What happens if JavaScript is disabled?", "a": "The overlay is visible by default via CSS — if JavaScript fails, the content remains protected (fail-safe) rather than leaking through unguarded." }
           ]
         }
       }

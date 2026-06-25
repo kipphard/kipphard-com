@@ -33,6 +33,7 @@ const routes = [
   { path: '/work/pigmentfrei', component: CaseStudy },
   { path: '/products', component: Products },
   { path: '/products/barrierefrei-check', component: ProductDetail },
+  { path: '/products/altersverifikation', component: ProductDetail },
   { path: '/blog', component: Blog },
   { path: '/blog/:slug', component: BlogPost },
   { path: '/404', component: NotFound },
