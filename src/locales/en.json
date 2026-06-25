@@ -57,7 +57,13 @@
         "id": "finance-tracker",
         "name": "Finance Tracker",
         "tagline": "A personal finance platform: net worth, cash flow, budgets and debts — plus freelance time tracking, invoicing and German EÜR/income-tax estimation. Built end to end, from the database to the charts.",
-        "stack": ["React", "TypeScript", "FastAPI", "PostgreSQL", "SQLAlchemy"],
+        "stack": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "PostgreSQL",
+          "SQLAlchemy"
+        ],
         "demoUrl": "https://finance-tracker.kipphard.com",
         "repoUrl": "https://github.com/kipphard/finance-tracker"
       },
@@ -65,7 +71,13 @@
         "id": "fitness-tracker",
         "name": "Fitness Tracker",
         "tagline": "Calorie and macro tracking with a food diary (barcode + photo AI), workout logging, and weight and body-measurement trends — as an installable PWA with offline support.",
-        "stack": ["React", "TypeScript", "FastAPI", "PostgreSQL", "PWA"],
+        "stack": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "PostgreSQL",
+          "PWA"
+        ],
         "demoUrl": "https://fitness-tracker.kipphard.com",
         "repoUrl": "https://github.com/kipphard/fitness-tracker"
       }
@@ -751,6 +763,10 @@
     "wieder-verfuegbar": {
       "title": "Wieder verfügbar – Back-in-Stock Plugin for WooCommerce",
       "description": "Back-in-stock notifications for WooCommerce: 'Notify me' form on out-of-stock products, automatic email on restock. Wins back sales that would otherwise be lost for good."
+    },
+    "wunschliste": {
+      "title": "Wunschliste – WooCommerce Wishlist Plugin",
+      "description": "WooCommerce wishlist plugin: heart button on products, persistent list for guests and customers, wishlist page via shortcode. More return visits and conversions — lean and fast."
     }
   },
   "cta": {
@@ -794,7 +810,12 @@
         "category": "WordPress Plugin",
         "status": "available",
         "priceFrom": "Free · Pro from 99 EUR/year",
-        "stack": ["WordPress", "WCAG 2.2", "BFSG", "PHP"],
+        "stack": [
+          "WordPress",
+          "WCAG 2.2",
+          "BFSG",
+          "PHP"
+        ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/barrierefrei-check/main/demo/blueprint.json",
         "detail": {
           "lede": "Check your website for accessibility compliance with WCAG 2.2 and BFSG in minutes, fix the most critical issues with concrete guidance, and generate a legally sound accessibility statement. No overlay widget that merely masks problems — a real audit of your rendered HTML.",
@@ -807,26 +828,93 @@
           "solution": "Barrierefrei Check analyses the real, rendered HTML of your pages — exactly as screen readers and assistive technologies see it. You get a prioritised list of concrete issues by severity, each with the corresponding WCAG criterion and a plain-language fix guide. On top of that, you can generate a BFSG-compliant accessibility statement via a simple form.",
           "featuresTitle": "What it does",
           "features": [
-            { "title": "12 automated audit rules", "desc": "WCAG 2.2 / BFSG: alt texts, form labels, heading structure, landmarks, language attributes, link text and more." },
-            { "title": "Real audit, no overlay", "desc": "Analyses your rendered HTML instead of masking problems with JavaScript. Honest results that hold up in court." },
-            { "title": "Prioritised by severity", "desc": "Critical, serious, moderate, minor — you see immediately what needs fixing first." },
-            { "title": "Concrete fix guidance", "desc": "Every issue comes with a plain-language guide and the exact WCAG reference — no jargon guessing game." },
-            { "title": "Statement generator", "desc": "Generate a BFSG-compliant accessibility statement as a WordPress page via a simple form — with conformance status, contact, and arbitration body." },
-            { "title": "German, for the German market", "desc": "Fully in German and aligned with BFSG / EU Directive 2019/882 — not a translated US solution." }
+            {
+              "title": "12 automated audit rules",
+              "desc": "WCAG 2.2 / BFSG: alt texts, form labels, heading structure, landmarks, language attributes, link text and more."
+            },
+            {
+              "title": "Real audit, no overlay",
+              "desc": "Analyses your rendered HTML instead of masking problems with JavaScript. Honest results that hold up in court."
+            },
+            {
+              "title": "Prioritised by severity",
+              "desc": "Critical, serious, moderate, minor — you see immediately what needs fixing first."
+            },
+            {
+              "title": "Concrete fix guidance",
+              "desc": "Every issue comes with a plain-language guide and the exact WCAG reference — no jargon guessing game."
+            },
+            {
+              "title": "Statement generator",
+              "desc": "Generate a BFSG-compliant accessibility statement as a WordPress page via a simple form — with conformance status, contact, and arbitration body."
+            },
+            {
+              "title": "German, for the German market",
+              "desc": "Fully in German and aligned with BFSG / EU Directive 2019/882 — not a translated US solution."
+            }
           ],
           "pricingTitle": "Pricing",
           "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
           "pricing": [
-            { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["12 audit rules", "Home + up to 4 pages", "Accessibility statement", "Manual scan"] },
-            { "name": "Pro", "price": "99 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["Scan all pages", "Scheduled automatic scans", "PDF conformance report", "History monitoring", "Priority support"] },
-            { "name": "Agency", "price": "299 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Multisite support", "Multiple client sites", "White-label reports", "Everything in Pro"] }
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "forever",
+              "highlighted": false,
+              "cta": "Start for free",
+              "features": [
+                "12 audit rules",
+                "Home + up to 4 pages",
+                "Accessibility statement",
+                "Manual scan"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "99 EUR",
+              "period": "per year",
+              "highlighted": true,
+              "cta": "Secure early access",
+              "features": [
+                "Scan all pages",
+                "Scheduled automatic scans",
+                "PDF conformance report",
+                "History monitoring",
+                "Priority support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "299 EUR",
+              "period": "per year",
+              "highlighted": false,
+              "cta": "Get in touch",
+              "features": [
+                "Multisite support",
+                "Multiple client sites",
+                "White-label reports",
+                "Everything in Pro"
+              ]
+            }
           ],
           "faqTitle": "Frequently asked questions",
           "faq": [
-            { "q": "Does this plugin make my website automatically accessible?", "a": "No — and no one can honestly promise that. Automated tests catch a portion of WCAG criteria. Barrierefrei Check shows you exactly what needs doing and helps you fix it. Colour contrast, keyboard navigation and content require additional manual review." },
-            { "q": "What is BFSG?", "a": "The Barrierefreiheitsstärkungsgesetz implements the EU Directive 2019/882 (European Accessibility Act) in Germany. Since 28 June 2025, many B2C online shops and service providers must be accessible." },
-            { "q": "How is it different from overlay tools like UserWay or accessiBe?", "a": "Overlays place a JavaScript layer over your page and mask problems instead of solving them — they are rejected by disability advocacy groups and in court proceedings. Barrierefrei Check audits the actual source code and helps you fix the root causes." },
-            { "q": "Do I need coding skills?", "a": "Not for the audit or the accessibility statement. Fixing some issues is easier with basic HTML knowledge and familiarity with your theme — but the guides are written so that editors can handle most fixes themselves." }
+            {
+              "q": "Does this plugin make my website automatically accessible?",
+              "a": "No — and no one can honestly promise that. Automated tests catch a portion of WCAG criteria. Barrierefrei Check shows you exactly what needs doing and helps you fix it. Colour contrast, keyboard navigation and content require additional manual review."
+            },
+            {
+              "q": "What is BFSG?",
+              "a": "The Barrierefreiheitsstärkungsgesetz implements the EU Directive 2019/882 (European Accessibility Act) in Germany. Since 28 June 2025, many B2C online shops and service providers must be accessible."
+            },
+            {
+              "q": "How is it different from overlay tools like UserWay or accessiBe?",
+              "a": "Overlays place a JavaScript layer over your page and mask problems instead of solving them — they are rejected by disability advocacy groups and in court proceedings. Barrierefrei Check audits the actual source code and helps you fix the root causes."
+            },
+            {
+              "q": "Do I need coding skills?",
+              "a": "Not for the audit or the accessibility statement. Fixing some issues is easier with basic HTML knowledge and familiarity with your theme — but the guides are written so that editors can handle most fixes themselves."
+            }
           ]
         }
       },
@@ -837,7 +925,12 @@
         "category": "WordPress Plugin",
         "status": "available",
         "priceFrom": "Free · Pro from 39 EUR/year",
-        "stack": ["WordPress", "WooCommerce", "JMStV", "PHP"],
+        "stack": [
+          "WordPress",
+          "WooCommerce",
+          "JMStV",
+          "PHP"
+        ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/altersverifikation/main/demo/blueprint.json",
         "detail": {
           "lede": "Show visitors an age verification prompt before they see your site or specific products — as a simple confirmation or a date-of-birth check. GDPR-compliant: the date of birth is evaluated exclusively in the browser and never leaves your server.",
@@ -850,26 +943,92 @@
           "solution": "A lean, customisable age verification plugin: a full-screen overlay (confirmation or date of birth), activatable site-wide or per page — and in the Pro version, targeted to specific WooCommerce categories only (e.g. alcohol only). GDPR-clean, fail-safe (content stays hidden if JavaScript fails) and fully customisable.",
           "featuresTitle": "What it does",
           "features": [
-            { "title": "Confirmation or date of birth", "desc": "Simple 'I am over 18' or a real date-of-birth check with age calculation — your choice." },
-            { "title": "GDPR-compliant", "desc": "The date of birth is evaluated in the browser only. No personal data leaves your server — just a functional cookie." },
-            { "title": "Site-wide or per page", "desc": "Gate the entire website or only selected pages. Confirmation is stored in a cookie, duration is configurable." },
-            { "title": "WooCommerce categories (Pro)", "desc": "Restrict only age-limited product categories — like alcohol only — rather than the whole site." },
-            { "title": "Fully customisable", "desc": "Texts, colours, logo, and rejection action (notice or redirect). Custom CSS in the Pro version." },
-            { "title": "Fail-safe and fast", "desc": "The overlay is visible by default — if JavaScript fails, the content stays protected. No tracking, no bloat." }
+            {
+              "title": "Confirmation or date of birth",
+              "desc": "Simple 'I am over 18' or a real date-of-birth check with age calculation — your choice."
+            },
+            {
+              "title": "GDPR-compliant",
+              "desc": "The date of birth is evaluated in the browser only. No personal data leaves your server — just a functional cookie."
+            },
+            {
+              "title": "Site-wide or per page",
+              "desc": "Gate the entire website or only selected pages. Confirmation is stored in a cookie, duration is configurable."
+            },
+            {
+              "title": "WooCommerce categories (Pro)",
+              "desc": "Restrict only age-limited product categories — like alcohol only — rather than the whole site."
+            },
+            {
+              "title": "Fully customisable",
+              "desc": "Texts, colours, logo, and rejection action (notice or redirect). Custom CSS in the Pro version."
+            },
+            {
+              "title": "Fail-safe and fast",
+              "desc": "The overlay is visible by default — if JavaScript fails, the content stays protected. No tracking, no bloat."
+            }
           ],
           "pricingTitle": "Pricing",
           "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
           "pricing": [
-            { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["Confirmation or date of birth", "Site-wide or per page", "Texts, colours, logo", "Remember cookie"] },
-            { "name": "Pro", "price": "39 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["WooCommerce category gating", "Geo-targeting by country", "Custom CSS", "White-label, no branding", "Priority support"] },
-            { "name": "Agency", "price": "99 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Up to 10 websites", "Multisite support", "Everything in Pro"] }
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "forever",
+              "highlighted": false,
+              "cta": "Start for free",
+              "features": [
+                "Confirmation or date of birth",
+                "Site-wide or per page",
+                "Texts, colours, logo",
+                "Remember cookie"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "39 EUR",
+              "period": "per year",
+              "highlighted": true,
+              "cta": "Secure early access",
+              "features": [
+                "WooCommerce category gating",
+                "Geo-targeting by country",
+                "Custom CSS",
+                "White-label, no branding",
+                "Priority support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "99 EUR",
+              "period": "per year",
+              "highlighted": false,
+              "cta": "Get in touch",
+              "features": [
+                "Up to 10 websites",
+                "Multisite support",
+                "Everything in Pro"
+              ]
+            }
           ],
           "faqTitle": "Frequently asked questions",
           "faq": [
-            { "q": "Is this a legally robust age check?", "a": "A confirmation or date-of-birth check effectively keeps minors out and meets the standard duty of care for most shops — but it is not a hard ID check. An ID/estimation integration for regulated sectors that require identity verification is on the Pro roadmap." },
-            { "q": "Is any personal data stored?", "a": "No. The date of birth is evaluated in the browser only and never sent to the server. Only a functional cookie is stored to remember the confirmation — GDPR-compliant." },
-            { "q": "Does it work with WooCommerce?", "a": "Yes. In the free version you gate the whole site or individual pages. In Pro you restrict specific product categories — for example, alcohol only." },
-            { "q": "What happens if JavaScript is disabled?", "a": "The overlay is visible by default via CSS — if JavaScript fails, the content remains protected (fail-safe) rather than leaking through unguarded." }
+            {
+              "q": "Is this a legally robust age check?",
+              "a": "A confirmation or date-of-birth check effectively keeps minors out and meets the standard duty of care for most shops — but it is not a hard ID check. An ID/estimation integration for regulated sectors that require identity verification is on the Pro roadmap."
+            },
+            {
+              "q": "Is any personal data stored?",
+              "a": "No. The date of birth is evaluated in the browser only and never sent to the server. Only a functional cookie is stored to remember the confirmation — GDPR-compliant."
+            },
+            {
+              "q": "Does it work with WooCommerce?",
+              "a": "Yes. In the free version you gate the whole site or individual pages. In Pro you restrict specific product categories — for example, alcohol only."
+            },
+            {
+              "q": "What happens if JavaScript is disabled?",
+              "a": "The overlay is visible by default via CSS — if JavaScript fails, the content remains protected (fail-safe) rather than leaking through unguarded."
+            }
           ]
         }
       },
@@ -880,7 +1039,12 @@
         "category": "WordPress Plugin",
         "status": "available",
         "priceFrom": "Free · Pro from 69 EUR/year",
-        "stack": ["WooCommerce", "B2B", "WordPress", "PHP"],
+        "stack": [
+          "WooCommerce",
+          "B2B",
+          "WordPress",
+          "PHP"
+        ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/angebotsanfrage/main/demo/blueprint.json",
         "detail": {
           "lede": "Let customers add products to a quote list and submit an enquiry — instead of buying directly. Ideal for B2B, wholesale, and shops with price-on-request products. Every enquiry lands in the WordPress back end and your inbox.",
@@ -893,26 +1057,92 @@
           "solution": "A lean quote flow: customers collect products on a quote list and submit an enquiry via a form. You receive the enquiry as a back-end entry and by email. Optionally hide price and cart for selected products and show 'Request a quote' instead.",
           "featuresTitle": "What it does",
           "features": [
-            { "title": "'Request a quote' button", "desc": "On shop and product pages — in addition to or instead of the cart, per product or category." },
-            { "title": "Quote list & form", "desc": "Customers collect multiple products and submit an enquiry with name, email, company, phone, and message." },
-            { "title": "Enquiries in the back end", "desc": "Every enquiry is saved as a back-end entry and emailed to you and the customer — nothing gets lost." },
-            { "title": "Hide prices", "desc": "For price-on-request products, hide the price and cart button and show only the quote button." },
-            { "title": "Quote to order (Pro)", "desc": "Convert an enquiry into a real WooCommerce order the customer can pay directly." },
-            { "title": "GDPR-compliant & lean", "desc": "No external services, no tracking — only the data the customer enters in the form." }
+            {
+              "title": "'Request a quote' button",
+              "desc": "On shop and product pages — in addition to or instead of the cart, per product or category."
+            },
+            {
+              "title": "Quote list & form",
+              "desc": "Customers collect multiple products and submit an enquiry with name, email, company, phone, and message."
+            },
+            {
+              "title": "Enquiries in the back end",
+              "desc": "Every enquiry is saved as a back-end entry and emailed to you and the customer — nothing gets lost."
+            },
+            {
+              "title": "Hide prices",
+              "desc": "For price-on-request products, hide the price and cart button and show only the quote button."
+            },
+            {
+              "title": "Quote to order (Pro)",
+              "desc": "Convert an enquiry into a real WooCommerce order the customer can pay directly."
+            },
+            {
+              "title": "GDPR-compliant & lean",
+              "desc": "No external services, no tracking — only the data the customer enters in the form."
+            }
           ],
           "pricingTitle": "Pricing",
           "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
           "pricing": [
-            { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["Request-a-quote button", "Quote list & form", "Enquiries in back end + email", "Optionally hide prices"] },
-            { "name": "Pro", "price": "69 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["Quote to WooCommerce order", "PDF quotes", "Custom form fields", "Category rules", "Priority support"] },
-            { "name": "Agency", "price": "149 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Up to 10 websites", "Multisite support", "Everything in Pro"] }
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "forever",
+              "highlighted": false,
+              "cta": "Start for free",
+              "features": [
+                "Request-a-quote button",
+                "Quote list & form",
+                "Enquiries in back end + email",
+                "Optionally hide prices"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "69 EUR",
+              "period": "per year",
+              "highlighted": true,
+              "cta": "Secure early access",
+              "features": [
+                "Quote to WooCommerce order",
+                "PDF quotes",
+                "Custom form fields",
+                "Category rules",
+                "Priority support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "149 EUR",
+              "period": "per year",
+              "highlighted": false,
+              "cta": "Get in touch",
+              "features": [
+                "Up to 10 websites",
+                "Multisite support",
+                "Everything in Pro"
+              ]
+            }
           ],
           "faqTitle": "Frequently asked questions",
           "faq": [
-            { "q": "Do I need WooCommerce?", "a": "Yes. Angebotsanfrage extends WooCommerce — without an active WooCommerce installation the plugin shows a notice and stays inactive." },
-            { "q": "Does it replace the cart?", "a": "You decide: the quote button can appear alongside the cart or replace it per product or category. That way you can mix normal sales and quote-only products." },
-            { "q": "What happens with an enquiry?", "a": "It is saved as a back-end entry and emailed to you and the customer. In the Pro version you can convert it into a payable WooCommerce order." },
-            { "q": "Is customer data sent to third parties?", "a": "No. There are no external services and no tracking — only what the customer enters in the form is stored." }
+            {
+              "q": "Do I need WooCommerce?",
+              "a": "Yes. Angebotsanfrage extends WooCommerce — without an active WooCommerce installation the plugin shows a notice and stays inactive."
+            },
+            {
+              "q": "Does it replace the cart?",
+              "a": "You decide: the quote button can appear alongside the cart or replace it per product or category. That way you can mix normal sales and quote-only products."
+            },
+            {
+              "q": "What happens with an enquiry?",
+              "a": "It is saved as a back-end entry and emailed to you and the customer. In the Pro version you can convert it into a payable WooCommerce order."
+            },
+            {
+              "q": "Is customer data sent to third parties?",
+              "a": "No. There are no external services and no tracking — only what the customer enters in the form is stored."
+            }
           ]
         }
       },
@@ -923,7 +1153,12 @@
         "category": "WordPress Plugin",
         "status": "available",
         "priceFrom": "Free · Pro from 49 EUR/year",
-        "stack": ["WooCommerce", "E-Commerce", "WordPress", "PHP"],
+        "stack": [
+          "WooCommerce",
+          "E-Commerce",
+          "WordPress",
+          "PHP"
+        ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wieder-verfuegbar/main/demo/blueprint.json",
         "detail": {
           "lede": "Show a 'Notify me' form on out-of-stock product pages. Shoppers leave their email — and the moment the product is back in stock, they get an automatic notification. That's how you recover sales that would otherwise be gone for good.",
@@ -936,26 +1171,205 @@
           "solution": "A lean 'Notify me' form on every out-of-stock product page. Shoppers drop their email; once you restock, the plugin automatically fires the notification. GDPR-compliant with a consent checkbox — and in the Pro version, with full double opt-in before anything is saved.",
           "featuresTitle": "What it does",
           "features": [
-            { "title": "'Notify me' form", "desc": "Appears automatically on out-of-stock product pages — zero configuration needed." },
-            { "title": "Automatic notification", "desc": "The moment stock is replenished, all registered shoppers receive an email notification." },
-            { "title": "Win back lost sales", "desc": "Instead of losing the visitor, you bring them back the moment the product is available again." },
-            { "title": "GDPR-compliant", "desc": "Includes a consent checkbox; Pro adds double opt-in — email confirmation required before the address is saved." },
-            { "title": "Fully customisable", "desc": "Form text, button label, and email content are all freely configurable. HTML emails in the Pro version." },
-            { "title": "Subscriber overview", "desc": "See all subscriptions at a glance. Pro adds CSV export, statistics, and per-variation notifications." }
+            {
+              "title": "'Notify me' form",
+              "desc": "Appears automatically on out-of-stock product pages — zero configuration needed."
+            },
+            {
+              "title": "Automatic notification",
+              "desc": "The moment stock is replenished, all registered shoppers receive an email notification."
+            },
+            {
+              "title": "Win back lost sales",
+              "desc": "Instead of losing the visitor, you bring them back the moment the product is available again."
+            },
+            {
+              "title": "GDPR-compliant",
+              "desc": "Includes a consent checkbox; Pro adds double opt-in — email confirmation required before the address is saved."
+            },
+            {
+              "title": "Fully customisable",
+              "desc": "Form text, button label, and email content are all freely configurable. HTML emails in the Pro version."
+            },
+            {
+              "title": "Subscriber overview",
+              "desc": "See all subscriptions at a glance. Pro adds CSV export, statistics, and per-variation notifications."
+            }
           ],
           "pricingTitle": "Pricing",
           "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
           "pricing": [
-            { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["Notify-me form", "Automatic email on restock", "Subscriber overview", "GDPR consent"] },
-            { "name": "Pro", "price": "49 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["Double opt-in", "Per-variation notifications", "HTML email templates", "CSV export & statistics", "Priority support"] },
-            { "name": "Agency", "price": "129 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Up to 10 websites", "Multisite support", "Everything in Pro"] }
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "forever",
+              "highlighted": false,
+              "cta": "Start for free",
+              "features": [
+                "Notify-me form",
+                "Automatic email on restock",
+                "Subscriber overview",
+                "GDPR consent"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "49 EUR",
+              "period": "per year",
+              "highlighted": true,
+              "cta": "Secure early access",
+              "features": [
+                "Double opt-in",
+                "Per-variation notifications",
+                "HTML email templates",
+                "CSV export & statistics",
+                "Priority support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "129 EUR",
+              "period": "per year",
+              "highlighted": false,
+              "cta": "Get in touch",
+              "features": [
+                "Up to 10 websites",
+                "Multisite support",
+                "Everything in Pro"
+              ]
+            }
           ],
           "faqTitle": "Frequently asked questions",
           "faq": [
-            { "q": "Do I need WooCommerce?", "a": "Yes. Wieder verfügbar extends WooCommerce — without an active WooCommerce installation the plugin shows a notice and stays inactive." },
-            { "q": "When is the notification sent?", "a": "The moment an out-of-stock product switches back to 'in stock', all registered subscribers are automatically notified by email." },
-            { "q": "Is it GDPR-compliant?", "a": "Yes. Only the email address is stored, with explicit consent, and exclusively for the restock notification. The Pro version adds double opt-in for an extra layer of confirmation." },
-            { "q": "Does it work with product variations?", "a": "The free version notifies at the product level. Per-variation notifications (e.g. only size L) are available in the Pro version." }
+            {
+              "q": "Do I need WooCommerce?",
+              "a": "Yes. Wieder verfügbar extends WooCommerce — without an active WooCommerce installation the plugin shows a notice and stays inactive."
+            },
+            {
+              "q": "When is the notification sent?",
+              "a": "The moment an out-of-stock product switches back to 'in stock', all registered subscribers are automatically notified by email."
+            },
+            {
+              "q": "Is it GDPR-compliant?",
+              "a": "Yes. Only the email address is stored, with explicit consent, and exclusively for the restock notification. The Pro version adds double opt-in for an extra layer of confirmation."
+            },
+            {
+              "q": "Does it work with product variations?",
+              "a": "The free version notifies at the product level. Per-variation notifications (e.g. only size L) are available in the Pro version."
+            }
+          ]
+        }
+      },
+      {
+        "id": "wunschliste",
+        "name": "Wunschliste",
+        "tagline": "WooCommerce Wishlist — save products, buy later, sell more.",
+        "category": "WordPress Plugin",
+        "status": "available",
+        "priceFrom": "Free · Pro from 49 EUR/year",
+        "stack": [
+          "WooCommerce",
+          "E-Commerce",
+          "WordPress",
+          "PHP"
+        ],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wunschliste/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Let shoppers save products to a wishlist and come back to buy later. The list persists — in the account for logged-in customers, via cookie for guests. More return visits, more conversions.",
+          "ctaPrimary": "Secure early access",
+          "ctaSecondary": "How it works",
+          "demoNote": "Live demo with WooCommerce in the browser.",
+          "problemTitle": "The problem",
+          "problem": "Many visitors are not ready to buy yet — they want to save a product for later. Without a wishlist, they forget it (and the shop). The best-known solution (YITH) has 400,000 installations but only a 78/100 rating — bloated and slow.",
+          "solutionTitle": "The solution",
+          "solution": "A lean, fast wishlist: a heart button on shop and product pages, a [wunschliste] page listing all saved products with a direct add-to-cart button. Works for guests and logged-in customers alike. Pro adds shareable wishlists, variation support, and statistics.",
+          "featuresTitle": "What it does",
+          "features": [
+            {
+              "title": "Heart button on products",
+              "desc": "On shop and product pages — one click, done. Via AJAX, no page reload."
+            },
+            {
+              "title": "Stays saved",
+              "desc": "Logged-in customers: stored in their account. Guests: stored in a cookie. The list is still there on their next visit."
+            },
+            {
+              "title": "Wishlist page",
+              "desc": "Via [wunschliste] shortcode: all saved products with image, price, and an add-to-cart button."
+            },
+            {
+              "title": "More conversions",
+              "desc": "Saved products bring shoppers back — and \"for later\" turns into \"buy now\"."
+            },
+            {
+              "title": "Shareable lists (Pro)",
+              "desc": "Customers share their wishlist via link — ideal for gift ideas and recommendations."
+            },
+            {
+              "title": "Lean & fast",
+              "desc": "No bloat, no external services. Clean, customisable markup."
+            }
+          ],
+          "pricingTitle": "Pricing",
+          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricing": [
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "forever",
+              "highlighted": false,
+              "cta": "Start for free",
+              "features": [
+                "Heart button (shop + product)",
+                "Wishlist for guests & customers",
+                "[wunschliste] page",
+                "AJAX, no reload"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "49 EUR",
+              "period": "per year",
+              "highlighted": true,
+              "cta": "Secure early access",
+              "features": [
+                "Shareable wishlists (link)",
+                "Variation support",
+                "Statistics: most-saved products",
+                "Priority support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "129 EUR",
+              "period": "per year",
+              "highlighted": false,
+              "cta": "Get in touch",
+              "features": [
+                "Up to 10 websites",
+                "Multisite support",
+                "Everything in Pro"
+              ]
+            }
+          ],
+          "faqTitle": "Frequently asked questions",
+          "faq": [
+            {
+              "q": "Do I need WooCommerce?",
+              "a": "Yes. Wunschliste extends WooCommerce — without an active WooCommerce installation the plugin shows a notice and stays inactive."
+            },
+            {
+              "q": "Does the wishlist work for guests too?",
+              "a": "Yes. Guest wishlists are stored in a cookie; logged-in customers keep their list permanently in their account."
+            },
+            {
+              "q": "Where does the wishlist appear?",
+              "a": "The heart button appears on shop and product pages. Display saved products anywhere using the [wunschliste] shortcode on any page."
+            },
+            {
+              "q": "Can wishlists be shared?",
+              "a": "Sharing via link (e.g. for gift requests) is part of the Pro version, along with variation support and statistics."
+            }
           ]
         }
       }

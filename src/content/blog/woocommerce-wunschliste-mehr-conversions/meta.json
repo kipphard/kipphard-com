@@ -1,0 +1,15 @@
+{
+  "category": "ecommerce",
+  "tags": ["WooCommerce", "Wunschliste", "Wishlist", "Conversion", "E-Commerce"],
+  "publishedAt": "2026-06-25",
+  "de": {
+    "title": "WooCommerce-Wunschliste: wie Merken zu Kaufen wird",
+    "description": "Warum eine Wunschliste im WooCommerce-Shop mehr Conversions bringt — und worauf es bei der Umsetzung ankommt: Gäste-Persistenz, Platzierung, Login-Zwang vermeiden und was ein gutes Wishlist-Plugin ausmacht.",
+    "excerpt": "Viele Besucher sind noch nicht kaufbereit — sie wollen merken, nicht kaufen. Eine gut umgesetzte Wunschliste holt sie zurück. Was dabei wirklich zählt."
+  },
+  "en": {
+    "title": "WooCommerce wishlist: how saving turns into buying",
+    "description": "Why a wishlist in your WooCommerce shop drives more conversions — and what good implementation looks like: guest persistence, placement, avoiding forced login, and what makes a wishlist plugin worth using.",
+    "excerpt": "Many visitors aren't ready to buy yet — they want to save, not purchase. A well-built wishlist brings them back. Here's what actually matters."
+  }
+}

@@ -36,6 +36,7 @@ const routes = [
   { path: '/products/altersverifikation', component: ProductDetail },
   { path: '/products/angebotsanfrage', component: ProductDetail },
   { path: '/products/wieder-verfuegbar', component: ProductDetail },
+  { path: '/products/wunschliste', component: ProductDetail },
   { path: '/blog', component: Blog },
   { path: '/blog/:slug', component: BlogPost },
   { path: '/404', component: NotFound },

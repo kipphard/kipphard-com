@@ -57,7 +57,13 @@
         "id": "finance-tracker",
         "name": "Finance Tracker",
         "tagline": "Persönliche Finanzplattform: Net Worth, Cashflow, Budgets und Schulden — plus Freelance-Zeiterfassung, Rechnungen und deutsche EÜR-/Steuerschätzung. Selbst gebaut, von der Datenbank bis zum Chart.",
-        "stack": ["React", "TypeScript", "FastAPI", "PostgreSQL", "SQLAlchemy"],
+        "stack": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "PostgreSQL",
+          "SQLAlchemy"
+        ],
         "demoUrl": "https://finance-tracker.kipphard.com",
         "repoUrl": "https://github.com/kipphard/finance-tracker"
       },
@@ -65,7 +71,13 @@
         "id": "fitness-tracker",
         "name": "Fitness Tracker",
         "tagline": "Kalorien- und Makro-Tracking mit Ernährungstagebuch (Barcode + Foto-KI), Workout-Logging sowie Gewichts- und Körpermaß-Trends — als installierbare PWA mit Offline-Support.",
-        "stack": ["React", "TypeScript", "FastAPI", "PostgreSQL", "PWA"],
+        "stack": [
+          "React",
+          "TypeScript",
+          "FastAPI",
+          "PostgreSQL",
+          "PWA"
+        ],
         "demoUrl": "https://fitness-tracker.kipphard.com",
         "repoUrl": "https://github.com/kipphard/fitness-tracker"
       }
@@ -751,6 +763,10 @@
     "wieder-verfuegbar": {
       "title": "Wieder verfügbar – Back-in-Stock-Plugin für WooCommerce",
       "description": "Back-in-Stock-Benachrichtigung für WooCommerce: Benachrichtige-mich-Formular auf ausverkauften Produkten, automatische E-Mail bei Verfügbarkeit. Holt verlorene Verkäufe zurück."
+    },
+    "wunschliste": {
+      "title": "Wunschliste – WooCommerce Wishlist Plugin",
+      "description": "WooCommerce-Wunschliste: Herz-Button auf Produkten, persistente Liste für Gäste und Kunden, Wunschlisten-Seite per Shortcode. Mehr Wiederbesuche und Conversions — schlank und schnell."
     }
   },
   "cta": {
@@ -794,7 +810,12 @@
         "category": "WordPress-Plugin",
         "status": "available",
         "priceFrom": "Kostenlos · Pro ab 99 EUR/Jahr",
-        "stack": ["WordPress", "WCAG 2.2", "BFSG", "PHP"],
+        "stack": [
+          "WordPress",
+          "WCAG 2.2",
+          "BFSG",
+          "PHP"
+        ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/barrierefrei-check/main/demo/blueprint.json",
         "detail": {
           "lede": "Prüfe deine Website in Minuten auf Barrierefreiheit nach WCAG 2.2 und BFSG, behebe die wichtigsten Fehler mit konkreten Anleitungen und erstelle eine rechtssichere Barrierefreiheitserklärung. Kein Overlay-Widget, das Probleme nur überdeckt — ein echtes Audit deines gerenderten HTML.",
@@ -807,26 +828,93 @@
           "solution": "Barrierefrei Check analysiert das echte, gerenderte HTML deiner Seiten — so wie Screenreader und assistive Technologien es sehen. Du bekommst eine priorisierte Liste konkreter Probleme nach Schweregrad, jeweils mit dem zugehörigen WCAG-Kriterium und einer verständlichen Lösungsanleitung. Dazu generierst du eine BFSG-konforme Barrierefreiheitserklärung per Formular.",
           "featuresTitle": "Was es kann",
           "features": [
-            { "title": "12 automatisierte Prüfregeln", "desc": "WCAG 2.2 / BFSG: Alt-Texte, Formular-Labels, Überschriften-Struktur, Landmarks, Sprachauszeichnung, Link-Texte und mehr." },
-            { "title": "Echtes Audit, kein Overlay", "desc": "Analysiert dein gerendertes HTML, statt Probleme per JavaScript zu überdecken. Ehrliche Ergebnisse, die auch vor Gericht zählen." },
-            { "title": "Priorisiert nach Schweregrad", "desc": "Kritisch, schwerwiegend, mittel, gering — du siehst sofort, was zuerst zu beheben ist." },
-            { "title": "Konkrete Lösungshinweise", "desc": "Jeder Fehler kommt mit verständlicher Anleitung und genauem WCAG-Bezug — kein Fachjargon-Rätselraten." },
-            { "title": "Erklärungs-Generator", "desc": "Erstelle per Formular eine BFSG-konforme Barrierefreiheitserklärung als WordPress-Seite — mit Konformitätsstatus, Kontakt und Schlichtungsstelle." },
-            { "title": "Deutsch, für den deutschen Markt", "desc": "Komplett deutschsprachig und auf BFSG / EU-Richtlinie 2019/882 ausgerichtet — keine eingedeutschte US-Lösung." }
+            {
+              "title": "12 automatisierte Prüfregeln",
+              "desc": "WCAG 2.2 / BFSG: Alt-Texte, Formular-Labels, Überschriften-Struktur, Landmarks, Sprachauszeichnung, Link-Texte und mehr."
+            },
+            {
+              "title": "Echtes Audit, kein Overlay",
+              "desc": "Analysiert dein gerendertes HTML, statt Probleme per JavaScript zu überdecken. Ehrliche Ergebnisse, die auch vor Gericht zählen."
+            },
+            {
+              "title": "Priorisiert nach Schweregrad",
+              "desc": "Kritisch, schwerwiegend, mittel, gering — du siehst sofort, was zuerst zu beheben ist."
+            },
+            {
+              "title": "Konkrete Lösungshinweise",
+              "desc": "Jeder Fehler kommt mit verständlicher Anleitung und genauem WCAG-Bezug — kein Fachjargon-Rätselraten."
+            },
+            {
+              "title": "Erklärungs-Generator",
+              "desc": "Erstelle per Formular eine BFSG-konforme Barrierefreiheitserklärung als WordPress-Seite — mit Konformitätsstatus, Kontakt und Schlichtungsstelle."
+            },
+            {
+              "title": "Deutsch, für den deutschen Markt",
+              "desc": "Komplett deutschsprachig und auf BFSG / EU-Richtlinie 2019/882 ausgerichtet — keine eingedeutschte US-Lösung."
+            }
           ],
           "pricingTitle": "Preise",
           "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
           "pricing": [
-            { "name": "Free", "price": "0 EUR", "period": "dauerhaft", "highlighted": false, "cta": "Kostenlos starten", "features": ["12 Prüfregeln", "Startseite + bis zu 4 Seiten", "Barrierefreiheitserklärung", "Manueller Scan"] },
-            { "name": "Pro", "price": "99 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["Alle Seiten scannen", "Geplante automatische Scans", "PDF-Konformitätsbericht", "Verlaufs-Monitoring", "Priority-Support"] },
-            { "name": "Agency", "price": "299 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Multisite-Support", "Mehrere Kundenseiten", "White-Label-Berichte", "Alles aus Pro"] }
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "dauerhaft",
+              "highlighted": false,
+              "cta": "Kostenlos starten",
+              "features": [
+                "12 Prüfregeln",
+                "Startseite + bis zu 4 Seiten",
+                "Barrierefreiheitserklärung",
+                "Manueller Scan"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "99 EUR",
+              "period": "pro Jahr",
+              "highlighted": true,
+              "cta": "Early Access sichern",
+              "features": [
+                "Alle Seiten scannen",
+                "Geplante automatische Scans",
+                "PDF-Konformitätsbericht",
+                "Verlaufs-Monitoring",
+                "Priority-Support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "299 EUR",
+              "period": "pro Jahr",
+              "highlighted": false,
+              "cta": "Anfragen",
+              "features": [
+                "Multisite-Support",
+                "Mehrere Kundenseiten",
+                "White-Label-Berichte",
+                "Alles aus Pro"
+              ]
+            }
           ],
           "faqTitle": "Häufige Fragen",
           "faq": [
-            { "q": "Macht dieses Plugin meine Website automatisch barrierefrei?", "a": "Nein — und niemand kann das ehrlich versprechen. Automatisierte Tests erkennen einen Teil der WCAG-Kriterien. Barrierefrei Check zeigt dir genau, was zu tun ist, und hilft beim Beheben. Kontraste, Tastaturbedienung und Inhalte erfordern zusätzlich eine manuelle Prüfung." },
-            { "q": "Was ist das BFSG?", "a": "Das Barrierefreiheitsstärkungsgesetz setzt die EU-Richtlinie 2019/882 (European Accessibility Act) in Deutschland um. Seit dem 28. Juni 2025 müssen viele B2C-Online-Shops und Dienstleister barrierefrei sein." },
-            { "q": "Worin unterscheidet es sich von Overlay-Tools wie UserWay oder accessiBe?", "a": "Overlays legen eine JavaScript-Schicht über deine Seite und überdecken Probleme, statt sie zu lösen — sie werden von Betroffenenverbänden und in Gerichtsverfahren abgelehnt. Barrierefrei Check prüft den echten Quellcode und hilft dir, die Ursachen zu beheben." },
-            { "q": "Brauche ich Programmierkenntnisse?", "a": "Für Prüfung und Erklärung nicht. Zum Beheben mancher Fehler hilft Grundwissen über HTML und dein Theme — die Anleitungen sind aber so geschrieben, dass Redakteure das meiste selbst umsetzen können." }
+            {
+              "q": "Macht dieses Plugin meine Website automatisch barrierefrei?",
+              "a": "Nein — und niemand kann das ehrlich versprechen. Automatisierte Tests erkennen einen Teil der WCAG-Kriterien. Barrierefrei Check zeigt dir genau, was zu tun ist, und hilft beim Beheben. Kontraste, Tastaturbedienung und Inhalte erfordern zusätzlich eine manuelle Prüfung."
+            },
+            {
+              "q": "Was ist das BFSG?",
+              "a": "Das Barrierefreiheitsstärkungsgesetz setzt die EU-Richtlinie 2019/882 (European Accessibility Act) in Deutschland um. Seit dem 28. Juni 2025 müssen viele B2C-Online-Shops und Dienstleister barrierefrei sein."
+            },
+            {
+              "q": "Worin unterscheidet es sich von Overlay-Tools wie UserWay oder accessiBe?",
+              "a": "Overlays legen eine JavaScript-Schicht über deine Seite und überdecken Probleme, statt sie zu lösen — sie werden von Betroffenenverbänden und in Gerichtsverfahren abgelehnt. Barrierefrei Check prüft den echten Quellcode und hilft dir, die Ursachen zu beheben."
+            },
+            {
+              "q": "Brauche ich Programmierkenntnisse?",
+              "a": "Für Prüfung und Erklärung nicht. Zum Beheben mancher Fehler hilft Grundwissen über HTML und dein Theme — die Anleitungen sind aber so geschrieben, dass Redakteure das meiste selbst umsetzen können."
+            }
           ]
         }
       },
@@ -837,7 +925,12 @@
         "category": "WordPress-Plugin",
         "status": "available",
         "priceFrom": "Kostenlos · Pro ab 39 EUR/Jahr",
-        "stack": ["WordPress", "WooCommerce", "JMStV", "PHP"],
+        "stack": [
+          "WordPress",
+          "WooCommerce",
+          "JMStV",
+          "PHP"
+        ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/altersverifikation/main/demo/blueprint.json",
         "detail": {
           "lede": "Zeige Besuchern eine Altersabfrage, bevor sie deine Seite oder bestimmte Produkte sehen — als einfache Bestätigung oder per Geburtsdatum. DSGVO-konform: Das Geburtsdatum wird ausschließlich im Browser geprüft, es verlässt nie deinen Server.",
@@ -850,26 +943,92 @@
           "solution": "Eine schlanke, anpassbare Altersverifikation: ein bildschirmfüllendes Overlay (Bestätigung oder Geburtsdatum), seitenweit oder pro Seite aktivierbar — und in der Pro-Version gezielt nur für bestimmte WooCommerce-Kategorien (z. B. nur Alkohol). DSGVO-sauber, fail-safe (Inhalt bleibt verborgen, falls JavaScript scheitert) und komplett anpassbar.",
           "featuresTitle": "Was es kann",
           "features": [
-            { "title": "Bestätigung oder Geburtsdatum", "desc": "Einfaches 'Ich bin über 18' oder echte Geburtsdatum-Abfrage mit Altersberechnung — du entscheidest." },
-            { "title": "DSGVO-konform", "desc": "Das Geburtsdatum wird nur im Browser ausgewertet. Keine personenbezogenen Daten verlassen deinen Server — nur ein funktionaler Cookie." },
-            { "title": "Seitenweit oder pro Seite", "desc": "Gate für die ganze Website oder nur ausgewählte Seiten. Die Bestätigung wird per Cookie gemerkt, die Dauer ist einstellbar." },
-            { "title": "WooCommerce-Kategorien (Pro)", "desc": "Sperre gezielt nur altersbeschränkte Produktkategorien — etwa nur Alkohol — statt der ganzen Seite." },
-            { "title": "Komplett anpassbar", "desc": "Texte, Farben, Logo und Ablehnungs-Aktion (Hinweis oder Weiterleitung). Eigenes CSS in der Pro-Version." },
-            { "title": "Fail-safe und schnell", "desc": "Das Overlay ist standardmäßig sichtbar — fällt JavaScript aus, bleibt der Inhalt geschützt. Kein Tracking, kein Ballast." }
+            {
+              "title": "Bestätigung oder Geburtsdatum",
+              "desc": "Einfaches 'Ich bin über 18' oder echte Geburtsdatum-Abfrage mit Altersberechnung — du entscheidest."
+            },
+            {
+              "title": "DSGVO-konform",
+              "desc": "Das Geburtsdatum wird nur im Browser ausgewertet. Keine personenbezogenen Daten verlassen deinen Server — nur ein funktionaler Cookie."
+            },
+            {
+              "title": "Seitenweit oder pro Seite",
+              "desc": "Gate für die ganze Website oder nur ausgewählte Seiten. Die Bestätigung wird per Cookie gemerkt, die Dauer ist einstellbar."
+            },
+            {
+              "title": "WooCommerce-Kategorien (Pro)",
+              "desc": "Sperre gezielt nur altersbeschränkte Produktkategorien — etwa nur Alkohol — statt der ganzen Seite."
+            },
+            {
+              "title": "Komplett anpassbar",
+              "desc": "Texte, Farben, Logo und Ablehnungs-Aktion (Hinweis oder Weiterleitung). Eigenes CSS in der Pro-Version."
+            },
+            {
+              "title": "Fail-safe und schnell",
+              "desc": "Das Overlay ist standardmäßig sichtbar — fällt JavaScript aus, bleibt der Inhalt geschützt. Kein Tracking, kein Ballast."
+            }
           ],
           "pricingTitle": "Preise",
           "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
           "pricing": [
-            { "name": "Free", "price": "0 EUR", "period": "dauerhaft", "highlighted": false, "cta": "Kostenlos starten", "features": ["Bestätigung oder Geburtsdatum", "Seitenweit oder pro Seite", "Texte, Farben, Logo", "Merken-Cookie"] },
-            { "name": "Pro", "price": "39 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["WooCommerce-Kategorie-Gating", "Geo-Targeting nach Land", "Eigenes CSS", "White-Label ohne Branding", "Priority-Support"] },
-            { "name": "Agency", "price": "99 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Bis zu 10 Websites", "Multisite-Support", "Alles aus Pro"] }
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "dauerhaft",
+              "highlighted": false,
+              "cta": "Kostenlos starten",
+              "features": [
+                "Bestätigung oder Geburtsdatum",
+                "Seitenweit oder pro Seite",
+                "Texte, Farben, Logo",
+                "Merken-Cookie"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "39 EUR",
+              "period": "pro Jahr",
+              "highlighted": true,
+              "cta": "Early Access sichern",
+              "features": [
+                "WooCommerce-Kategorie-Gating",
+                "Geo-Targeting nach Land",
+                "Eigenes CSS",
+                "White-Label ohne Branding",
+                "Priority-Support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "99 EUR",
+              "period": "pro Jahr",
+              "highlighted": false,
+              "cta": "Anfragen",
+              "features": [
+                "Bis zu 10 Websites",
+                "Multisite-Support",
+                "Alles aus Pro"
+              ]
+            }
           ],
           "faqTitle": "Häufige Fragen",
           "faq": [
-            { "q": "Ist das eine rechtssichere Altersprüfung?", "a": "Eine Bestätigungs- bzw. Geburtsdatum-Abfrage hält Minderjährige wirksam ab und erfüllt die übliche Sorgfaltspflicht vieler Shops — sie ist aber keine harte ID-Prüfung. Für regulierte Bereiche mit ID-Pflicht ist eine ID-/Schätzungs-Integration als Pro-Roadmap geplant." },
-            { "q": "Werden personenbezogene Daten gespeichert?", "a": "Nein. Das Geburtsdatum wird ausschließlich im Browser geprüft und nie an den Server gesendet. Gespeichert wird nur ein funktionaler Cookie, der die Bestätigung merkt — DSGVO-konform." },
-            { "q": "Funktioniert es mit WooCommerce?", "a": "Ja. In der kostenlosen Version sperrst du die ganze Seite oder einzelne Seiten. In Pro beschränkst du gezielt einzelne Produktkategorien, etwa nur Alkohol." },
-            { "q": "Was passiert, wenn JavaScript deaktiviert ist?", "a": "Das Overlay ist standardmäßig per CSS sichtbar — fällt JavaScript aus, bleibt der Inhalt geschützt (fail-safe), statt ungeschützt durchzurutschen." }
+            {
+              "q": "Ist das eine rechtssichere Altersprüfung?",
+              "a": "Eine Bestätigungs- bzw. Geburtsdatum-Abfrage hält Minderjährige wirksam ab und erfüllt die übliche Sorgfaltspflicht vieler Shops — sie ist aber keine harte ID-Prüfung. Für regulierte Bereiche mit ID-Pflicht ist eine ID-/Schätzungs-Integration als Pro-Roadmap geplant."
+            },
+            {
+              "q": "Werden personenbezogene Daten gespeichert?",
+              "a": "Nein. Das Geburtsdatum wird ausschließlich im Browser geprüft und nie an den Server gesendet. Gespeichert wird nur ein funktionaler Cookie, der die Bestätigung merkt — DSGVO-konform."
+            },
+            {
+              "q": "Funktioniert es mit WooCommerce?",
+              "a": "Ja. In der kostenlosen Version sperrst du die ganze Seite oder einzelne Seiten. In Pro beschränkst du gezielt einzelne Produktkategorien, etwa nur Alkohol."
+            },
+            {
+              "q": "Was passiert, wenn JavaScript deaktiviert ist?",
+              "a": "Das Overlay ist standardmäßig per CSS sichtbar — fällt JavaScript aus, bleibt der Inhalt geschützt (fail-safe), statt ungeschützt durchzurutschen."
+            }
           ]
         }
       },
@@ -880,7 +1039,12 @@
         "category": "WordPress-Plugin",
         "status": "available",
         "priceFrom": "Kostenlos · Pro ab 69 EUR/Jahr",
-        "stack": ["WooCommerce", "B2B", "WordPress", "PHP"],
+        "stack": [
+          "WooCommerce",
+          "B2B",
+          "WordPress",
+          "PHP"
+        ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/angebotsanfrage/main/demo/blueprint.json",
         "detail": {
           "lede": "Lass Kunden Produkte auf eine Angebotsliste setzen und eine Anfrage senden — statt direkt zu kaufen. Ideal für B2B, Großhandel und Shops mit Preisen auf Anfrage. Jede Anfrage landet im WordPress-Backend und in deinem Postfach.",
@@ -893,26 +1057,92 @@
           "solution": "Ein schlanker Angebots-Flow: Kunden sammeln Produkte auf einer Angebotsliste und senden eine Anfrage über ein Formular. Du erhältst die Anfrage als Eintrag im Backend und per E-Mail. Optional blendest du Preis und Warenkorb für ausgewählte Produkte aus und zeigst stattdessen 'Angebot anfragen'.",
           "featuresTitle": "Was es kann",
           "features": [
-            { "title": "'Angebot anfragen'-Button", "desc": "Auf Shop- und Produktseiten — zusätzlich zum oder anstelle des Warenkorbs, pro Produkt oder Kategorie." },
-            { "title": "Angebotsliste & Formular", "desc": "Kunden sammeln mehrere Produkte und senden eine Anfrage mit Name, E-Mail, Firma, Telefon und Nachricht." },
-            { "title": "Anfragen im Backend", "desc": "Jede Anfrage wird als Eintrag gespeichert und an dich und den Kunden per E-Mail gesendet — nichts geht verloren." },
-            { "title": "Preise ausblenden", "desc": "Für 'Preis auf Anfrage'-Produkte blendest du Preis und Warenkorb aus und zeigst nur den Angebots-Button." },
-            { "title": "Angebot zu Bestellung (Pro)", "desc": "Wandle eine Anfrage in eine echte WooCommerce-Bestellung um, die der Kunde direkt bezahlen kann." },
-            { "title": "DSGVO-konform & schlank", "desc": "Keine externen Dienste, kein Tracking — nur die Daten, die der Kunde selbst im Formular sendet." }
+            {
+              "title": "'Angebot anfragen'-Button",
+              "desc": "Auf Shop- und Produktseiten — zusätzlich zum oder anstelle des Warenkorbs, pro Produkt oder Kategorie."
+            },
+            {
+              "title": "Angebotsliste & Formular",
+              "desc": "Kunden sammeln mehrere Produkte und senden eine Anfrage mit Name, E-Mail, Firma, Telefon und Nachricht."
+            },
+            {
+              "title": "Anfragen im Backend",
+              "desc": "Jede Anfrage wird als Eintrag gespeichert und an dich und den Kunden per E-Mail gesendet — nichts geht verloren."
+            },
+            {
+              "title": "Preise ausblenden",
+              "desc": "Für 'Preis auf Anfrage'-Produkte blendest du Preis und Warenkorb aus und zeigst nur den Angebots-Button."
+            },
+            {
+              "title": "Angebot zu Bestellung (Pro)",
+              "desc": "Wandle eine Anfrage in eine echte WooCommerce-Bestellung um, die der Kunde direkt bezahlen kann."
+            },
+            {
+              "title": "DSGVO-konform & schlank",
+              "desc": "Keine externen Dienste, kein Tracking — nur die Daten, die der Kunde selbst im Formular sendet."
+            }
           ],
           "pricingTitle": "Preise",
           "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
           "pricing": [
-            { "name": "Free", "price": "0 EUR", "period": "dauerhaft", "highlighted": false, "cta": "Kostenlos starten", "features": ["Angebot-anfragen-Button", "Angebotsliste & Formular", "Anfragen im Backend + E-Mail", "Preise optional ausblenden"] },
-            { "name": "Pro", "price": "69 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["Angebot zu WooCommerce-Bestellung", "PDF-Angebote", "Eigene Formularfelder", "Kategorie-Regeln", "Priority-Support"] },
-            { "name": "Agency", "price": "149 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Bis zu 10 Websites", "Multisite-Support", "Alles aus Pro"] }
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "dauerhaft",
+              "highlighted": false,
+              "cta": "Kostenlos starten",
+              "features": [
+                "Angebot-anfragen-Button",
+                "Angebotsliste & Formular",
+                "Anfragen im Backend + E-Mail",
+                "Preise optional ausblenden"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "69 EUR",
+              "period": "pro Jahr",
+              "highlighted": true,
+              "cta": "Early Access sichern",
+              "features": [
+                "Angebot zu WooCommerce-Bestellung",
+                "PDF-Angebote",
+                "Eigene Formularfelder",
+                "Kategorie-Regeln",
+                "Priority-Support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "149 EUR",
+              "period": "pro Jahr",
+              "highlighted": false,
+              "cta": "Anfragen",
+              "features": [
+                "Bis zu 10 Websites",
+                "Multisite-Support",
+                "Alles aus Pro"
+              ]
+            }
           ],
           "faqTitle": "Häufige Fragen",
           "faq": [
-            { "q": "Brauche ich WooCommerce?", "a": "Ja. Angebotsanfrage erweitert WooCommerce — ohne aktives WooCommerce zeigt das Plugin einen Hinweis und bleibt inaktiv." },
-            { "q": "Ersetzt es den Warenkorb?", "a": "Du entscheidest: Der Angebots-Button kann zusätzlich zum Warenkorb erscheinen oder ihn pro Produkt bzw. Kategorie ersetzen. So mischst du normalen Verkauf und Anfrage-Produkte." },
-            { "q": "Was passiert mit einer Anfrage?", "a": "Sie wird als Eintrag im Backend gespeichert und an dich und den Kunden per E-Mail gesendet. In der Pro-Version wandelst du sie in eine bezahlbare WooCommerce-Bestellung um." },
-            { "q": "Werden Kundendaten an Dritte gesendet?", "a": "Nein. Es gibt keine externen Dienste und kein Tracking — gespeichert wird nur, was der Kunde im Formular eingibt." }
+            {
+              "q": "Brauche ich WooCommerce?",
+              "a": "Ja. Angebotsanfrage erweitert WooCommerce — ohne aktives WooCommerce zeigt das Plugin einen Hinweis und bleibt inaktiv."
+            },
+            {
+              "q": "Ersetzt es den Warenkorb?",
+              "a": "Du entscheidest: Der Angebots-Button kann zusätzlich zum Warenkorb erscheinen oder ihn pro Produkt bzw. Kategorie ersetzen. So mischst du normalen Verkauf und Anfrage-Produkte."
+            },
+            {
+              "q": "Was passiert mit einer Anfrage?",
+              "a": "Sie wird als Eintrag im Backend gespeichert und an dich und den Kunden per E-Mail gesendet. In der Pro-Version wandelst du sie in eine bezahlbare WooCommerce-Bestellung um."
+            },
+            {
+              "q": "Werden Kundendaten an Dritte gesendet?",
+              "a": "Nein. Es gibt keine externen Dienste und kein Tracking — gespeichert wird nur, was der Kunde im Formular eingibt."
+            }
           ]
         }
       },
@@ -923,7 +1153,12 @@
         "category": "WordPress-Plugin",
         "status": "available",
         "priceFrom": "Kostenlos · Pro ab 49 EUR/Jahr",
-        "stack": ["WooCommerce", "E-Commerce", "WordPress", "PHP"],
+        "stack": [
+          "WooCommerce",
+          "E-Commerce",
+          "WordPress",
+          "PHP"
+        ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wieder-verfuegbar/main/demo/blueprint.json",
         "detail": {
           "lede": "Zeige bei ausverkauften Produkten ein 'Benachrichtige mich'-Formular. Kunden tragen ihre E-Mail ein — und sobald das Produkt wieder lieferbar ist, werden sie automatisch benachrichtigt. So holst du Verkäufe zurück, die sonst verloren gingen.",
@@ -936,26 +1171,205 @@
           "solution": "Ein schlankes 'Benachrichtige mich'-Formular auf jeder ausverkauften Produktseite. Kunden hinterlassen ihre E-Mail; sobald du den Bestand wieder auffüllst, verschickt das Plugin automatisch die Benachrichtigung. DSGVO-konform mit Einwilligung — in der Pro-Version sogar mit Double-Opt-in.",
           "featuresTitle": "Was es kann",
           "features": [
-            { "title": "'Benachrichtige mich'-Formular", "desc": "Erscheint automatisch auf ausverkauften Produktseiten — ohne Konfiguration." },
-            { "title": "Automatische Benachrichtigung", "desc": "Sobald der Bestand wieder verfügbar ist, werden alle Interessenten per E-Mail informiert." },
-            { "title": "Verlorene Verkäufe zurückholen", "desc": "Statt den Besucher zu verlieren, bringst du ihn zurück, wenn das Produkt wieder da ist." },
-            { "title": "DSGVO-konform", "desc": "Mit Einwilligungs-Checkbox; in Pro mit Double-Opt-in (Bestätigung per E-Mail), bevor gespeichert wird." },
-            { "title": "Anpassbar", "desc": "Formular-Texte, Button und E-Mail-Inhalt frei konfigurierbar. HTML-E-Mails in der Pro-Version." },
-            { "title": "Übersicht im Backend", "desc": "Alle Abonnements auf einen Blick. In Pro: CSV-Export, Statistiken und Varianten-Benachrichtigungen." }
+            {
+              "title": "'Benachrichtige mich'-Formular",
+              "desc": "Erscheint automatisch auf ausverkauften Produktseiten — ohne Konfiguration."
+            },
+            {
+              "title": "Automatische Benachrichtigung",
+              "desc": "Sobald der Bestand wieder verfügbar ist, werden alle Interessenten per E-Mail informiert."
+            },
+            {
+              "title": "Verlorene Verkäufe zurückholen",
+              "desc": "Statt den Besucher zu verlieren, bringst du ihn zurück, wenn das Produkt wieder da ist."
+            },
+            {
+              "title": "DSGVO-konform",
+              "desc": "Mit Einwilligungs-Checkbox; in Pro mit Double-Opt-in (Bestätigung per E-Mail), bevor gespeichert wird."
+            },
+            {
+              "title": "Anpassbar",
+              "desc": "Formular-Texte, Button und E-Mail-Inhalt frei konfigurierbar. HTML-E-Mails in der Pro-Version."
+            },
+            {
+              "title": "Übersicht im Backend",
+              "desc": "Alle Abonnements auf einen Blick. In Pro: CSV-Export, Statistiken und Varianten-Benachrichtigungen."
+            }
           ],
           "pricingTitle": "Preise",
           "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
           "pricing": [
-            { "name": "Free", "price": "0 EUR", "period": "dauerhaft", "highlighted": false, "cta": "Kostenlos starten", "features": ["Benachrichtige-mich-Formular", "Automatische E-Mail bei Verfügbarkeit", "Abonnement-Übersicht", "DSGVO-Einwilligung"] },
-            { "name": "Pro", "price": "49 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["Double-Opt-in", "Varianten-Benachrichtigungen", "HTML-E-Mail-Vorlagen", "CSV-Export & Statistiken", "Priority-Support"] },
-            { "name": "Agency", "price": "129 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Bis zu 10 Websites", "Multisite-Support", "Alles aus Pro"] }
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "dauerhaft",
+              "highlighted": false,
+              "cta": "Kostenlos starten",
+              "features": [
+                "Benachrichtige-mich-Formular",
+                "Automatische E-Mail bei Verfügbarkeit",
+                "Abonnement-Übersicht",
+                "DSGVO-Einwilligung"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "49 EUR",
+              "period": "pro Jahr",
+              "highlighted": true,
+              "cta": "Early Access sichern",
+              "features": [
+                "Double-Opt-in",
+                "Varianten-Benachrichtigungen",
+                "HTML-E-Mail-Vorlagen",
+                "CSV-Export & Statistiken",
+                "Priority-Support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "129 EUR",
+              "period": "pro Jahr",
+              "highlighted": false,
+              "cta": "Anfragen",
+              "features": [
+                "Bis zu 10 Websites",
+                "Multisite-Support",
+                "Alles aus Pro"
+              ]
+            }
           ],
           "faqTitle": "Häufige Fragen",
           "faq": [
-            { "q": "Brauche ich WooCommerce?", "a": "Ja. Wieder verfügbar erweitert WooCommerce — ohne aktives WooCommerce zeigt das Plugin einen Hinweis und bleibt inaktiv." },
-            { "q": "Wann wird die Benachrichtigung versendet?", "a": "Sobald ein ausverkauftes Produkt wieder auf 'auf Lager' wechselt, werden alle eingetragenen Interessenten automatisch per E-Mail informiert." },
-            { "q": "Ist es DSGVO-konform?", "a": "Ja. Es wird nur die E-Mail mit Einwilligung gespeichert, ausschließlich für die Benachrichtigung. Die Pro-Version bietet Double-Opt-in für eine zusätzliche Bestätigung." },
-            { "q": "Funktioniert es mit Produktvarianten?", "a": "Die kostenlose Version benachrichtigt auf Produktebene. Varianten-genaue Benachrichtigungen (z. B. nur Größe L) sind in der Pro-Version enthalten." }
+            {
+              "q": "Brauche ich WooCommerce?",
+              "a": "Ja. Wieder verfügbar erweitert WooCommerce — ohne aktives WooCommerce zeigt das Plugin einen Hinweis und bleibt inaktiv."
+            },
+            {
+              "q": "Wann wird die Benachrichtigung versendet?",
+              "a": "Sobald ein ausverkauftes Produkt wieder auf 'auf Lager' wechselt, werden alle eingetragenen Interessenten automatisch per E-Mail informiert."
+            },
+            {
+              "q": "Ist es DSGVO-konform?",
+              "a": "Ja. Es wird nur die E-Mail mit Einwilligung gespeichert, ausschließlich für die Benachrichtigung. Die Pro-Version bietet Double-Opt-in für eine zusätzliche Bestätigung."
+            },
+            {
+              "q": "Funktioniert es mit Produktvarianten?",
+              "a": "Die kostenlose Version benachrichtigt auf Produktebene. Varianten-genaue Benachrichtigungen (z. B. nur Größe L) sind in der Pro-Version enthalten."
+            }
+          ]
+        }
+      },
+      {
+        "id": "wunschliste",
+        "name": "Wunschliste",
+        "tagline": "WooCommerce-Wunschliste — Produkte merken, später kaufen, mehr verkaufen.",
+        "category": "WordPress-Plugin",
+        "status": "available",
+        "priceFrom": "Kostenlos · Pro ab 49 EUR/Jahr",
+        "stack": [
+          "WooCommerce",
+          "E-Commerce",
+          "WordPress",
+          "PHP"
+        ],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wunschliste/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Lass Kunden Produkte auf eine Wunschliste setzen und später kaufen. Die Liste bleibt erhalten — für eingeloggte Kunden im Konto, für Gäste per Cookie. Mehr Wiederbesuche, mehr Conversions.",
+          "ctaPrimary": "Early Access sichern",
+          "ctaSecondary": "So funktioniert's",
+          "demoNote": "Live-Demo mit WooCommerce im Browser.",
+          "problemTitle": "Das Problem",
+          "problem": "Viele Besucher sind noch nicht kaufbereit — sie wollen ein Produkt 'für später' merken. Ohne Wunschliste vergessen sie es (oder den Shop). Die bekannteste Lösung (YITH) hat 400.000 Installationen, aber nur 78 von 100 Bewertung — überladen und träge.",
+          "solutionTitle": "Die Lösung",
+          "solution": "Eine schlanke, schnelle Wunschliste: ein Herz-Button auf Shop- und Produktseiten, eine [wunschliste]-Seite mit allen gemerkten Produkten und direktem In-den-Warenkorb. Funktioniert für Gäste und eingeloggte Kunden. In der Pro-Version: teilbare Wunschlisten, Varianten und Statistiken.",
+          "featuresTitle": "Was es kann",
+          "features": [
+            {
+              "title": "Herz-Button auf Produkten",
+              "desc": "Auf Shop- und Produktseiten — ein Klick, fertig. Per AJAX, ohne Seitenneuladen."
+            },
+            {
+              "title": "Bleibt erhalten",
+              "desc": "Eingeloggte Kunden: im Konto gespeichert. Gäste: per Cookie. Die Liste ist beim nächsten Besuch noch da."
+            },
+            {
+              "title": "Wunschlisten-Seite",
+              "desc": "Per [wunschliste]-Shortcode: alle gemerkten Produkte mit Bild, Preis und In-den-Warenkorb-Button."
+            },
+            {
+              "title": "Mehr Conversions",
+              "desc": "Gemerkte Produkte bringen Besucher zurück — und 'für später' wird zu 'jetzt kaufen'."
+            },
+            {
+              "title": "Teilbare Listen (Pro)",
+              "desc": "Kunden teilen ihre Wunschliste per Link — ideal für Geschenke und Empfehlungen."
+            },
+            {
+              "title": "Schlank & schnell",
+              "desc": "Kein Ballast, keine externen Dienste. Sauberes, anpassbares Markup."
+            }
+          ],
+          "pricingTitle": "Preise",
+          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricing": [
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "dauerhaft",
+              "highlighted": false,
+              "cta": "Kostenlos starten",
+              "features": [
+                "Herz-Button (Shop + Produkt)",
+                "Wunschliste für Gäste & Kunden",
+                "[wunschliste]-Seite",
+                "AJAX, ohne Neuladen"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "49 EUR",
+              "period": "pro Jahr",
+              "highlighted": true,
+              "cta": "Early Access sichern",
+              "features": [
+                "Teilbare Wunschlisten (Link)",
+                "Varianten-Unterstützung",
+                "Statistik: meistgemerkte Produkte",
+                "Priority-Support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "129 EUR",
+              "period": "pro Jahr",
+              "highlighted": false,
+              "cta": "Anfragen",
+              "features": [
+                "Bis zu 10 Websites",
+                "Multisite-Support",
+                "Alles aus Pro"
+              ]
+            }
+          ],
+          "faqTitle": "Häufige Fragen",
+          "faq": [
+            {
+              "q": "Brauche ich WooCommerce?",
+              "a": "Ja. Wunschliste erweitert WooCommerce — ohne aktives WooCommerce zeigt das Plugin einen Hinweis und bleibt inaktiv."
+            },
+            {
+              "q": "Funktioniert die Wunschliste auch für nicht eingeloggte Besucher?",
+              "a": "Ja. Gäste-Wunschlisten werden per Cookie gespeichert; eingeloggte Kunden behalten ihre Liste dauerhaft im Konto."
+            },
+            {
+              "q": "Wo erscheint die Wunschliste?",
+              "a": "Der Herz-Button erscheint auf Shop- und Produktseiten. Die gemerkten Produkte zeigst du über den Shortcode [wunschliste] auf einer beliebigen Seite."
+            },
+            {
+              "q": "Kann man Wunschlisten teilen?",
+              "a": "Das Teilen per Link (z. B. für Geschenkewünsche) ist Teil der Pro-Version, ebenso Varianten-Unterstützung und Statistiken."
+            }
           ]
         }
       }
