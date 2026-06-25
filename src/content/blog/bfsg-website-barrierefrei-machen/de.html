@@ -1,0 +1,61 @@
+<h2>Was das BFSG für deine Website bedeutet</h2>
+
+<p>Seit dem 28. Juni 2025 gilt in Deutschland das Barrierefreiheitsstärkungsgesetz (BFSG). Es setzt die europäische European Accessibility Act (EAA) in nationales Recht um und verpflichtet Anbieter digitaler Produkte und Dienstleistungen dazu, diese für Menschen mit Behinderungen zugänglich zu machen. Betroffen sind vor allem Unternehmen, die Verbrauchern gegenüber auftreten – also de facto die meisten kommerziellen Websites und Online-Shops.</p>
+
+<p>Kurz gesagt: Wenn du eine Website mit kommerziellem Bezug betreibst, bist du höchstwahrscheinlich betroffen. Kleinunternehmen mit weniger als zehn Beschäftigten und einem Jahresumsatz unter zwei Millionen Euro können sich auf eine Ausnahme berufen – alle anderen nicht. Und selbst wer unter die Ausnahme fällt, sollte Barrierefreiheit mittelfristig nicht ignorieren.</p>
+
+<h2>Was das BFSG konkret verlangt</h2>
+
+<p>Das Gesetz orientiert sich an den <strong>Web Content Accessibility Guidelines (WCAG) 2.1</strong>, Konformitätsstufe AA. Das klingt technischer als es ist. Zusammengefasst geht es um vier Grundsätze:</p>
+
+<ul>
+  <li><strong>Wahrnehmbar</strong>: Inhalte müssen für alle Sinne zugänglich sein. Bilder brauchen Alternativtexte, Videos Untertitel, Farbkontraste müssen ausreichend sein.</li>
+  <li><strong>Bedienbar</strong>: Die gesamte Website muss mit der Tastatur navigierbar sein – kein Element darf nur per Maus erreichbar sein.</li>
+  <li><strong>Verständlich</strong>: Formulare brauchen sichtbare Labels, Fehlermeldungen müssen eindeutig sein, die Sprache der Seite muss im HTML-Code angegeben sein.</li>
+  <li><strong>Robust</strong>: Der HTML-Code muss valide und so strukturiert sein, dass Screenreader und andere Hilfsmittel ihn zuverlässig verarbeiten können.</li>
+</ul>
+
+<p>Zusätzlich schreibt das BFSG eine <strong>Barrierefreiheitserklärung</strong> vor: ein öffentlich zugängliches Dokument, das beschreibt, welchen Standard deine Website erfüllt, wo noch Lücken bestehen und wie Betroffene Feedback geben können.</p>
+
+<h2>Warum Overlay-Tools keine Lösung sind</h2>
+
+<p>Wenn du "Website barrierefrei machen" gegoogelt hast, bist du vermutlich auf Anbieter wie UserWay, accessiBe oder ähnliche gestoßen. Diese Tools versprechen, per JavaScript-Snippet die gesamte Website nachträglich barrierefrei zu machen – oft für einen monatlichen Fixbetrag.</p>
+
+<p>Das Problem: Sie halten nicht, was sie versprechen. Overlay-Tools können strukturelle Fehler im HTML nicht reparieren. Sie können kein fehlendes Alt-Attribut nachträglich sinnvoll ergänzen, wenn der Kontext des Bildes fehlt. Sie können keine schlecht beschrifteten Formularfelder semantisch korrekt verknüpfen. Und sie schaffen manchmal sogar neue Barrieren, weil ihre eigene Benutzeroberfläche mit Screenreadern in Konflikt gerät.</p>
+
+<p>Führende Behindertenverbände – darunter die National Federation of the Blind in den USA und mehrere deutsche Organisationen – haben Overlay-Tools explizit abgelehnt. Gerichte in den USA haben bereits Urteile gegen Betreiber gesprochen, die sich auf solche Tools verlassen haben. Aus rechtlicher Sicht schützt ein Overlay-Tool also nicht vor Abmahnungen oder Bußgeldern.</p>
+
+<h2>Was ein echter Barrierefreiheits-Audit prüft</h2>
+
+<p>Eine echte Prüfung schaut sich das tatsächlich gerenderte HTML an – so, wie ein Screenreader oder eine Tastaturnavigation die Seite erlebt. Die wichtigsten Prüfpunkte:</p>
+
+<ul>
+  <li><strong>Alternativtexte</strong>: Hat jedes inhaltliche Bild ein aussagekräftiges <code>alt</code>-Attribut? Sind rein dekorative Bilder mit <code>alt=""</code> ausgeblendet?</li>
+  <li><strong>Farbkontrast</strong>: Erreicht Text auf farbigem Hintergrund das WCAG-Verhältnis von mindestens 4,5:1 (normaler Text) bzw. 3:1 (großer Text)?</li>
+  <li><strong>Tastaturnavigation</strong>: Ist jedes interaktive Element per Tab erreichbar? Gibt es einen sichtbaren Fokus-Indikator?</li>
+  <li><strong>Überschriftenstruktur</strong>: Ist die Hierarchie der Überschriften logisch aufgebaut? Fehlt ein <code>&lt;h1&gt;</code> oder werden Ebenen übersprungen?</li>
+  <li><strong>Formular-Labels</strong>: Sind alle Eingabefelder mit einem <code>&lt;label&gt;</code> verknüpft, das von Screenreadern vorgelesen wird?</li>
+  <li><strong>ARIA-Attribute</strong>: Werden ARIA-Rollen und -Attribute sinnvoll eingesetzt – oder fehlen sie dort, wo sie notwendig wären?</li>
+  <li><strong>Sprache</strong>: Hat das <code>&lt;html&gt;</code>-Element ein <code>lang</code>-Attribut? Wechselt die Sprache innerhalb der Seite?</li>
+</ul>
+
+<h2>Erste praktische Schritte</h2>
+
+<p>Wenn du heute anfangen willst, deiner Pflicht nachzukommen, sind das sinnvolle erste Maßnahmen:</p>
+
+<ul>
+  <li>Führe einen automatisierten Scan mit einem Tool wie <em>WAVE</em> oder den Accessibility-Checks in den Chrome DevTools durch. Das deckt einen Teil der offensichtlichen Fehler auf – aber nicht alle.</li>
+  <li>Navigiere deine eigene Website ausschließlich per Tastatur. Kommst du überall hin? Weißt du immer, wo der Fokus gerade liegt?</li>
+  <li>Prüfe die Kontrastverhältnisse deiner Textfarben. Der <em>Colour Contrast Analyser</em> ist ein kostenfreies Tool dafür.</li>
+  <li>Lass eine Person mit Screenreader-Erfahrung einen kurzen Usability-Test machen – das zeigt Probleme, die automatische Tools nie finden.</li>
+</ul>
+
+<p>Wichtig dabei: Automatisierte Tools finden schätzungsweise 30–40 % aller Barrieren. Den Rest entdeckt man nur durch manuelle Prüfung oder tatsächliche Nutzertests.</p>
+
+<h2>Der Barrierefrei Check: Audit-Plugin für WordPress</h2>
+
+<p>Für WordPress-Websites gibt es einen direkten Weg, den Status deiner Site zu verstehen und die Barrierefreiheitserklärung rechtssicher zu erstellen. Der <a href="/products/barrierefrei-check">Barrierefrei Check</a> ist ein WordPress-Plugin, das dein tatsächlich gerendertes HTML analysiert – kein Overlay, kein Schnellfix – und strukturierte Ergebnisse liefert, die zeigen, wo Handlungsbedarf besteht.</p>
+
+<p>Das Plugin prüft Alternativtexte, Kontraste, Überschriftenstruktur, Formular-Labels und ARIA-Attribute, und hilft anschließend dabei, die gesetzlich vorgeschriebene Barrierefreiheitserklärung zu generieren. Du kannst es kostenlos im Browser ausprobieren, bevor du es installierst.</p>
+
+<p>Barrierefreiheit ist keine einmalige Checkbox. Aber mit dem richtigen Ausgangspunkt und einer ehrlichen Bestandsaufnahme lässt sich vieles deutlich schneller in Ordnung bringen, als die meisten vermuten.</p>

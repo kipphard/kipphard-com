@@ -1,0 +1,61 @@
+<h2>What Germany's BFSG Means for Your Website</h2>
+
+<p>Since 28 June 2025, the Barrierefreiheitsstärkungsgesetz (BFSG) — Germany's implementation of the European Accessibility Act — has been in force. It requires providers of digital products and services to make them accessible to people with disabilities. If you run a commercial website or online shop targeting consumers in Germany, you are almost certainly within its scope.</p>
+
+<p>The main exemption covers microenterprises with fewer than ten employees and annual revenue below two million euros. Everyone else is obligated to comply. And even those who qualify for the exemption should treat accessibility as a medium-term priority — it's increasingly expected and audited.</p>
+
+<h2>What the BFSG Actually Requires</h2>
+
+<p>The law is anchored in the <strong>Web Content Accessibility Guidelines (WCAG) 2.1</strong> at conformance level AA. That sounds technical, but it breaks down into four principles:</p>
+
+<ul>
+  <li><strong>Perceivable</strong>: Content must be accessible across senses. Images need alt text, videos need captions, colour contrast must meet minimum ratios.</li>
+  <li><strong>Operable</strong>: The entire website must be navigable by keyboard — nothing should be reachable by mouse only.</li>
+  <li><strong>Understandable</strong>: Forms need visible labels, error messages must be clear, and the page language must be declared in the HTML.</li>
+  <li><strong>Robust</strong>: HTML must be valid and structured so screen readers and other assistive technologies can reliably process it.</li>
+</ul>
+
+<p>The BFSG also mandates a publicly accessible <strong>accessibility statement</strong> — a document explaining which standard your site meets, where gaps remain, and how affected users can provide feedback.</p>
+
+<h2>Why Overlay Tools Won't Get You Compliant</h2>
+
+<p>Search for "website barrierefrei machen" and you'll quickly encounter providers like UserWay or accessiBe. They promise to retrofit an entire website for accessibility by injecting a JavaScript snippet — usually for a monthly flat fee.</p>
+
+<p>The problem: they don't deliver on that promise. Overlay tools cannot repair structural flaws in your HTML. They cannot meaningfully fill in a missing alt attribute when the image's context is unknown. They cannot correctly associate poorly labelled form fields with their inputs. And in some cases they introduce new barriers because their own interface conflicts with screen readers.</p>
+
+<p>Major disability advocacy organisations — including multiple German groups — have explicitly rejected overlay tools. US courts have already ruled against site owners who relied on them as a compliance strategy. From a legal standpoint, an overlay does not protect you from complaints or fines under the BFSG.</p>
+
+<h2>What a Real Accessibility Audit Checks</h2>
+
+<p>A genuine audit examines your actual rendered HTML — the way a screen reader or keyboard user experiences the page. Key checkpoints include:</p>
+
+<ul>
+  <li><strong>Alt text</strong>: Does every meaningful image have a descriptive <code>alt</code> attribute? Are purely decorative images marked with <code>alt=""</code>?</li>
+  <li><strong>Colour contrast</strong>: Does text on coloured backgrounds meet the WCAG ratio of at least 4.5:1 for normal text or 3:1 for large text?</li>
+  <li><strong>Keyboard navigation</strong>: Is every interactive element reachable by Tab? Is there a visible focus indicator at all times?</li>
+  <li><strong>Heading structure</strong>: Is the heading hierarchy logical? Is an <code>&lt;h1&gt;</code> present? Are heading levels skipped anywhere?</li>
+  <li><strong>Form labels</strong>: Is every input field associated with a <code>&lt;label&gt;</code> element that screen readers can announce?</li>
+  <li><strong>ARIA attributes</strong>: Are ARIA roles and attributes used meaningfully — and are they absent where they're not needed?</li>
+  <li><strong>Language declaration</strong>: Does the <code>&lt;html&gt;</code> element carry a <code>lang</code> attribute? Are language switches within a page marked up correctly?</li>
+</ul>
+
+<h2>Practical First Steps</h2>
+
+<p>If you want to start addressing your obligations today, these are worthwhile first moves:</p>
+
+<ul>
+  <li>Run an automated scan using a tool like <em>WAVE</em> or the Accessibility panel in Chrome DevTools. This surfaces a portion of obvious issues — but not all of them.</li>
+  <li>Navigate your own website using only the keyboard. Can you reach everything? Do you always know where focus is?</li>
+  <li>Check the contrast ratios of your text colours. The free <em>Colour Contrast Analyser</em> tool is a good starting point.</li>
+  <li>Have someone with screen reader experience do a short usability walkthrough — this reveals barriers that automated tools systematically miss.</li>
+</ul>
+
+<p>A note of caution: automated tools catch an estimated 30–40% of all accessibility barriers. The rest requires manual review or real user testing. This is one reason why one-click overlay tools are legally insufficient — they can only automate what's automatable.</p>
+
+<h2>The Barrierefrei Check: Audit Plugin for WordPress</h2>
+
+<p>For WordPress sites, there is a direct path to understanding where your site stands and generating a legally compliant accessibility statement. The <a href="/products/barrierefrei-check">Barrierefrei Check</a> is a WordPress plugin that analyses your actual rendered HTML — no overlay, no cosmetic patch — and produces structured results showing exactly where action is required.</p>
+
+<p>It checks alt text, contrast, heading structure, form labels, and ARIA attributes, and then helps you generate the accessibility statement required by the BFSG. You can try it free in your browser before installing anything.</p>
+
+<p>Accessibility is not a one-time checkbox exercise. But with an honest baseline and the right tools, most sites can close the most critical gaps faster than expected.</p>

@@ -1,0 +1,65 @@
+<h2>Wann braucht dein Onlineshop eine Altersverifikation?</h2>
+
+<p>Nicht jeder Shop, der theoretisch an Jugendliche verkaufen könnte, braucht eine Altersprüfung. Aber sobald du bestimmte Produktkategorien anbietest, kommt du in Deutschland nicht mehr daran vorbei. Die relevanten Rechtsgrundlagen sind vor allem das <strong>Jugendschutzgesetz (JuSchG)</strong> und der <strong>Jugendmedienschutz-Staatsvertrag (JMStV)</strong>.</p>
+
+<p>Konkret besteht eine Altersprüfungspflicht bei:</p>
+
+<ul>
+  <li><strong>Alkohol</strong>: Bier und Wein dürfen nur an Personen ab 16 Jahren abgegeben werden, Spirituosen erst ab 18. Im Onlinehandel gilt die Grenze von 18 Jahren als anerkannter Standard, weil eine differenzierte Prüfung beim Versand kaum umsetzbar ist.</li>
+  <li><strong>Tabakwaren und Vape/E-Zigaretten</strong>: Seit dem Nichtraucherschutzgesetz und den Anpassungen des JuSchG gilt hier eine strenge Abgabesperre an unter 18-Jährige.</li>
+  <li><strong>Sonstige 18+-Produkte</strong>: Messer bestimmter Art, pyrotechnische Artikel, FSK-18-Medien – jeweils mit eigenen Regelungen.</li>
+</ul>
+
+<p>Das entscheidende Kriterium ist immer: Ist das Produkt laut Gesetz jugendschutzbeschränkt? Wenn ja, bist du als Händler in der Pflicht, sicherzustellen, dass es nicht an Minderjährige gelangt.</p>
+
+<h2>Einfache Bestätigung, Geburtsdatum-Gate oder Ausweiskontrolle – was reicht?</h2>
+
+<p>Hier liegt die häufigste Quelle der Unsicherheit. Es gibt ein breites Spektrum an Altersverifikationsmethoden, und sie unterscheiden sich erheblich in dem, was sie juristisch leisten.</p>
+
+<p><strong>Einfache Bestätigung ("Ich bin 18+"):</strong> Ein Klick auf eine Checkbox reicht in den meisten Fällen nicht aus. Gerichte haben geurteilt, dass eine bloße Selbstauskunft keine ausreichende Altersprüfung im Sinne des JuSchG darstellt. Das gilt insbesondere für FSK-18-Inhalte.</p>
+
+<p><strong>Geburtsdatumsabfrage:</strong> Eine Seite, die das Geburtsdatum abfragt und daraus das Alter berechnet, stellt eine deutlich bessere Hürde dar. Sie ist nicht fälschungssicher, aber sie signalisiert klar, dass der Händler seinen Sorgfaltspflichten nachkommt. Für viele Produktkategorien – insbesondere Alkohol und Vape im Versandhandel – gilt diese Methode in Kombination mit einer klaren rechtlichen Hinweispflicht als vertretbar, solange kein Zweifel am Mindestalter besteht.</p>
+
+<p><strong>Harte Identitätsprüfung (Ausweiskontrolle):</strong> Für FSK-18-Inhalte oder Produkte mit besonders strikten Anforderungen ist ein echter Identitätsnachweis notwendig. Das kann die PostIdent-Prüfung, eine VideoIdent-Lösung oder eine Abfrage über einen zertifizierten Dienstleister sein. Diese Methoden sind sicher, aber komplex und teuer – für die meisten Standard-Shops überdimensioniert.</p>
+
+<p>Die Faustregel: Für alkohol- und nikotinhaltige Produkte ist eine Geburtsdatumsabfrage mit unmissverständlichem Hinweis ein praxisnaher Ansatz. Für Inhalte, bei denen das JuSchG explizit eine "sichere" Altersprüfung fordert, reicht das allein nicht aus.</p>
+
+<h2>DSGVO: Was du nicht speichern solltest</h2>
+
+<p>Wenn du eine Altersverifikation implementierst, gerätst du automatisch in den Anwendungsbereich der Datenschutz-Grundverordnung – zumindest dann, wenn du personenbezogene Daten erhebst. Das Geburtsdatum ist ein personenbezogenes Datum.</p>
+
+<p>Der datenschutzfreundlichste Ansatz ist die <strong>client-seitige Prüfung</strong>: Das eingegebene Geburtsdatum wird im Browser des Nutzers ausgewertet, ob das Mindestalter erreicht ist. Das Datum selbst wird nie an den Server übertragen und nicht gespeichert. Dieses Prinzip – minimale Datenverarbeitung – entspricht dem Grundsatz der Datensparsamkeit aus Art. 5 Abs. 1 lit. c DSGVO.</p>
+
+<p>Was du vermeiden solltest: Geburtsdaten protokollieren, dauerhaft in einer Datenbank ablegen oder mit Nutzerprofilen verknüpfen, ohne dafür eine ausdrückliche Rechtsgrundlage und einen klaren Zweck zu haben. Das schafft Risiken ohne Mehrwert.</p>
+
+<h2>Warum du nicht den ganzen Shop sperren solltest</h2>
+
+<p>Viele Betreiber, die erstmals eine Altersverifikation einrichten, sperren pauschal die gesamte Website. Das ist aus zwei Gründen keine gute Idee.</p>
+
+<p>Erstens verlierst du alle Besucher, die ganz andere Produkte kaufen wollen. Wenn du neben Alkohol auch Küchenutensilien oder Grillzubehör verkaufst, ist eine generelle Alterssperre für deine Besucher unnötig einschränkend und für dich konversionsschädlich.</p>
+
+<p>Zweitens ist eine generelle Sperre aus Compliance-Sicht häufig overdimensioniert – du löst ein gezieltes Problem mit einer Brechstange. Besser ist es, die Altersverifikation nur dort einzublenden, wo sie tatsächlich erforderlich ist: auf den Produktseiten und beim Checkout für die betroffenen Kategorien.</p>
+
+<p>WooCommerce bietet dafür mit seinem Kategorie-System eine geeignete Grundlage: Du weist jugendschutzrelevante Produkte einer eigenen Kategorie zu und blendet die Altersprüfung ausschließlich dort ein. Das ist sowohl nutzerfreundlicher als auch juristisch sauberer, weil du zielgenau die Anforderung erfüllst.</p>
+
+<h2>Altersverifikation in WooCommerce umsetzen</h2>
+
+<p>Das technische Setup für ein kategoriespezifisches Age Gate in WooCommerce ist mit dem richtigen Plugin unkompliziert. Worauf du achten solltest:</p>
+
+<ul>
+  <li>Das Gate erscheint nur bei Produkten aus bestimmten Kategorien – nicht global.</li>
+  <li>Die Prüfung findet client-seitig statt, sodass kein Geburtsdatum auf dem Server landet.</li>
+  <li>Die Darstellung ist klar und unmissverständlich – kein visuell verstecktes Fine Print.</li>
+  <li>Das Gate ist mobilfreundlich und nicht leicht zu umschiffen (z. B. durch Browser-Zurück-Taste).</li>
+  <li>Die Cookie-Session hält die Verifizierung für die Sitzungsdauer vor, ohne unnötig Daten zu persistieren.</li>
+</ul>
+
+<p>Das WordPress-Plugin <a href="/products/altersverifikation">Altersverifikation</a> setzt genau diesen Ansatz um: DSGVO-konform, kategoriespezifisch und ohne serverseitige Datenspeicherung des Geburtsdatums. Du kannst es im Browser kostenlos ausprobieren, bevor du es auf deiner Site einsetzt.</p>
+
+<h2>Was ein Age Gate kann – und was nicht</h2>
+
+<p>Abschließend eine ehrliche Einschätzung: Kein Geburtsdatum-Gate ist absolut fälschungssicher. Ein entschlossener Minderjähriger, der eine falsche Zahl eingibt, wird technisch nicht gestoppt. Das ist das gleiche Problem wie bei jedem Formular, das Selbstauskunft verlangt.</p>
+
+<p>Juristisch betrachtet bist du als Händler in der Pflicht, <em>angemessene</em> Maßnahmen zu ergreifen – nicht <em>perfekte</em>. Eine gut implementierte Geburtsdatumsabfrage, kombiniert mit klaren AGB-Hinweisen und einer Altersverifikation beim Versand (z. B. durch die Packstation-Abholung mit Ausweis), ist für die meisten Produktkategorien ein rechtlich vertretbares Gesamtkonzept.</p>
+
+<p>Wichtig ist, dass du nachweisen kannst, dass du dir Gedanken gemacht hast und nicht einfach nichts getan hast. Dokumentiere dein Schutzkonzept.</p>

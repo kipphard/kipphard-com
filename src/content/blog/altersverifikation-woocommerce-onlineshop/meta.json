@@ -1,0 +1,15 @@
+{
+  "category": "ecommerce",
+  "tags": ["Altersverifikation", "WooCommerce", "Jugendschutz", "Onlineshop", "Age Gate"],
+  "publishedAt": "2026-06-25",
+  "de": {
+    "title": "Altersverifikation im WooCommerce-Shop: Was du rechtlich brauchst",
+    "description": "Wann ein Onlineshop eine Altersabfrage braucht, was JMStV und JuSchG verlangen und wie du spezifische WooCommerce-Kategorien absicherst.",
+    "excerpt": "Alkohol, Vape, Tabak: Nicht jeder Onlineshop braucht die gleiche Altersabfrage. Was das Jugendschutzrecht verlangt – und was nicht."
+  },
+  "en": {
+    "title": "Age Verification for WooCommerce: What You Actually Need",
+    "description": "When online shops need an age gate, what German youth protection law requires, and how to gate specific WooCommerce categories without storing personal data.",
+    "excerpt": "Alcohol, vapes, tobacco: not every shop needs the same age check. What German youth protection law requires — and what a DOB gate can and can't do."
+  }
+}

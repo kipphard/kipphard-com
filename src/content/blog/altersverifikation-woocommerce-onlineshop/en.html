@@ -1,0 +1,65 @@
+<h2>When Does Your Online Shop Need Age Verification?</h2>
+
+<p>Not every shop that could theoretically sell to minors is legally required to check ages. But once you carry certain product categories in Germany, age verification is unavoidable. The two main legal frameworks are the <strong>Youth Protection Act (JuSchG)</strong> and the <strong>Interstate Treaty on the Protection of Minors in the Media (JMStV)</strong>.</p>
+
+<p>Age verification is required when selling:</p>
+
+<ul>
+  <li><strong>Alcohol</strong>: Beer and wine may only be sold to persons aged 16 or over, spirits to those 18 and older. For online sales, 18 is treated as the practical minimum across the board, since differentiated checks at the point of delivery are rarely feasible.</li>
+  <li><strong>Tobacco and vaping products</strong>: Under the JuSchG as amended, strict restrictions apply — products may not be sold to anyone under 18.</li>
+  <li><strong>Other 18+ products</strong>: Certain knives, pyrotechnics, and media with an FSK-18 rating each carry their own rules.</li>
+</ul>
+
+<p>The core question is always: does the law restrict this product's sale to minors? If yes, you as a retailer are obligated to ensure it doesn't reach them.</p>
+
+<h2>Simple Confirmation, Date-of-Birth Gate, or ID Check — What's Enough?</h2>
+
+<p>This is where most of the confusion lies. Age verification exists on a spectrum, and different methods carry very different legal weight.</p>
+
+<p><strong>Simple confirmation ("I am 18+"):</strong> A single checkbox is not sufficient in most cases. German courts have ruled that a bare self-declaration does not constitute adequate age verification under the JuSchG — particularly for FSK-18 content.</p>
+
+<p><strong>Date-of-birth check:</strong> A page that collects a date of birth and calculates the user's age is a meaningfully higher barrier. It isn't forgery-proof, but it clearly signals that the merchant is taking due diligence seriously. For many product categories — alcohol and vaping products sold by mail in particular — this approach combined with clear legal notices is generally considered defensible, provided there is no obvious indication of the user's actual age.</p>
+
+<p><strong>Hard identity verification (ID check):</strong> For FSK-18 content or products subject to strict statutory requirements, a real identity check is necessary. Options include PostIdent, VideoIdent, or third-party certified verification services. These are secure but complex and expensive — usually overkill for the average WooCommerce store.</p>
+
+<p>The practical rule of thumb: for alcohol and nicotine products, a date-of-birth gate with an unambiguous warning is a workable approach for most shops. For content where the JuSchG explicitly demands a "secure" verification method, it won't be sufficient on its own.</p>
+
+<h2>GDPR: What You Should Not Store</h2>
+
+<p>Implementing an age verification check immediately brings GDPR into scope — at least if you're collecting personal data. A date of birth is personal data.</p>
+
+<p>The privacy-friendliest approach is <strong>client-side verification</strong>: the date of birth entered by the user is evaluated in their browser to determine whether the minimum age is met. The date itself is never transmitted to or stored on your server. This principle — minimal data processing — aligns with the data minimisation requirement in Article 5(1)(c) GDPR.</p>
+
+<p>What to avoid: logging birth dates, persisting them in a database, or linking them to user profiles without an explicit legal basis and a clear purpose. That creates compliance risk without any practical benefit.</p>
+
+<h2>Why You Shouldn't Lock Down Your Entire Shop</h2>
+
+<p>Many shop owners setting up age verification for the first time apply it to the entire site. That's a mistake for two reasons.</p>
+
+<p>First, you'll lose all visitors who want to buy something completely unrelated. If you sell alcohol alongside kitchen tools or garden furniture, a blanket age gate is unnecessarily restrictive for your audience and harmful to conversion.</p>
+
+<p>Second, a site-wide block is frequently over-engineered for the actual compliance requirement. It's a blunt instrument applied to a targeted problem. The better approach is to show the age gate only where it is legally required — on the product pages and at checkout for the affected categories.</p>
+
+<p>WooCommerce's category system provides exactly the right foundation for this: assign age-restricted products to a dedicated category and trigger the age check only there. It's friendlier for users and legally cleaner — you're fulfilling the specific requirement, not more.</p>
+
+<h2>Implementing Age Verification in WooCommerce</h2>
+
+<p>The technical setup for a category-specific age gate in WooCommerce is straightforward with the right plugin. Key things to look for:</p>
+
+<ul>
+  <li>The gate appears only on products from specific categories — not globally across the store.</li>
+  <li>The check runs client-side, so no date of birth ever reaches your server.</li>
+  <li>The prompt is clear and unambiguous — no fine print hidden in a corner.</li>
+  <li>The gate is mobile-friendly and not easily bypassed (e.g., via the browser back button).</li>
+  <li>A cookie or session variable holds the verification for the current session without unnecessarily persisting data.</li>
+</ul>
+
+<p>The <a href="/products/altersverifikation">Altersverifikation</a> WordPress plugin is built around exactly this approach: GDPR-clean, category-specific, with no server-side storage of date-of-birth data. You can try it free in your browser before installing it on your site.</p>
+
+<h2>What an Age Gate Can Do — and What It Can't</h2>
+
+<p>One honest note to close: no date-of-birth gate is absolutely forgery-proof. A determined minor who enters a false date won't be stopped by the technology. This is the same limitation as any form that relies on self-declaration.</p>
+
+<p>From a legal standpoint, you as a merchant are required to take <em>appropriate</em> measures — not <em>perfect</em> ones. A well-implemented date-of-birth check, combined with clear terms and conditions and age verification at the point of delivery where applicable (for example, requiring ID at a parcel locker), constitutes a legally defensible overall framework for most product categories.</p>
+
+<p>What matters is that you can demonstrate you gave it serious consideration and took concrete steps. Document your protection concept — and make sure a simple gate is not the only line of defence when the stakes are high.</p>

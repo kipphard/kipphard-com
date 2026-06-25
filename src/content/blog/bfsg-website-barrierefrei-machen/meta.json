@@ -1,0 +1,15 @@
+{
+  "category": "wordpress",
+  "tags": ["BFSG", "Barrierefreiheit", "WordPress", "WCAG", "Accessibility"],
+  "publishedAt": "2026-06-25",
+  "de": {
+    "title": "BFSG: Website barrierefrei machen – was wirklich hilft (und was nicht)",
+    "description": "Das BFSG gilt ab 28. Juni 2025. Was Websitebetreiber jetzt konkret tun müssen – und warum Overlay-Tools keine echte Lösung sind.",
+    "excerpt": "BFSG ist in Kraft. Wer jetzt ein Overlay-Tool kauft, ist trotzdem nicht konform. Was wirklich zählt – und wie ein echter Audit aussieht."
+  },
+  "en": {
+    "title": "BFSG Web Accessibility: What Actually Works (and What Doesn't)",
+    "description": "Germany's BFSG accessibility law is in force since 28 June 2025. What website owners must do — and why overlay tools won't get you compliant.",
+    "excerpt": "Germany's accessibility law is here. Overlay tools won't make you compliant. Here's what a real audit covers and what you actually need to do."
+  }
+}
