@@ -1,0 +1,88 @@
+<h2>The Google Fonts ruling as a wake-up call</h2>
+
+<p>In January 2022, the Regional Court of Munich I (case 3 O 17493/20) ordered a website operator to pay €100 in damages to a visitor. The reason: the site loaded Google Fonts directly from Google's servers, transmitting the visitor's IP address to Google without their consent. The court ruled this a violation of the GDPR.</p>
+
+<p>The ruling triggered a wave of automated warning letters ("Abmahnungen") across Germany, with law firms sending letters to operators of sites that loaded external fonts. For many it was the first time they seriously confronted a question that had been open since the GDPR came into force: what does my website actually send, to whom, and did the visitor consent?</p>
+
+<p>Google Fonts is just one example. It became the most widely known — because the ruling attracted attention — but it is far from the only problem.</p>
+
+<h2>It was never just about fonts</h2>
+
+<p>The same core problem the Munich court identified with Google Fonts — an IP address transmitted to a third party without being asked — applies to a wide range of other technologies that are commonplace on WordPress sites:</p>
+
+<ul>
+  <li><strong>YouTube and Vimeo embeds:</strong> An embedded video loads resources from the platform's servers on page load, even before a visitor clicks play.</li>
+  <li><strong>Google Maps:</strong> A map embedded directly on a page establishes a connection to Google's infrastructure when the page renders.</li>
+  <li><strong>Google Analytics and Tag Manager:</strong> The tracking script is loaded from a Google server and sends usage data — including the IP address.</li>
+  <li><strong>Gravatar:</strong> WordPress loads comment profile pictures from gravatar.com by default. The request includes a hash of the commenter's email address.</li>
+  <li><strong>Google reCAPTCHA:</strong> The spam-protection script is served from Google's servers and communicates with Google on page load.</li>
+  <li><strong>Meta Pixel (formerly Facebook Pixel):</strong> The conversion-tracking script loads from Meta's servers and starts sending signals immediately.</li>
+  <li><strong>Hotjar and similar session-recording tools:</strong> The script arrives from external servers and begins collecting data as soon as the page loads.</li>
+  <li><strong>JS CDNs:</strong> jQuery from <code>code.jquery.com</code>, Bootstrap from <code>cdn.jsdelivr.net</code>, Lodash from <code>unpkg.com</code> — loading libraries from a content delivery network creates a third-party connection that fires on every page load.</li>
+</ul>
+
+<p>Many of these requests aren't the result of an explicit decision by the site operator. Themes bundle Google Fonts in their stylesheet. Page builders load their JavaScript dependencies from CDNs. Plugins add reCAPTCHA to forms without disclosing that a Google connection is involved. The result: many operators simply don't know what their site actually sends when it loads.</p>
+
+<h2>Why a cookie banner doesn't solve this</h2>
+
+<p>A common misconception: "I have a consent banner, so I'm covered." A consent banner asks for permission — it doesn't automatically block requests. Whether an external connection is actually deferred until after consent depends entirely on how the banner is technically implemented and how the embedded tools respond to it.</p>
+
+<p>In practice, many of the requests listed above fire on page load — before the visitor has had any chance to interact with the banner. Google Fonts referenced in CSS are loaded by the browser in parallel with the HTML. The Gravatar image appears as soon as the comment section is rendered. The reCAPTCHA script runs as soon as the form is in the DOM.</p>
+
+<p>That doesn't make consent management pointless — quite the opposite. A carefully configured consent banner is essential for analytics and tracking. But it is not a substitute for reducing external connections at source. The cleaner fix is to remove or self-host requests so that data doesn't leave your infrastructure in the first place. Consent management and request reduction are complementary; neither replaces the other.</p>
+
+<h2>How to find out what your site loads</h2>
+
+<p>The first step is an honest audit. You don't need special tools — a browser is enough.</p>
+
+<p>Open your site in Chrome or Firefox, right-click anywhere on the page and choose "Inspect." Switch to the <strong>Network</strong> tab. Reload the page. You'll see every request fired during page load. Filter by domain: any request that doesn't go to your own domain is an external connection.</p>
+
+<p>Specifically, look for these domains in the request list:</p>
+
+<ul>
+  <li><code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code> — Google Fonts</li>
+  <li><code>www.google-analytics.com</code> and <code>www.googletagmanager.com</code> — Analytics and Tag Manager</li>
+  <li><code>www.gravatar.com</code> — Gravatar profile images</li>
+  <li><code>www.youtube.com</code> and <code>i.ytimg.com</code> — YouTube embeds</li>
+  <li><code>maps.googleapis.com</code> and <code>maps.gstatic.com</code> — Google Maps</li>
+  <li><code>connect.facebook.net</code> — Meta Pixel</li>
+  <li><code>static.hotjar.com</code> — Hotjar</li>
+  <li><code>code.jquery.com</code>, <code>cdn.jsdelivr.net</code>, <code>unpkg.com</code>, <code>cdnjs.cloudflare.com</code> — JS CDNs</li>
+</ul>
+
+<p>You can also view the page source (Ctrl+U) and search for these domain names. Bear in mind: this only shows resources referenced directly in the HTML. Requests triggered later by JavaScript won't appear in the source view — for those, the Network tab in DevTools is the more reliable method.</p>
+
+<h2>How to fix the common offenders</h2>
+
+<p>Once you know what your site loads, you can act on it deliberately.</p>
+
+<p><strong>Self-hosting Google Fonts:</strong> Download the font variants you need from <a href="https://fonts.google.com" rel="noopener noreferrer">fonts.google.com</a> (or use the <a href="https://gwfh.mranftl.com/fonts" rel="noopener noreferrer">Google Webfonts Helper</a>), copy the woff2 files into your theme or plugin, and reference them in your CSS using <code>@font-face</code> with a local path. No external connection needed. Alternatively: switch to a system font stack (<code>system-ui, -apple-system, sans-serif</code>). Zero external requests, near-identical rendering on most devices.</p>
+
+<p><strong>Disabling the WordPress emoji script:</strong> WordPress Core loads an emoji detection script from <code>s.w.org</code> by default. That's an external connection most sites don't need. A small snippet in <code>functions.php</code> removes it:</p>
+
+<pre><code>remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');</code></pre>
+
+<p><strong>Replacing Gravatar:</strong> Under <em>Settings → Discussion</em> you can switch the default avatar to a local image, or disable avatars entirely. That eliminates the request to gravatar.com.</p>
+
+<p><strong>Privacy-friendly YouTube embeds:</strong> Use <code>youtube-nocookie.com</code> instead of <code>youtube.com</code> in embed URLs. Google says it won't set cookies before the visitor plays the video. Even cleaner is a click-to-load approach: show a thumbnail initially and only establish the YouTube connection after a click.</p>
+
+<p><strong>Replacing Google Maps:</strong> Use a static map image for visual display, or implement a click-to-load overlay so the real map only loads on user interaction.</p>
+
+<p><strong>JS CDNs:</strong> Download external libraries locally and serve them from your own server. WordPress's own jQuery is already served locally by default — make sure no theme or plugin silently swaps it for a CDN version.</p>
+
+<h2>A faster path to the full picture</h2>
+
+<p>The manual DevTools walkthrough is instructive, but it takes time — and it needs to be repeated for every page of your site. A scanner that analyses the rendered HTML, groups all external requests, and flags them by risk level saves significant effort.</p>
+
+<p><a href="/products/dsgvo-webfonts">DSGVO Webfonts</a> is a WordPress plugin that does exactly this: it scans the rendered output of your site, lists external requests by risk level, and covers Google Fonts, the emoji script, and Gravatar. The free version includes the scan, an export report, and the ability to remove Google Fonts, disable the emoji request, and replace Gravatar with a local placeholder. The Pro version adds automatic local font hosting and embed localisation. A live demo runs directly in the browser via WordPress Playground — no installation, no sign-up required.</p>
+
+<p>Even if you choose not to use the plugin: the first step — understanding what your site loads — is free and takes ten minutes in DevTools.</p>
+
+<h2>Conclusion</h2>
+
+<p>External requests are not a niche concern for WordPress sites in the DACH region — they are a structural, ongoing compliance issue. The Munich ruling on Google Fonts made that concrete and visible, but the same logic applies to dozens of other technologies active on a typical WordPress installation.</p>
+
+<p>The sensible approach: know what your site loads. Remove what isn't needed. Self-host what can be self-hosted. Configure your consent banner so it actually blocks what it's supposed to block. This isn't a one-time task — themes and plugins change, and with them the external request footprint of your site can change too.</p>
+
+<p><em>This article contains general technical information and does not constitute legal advice. For a reliable assessment of your specific situation, consult a law firm specialising in data protection law.</em></p>

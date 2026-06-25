@@ -771,6 +771,10 @@
     "checkout-felder": {
       "title": "Checkout-Felder – WooCommerce Checkout Field Editor",
       "description": "WooCommerce Checkout-Felder bearbeiten: Felder umbenennen, ausblenden, anordnen und eigene Felder hinzufügen. Werte automatisch in Bestellung und E-Mails. Schlank und übersichtlich."
+    },
+    "dsgvo-webfonts": {
+      "title": "DSGVO Webfonts – Google Fonts lokal & externe Anfragen prüfen",
+      "description": "WordPress-Plugin, das externe Anfragen (Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA) findet und nach Risiko bewertet — und hilft, sie DSGVO-konform zu entfernen oder lokal einzubinden. Ehrlicher Scan, kein Cookie-Banner."
     }
   },
   "cta": {
@@ -805,10 +809,18 @@
     "title": "WordPress-Plugins, die ich selbst baue und pflege.",
     "intro": "Fokussierte, gut gewartete Plugins für den deutschen Markt — gebaut von einem Senior-Entwickler, nicht von einer Plugin-Fabrik. Ehrliche Tools statt Feature-Friedhöfe.",
     "detailsCta": "Details ansehen",
+    "viewAll": "Alle Produkte ansehen",
     "backToProducts": "← Alle Produkte",
+    "filterAll": "Alle",
+    "groups": {
+      "accessibility": "Barrierefreiheit",
+      "privacy": "Datenschutz",
+      "ecommerce": "E-Commerce"
+    },
     "items": [
       {
         "id": "barrierefrei-check",
+        "group": "accessibility",
         "name": "Barrierefrei Check",
         "tagline": "BFSG- & WCAG-Konformität für WordPress — ehrliches Audit statt Overlay.",
         "category": "WordPress-Plugin",
@@ -924,6 +936,7 @@
       },
       {
         "id": "altersverifikation",
+        "group": "privacy",
         "name": "Altersverifikation",
         "tagline": "Age Gate für WordPress & WooCommerce — DSGVO-konform, ohne Daten-Abfluss.",
         "category": "WordPress-Plugin",
@@ -1038,6 +1051,7 @@
       },
       {
         "id": "angebotsanfrage",
+        "group": "ecommerce",
         "name": "Angebotsanfrage",
         "tagline": "Request a Quote für WooCommerce — Angebotsliste & Anfrage statt Warenkorb.",
         "category": "WordPress-Plugin",
@@ -1152,6 +1166,7 @@
       },
       {
         "id": "wieder-verfuegbar",
+        "group": "ecommerce",
         "name": "Wieder verfügbar",
         "tagline": "Back-in-Stock-Benachrichtigung für WooCommerce — verlorene Verkäufe zurückholen.",
         "category": "WordPress-Plugin",
@@ -1266,6 +1281,7 @@
       },
       {
         "id": "wunschliste",
+        "group": "ecommerce",
         "name": "Wunschliste",
         "tagline": "WooCommerce-Wunschliste — Produkte merken, später kaufen, mehr verkaufen.",
         "category": "WordPress-Plugin",
@@ -1379,6 +1395,7 @@
       },
       {
         "id": "checkout-felder",
+        "group": "ecommerce",
         "name": "Checkout-Felder",
         "tagline": "WooCommerce Checkout-Felder bearbeiten — hinzufügen, umbenennen, anordnen.",
         "category": "WordPress-Plugin",
@@ -1486,6 +1503,121 @@
             {
               "q": "Welche Feldtypen gibt es?",
               "a": "Die kostenlose Version unterstützt Text- und Mehrzeilenfelder. Auswahl, Checkbox, Radio, Datum und Zahl sowie bedingte Logik sind in der Pro-Version enthalten."
+            }
+          ]
+        }
+      },
+      {
+        "id": "dsgvo-webfonts",
+        "group": "privacy",
+        "name": "DSGVO Webfonts",
+        "tagline": "Externe Anfragen finden & abstellen — Google Fonts, Tracker, Embeds. Ehrlicher Scan.",
+        "category": "WordPress-Plugin",
+        "status": "available",
+        "priceFrom": "Kostenlos · Pro ab 39 EUR/Jahr",
+        "stack": [
+          "WordPress",
+          "DSGVO",
+          "Datenschutz",
+          "PHP"
+        ],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/dsgvo-webfonts/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Prüfe deine Website auf externe Anfragen, die personenbezogene Daten (z. B. die IP-Adresse) an Dritte übertragen — Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA und mehr. Du bekommst einen nach Risiko sortierten Bericht mit konkreten Empfehlungen und kannst die häufigsten Probleme direkt abstellen. Kein Cookie-Banner — sondern weniger Anfragen an Dritte.",
+          "ctaPrimary": "Early Access sichern",
+          "ctaSecondary": "So funktioniert's",
+          "demoNote": "Live-Demo mit Beispiel-Bericht im Browser.",
+          "problemTitle": "Das Problem",
+          "problem": "Seit dem Google-Fonts-Urteil (LG München I) sind extern geladene Schriften ein dokumentiertes DSGVO-Risiko — und eine Abmahn-Welle folgte. Aber nicht nur Fonts: YouTube-Embeds, Google Maps, Analytics, Gravatar und reCAPTCHA übertragen still die IP-Adresse deiner Besucher an Server in den USA. Die meisten Seitenbetreiber wissen gar nicht, welche Dienste ihre Seite überhaupt lädt.",
+          "solutionTitle": "Die Lösung",
+          "solution": "Ein ehrlicher Scanner, der das ausgelieferte HTML deiner Seiten prüft und jede externe Anfrage erkennt, klassifiziert und nach Risiko bewertet. Du siehst auf einen Blick, welche Dienste Daten an Dritte senden — mit konkreten Handlungsempfehlungen. Häufige Probleme behebst du direkt: Google Fonts entfernen, WordPress-Emojis abschalten, Gravatar lokal ersetzen. In der Pro-Version: Fonts automatisch lokal hosten und Embeds datenschutzfreundlich umschreiben.",
+          "featuresTitle": "Was es kann",
+          "features": [
+            {
+              "title": "Scan & Risiko-Bericht",
+              "desc": "Prüft das gerenderte HTML und gruppiert alle externen Anfragen nach Risiko — mit einer Empfehlung pro Dienst."
+            },
+            {
+              "title": "Erkennt die wichtigsten Dienste",
+              "desc": "Google Fonts, Analytics, Tag Manager, Ads, YouTube, Vimeo, Maps, Gravatar, reCAPTCHA, Meta Pixel, Hotjar, CDNs."
+            },
+            {
+              "title": "Google Fonts entfernen",
+              "desc": "Entfernt externe Google-Fonts-Anfragen aus dem Front-End — mit einem Klick."
+            },
+            {
+              "title": "Emojis & Gravatar abstellen",
+              "desc": "Deaktiviert das s.w.org-Emoji-Skript und ersetzt Gravatar durch einen lokalen Platzhalter — keine Anfrage an Dritte."
+            },
+            {
+              "title": "Fonts lokal hosten (Pro)",
+              "desc": "Lädt Google Fonts herunter und liefert sie lokal aus — die Schriften bleiben erhalten, ohne externe Anfrage."
+            },
+            {
+              "title": "Embeds lokalisieren (Pro)",
+              "desc": "YouTube (nocookie), Maps & Vimeo als Klick-zum-Laden-Platzhalter, plus geplanter Re-Scan per E-Mail."
+            }
+          ],
+          "pricingTitle": "Preise",
+          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricing": [
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "dauerhaft",
+              "highlighted": false,
+              "cta": "Kostenlos starten",
+              "features": [
+                "Scan & Risiko-Bericht aller externen Anfragen",
+                "Google Fonts entfernen",
+                "WordPress-Emojis deaktivieren",
+                "Gravatar lokal ersetzen"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "39 EUR",
+              "period": "pro Jahr",
+              "highlighted": true,
+              "cta": "Early Access sichern",
+              "features": [
+                "Google Fonts automatisch lokal hosten",
+                "Embeds lokalisieren (YouTube, Maps, Vimeo)",
+                "Geplanter Re-Scan + E-Mail-Bericht",
+                "Priority-Support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "99 EUR",
+              "period": "pro Jahr",
+              "highlighted": false,
+              "cta": "Anfragen",
+              "features": [
+                "Bis zu 10 Websites",
+                "Multisite-Support",
+                "PDF-Konformitätsbericht",
+                "Alles aus Pro"
+              ]
+            }
+          ],
+          "faqTitle": "Häufige Fragen",
+          "faq": [
+            {
+              "q": "Ist das ein Cookie-Banner?",
+              "a": "Nein. Ein Cookie-Banner fragt um Einwilligung — dieses Plugin reduziert die externen Anfragen selbst, damit weniger Daten überhaupt an Dritte gehen. Beides ergänzt sich."
+            },
+            {
+              "q": "Erkennt der Scan wirklich alles?",
+              "a": "Der Scan prüft das ausgelieferte HTML. Per JavaScript dynamisch nachgeladene Anfragen werden ggf. nicht erkannt — der Bericht weist darauf hin. Das Plugin ersetzt keine Rechtsberatung."
+            },
+            {
+              "q": "Brauche ich technisches Wissen?",
+              "a": "Nein. Scan starten, Bericht lesen, häufige Probleme per Schalter abstellen. Für das automatische lokale Hosten der Schriften genügt ein Klick in der Pro-Version."
+            },
+            {
+              "q": "Was ist mit dem Google-Fonts-Urteil?",
+              "a": "Das LG München I (Az. 3 O 17493/20) wertete extern geladene Google Fonts als DSGVO-Verstoß. Dieses Plugin findet solche Anfragen und hilft, sie zu entfernen oder lokal zu hosten."
             }
           ]
         }

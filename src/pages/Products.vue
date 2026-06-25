@@ -8,8 +8,31 @@
           <p>{{ t('products.intro') }}</p>
         </div>
 
+        <div v-if="availableGroups.length > 1" class="product-filters" role="group" :aria-label="t('products.eyebrow')">
+          <button
+            type="button"
+            class="product-filter"
+            :class="{ 'product-filter--active': activeGroup === 'all' }"
+            :aria-pressed="activeGroup === 'all'"
+            @click="activeGroup = 'all'"
+          >
+            {{ t('products.filterAll') }}
+          </button>
+          <button
+            v-for="g in availableGroups"
+            :key="g"
+            type="button"
+            class="product-filter"
+            :class="{ 'product-filter--active': activeGroup === g }"
+            :aria-pressed="activeGroup === g"
+            @click="activeGroup = g"
+          >
+            {{ groupLabels[g] }}
+          </button>
+        </div>
+
         <div class="product-grid">
-          <article v-for="item in items" :key="item.id" class="product-card">
+          <article v-for="item in filtered" :key="item.id" class="product-card">
             <div class="product-card__head">
               <h2>{{ item.name }}</h2>
               <span class="labs-badge">{{ item.category }}</span>
@@ -32,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useHead } from '@unhead/vue'
 import { useI18n } from 'vue-i18n'
 
@@ -41,6 +64,7 @@ interface ProductItem {
   name: string
   tagline: string
   category: string
+  group: string
   status: string
   priceFrom: string
   stack: string[]
@@ -50,6 +74,18 @@ interface ProductItem {
 const { t, tm } = useI18n()
 
 const items = computed(() => tm('products.items') as ProductItem[])
+const groupLabels = computed(() => tm('products.groups') as Record<string, string>)
+
+// Filter chips: only groups that actually have products, ordered as defined in the locale map.
+const availableGroups = computed(() => {
+  const present = new Set(items.value.map((i) => i.group))
+  return Object.keys(groupLabels.value).filter((k) => present.has(k))
+})
+
+const activeGroup = ref('all')
+const filtered = computed(() =>
+  activeGroup.value === 'all' ? items.value : items.value.filter((i) => i.group === activeGroup.value),
+)
 
 const canonical = 'https://kipphard.com/products'
 

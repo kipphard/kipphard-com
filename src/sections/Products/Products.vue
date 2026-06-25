@@ -25,11 +25,18 @@
           </div>
         </article>
       </div>
+
+      <div class="products-all-link">
+        <RouterLink to="/products" class="btn btn--ghost">
+          {{ t('products.viewAll') }} <span class="arrow" aria-hidden="true">→</span>
+        </RouterLink>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -42,6 +49,14 @@ interface ProductItem {
   stack: string[]
 }
 
+// Curated selection shown on the homepage; the full catalog lives at /products.
+// Edit this list to feature different products.
+const FEATURED = ['barrierefrei-check', 'angebotsanfrage', 'wieder-verfuegbar', 'wunschliste']
+
 const { t, tm } = useI18n()
-const items = tm('products.items') as ProductItem[]
+const items = computed(() => {
+  const all = tm('products.items') as ProductItem[]
+  const featured = all.filter((i) => FEATURED.includes(i.id))
+  return featured.length ? featured : all.slice(0, 4)
+})
 </script>

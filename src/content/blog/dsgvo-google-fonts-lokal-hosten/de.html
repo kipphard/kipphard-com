@@ -1,0 +1,88 @@
+<h2>Das Google-Fonts-Urteil als Weckruf</h2>
+
+<p>Im Januar 2022 verurteilte das Landgericht München I (Az. 3 O 17493/20) einen Websitebetreiber zur Zahlung von 100 Euro Schadensersatz an einen Besucher. Der Grund: Die Site lud Google Fonts direkt von Googles Servern — und übermittelte dabei die IP-Adresse des Besuchers ohne dessen Einwilligung an Google. Das Gericht wertete das als Verstoß gegen die DSGVO.</p>
+
+<p>Das Urteil löste in Deutschland eine Welle an Abmahnungen aus. Anwaltskanzleien schickten automatisiert Schreiben an Betreiber von Websites, die extern geladene Schriften verwendeten. Für viele war es das erste Mal, dass sie ernsthaft über eine Frage nachgedacht haben, die eigentlich seit Einführung der DSGVO im Raum stand: Was schickt meine Website eigentlich an wen, und hat der Besucher dem zugestimmt?</p>
+
+<p>Google Fonts ist dabei nur ein Beispiel. Es ist das bekannteste — weil das Urteil Aufmerksamkeit erzeugte — aber es ist bei Weitem nicht das einzige Problem.</p>
+
+<h2>Es war nie nur um Schriften</h2>
+
+<p>Dasselbe Grundproblem, das das Münchner Gericht bei Google Fonts beschrieben hat — die ungefragt übermittelte IP-Adresse an einen Drittanbieter — betrifft eine ganze Reihe weiterer Technologien, die auf WordPress-Sites alltäglich sind:</p>
+
+<ul>
+  <li><strong>YouTube- und Vimeo-Embeds:</strong> Ein eingebettetes Video lädt beim Seitenaufruf Ressourcen von den Servern des Plattformanbieters. Auch ohne Klick auf das Video.</li>
+  <li><strong>Google Maps:</strong> Eine Karte, die direkt eingebunden ist, stellt beim Laden eine Verbindung zu Googles Infrastruktur her.</li>
+  <li><strong>Google Analytics und Tag Manager:</strong> Das Tracking-Skript wird von einem Google-Server geladen und sendet Nutzungsdaten — dazu gehört die IP.</li>
+  <li><strong>Gravatar:</strong> WordPress lädt für Kommentarprofilbilder standardmäßig Bilder von gravatar.com. Die Anfrage enthält einen Hash der E-Mail-Adresse des Kommentators.</li>
+  <li><strong>Google reCAPTCHA:</strong> Das Skript für die Spam-Schutzfunktion wird von Googles Servern geliefert und kommuniziert mit Google beim Laden der Seite.</li>
+  <li><strong>Meta Pixel (ehemals Facebook Pixel):</strong> Das Conversion-Tracking-Skript wird von Metas Servern geladen und sendet Nutzungssignale.</li>
+  <li><strong>Hotjar und ähnliche Session-Recording-Tools:</strong> Das Skript kommt von externen Servern und beginnt sofort mit dem Sammeln von Daten.</li>
+  <li><strong>JS-CDNs:</strong> jQuery von <code>code.jquery.com</code>, Bootstrap von <code>cdn.jsdelivr.net</code>, Lodash von <code>unpkg.com</code> — wer Libraries über ein Content Delivery Network einbindet, baut eine Drittanbieter-Verbindung ein, die beim Seitenaufruf aktiviert wird.</li>
+</ul>
+
+<p>Viele dieser Requests kommen nicht durch explizite Entscheidung des Betreibers zustande. Themes binden Google Fonts über ihr Stylesheet ein. Page-Builder laden ihre JavaScript-Abhängigkeiten von CDNs. Plugins fügen reCAPTCHA zu Formularen hinzu, ohne darüber zu informieren, dass dabei eine Google-Verbindung entsteht. Das Ergebnis: Viele Betreiber wissen schlicht nicht, was ihre Site beim Laden tatsächlich alles sendet.</p>
+
+<h2>Warum ein Cookie-Banner das Problem nicht löst</h2>
+
+<p>Ein häufiges Missverständnis: „Ich habe einen Consent-Banner, damit bin ich auf der sicheren Seite." Ein Consent-Banner fragt nach Einwilligung — er verhindert die Requests nicht automatisch. Ob die externe Verbindung tatsächlich erst nach Zustimmung aufgebaut wird, hängt davon ab, wie der Banner technisch implementiert ist und wie die eingebundenen Tools reagieren.</p>
+
+<p>In der Praxis feuern viele der oben genannten Requests beim Laden der Seite — bevor der Besucher überhaupt die Möglichkeit hatte, dem Banner zu reagieren. Google Fonts, die im CSS verlinkt sind, werden vom Browser parallel zum HTML geladen. Das Gravatar-Bild erscheint, sobald die Kommentarsektion gerendert wird. Das reCAPTCHA-Skript läuft, sobald das Formular im DOM ist.</p>
+
+<p>Das bedeutet nicht, dass Consent-Management überflüssig ist — im Gegenteil. Ein sorgfältig konfigurierter Consent-Banner ist für Analytics und Tracking unerlässlich. Aber er ist kein Ersatz dafür, externe Verbindungen zu reduzieren. Die sauberere Lösung ist, Requests zu entfernen oder zu lokalisieren, sodass die Daten die eigene Infrastruktur gar nicht erst verlassen. Consent-Management und Request-Reduktion ergänzen sich; keines ersetzt das andere.</p>
+
+<h2>Wie du herausfindest, was deine Site sendet</h2>
+
+<p>Der erste Schritt ist eine ehrliche Bestandsaufnahme. Du brauchst dafür keine speziellen Tools — ein Browser genügt.</p>
+
+<p>Öffne deine Site in Chrome oder Firefox, klicke mit der rechten Maustaste irgendwo auf die Seite und wähle „Untersuchen" (bzw. „Inspect"). Wechsle zum Tab <strong>Netzwerk</strong> (Network). Lade die Seite neu. Du siehst jetzt alle Anfragen, die beim Laden gefeuert werden. Filtere nach Domain: Requests, die nicht an deine eigene Domain gehen, sind externe Verbindungen.</p>
+
+<p>Konkret lohnt es sich, in der Adressspalte nach diesen Domains zu suchen:</p>
+
+<ul>
+  <li><code>fonts.googleapis.com</code> und <code>fonts.gstatic.com</code> — Google Fonts</li>
+  <li><code>www.google-analytics.com</code> und <code>www.googletagmanager.com</code> — Analytics und Tag Manager</li>
+  <li><code>www.gravatar.com</code> — Gravatar-Profilbilder</li>
+  <li><code>www.youtube.com</code> und <code>i.ytimg.com</code> — YouTube-Embeds</li>
+  <li><code>maps.googleapis.com</code> und <code>maps.gstatic.com</code> — Google Maps</li>
+  <li><code>connect.facebook.net</code> — Meta Pixel</li>
+  <li><code>static.hotjar.com</code> — Hotjar</li>
+  <li><code>code.jquery.com</code>, <code>cdn.jsdelivr.net</code>, <code>unpkg.com</code>, <code>cdnjs.cloudflare.com</code> — JS-CDNs</li>
+</ul>
+
+<p>Alternativ kannst du den Quelltext der Seite aufrufen (Strg+U) und darin nach diesen Domains suchen. Wichtig: Diese Methode zeigt nur Ressourcen, die direkt im HTML stehen. Requests, die JavaScript erst nach dem Laden der Seite auslöst, tauchen im Quelltext nicht auf — dafür ist der Netzwerk-Tab im DevTools die zuverlässigere Quelle.</p>
+
+<h2>Wie du die häufigsten Probleme behebst</h2>
+
+<p>Wenn du weißt, was deine Site lädt, kannst du gezielt handeln.</p>
+
+<p><strong>Google Fonts lokal einbinden:</strong> Lade die benötigten Schriftschnitte von <a href="https://fonts.google.com" rel="noopener noreferrer">fonts.google.com</a> herunter (oder nutze den <a href="https://gwfh.mranftl.com/fonts" rel="noopener noreferrer">Google Webfonts Helper</a>), kopiere die woff2-Dateien in dein Theme oder dein Plugin, und referenziere sie in deinem CSS per <code>@font-face</code> mit lokalem Pfad. Keine externe Verbindung mehr. Alternativ: Wechsle auf einen System-Font-Stack (<code>system-ui, -apple-system, sans-serif</code>). Null externe Requests, nahezu identisches Rendering auf den meisten Geräten.</p>
+
+<p><strong>WordPress Emoji-Skript deaktivieren:</strong> WordPress Core lädt standardmäßig ein Emoji-Skript von <code>s.w.org</code>. Das ist eine externe Verbindung, die die meisten Sites nicht brauchen. Mit einem kleinen Codeschnipsel in der <code>functions.php</code> lässt sich das entfernen:</p>
+
+<pre><code>remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');</code></pre>
+
+<p><strong>Gravatar ersetzen:</strong> Unter <em>Einstellungen → Diskussion</em> kannst du das Standard-Avatar-Bild auf ein lokales Bild umstellen oder Avatare ganz deaktivieren. Damit entfällt der Request zu gravatar.com.</p>
+
+<p><strong>YouTube datenschutzfreundlich einbinden:</strong> Nutze statt <code>youtube.com</code> die Domain <code>youtube-nocookie.com</code> für Embeds. Google verspricht damit, keine Cookies zu setzen, bevor der Nutzer das Video abspielt. Noch sauberer ist eine Click-to-Load-Lösung: Es wird zunächst nur ein Vorschaubild angezeigt, die eigentliche YouTube-Verbindung entsteht erst nach Klick.</p>
+
+<p><strong>Google Maps ersetzen:</strong> Verwende ein statisches Kartenbild für die visuelle Darstellung, oder setze ein Click-to-Load-Overlay ein, das die echte Karte erst auf Nutzerinteraktion lädt.</p>
+
+<p><strong>JS-CDNs:</strong> Lade externe Libraries lokal herunter und binde sie von deinem eigenen Server ein. Beim WordPress-eigenen jQuery ist das ohnehin Standard — stelle sicher, dass kein Theme oder Plugin das durch eine CDN-Version ersetzt.</p>
+
+<h2>Ein schnellerer Weg zur Übersicht</h2>
+
+<p>Der manuelle Weg durch DevTools ist lehrreich, aber zeitaufwendig — und er muss für jede Seite deiner Site separat durchgeführt werden. Ein Scanner, der das gerenderete HTML analysiert und alle externen Requests gruppiert und bewertet, spart erhebliche Zeit.</p>
+
+<p><a href="/products/dsgvo-webfonts">DSGVO Webfonts</a> ist ein WordPress-Plugin, das genau das tut: Es scannt die gerenderte Ausgabe deiner Site, listet externe Requests nach Risikostufe auf und behält Google Fonts, den Emoji-Script und Gravatar im Blick. Die Free-Version enthält den Scan, einen Export-Bericht und kann Google Fonts entfernen, den Emoji-Request deaktivieren sowie Gravatar durch einen lokalen Platzhalter ersetzen. Die Pro-Version ergänzt automatisches lokales Hosting der Schriftdateien und die Lokalisierung von Embed-Requests. Eine Live-Demo läuft direkt im Browser über WordPress Playground — ohne Installation, ohne Anmeldung.</p>
+
+<p>Auch wenn du das Plugin nicht nutzt: Der erste Schritt — verstehen, was deine Site lädt — ist kostenlos und dauert zehn Minuten in den DevTools.</p>
+
+<h2>Fazit</h2>
+
+<p>Externe Requests sind kein Randthema für WordPress-Sites im DACH-Raum — sie sind ein strukturelles, laufendes Compliance-Thema. Das Münchner Urteil zu Google Fonts hat das exemplarisch klargestellt, aber die gleiche Logik gilt für Dutzende anderer Technologien, die auf typischen WordPress-Installationen aktiv sind.</p>
+
+<p>Der sinnvolle Ansatz: Wisse, was deine Site lädt. Entferne, was nicht gebraucht wird. Hoste lokal, was sich lokal hosten lässt. Konfiguriere deinen Consent-Banner so, dass er tatsächlich verhindert, was er verhindern soll. Das ist kein einmaliger Aufwand, sondern eine laufende Aufgabe — Themes und Plugins ändern sich, und mit ihnen kann sich der Request-Footprint deiner Site verändern.</p>
+
+<p><em>Dieser Artikel enthält allgemeine technische Informationen und stellt keine Rechtsberatung dar. Für eine rechtssichere Einschätzung im konkreten Einzelfall wende dich an eine auf Datenschutzrecht spezialisierte Kanzlei.</em></p>

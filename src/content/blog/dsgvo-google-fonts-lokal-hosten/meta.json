@@ -1,0 +1,15 @@
+{
+  "category": "wordpress",
+  "tags": ["DSGVO", "Google Fonts", "Datenschutz", "WordPress", "GDPR"],
+  "publishedAt": "2026-06-25",
+  "de": {
+    "title": "Google Fonts DSGVO-konform lokal einbinden — und das größere Problem",
+    "description": "Das Münchner Urteil zu Google Fonts war ein Weckruf. Aber das eigentliche Problem sind alle externen Requests, die deine WordPress-Site ungefragt sendet.",
+    "excerpt": "Seit dem Urteil des LG München I sind extern geladene Google Fonts ein rechtliches Risiko. Doch das Problem reicht weiter: YouTube, Maps, Gravatar und JS-CDNs senden IP-Adressen — oft vor jedem Consent."
+  },
+  "en": {
+    "title": "Self-Hosting Google Fonts for GDPR — and the Bigger Problem",
+    "description": "The Munich court ruling on Google Fonts was a wake-up call. But the real issue is every external request your WordPress site fires without asking.",
+    "excerpt": "The Munich ruling made externally loaded Google Fonts a documented legal risk. But the problem goes further: YouTube, Maps, Gravatar, and JS CDNs all leak IPs — often before any consent banner fires."
+  }
+}

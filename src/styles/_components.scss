@@ -783,6 +783,16 @@
 .product-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
 
 .product-demo-note { margin-top: 14px; font-size: 0.9rem; color: var(--fg-subtle); }
+.products-all-link { margin-top: clamp(28px, 4vw, 44px); display: flex; justify-content: center; }
+
+.product-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: clamp(22px, 3vw, 32px); }
+.product-filter {
+  border: 1px solid var(--line); background: none; color: var(--fg-muted);
+  padding: 7px 14px; border-radius: var(--radius-pill); font-size: 0.85rem; cursor: pointer;
+  transition: color 0.2s var(--ease), border-color 0.2s var(--ease), background 0.2s var(--ease);
+}
+.product-filter:hover { color: var(--fg); border-color: var(--line-strong); }
+.product-filter--active { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
 
 .product-features {
   display: grid;
