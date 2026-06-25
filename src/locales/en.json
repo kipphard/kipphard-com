@@ -8,6 +8,7 @@
     "blog": "Blog",
     "pricing": "Pricing",
     "contact": "Contact",
+    "products": "Products",
     "cta": "Get in touch",
     "ctaShort": "Start a project",
     "langLabel": "Language",
@@ -730,6 +731,14 @@
     "pigmentfrei": {
       "title": "Pigmentfrei — Case Study — André Kipphard",
       "description": "Tattoo-laser and PMU-removal centre in Oldenburg. First web identity of the Augusta-Praxis group on Hello Elementor + Elementor Pro."
+    },
+    "products": {
+      "title": "Products — WordPress Plugins by André Kipphard",
+      "description": "Focused, well-maintained WordPress plugins for the German market — built by a senior developer. Barrierefrei Check and more tools."
+    },
+    "barrierefrei-check": {
+      "title": "Barrierefrei Check – BFSG & WCAG Plugin for WordPress",
+      "description": "WordPress plugin for BFSG and WCAG compliance: honest accessibility audit of your rendered HTML, prioritised issues with fixes, and a generator for your accessibility statement."
     }
   },
   "cta": {
@@ -758,5 +767,57 @@
     "accept": "Accept",
     "decline": "Decline",
     "aria": "Cookie consent"
+  },
+  "products": {
+    "eyebrow": "Products",
+    "title": "WordPress plugins I build and maintain myself.",
+    "intro": "Focused, well-maintained plugins for the German market — built by a senior developer, not a plugin factory. Honest tools instead of feature graveyards.",
+    "detailsCta": "View details",
+    "backToProducts": "← All products",
+    "items": [
+      {
+        "id": "barrierefrei-check",
+        "name": "Barrierefrei Check",
+        "tagline": "BFSG & WCAG compliance for WordPress — honest audit instead of an overlay.",
+        "category": "WordPress Plugin",
+        "status": "available",
+        "priceFrom": "Free · Pro from 49 EUR/year",
+        "stack": ["WordPress", "WCAG 2.2", "BFSG", "PHP"],
+        "demoUrl": "",
+        "detail": {
+          "lede": "Check your website for accessibility compliance with WCAG 2.2 and BFSG in minutes, fix the most critical issues with concrete guidance, and generate a legally sound accessibility statement. No overlay widget that merely masks problems — a real audit of your rendered HTML.",
+          "ctaPrimary": "Secure early access",
+          "ctaSecondary": "How it works",
+          "demoNote": "Live demo coming soon.",
+          "problemTitle": "The problem",
+          "problem": "Since 28 June 2025, the German Accessibility Strengthening Act (BFSG) requires many online shops and service providers to offer accessible websites — violations can result in legal warnings. Most one-click overlay tools do not meet the requirements: they mask problems via JavaScript instead of solving them, and are rejected by courts and disability advocacy groups.",
+          "solutionTitle": "The solution",
+          "solution": "Barrierefrei Check analyses the real, rendered HTML of your pages — exactly as screen readers and assistive technologies see it. You get a prioritised list of concrete issues by severity, each with the corresponding WCAG criterion and a plain-language fix guide. On top of that, you can generate a BFSG-compliant accessibility statement via a simple form.",
+          "featuresTitle": "What it does",
+          "features": [
+            { "title": "12 automated audit rules", "desc": "WCAG 2.2 / BFSG: alt texts, form labels, heading structure, landmarks, language attributes, link text and more." },
+            { "title": "Real audit, no overlay", "desc": "Analyses your rendered HTML instead of masking problems with JavaScript. Honest results that hold up in court." },
+            { "title": "Prioritised by severity", "desc": "Critical, serious, moderate, minor — you see immediately what needs fixing first." },
+            { "title": "Concrete fix guidance", "desc": "Every issue comes with a plain-language guide and the exact WCAG reference — no jargon guessing game." },
+            { "title": "Statement generator", "desc": "Generate a BFSG-compliant accessibility statement as a WordPress page via a simple form — with conformance status, contact, and arbitration body." },
+            { "title": "German, for the German market", "desc": "Fully in German and aligned with BFSG / EU Directive 2019/882 — not a translated US solution." }
+          ],
+          "pricingTitle": "Pricing",
+          "pricingNote": "Preliminary prices — early access spots at special conditions.",
+          "pricing": [
+            { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["12 audit rules", "Home + up to 4 pages", "Accessibility statement", "Manual scan"] },
+            { "name": "Pro", "price": "49 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["Scan all pages", "Scheduled automatic scans", "PDF conformance report", "History monitoring", "Priority support"] },
+            { "name": "Agency", "price": "149 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Multisite support", "Multiple client sites", "White-label reports", "Everything in Pro"] }
+          ],
+          "faqTitle": "Frequently asked questions",
+          "faq": [
+            { "q": "Does this plugin make my website automatically accessible?", "a": "No — and no one can honestly promise that. Automated tests catch a portion of WCAG criteria. Barrierefrei Check shows you exactly what needs doing and helps you fix it. Colour contrast, keyboard navigation and content require additional manual review." },
+            { "q": "What is BFSG?", "a": "The Barrierefreiheitsstärkungsgesetz implements the EU Directive 2019/882 (European Accessibility Act) in Germany. Since 28 June 2025, many B2C online shops and service providers must be accessible." },
+            { "q": "How is it different from overlay tools like UserWay or accessiBe?", "a": "Overlays place a JavaScript layer over your page and mask problems instead of solving them — they are rejected by disability advocacy groups and in court proceedings. Barrierefrei Check audits the actual source code and helps you fix the root causes." },
+            { "q": "Do I need coding skills?", "a": "Not for the audit or the accessibility statement. Fixing some issues is easier with basic HTML knowledge and familiarity with your theme — but the guides are written so that editors can handle most fixes themselves." }
+          ]
+        }
+      }
+    ]
   }
 }

@@ -14,6 +14,8 @@ import Home from './pages/Home.vue'
 import Impressum from './pages/Impressum.vue'
 import Datenschutz from './pages/Datenschutz.vue'
 import CaseStudy from './pages/CaseStudy.vue'
+import Products from './pages/Products.vue'
+import ProductDetail from './pages/ProductDetail.vue'
 import Blog from './pages/Blog.vue'
 import BlogPost from './pages/BlogPost.vue'
 import NotFound from './pages/NotFound.vue'
@@ -29,6 +31,8 @@ const routes = [
   { path: '/work/augusta-beauty', component: CaseStudy },
   { path: '/work/lipold', component: CaseStudy },
   { path: '/work/pigmentfrei', component: CaseStudy },
+  { path: '/products', component: Products },
+  { path: '/products/barrierefrei-check', component: ProductDetail },
   { path: '/blog', component: Blog },
   { path: '/blog/:slug', component: BlogPost },
   { path: '/404', component: NotFound },

@@ -8,6 +8,7 @@
     "blog": "Blog",
     "pricing": "Preise",
     "contact": "Kontakt",
+    "products": "Produkte",
     "cta": "Anfragen",
     "ctaShort": "Projekt anfragen",
     "langLabel": "Sprache",
@@ -730,6 +731,14 @@
     "pigmentfrei": {
       "title": "Pigmentfrei — Case Study — André Kipphard",
       "description": "Tattoo-Laser- und PMU-Entfernungs-Zentrum in Oldenburg. Erste Web-Identität der Augusta-Praxis-Gruppe auf Hello Elementor + Elementor Pro."
+    },
+    "products": {
+      "title": "Produkte — WordPress-Plugins von André Kipphard",
+      "description": "Fokussierte WordPress-Plugins für den deutschen Markt — gebaut von einem Senior-Entwickler. Barrierefrei Check und weitere Tools."
+    },
+    "barrierefrei-check": {
+      "title": "Barrierefrei Check – BFSG & WCAG Plugin für WordPress",
+      "description": "WordPress-Plugin für BFSG- und WCAG-Konformität: ehrliches Accessibility-Audit deines gerenderten HTML, priorisierte Fehler mit Lösungen und ein Generator für die Barrierefreiheitserklärung."
     }
   },
   "cta": {
@@ -758,5 +767,57 @@
     "accept": "Akzeptieren",
     "decline": "Ablehnen",
     "aria": "Cookie-Einwilligung"
+  },
+  "products": {
+    "eyebrow": "Produkte",
+    "title": "WordPress-Plugins, die ich selbst baue und pflege.",
+    "intro": "Fokussierte, gut gewartete Plugins für den deutschen Markt — gebaut von einem Senior-Entwickler, nicht von einer Plugin-Fabrik. Ehrliche Tools statt Feature-Friedhöfe.",
+    "detailsCta": "Details ansehen",
+    "backToProducts": "← Alle Produkte",
+    "items": [
+      {
+        "id": "barrierefrei-check",
+        "name": "Barrierefrei Check",
+        "tagline": "BFSG- & WCAG-Konformität für WordPress — ehrliches Audit statt Overlay.",
+        "category": "WordPress-Plugin",
+        "status": "available",
+        "priceFrom": "Kostenlos · Pro ab 49 EUR/Jahr",
+        "stack": ["WordPress", "WCAG 2.2", "BFSG", "PHP"],
+        "demoUrl": "",
+        "detail": {
+          "lede": "Prüfe deine Website in Minuten auf Barrierefreiheit nach WCAG 2.2 und BFSG, behebe die wichtigsten Fehler mit konkreten Anleitungen und erstelle eine rechtssichere Barrierefreiheitserklärung. Kein Overlay-Widget, das Probleme nur überdeckt — ein echtes Audit deines gerenderten HTML.",
+          "ctaPrimary": "Early Access sichern",
+          "ctaSecondary": "So funktioniert's",
+          "demoNote": "Live-Demo in Kürze verfügbar.",
+          "problemTitle": "Das Problem",
+          "problem": "Seit dem 28. Juni 2025 verpflichtet das Barrierefreiheitsstärkungsgesetz (BFSG) viele Online-Shops und Dienstleister zu barrierefreien Websites — Verstöße können abgemahnt werden. Die meisten 'Ein-Klick'-Overlay-Tools erfüllen die Anforderungen nicht: Sie überdecken Probleme per JavaScript, statt sie zu lösen, und werden von Gerichten und Betroffenenverbänden abgelehnt.",
+          "solutionTitle": "Die Lösung",
+          "solution": "Barrierefrei Check analysiert das echte, gerenderte HTML deiner Seiten — so wie Screenreader und assistive Technologien es sehen. Du bekommst eine priorisierte Liste konkreter Probleme nach Schweregrad, jeweils mit dem zugehörigen WCAG-Kriterium und einer verständlichen Lösungsanleitung. Dazu generierst du eine BFSG-konforme Barrierefreiheitserklärung per Formular.",
+          "featuresTitle": "Was es kann",
+          "features": [
+            { "title": "12 automatisierte Prüfregeln", "desc": "WCAG 2.2 / BFSG: Alt-Texte, Formular-Labels, Überschriften-Struktur, Landmarks, Sprachauszeichnung, Link-Texte und mehr." },
+            { "title": "Echtes Audit, kein Overlay", "desc": "Analysiert dein gerendertes HTML, statt Probleme per JavaScript zu überdecken. Ehrliche Ergebnisse, die auch vor Gericht zählen." },
+            { "title": "Priorisiert nach Schweregrad", "desc": "Kritisch, schwerwiegend, mittel, gering — du siehst sofort, was zuerst zu beheben ist." },
+            { "title": "Konkrete Lösungshinweise", "desc": "Jeder Fehler kommt mit verständlicher Anleitung und genauem WCAG-Bezug — kein Fachjargon-Rätselraten." },
+            { "title": "Erklärungs-Generator", "desc": "Erstelle per Formular eine BFSG-konforme Barrierefreiheitserklärung als WordPress-Seite — mit Konformitätsstatus, Kontakt und Schlichtungsstelle." },
+            { "title": "Deutsch, für den deutschen Markt", "desc": "Komplett deutschsprachig und auf BFSG / EU-Richtlinie 2019/882 ausgerichtet — keine eingedeutschte US-Lösung." }
+          ],
+          "pricingTitle": "Preise",
+          "pricingNote": "Vorläufige Preise — Early-Access-Plätze zu Sonderkonditionen.",
+          "pricing": [
+            { "name": "Free", "price": "0 EUR", "period": "dauerhaft", "highlighted": false, "cta": "Kostenlos starten", "features": ["12 Prüfregeln", "Startseite + bis zu 4 Seiten", "Barrierefreiheitserklärung", "Manueller Scan"] },
+            { "name": "Pro", "price": "49 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["Alle Seiten scannen", "Geplante automatische Scans", "PDF-Konformitätsbericht", "Verlaufs-Monitoring", "Priority-Support"] },
+            { "name": "Agency", "price": "149 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Multisite-Support", "Mehrere Kundenseiten", "White-Label-Berichte", "Alles aus Pro"] }
+          ],
+          "faqTitle": "Häufige Fragen",
+          "faq": [
+            { "q": "Macht dieses Plugin meine Website automatisch barrierefrei?", "a": "Nein — und niemand kann das ehrlich versprechen. Automatisierte Tests erkennen einen Teil der WCAG-Kriterien. Barrierefrei Check zeigt dir genau, was zu tun ist, und hilft beim Beheben. Kontraste, Tastaturbedienung und Inhalte erfordern zusätzlich eine manuelle Prüfung." },
+            { "q": "Was ist das BFSG?", "a": "Das Barrierefreiheitsstärkungsgesetz setzt die EU-Richtlinie 2019/882 (European Accessibility Act) in Deutschland um. Seit dem 28. Juni 2025 müssen viele B2C-Online-Shops und Dienstleister barrierefrei sein." },
+            { "q": "Worin unterscheidet es sich von Overlay-Tools wie UserWay oder accessiBe?", "a": "Overlays legen eine JavaScript-Schicht über deine Seite und überdecken Probleme, statt sie zu lösen — sie werden von Betroffenenverbänden und in Gerichtsverfahren abgelehnt. Barrierefrei Check prüft den echten Quellcode und hilft dir, die Ursachen zu beheben." },
+            { "q": "Brauche ich Programmierkenntnisse?", "a": "Für Prüfung und Erklärung nicht. Zum Beheben mancher Fehler hilft Grundwissen über HTML und dein Theme — die Anleitungen sind aber so geschrieben, dass Redakteure das meiste selbst umsetzen können." }
+          ]
+        }
+      }
+    ]
   }
 }
