@@ -95,7 +95,7 @@
       <!-- FAQ -->
       <section class="section section--sunken">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--center">
             <h2>{{ item.detail.faqTitle }}</h2>
           </div>
           <div class="faq product-faq">
