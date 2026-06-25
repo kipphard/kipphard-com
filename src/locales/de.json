@@ -781,7 +781,7 @@
         "tagline": "BFSG- & WCAG-Konformität für WordPress — ehrliches Audit statt Overlay.",
         "category": "WordPress-Plugin",
         "status": "available",
-        "priceFrom": "Kostenlos · Pro ab 49 EUR/Jahr",
+        "priceFrom": "Kostenlos · Pro ab 99 EUR/Jahr",
         "stack": ["WordPress", "WCAG 2.2", "BFSG", "PHP"],
         "demoUrl": "",
         "detail": {
@@ -803,11 +803,11 @@
             { "title": "Deutsch, für den deutschen Markt", "desc": "Komplett deutschsprachig und auf BFSG / EU-Richtlinie 2019/882 ausgerichtet — keine eingedeutschte US-Lösung." }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Vorläufige Preise — Early-Access-Plätze zu Sonderkonditionen.",
+          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
           "pricing": [
             { "name": "Free", "price": "0 EUR", "period": "dauerhaft", "highlighted": false, "cta": "Kostenlos starten", "features": ["12 Prüfregeln", "Startseite + bis zu 4 Seiten", "Barrierefreiheitserklärung", "Manueller Scan"] },
-            { "name": "Pro", "price": "49 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["Alle Seiten scannen", "Geplante automatische Scans", "PDF-Konformitätsbericht", "Verlaufs-Monitoring", "Priority-Support"] },
-            { "name": "Agency", "price": "149 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Multisite-Support", "Mehrere Kundenseiten", "White-Label-Berichte", "Alles aus Pro"] }
+            { "name": "Pro", "price": "99 EUR", "period": "pro Jahr", "highlighted": true, "cta": "Early Access sichern", "features": ["Alle Seiten scannen", "Geplante automatische Scans", "PDF-Konformitätsbericht", "Verlaufs-Monitoring", "Priority-Support"] },
+            { "name": "Agency", "price": "299 EUR", "period": "pro Jahr", "highlighted": false, "cta": "Anfragen", "features": ["Multisite-Support", "Mehrere Kundenseiten", "White-Label-Berichte", "Alles aus Pro"] }
           ],
           "faqTitle": "Häufige Fragen",
           "faq": [

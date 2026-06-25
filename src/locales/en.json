@@ -781,7 +781,7 @@
         "tagline": "BFSG & WCAG compliance for WordPress — honest audit instead of an overlay.",
         "category": "WordPress Plugin",
         "status": "available",
-        "priceFrom": "Free · Pro from 49 EUR/year",
+        "priceFrom": "Free · Pro from 99 EUR/year",
         "stack": ["WordPress", "WCAG 2.2", "BFSG", "PHP"],
         "demoUrl": "",
         "detail": {
@@ -803,11 +803,11 @@
             { "title": "German, for the German market", "desc": "Fully in German and aligned with BFSG / EU Directive 2019/882 — not a translated US solution." }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Preliminary prices — early access spots at special conditions.",
+          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
           "pricing": [
             { "name": "Free", "price": "0 EUR", "period": "forever", "highlighted": false, "cta": "Start for free", "features": ["12 audit rules", "Home + up to 4 pages", "Accessibility statement", "Manual scan"] },
-            { "name": "Pro", "price": "49 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["Scan all pages", "Scheduled automatic scans", "PDF conformance report", "History monitoring", "Priority support"] },
-            { "name": "Agency", "price": "149 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Multisite support", "Multiple client sites", "White-label reports", "Everything in Pro"] }
+            { "name": "Pro", "price": "99 EUR", "period": "per year", "highlighted": true, "cta": "Secure early access", "features": ["Scan all pages", "Scheduled automatic scans", "PDF conformance report", "History monitoring", "Priority support"] },
+            { "name": "Agency", "price": "299 EUR", "period": "per year", "highlighted": false, "cta": "Get in touch", "features": ["Multisite support", "Multiple client sites", "White-label reports", "Everything in Pro"] }
           ],
           "faqTitle": "Frequently asked questions",
           "faq": [
