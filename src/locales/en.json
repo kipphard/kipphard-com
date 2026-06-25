@@ -783,7 +783,7 @@
         "status": "available",
         "priceFrom": "Free · Pro from 99 EUR/year",
         "stack": ["WordPress", "WCAG 2.2", "BFSG", "PHP"],
-        "demoUrl": "",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/barrierefrei-check/main/demo/blueprint.json",
         "detail": {
           "lede": "Check your website for accessibility compliance with WCAG 2.2 and BFSG in minutes, fix the most critical issues with concrete guidance, and generate a legally sound accessibility statement. No overlay widget that merely masks problems — a real audit of your rendered HTML.",
           "ctaPrimary": "Secure early access",

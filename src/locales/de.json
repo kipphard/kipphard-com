@@ -783,7 +783,7 @@
         "status": "available",
         "priceFrom": "Kostenlos · Pro ab 99 EUR/Jahr",
         "stack": ["WordPress", "WCAG 2.2", "BFSG", "PHP"],
-        "demoUrl": "",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/barrierefrei-check/main/demo/blueprint.json",
         "detail": {
           "lede": "Prüfe deine Website in Minuten auf Barrierefreiheit nach WCAG 2.2 und BFSG, behebe die wichtigsten Fehler mit konkreten Anleitungen und erstelle eine rechtssichere Barrierefreiheitserklärung. Kein Overlay-Widget, das Probleme nur überdeckt — ein echtes Audit deines gerenderten HTML.",
           "ctaPrimary": "Early Access sichern",
