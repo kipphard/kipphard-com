@@ -767,6 +767,10 @@
     "wunschliste": {
       "title": "Wunschliste – WooCommerce Wishlist Plugin",
       "description": "WooCommerce wishlist plugin: heart button on products, persistent list for guests and customers, wishlist page via shortcode. More return visits and conversions — lean and fast."
+    },
+    "checkout-felder": {
+      "title": "Checkout-Felder – WooCommerce Checkout Field Editor",
+      "description": "Edit WooCommerce checkout fields: rename, hide, reorder, and add custom fields. Values saved automatically in the order and in notification emails. Lean and clear."
     }
   },
   "cta": {
@@ -1369,6 +1373,119 @@
             {
               "q": "Can wishlists be shared?",
               "a": "Sharing via link (e.g. for gift requests) is part of the Pro version, along with variation support and statistics."
+            }
+          ]
+        }
+      },
+      {
+        "id": "checkout-felder",
+        "name": "Checkout-Felder",
+        "tagline": "WooCommerce Checkout Field Editor — add, rename, and reorder checkout fields.",
+        "category": "WordPress Plugin",
+        "status": "available",
+        "priceFrom": "Free · Pro from 49 EUR/year",
+        "stack": [
+          "WooCommerce",
+          "E-Commerce",
+          "WordPress",
+          "PHP"
+        ],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/checkout-felder/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Customise the checkout fields in your WooCommerce shop: rename fields, mark them as required, hide them, reorder them — and add your own. Values are automatically saved to the order and included in notification emails.",
+          "ctaPrimary": "Secure early access",
+          "ctaSecondary": "How it works",
+          "demoNote": "Live demo with WooCommerce in the browser.",
+          "problemTitle": "The problem",
+          "problem": "WooCommerce ships with a fixed set of checkout fields — but every shop needs something different: a delivery date field, a gift message, a VAT number for B2B customers, or simply fewer fields for a faster checkout. The established editors get the job done but feel dated and cluttered.",
+          "solutionTitle": "The solution",
+          "solution": "A clear editor for all checkout fields, grouped by billing, shipping, and additional. Edit or hide existing fields, add custom text and textarea fields, and arrange them by position. Values are saved with the order and shown in the order detail and in notification emails. Pro adds more field types and conditional logic.",
+          "featuresTitle": "What it does",
+          "features": [
+            {
+              "title": "Edit existing fields",
+              "desc": "Customise the label, placeholder, required state, and order of every standard WooCommerce checkout field."
+            },
+            {
+              "title": "Hide fields",
+              "desc": "Deactivate fields you don't need with one click — for a leaner, faster checkout."
+            },
+            {
+              "title": "Add custom fields",
+              "desc": "Add text and textarea fields — for example a gift message or a preferred delivery date."
+            },
+            {
+              "title": "Automatically in order & email",
+              "desc": "Values entered by the customer appear automatically in the order overview and in order notification emails."
+            },
+            {
+              "title": "More field types (Pro)",
+              "desc": "Select, checkbox, radio, date, and number — plus conditional display (show a field only when …)."
+            },
+            {
+              "title": "Lean & clean",
+              "desc": "A clear editor, no bloat, clean markup — works with your theme out of the box."
+            }
+          ],
+          "pricingTitle": "Pricing",
+          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricing": [
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "forever",
+              "highlighted": false,
+              "cta": "Start for free",
+              "features": [
+                "Edit & hide standard fields",
+                "Reorder fields",
+                "Custom text & textarea fields",
+                "Values saved in order & email"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "49 EUR",
+              "period": "per year",
+              "highlighted": true,
+              "cta": "Secure early access",
+              "features": [
+                "Field types: select, checkbox, radio, date, number",
+                "Conditional display (conditional logic)",
+                "Fee fields",
+                "Priority support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "129 EUR",
+              "period": "per year",
+              "highlighted": false,
+              "cta": "Get in touch",
+              "features": [
+                "Up to 10 websites",
+                "Multisite support",
+                "Everything in Pro"
+              ]
+            }
+          ],
+          "faqTitle": "Frequently asked questions",
+          "faq": [
+            {
+              "q": "Do I need WooCommerce?",
+              "a": "Yes. Checkout-Felder extends WooCommerce — without an active WooCommerce installation the plugin shows a notice and stays inactive."
+            },
+            {
+              "q": "Are values from custom fields saved?",
+              "a": "Yes. Values are saved as part of the order and shown automatically in the order detail in the WordPress back end as well as in order notification emails."
+            },
+            {
+              "q": "Can I make fields required?",
+              "a": "Yes. You can set any field as required; if a required field is left blank, the order cannot be completed."
+            },
+            {
+              "q": "Which field types are available?",
+              "a": "The free version supports text and textarea fields. Select, checkbox, radio, date, and number fields, as well as conditional logic, are included in the Pro version."
             }
           ]
         }

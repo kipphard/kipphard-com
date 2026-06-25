@@ -767,6 +767,10 @@
     "wunschliste": {
       "title": "Wunschliste – WooCommerce Wishlist Plugin",
       "description": "WooCommerce-Wunschliste: Herz-Button auf Produkten, persistente Liste für Gäste und Kunden, Wunschlisten-Seite per Shortcode. Mehr Wiederbesuche und Conversions — schlank und schnell."
+    },
+    "checkout-felder": {
+      "title": "Checkout-Felder – WooCommerce Checkout Field Editor",
+      "description": "WooCommerce Checkout-Felder bearbeiten: Felder umbenennen, ausblenden, anordnen und eigene Felder hinzufügen. Werte automatisch in Bestellung und E-Mails. Schlank und übersichtlich."
     }
   },
   "cta": {
@@ -1369,6 +1373,119 @@
             {
               "q": "Kann man Wunschlisten teilen?",
               "a": "Das Teilen per Link (z. B. für Geschenkewünsche) ist Teil der Pro-Version, ebenso Varianten-Unterstützung und Statistiken."
+            }
+          ]
+        }
+      },
+      {
+        "id": "checkout-felder",
+        "name": "Checkout-Felder",
+        "tagline": "WooCommerce Checkout-Felder bearbeiten — hinzufügen, umbenennen, anordnen.",
+        "category": "WordPress-Plugin",
+        "status": "available",
+        "priceFrom": "Kostenlos · Pro ab 49 EUR/Jahr",
+        "stack": [
+          "WooCommerce",
+          "E-Commerce",
+          "WordPress",
+          "PHP"
+        ],
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/checkout-felder/main/demo/blueprint.json",
+        "detail": {
+          "lede": "Passe die Checkout-Felder deines WooCommerce-Shops an: Felder umbenennen, als Pflicht markieren, ausblenden, neu anordnen — und eigene Felder hinzufügen. Die Werte landen automatisch in der Bestellung und in den E-Mails.",
+          "ctaPrimary": "Early Access sichern",
+          "ctaSecondary": "So funktioniert's",
+          "demoNote": "Live-Demo mit WooCommerce im Browser.",
+          "problemTitle": "Das Problem",
+          "problem": "WooCommerce gibt dir feste Checkout-Felder — aber jeder Shop braucht andere: ein Feld für den Wunschtermin, eine Geschenknachricht, eine USt-IdNr. für B2B, oder weniger Felder für eine schnellere Kasse. Die bekannten Editoren funktionieren, sind aber altbacken und unübersichtlich.",
+          "solutionTitle": "Die Lösung",
+          "solution": "Ein klarer Editor für alle Checkout-Felder, gruppiert nach Rechnung, Versand und Zusätzlich. Bestehende Felder bearbeiten oder ausblenden, eigene Text- und Mehrzeilenfelder hinzufügen, per Position anordnen. Die Werte werden gespeichert und in Bestellung und E-Mails angezeigt. In der Pro-Version: weitere Feldtypen und bedingte Logik.",
+          "featuresTitle": "Was es kann",
+          "features": [
+            {
+              "title": "Felder bearbeiten",
+              "desc": "Beschriftung, Platzhalter, Pflichtfeld und Reihenfolge aller Standard-Checkout-Felder anpassen."
+            },
+            {
+              "title": "Felder ausblenden",
+              "desc": "Nicht benötigte Felder mit einem Klick deaktivieren — für eine schlankere, schnellere Kasse."
+            },
+            {
+              "title": "Eigene Felder hinzufügen",
+              "desc": "Text- und Mehrzeilenfelder ergänzen — z. B. Geschenknachricht oder Wunschtermin."
+            },
+            {
+              "title": "Automatisch in Bestellung & E-Mail",
+              "desc": "Eingegebene Werte erscheinen automatisch in der Bestellübersicht und den Bestell-E-Mails."
+            },
+            {
+              "title": "Weitere Feldtypen (Pro)",
+              "desc": "Auswahl, Checkbox, Radio, Datum und Zahl — plus bedingte Anzeige (Feld nur zeigen, wenn …)."
+            },
+            {
+              "title": "Schlank & sauber",
+              "desc": "Übersichtlicher Editor, kein Ballast, sauberes Markup — funktioniert mit deinem Theme."
+            }
+          ],
+          "pricingTitle": "Preise",
+          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricing": [
+            {
+              "name": "Free",
+              "price": "0 EUR",
+              "period": "dauerhaft",
+              "highlighted": false,
+              "cta": "Kostenlos starten",
+              "features": [
+                "Standard-Felder bearbeiten & ausblenden",
+                "Reihenfolge anpassen",
+                "Eigene Text- & Mehrzeilenfelder",
+                "Werte in Bestellung & E-Mail"
+              ]
+            },
+            {
+              "name": "Pro",
+              "price": "49 EUR",
+              "period": "pro Jahr",
+              "highlighted": true,
+              "cta": "Early Access sichern",
+              "features": [
+                "Feldtypen: Auswahl, Checkbox, Radio, Datum, Zahl",
+                "Bedingte Anzeige (Conditional Logic)",
+                "Gebühren-Felder",
+                "Priority-Support"
+              ]
+            },
+            {
+              "name": "Agency",
+              "price": "129 EUR",
+              "period": "pro Jahr",
+              "highlighted": false,
+              "cta": "Anfragen",
+              "features": [
+                "Bis zu 10 Websites",
+                "Multisite-Support",
+                "Alles aus Pro"
+              ]
+            }
+          ],
+          "faqTitle": "Häufige Fragen",
+          "faq": [
+            {
+              "q": "Brauche ich WooCommerce?",
+              "a": "Ja. Checkout-Felder erweitert WooCommerce — ohne aktives WooCommerce zeigt das Plugin einen Hinweis und bleibt inaktiv."
+            },
+            {
+              "q": "Werden die Werte eigener Felder gespeichert?",
+              "a": "Ja. Die Eingaben werden als Teil der Bestellung gespeichert und automatisch in der Bestellübersicht im Backend sowie in den Bestell-E-Mails angezeigt."
+            },
+            {
+              "q": "Kann ich Pflichtfelder festlegen?",
+              "a": "Ja. Für jedes Feld lässt sich einstellen, ob es Pflicht ist; fehlt eine Pflichtangabe, kann die Bestellung nicht abgeschlossen werden."
+            },
+            {
+              "q": "Welche Feldtypen gibt es?",
+              "a": "Die kostenlose Version unterstützt Text- und Mehrzeilenfelder. Auswahl, Checkbox, Radio, Datum und Zahl sowie bedingte Logik sind in der Pro-Version enthalten."
             }
           ]
         }

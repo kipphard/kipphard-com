@@ -1,0 +1,15 @@
+{
+  "category": "ecommerce",
+  "tags": ["WooCommerce", "Checkout", "Checkout Fields", "Conversion", "E-Commerce"],
+  "publishedAt": "2026-06-25",
+  "de": {
+    "title": "WooCommerce Checkout-Felder anpassen: weniger ist mehr Conversion",
+    "description": "Wie du WooCommerce Checkout-Felder optimierst: welche Felder du weglassen kannst, welche Pflicht sind, wie eigene Felder in Bestellung und E-Mail landen — und warum ein schlankes Checkout-Formular mehr verkauft.",
+    "excerpt": "Zu viele Checkout-Felder kosten Conversions. Welche WooCommerce-Felder du sicher entfernen kannst, welche du brauchst — und wie eigene Felder sauber in Bestellung und E-Mail landen."
+  },
+  "en": {
+    "title": "Customising WooCommerce checkout fields: fewer fields, more conversions",
+    "description": "How to optimise your WooCommerce checkout fields: which ones you can safely remove, which ones are essential, how custom field values flow into orders and emails — and why a lean checkout form sells more.",
+    "excerpt": "Too many checkout fields cost you conversions. Which WooCommerce fields you can safely remove, which you need to keep — and how custom fields flow cleanly into orders and notification emails."
+  }
+}

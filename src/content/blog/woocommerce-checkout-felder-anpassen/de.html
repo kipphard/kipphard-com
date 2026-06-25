@@ -1,0 +1,66 @@
+<h2>Warum der Checkout über den Kauf entscheidet</h2>
+
+<p>Ein Besucher hat ein Produkt gefunden, in den Warenkorb gelegt und klickt auf „Zur Kasse". Was folgt, ist der kritischste Moment im gesamten Kaufprozess. Jedes überflüssige Feld, jede unklare Beschriftung, jede unnötige Pflichtangabe ist eine Chance, den Abschluss zu verlieren. Studien beziffern die Checkout-Abbruchrate auf 60–80 Prozent — und zu viele Formularfelder gehören konsistent zu den häufigsten Gründen.</p>
+
+<p>WooCommerce liefert einen vollständigen Checkout-Feldersatz: Vorname, Nachname, Unternehmen, Adresszeilen, PLZ, Ort, Land, Telefon, E-Mail — zweimal, für Rechnung und Versand. Das ist für einen physischen B2C-Versand halbwegs sinnvoll. Für die meisten Shops ist es zu viel.</p>
+
+<h2>Welche Felder du sicher entfernen kannst</h2>
+
+<p>Nicht jedes WooCommerce-Standardfeld ist für jeden Shop notwendig. Eine ehrliche Bestandsaufnahme:</p>
+
+<ul>
+  <li><strong>Unternehmensname:</strong> Für reine B2C-Shops weitgehend irrelevant. Entfernen senkt die Formulartiefe, ohne Informationen zu verlieren, die der Shop wirklich braucht.</li>
+  <li><strong>Adresszeile 2:</strong> In den meisten deutschen Bestellungen leer. Einen Zusatz wie „c/o" oder „Hinterhaus" kann man in Adresszeile 1 unterbringen. Nur behalten, wenn ein relevanter Teil deiner Kunden ihn tatsächlich nutzt.</li>
+  <li><strong>Telefon:</strong> Falls dein Versanddienstleister die Nummer nicht für Lieferbenachrichtigungen braucht — weglassen. Ein Pflichttelefon erhöht die Abbruchrate messbar, weil viele Kunden es nicht angeben wollen.</li>
+  <li><strong>Separate Versandadresse:</strong> Sinnvoll für Geschenksendungen, unnötig für Shops, bei denen die meisten Kunden Rechnung- und Lieferadresse identisch haben. Als optionales Opt-in statt Standard-Anzeige konfigurieren.</li>
+</ul>
+
+<p>Was du nicht entfernen solltest: E-Mail (Pflicht für Bestellbestätigung und Kundenkonto), vollständige Rechnungsadresse (gesetzliche Pflicht auf der Rechnung), Land (für Steuer und Versandkosten). Diese Felder haben eine Funktion, die über die Darstellung hinausgeht.</p>
+
+<h2>Wann eigene Felder echten Mehrwert bringen</h2>
+
+<p>Neben dem Kürzen gibt es den umgekehrten Fall: Shops, die eine Information brauchen, für die WooCommerce kein Standardfeld hat.</p>
+
+<p><strong>B2B-Shops</strong> brauchen oft eine USt-IdNr. für den Reverse-Charge-Nachweis. Ein eigenes Textfeld am Checkout ist die sauberste Lösung — kein Plugin-Overhead, der Wert landet direkt an der Bestellung.</p>
+
+<p><strong>Shops mit Wunschlieferdatum</strong> — Blumenlieferungen, Lebensmittelkörbe, Geschenksendungen — brauchen ein Datumsfeld. Fragt man es per Freitext ab, bekommt man Formatchaos. Ein dediziertes Datumsfeld (in der Pro-Version verfügbar) löst das ohne manuelle Nacharbeit.</p>
+
+<p><strong>Geschenknachrichten:</strong> Ein Mehrzeilenfeld für eine persönliche Botschaft ist für Shops mit Geschenkverpackung oder Grußkarten ein echter Conversion-Treiber — der Kauf wird persönlicher, der Mehrwert der Zusatzleistung ist sichtbar.</p>
+
+<p>Die Faustregel: Jedes eigene Feld muss eine Aufgabe erfüllen, die direkt zum Kauf oder zur Lieferung beiträgt. Kein Feld der Vollständigkeit halber.</p>
+
+<h2>Wie Feldwerte in Bestellung und E-Mails landen</h2>
+
+<p>Das ist der technische Punkt, der in vielen Tutorials zu kurz kommt: Ein eigenes Checkout-Feld nützt nichts, wenn der Wert nur angezeigt, aber nicht gespeichert wird — oder wenn er in der Bestellübersicht im Backend fehlt und nicht in den Bestell-E-Mails auftaucht.</p>
+
+<p>Sauber implementiert bedeutet: Der eingegebene Wert wird als Order-Meta an der WooCommerce-Bestellung gespeichert. Er erscheint im Backend in der Bestelldetailansicht, sodass das Fulfillment-Team ihn sieht. Und er wird automatisch in die Bestell-E-Mails eingebaut — die Bestätigungsmail an den Kunden ebenso wie die interne Bestellbenachrichtigung.</p>
+
+<p>Wer das manuell mit <code>add_action('woocommerce_checkout_update_order_meta')</code> löst, kennt den Aufwand. Ein guter Checkout-Felder-Editor übernimmt das automatisch — ohne Code, für jedes Feld, das man hinzufügt.</p>
+
+<h2>Pflicht oder optional: die richtige Entscheidung</h2>
+
+<p>Ob ein Feld Pflicht ist, sollte konsequent am tatsächlichen Bedarf hängen — nicht an dem, was man gern wüsste.</p>
+
+<p>Das Wunschlieferdatum kann sinnvoll optional sein: Kunden, die kein Datum angeben, bekommen den nächstmöglichen Termin. Eine USt-IdNr. für B2B-Kunden sollte in vielen Fällen optional bleiben, weil nicht jeder Käufer ein Unternehmen ist. Eine Geschenknachricht ist per Definition optional.</p>
+
+<p>Pflichtfelder sollten nur da gesetzt werden, wo das Fehlen die Bestellung wirklich nicht verarbeitbar macht. Jedes unnötige Pflichtfeld ist eine Abbruch-Einladung.</p>
+
+<h2>Best Practices auf einen Blick</h2>
+
+<ul>
+  <li><strong>Felder zählen:</strong> Starte mit dem WooCommerce-Standard und streiche konsequent alles, was du für Lieferung, Rechnung und Kommunikation nicht brauchst.</li>
+  <li><strong>Beschriftungen prüfen:</strong> „Adresszeile 1" ist generisch. „Straße und Hausnummer" ist klar. Gute Beschriftungen reduzieren Tippfehler und Support-Aufwand.</li>
+  <li><strong>Platzhalter nutzen:</strong> Ein Platzhaltertext zeigt das erwartete Format — besonders hilfreich bei USt-IdNr., Telefon und Datum.</li>
+  <li><strong>Mobile testen:</strong> Ein langer Checkout ist auf dem Smartphone besonders schmerzhaft. Weniger Felder bedeutet schnelleres Tippen und weniger Scrollen.</li>
+  <li><strong>Werte nachverfolgen:</strong> Eigene Felder sind nur nützlich, wenn ihr Wert im Backend sichtbar ist und im Fulfillment-Prozess verwendet wird.</li>
+</ul>
+
+<h2>Ein Editor, der das ohne Code löst</h2>
+
+<p>All das — Standard-Felder bearbeiten, ausblenden und anordnen, eigene Felder hinzufügen, Werte automatisch in Bestellung und E-Mails — ist genau das, was <a href="/products/checkout-felder">Checkout-Felder</a> löst. Ein übersichtlicher Editor, gruppiert nach Rechnung, Versand und Zusätzlich, ohne PHP-Eingriff. Die Free-Version deckt Text- und Mehrzeilenfelder ab; die Pro-Version ergänzt Auswahl, Checkbox, Radio, Datum, Zahl und bedingte Anzeige.</p>
+
+<p>Testen lässt es sich direkt im Browser — eine Live-Demo mit WooCommerce ist ohne Installation verfügbar.</p>
+
+<h2>Fazit</h2>
+
+<p>Der WooCommerce-Checkout ist kein Formular, das man einmal einrichtet und vergisst. Es ist der letzte Schritt vor dem Kauf — und ein schlankes, klares Formular ist einer der direktesten Hebel für mehr Conversions. Weniger Felder bedeutet weniger Hürden. Klare Beschriftungen bedeuten weniger Fehler. Eigene Felder, die wirklich gebraucht werden, bedeuten bessere Daten und zufriedenere Kunden. Alles andere ist Ballast.</p>

@@ -1,0 +1,66 @@
+<h2>Why checkout determines whether the sale happens</h2>
+
+<p>A visitor has found a product, added it to their cart, and clicked "Proceed to checkout." What follows is the most critical moment in the entire buying journey. Every superfluous field, every unclear label, every unnecessary required input is an opportunity to lose the sale. Studies put checkout abandonment rates at 60–80 percent — and too many form fields consistently rank among the top reasons.</p>
+
+<p>WooCommerce ships with a complete set of checkout fields: first name, last name, company, address lines, postcode, city, country, phone, email — twice over, for billing and shipping. That's roughly sensible for a physical B2C shipping operation. For most shops, it's too much.</p>
+
+<h2>Which fields you can safely remove</h2>
+
+<p>Not every WooCommerce default field is necessary for every shop. An honest audit:</p>
+
+<ul>
+  <li><strong>Company name:</strong> Largely irrelevant for pure B2C shops. Removing it reduces form length without losing information the shop actually needs.</li>
+  <li><strong>Address line 2:</strong> Empty in the vast majority of orders. A supplement like "c/o" or "rear building" can go in address line 1. Keep it only if a meaningful share of your customers actually use it.</li>
+  <li><strong>Phone:</strong> If your shipping carrier doesn't need it for delivery notifications, leave it out. A required phone field measurably increases abandonment rates — many customers simply don't want to share it.</li>
+  <li><strong>Separate shipping address:</strong> Useful for gift shipments, unnecessary for shops where most customers have identical billing and shipping addresses. Configure it as an optional opt-in rather than the default view.</li>
+</ul>
+
+<p>What you shouldn't remove: email (required for order confirmation and customer account), full billing address (legally required on the invoice), country (required for tax calculation and shipping rates). These fields serve a function that goes beyond the display layer.</p>
+
+<h2>When custom fields genuinely add value</h2>
+
+<p>Beyond trimming there's the opposite case: shops that need information WooCommerce has no standard field for.</p>
+
+<p><strong>B2B shops</strong> often need a VAT registration number for reverse-charge documentation. A custom text field at checkout is the cleanest solution — no plugin overhead, and the value is stored directly on the order.</p>
+
+<p><strong>Shops with preferred delivery dates</strong> — flower deliveries, food boxes, gift shipments — need a date field. If you collect it as free text you get format chaos. A dedicated date field (available in the Pro version) solves this without manual clean-up afterwards.</p>
+
+<p><strong>Gift messages:</strong> A textarea for a personal note is a genuine conversion driver for shops offering gift wrapping or greeting cards — the purchase becomes personal, and the value of the added service is visible upfront.</p>
+
+<p>The guiding principle: every custom field must serve a purpose that directly supports the purchase or the delivery. No fields for completeness' sake.</p>
+
+<h2>How field values flow into orders and emails</h2>
+
+<p>This is the technical detail that many tutorials skim over: a custom checkout field is worthless if the value is only displayed but not saved — or if it's missing from the order detail in the back end and absent from the notification emails.</p>
+
+<p>Done properly it means: the submitted value is saved as order meta on the WooCommerce order. It appears in the order detail view in the back end so the fulfilment team can see it. And it is automatically included in order emails — both the confirmation to the customer and the internal order notification.</p>
+
+<p>Anyone who has solved this manually with <code>add_action('woocommerce_checkout_update_order_meta')</code> knows the effort involved. A good checkout field editor handles this automatically — no code required, for every field you add.</p>
+
+<h2>Required or optional: making the right call</h2>
+
+<p>Whether a field is required should be tied consistently to actual operational need — not to what you'd like to know.</p>
+
+<p>A preferred delivery date can reasonably be optional: customers who don't specify a date get the next available slot. A VAT number for B2B customers should often stay optional, because not every buyer is a business. A gift message is optional by definition.</p>
+
+<p>Required fields should only be set where a missing value genuinely makes the order unprocessable. Every unnecessary required field is an invitation to abandon.</p>
+
+<h2>Best practices at a glance</h2>
+
+<ul>
+  <li><strong>Count your fields:</strong> Start from the WooCommerce defaults and cut everything you don't need for delivery, invoicing, or communication.</li>
+  <li><strong>Review labels:</strong> "Address line 1" is generic. "Street and house number" is clear. Good labels reduce typos and support requests.</li>
+  <li><strong>Use placeholders:</strong> Placeholder text shows the expected format — particularly helpful for VAT numbers, phone, and date fields.</li>
+  <li><strong>Test on mobile:</strong> A long checkout is especially painful on a small screen. Fewer fields means less typing and less scrolling.</li>
+  <li><strong>Track values:</strong> Custom fields are only useful if the value is visible in the back end and used in the fulfilment process.</li>
+</ul>
+
+<h2>An editor that solves this without code</h2>
+
+<p>All of the above — editing, hiding, and reordering standard fields, adding custom fields, and automatically storing values in orders and emails — is exactly what <a href="/products/checkout-felder">Checkout-Felder</a> handles. A clear editor, grouped by billing, shipping, and additional fields, no PHP required. The free version covers text and textarea fields; the Pro version adds select, checkbox, radio, date, number, and conditional display.</p>
+
+<p>You can try it directly in your browser — a live WooCommerce demo is available with no installation needed.</p>
+
+<h2>Conclusion</h2>
+
+<p>The WooCommerce checkout isn't a form you set up once and forget. It's the last step before the purchase — and a lean, clear form is one of the most direct levers for more conversions. Fewer fields means fewer barriers. Clear labels mean fewer errors. Custom fields that are genuinely needed mean better data and happier customers. Everything else is noise.</p>
