@@ -5,6 +5,7 @@
     <Services />
     <About />
     <Work />
+    <Products />
     <Labs />
     <Pricing />
     <Faq />
@@ -21,6 +22,7 @@ import Stats from '@/sections/Stats/Stats.vue'
 import Services from '@/sections/Services/Services.vue'
 import About from '@/sections/About/About.vue'
 import Work from '@/sections/Work/Work.vue'
+import Products from '@/sections/Products/Products.vue'
 import Labs from '@/sections/Labs/Labs.vue'
 import Pricing from '@/sections/Pricing/Pricing.vue'
 import Faq from '@/sections/Faq/Faq.vue'

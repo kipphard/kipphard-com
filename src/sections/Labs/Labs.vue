@@ -27,18 +27,11 @@
           </div>
         </article>
       </div>
-
-      <div class="labs-products-link">
-        <RouterLink to="/products" class="btn btn--ghost btn--sm">
-          {{ t('nav.products') }} ansehen <span aria-hidden="true">↗</span>
-        </RouterLink>
-      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 interface LabItem {
