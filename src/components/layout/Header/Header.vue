@@ -10,7 +10,17 @@
         <RouterLink :to="localePath('/#about')">{{ t('nav.about') }}</RouterLink>
         <RouterLink :to="localePath('/#services')">{{ t('nav.services') }}</RouterLink>
         <RouterLink :to="localePath('/#work')">{{ t('nav.work') }}</RouterLink>
-        <RouterLink :to="localePath('/products')">{{ t('nav.products') }}</RouterLink>
+        <div class="nav__drop">
+          <RouterLink :to="localePath('/products')">{{ t('nav.products') }}</RouterLink>
+          <div class="nav__submenu" role="menu" :aria-label="t('nav.products')">
+            <RouterLink
+              v-for="p in products"
+              :key="p.id"
+              :to="localePath('/products/' + p.id)"
+              role="menuitem"
+            >{{ p.name }}</RouterLink>
+          </div>
+        </div>
         <RouterLink :to="localePath('/#labs')">{{ t('nav.labs') }}</RouterLink>
         <RouterLink :to="localePath('/#pricing')">{{ t('nav.pricing') }}</RouterLink>
       </nav>
@@ -61,6 +71,14 @@
       <li><RouterLink :to="localePath('/#services')" @click="menuOpen = false">{{ t('nav.services') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink :to="localePath('/#work')" @click="menuOpen = false">{{ t('nav.work') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink :to="localePath('/products')" @click="menuOpen = false">{{ t('nav.products') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li class="mobile-sub">
+        <RouterLink
+          v-for="p in products"
+          :key="p.id"
+          :to="localePath('/products/' + p.id)"
+          @click="menuOpen = false"
+        >{{ p.name }}</RouterLink>
+      </li>
       <li><RouterLink :to="localePath('/#labs')" @click="menuOpen = false">{{ t('nav.labs') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink :to="localePath('/#pricing')" @click="menuOpen = false">{{ t('nav.pricing') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink :to="localePath('/#contact')" @click="menuOpen = false">{{ t('nav.contact') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
@@ -88,14 +106,18 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { ref, onMounted, onUnmounted, watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import Icon from '@/components/ui/Icon/Icon.vue'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { localeFromPath, toLocalePath, type Locale } from '@/lib/i18n-routing'
 
-const { t, locale } = useI18n()
+const { t, tm, locale } = useI18n()
+
+// Product sub-menu items under "Products" (reactive to locale via tm()).
+interface ProductNavItem { id: string; name: string }
+const products = computed(() => (tm('products.items') as ProductNavItem[]) || [])
 const route = useRoute()
 const router = useRouter()
 const { localePath } = useLocalePath()

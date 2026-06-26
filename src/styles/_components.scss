@@ -38,6 +38,28 @@
   transition: color 0.2s var(--ease), background 0.2s var(--ease);
 }
 .nav__links a:hover { color: var(--fg); }
+
+/* Products dropdown (desktop) */
+.nav__drop { position: relative; display: flex; align-items: center; }
+.nav__submenu {
+  position: absolute; top: 100%; left: 0;
+  min-width: 230px; margin-top: 8px; padding: 6px;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow-lg);
+  display: grid; gap: 2px; z-index: 60;
+  opacity: 0; visibility: hidden; transform: translateY(-6px);
+  transition: opacity 0.18s var(--ease), transform 0.18s var(--ease), visibility 0.18s var(--ease);
+}
+/* Bridge the gap so hover isn't lost between trigger and panel. */
+.nav__submenu::before { content: ''; position: absolute; top: -8px; left: 0; right: 0; height: 8px; }
+.nav__drop:hover .nav__submenu,
+.nav__drop:focus-within .nav__submenu { opacity: 1; visibility: visible; transform: none; }
+.nav__submenu a {
+  padding: 8px 12px; border-radius: var(--radius-sm);
+  font-size: 0.92rem; font-weight: 500; color: var(--fg-muted); white-space: nowrap;
+}
+.nav__submenu a:hover { color: var(--fg); background: var(--line); }
+
 .nav__spacer { margin-left: auto; }
 .nav__tools { display: flex; align-items: center; gap: 8px; }
 
@@ -110,6 +132,8 @@
   border-bottom: 1px solid var(--line);
 }
 .mobile-menu a .arrow { color: var(--accent); }
+.mobile-menu .mobile-sub { display: grid; gap: 2px; margin: 0 0 6px 8px; padding-left: 12px; border-left: 1px solid var(--line); }
+.mobile-menu .mobile-sub a { padding: 8px 10px; font-size: 0.96rem; color: var(--fg-muted); }
 .mobile-menu .mobile-controls { display: flex; gap: 10px; margin-top: 26px; }
 .mobile-menu .meta { margin-top: 26px; display: flex; flex-direction: column; gap: 4px; color: var(--fg-subtle); font-size: 0.9rem; }
 
@@ -788,6 +812,15 @@
 .product-card:hover { border-color: var(--line-strong); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 /* Whole card clickable via its primary link. */
 .product-card__actions .btn--primary::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+
+/* Stretched-link cards: the whole surface is clickable, so show the pointer everywhere,
+   and DON'T transform the overlay's owner on hover — a transform makes the button the
+   containing block for its own ::after, collapsing the overlay to button size and causing
+   the cursor to flicker between pointer (over overlay) and default (over card body). */
+.product-card, .labs-card, .price-card { cursor: pointer; }
+.product-card__actions .btn--primary:hover,
+.labs-card__actions .btn--primary:hover,
+.price-card .btn--block:hover { transform: none; }
 .product-card__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .product-card__head h2 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.5rem); }
 .product-card__tagline { margin: 0; color: var(--fg-muted); line-height: 1.6; flex: 1; }

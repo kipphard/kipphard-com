@@ -17,6 +17,7 @@
             <li><RouterLink :to="localePath('/#about')">{{ t('nav.about') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/#services')">{{ t('nav.services') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/#work')">{{ t('nav.work') }}</RouterLink></li>
+            <li><RouterLink :to="localePath('/products')">{{ t('nav.products') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/#labs')">{{ t('nav.labs') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/blog')">{{ t('nav.blog') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/#pricing')">{{ t('nav.pricing') }}</RouterLink></li>

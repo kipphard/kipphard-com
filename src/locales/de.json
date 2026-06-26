@@ -161,8 +161,8 @@
         "ai": true
       },
       {
-        "label": "Design im Browser",
-        "desc": "Keine Figma-Zwischenebene. Direkt im Code.",
+        "label": "Interaktiver Prototyp",
+        "desc": "Klickbar im Browser – keine Figma-Zwischenebene.",
         "ai": true
       },
       {

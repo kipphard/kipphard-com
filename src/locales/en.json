@@ -161,8 +161,8 @@
         "ai": true
       },
       {
-        "label": "Design in browser",
-        "desc": "No Figma middle layer. Straight to code.",
+        "label": "Interactive prototype",
+        "desc": "Clickable in the browser — no Figma middle layer.",
         "ai": true
       },
       {
