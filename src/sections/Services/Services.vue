@@ -22,11 +22,12 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Icon from '@/components/ui/Icon/Icon.vue'
 
 interface ServiceItem { icon: string; title: string; desc: string; tags: string[] }
 
 const { t, tm } = useI18n()
-const services = tm('services.items') as ServiceItem[]
+const services = computed(() => tm('services.items') as ServiceItem[])
 </script>

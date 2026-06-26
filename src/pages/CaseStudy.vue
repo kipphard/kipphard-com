@@ -4,7 +4,7 @@
       <!-- Hero -->
       <section class="section cs-hero">
         <div class="container">
-          <RouterLink to="/#work" class="crumb">{{ t('caseStudy.backToProjects') }}</RouterLink>
+          <RouterLink :to="localePath('/#work')" class="crumb">{{ t('caseStudy.backToProjects') }}</RouterLink>
           <div class="cs-meta">
             <span class="accent">{{ item.year }}</span>
             <span>{{ item.client }}</span>
@@ -20,7 +20,7 @@
               target="_blank"
               rel="noopener"
             >{{ t('caseStudy.visitLiveSite') }} <span class="arrow">↗</span></a>
-            <RouterLink to="/#work" class="btn btn--ghost">Weitere Projekte</RouterLink>
+            <RouterLink :to="localePath('/#work')" class="btn btn--ghost">{{ t('caseStudy.moreProjects') }}</RouterLink>
           </div>
           <figure class="cs-figure">
             <img :src="item.case.hero" :alt="item.title" loading="eager" />
@@ -49,11 +49,11 @@
           <div>
             <div class="cs-aside--sticky">
               <div class="cs-aside">
-                <h3>Projekt</h3>
+                <h3>{{ t('caseStudy.project') }}</h3>
                 <dl>
-                  <div><dt>Kunde</dt><dd>{{ item.client }}</dd></div>
-                  <div><dt>Zeitraum</dt><dd>{{ item.year }}</dd></div>
-                  <div><dt>Typ</dt><dd>{{ item.type }}</dd></div>
+                  <div><dt>{{ t('caseStudy.client') }}</dt><dd>{{ item.client }}</dd></div>
+                  <div><dt>{{ t('caseStudy.period') }}</dt><dd>{{ item.year }}</dd></div>
+                  <div><dt>{{ t('caseStudy.type') }}</dt><dd>{{ item.type }}</dd></div>
                   <div v-if="item.url">
                     <dt>Live</dt>
                     <dd><a :href="item.url" target="_blank" rel="noopener">{{ item.url.replace(/^https?:\/\//, '') }} ↗</a></dd>
@@ -94,8 +94,8 @@
       <section class="section--tight">
         <div class="container">
           <div class="cta-panel">
-            <h2>Ein ähnliches Projekt im Kopf? Lass uns sprechen.</h2>
-            <RouterLink to="/#contact" class="btn btn--primary">Projekt anfragen <span class="arrow">→</span></RouterLink>
+            <h2>{{ t('caseStudy.bottomCtaTitle') }}</h2>
+            <RouterLink :to="localePath('/#contact')" class="btn btn--primary">{{ t('caseStudy.bottomCtaButton') }} <span class="arrow">→</span></RouterLink>
           </div>
         </div>
       </section>
@@ -103,7 +103,7 @@
 
     <div v-else class="case-not-found">
       <p>{{ t('caseStudy.notFound') }}</p>
-      <RouterLink to="/" class="btn btn--ghost">← Home</RouterLink>
+      <RouterLink :to="localePath('/')" class="btn btn--ghost">← Home</RouterLink>
     </div>
 
     <!-- Lightbox -->
@@ -163,6 +163,8 @@ import { computed, nextTick, ref, watch } from 'vue'
 import { useHead } from '@unhead/vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { useLocalePath } from '@/composables/useLocalePath'
+import { useLocaleHead } from '@/composables/useLocaleHead'
 
 interface CaseScreenshot {
   src: string
@@ -195,13 +197,13 @@ interface WorkItem {
 
 const { t, tm } = useI18n()
 const route = useRoute()
+const { localePath } = useLocalePath()
 
 const slug = computed(() => {
   const segments = route.path.split('/')
   return segments[segments.length - 1]
 })
 
-const canonical = computed(() => `https://kipphard.com/work/${slug.value}`)
 const ogImage = computed(() => `https://kipphard.com/case-studies/${slug.value}/hero.webp`)
 
 useHead({
@@ -211,12 +213,13 @@ useHead({
     { property: 'og:title',       content: () => t(`pages.${slug.value}.title`) },
     { property: 'og:description', content: () => t(`pages.${slug.value}.description`) },
     { property: 'og:type',        content: 'article' },
-    { property: 'og:url',         content: () => canonical.value },
     { property: 'og:image',       content: () => ogImage.value },
     { name: 'twitter:card',       content: 'summary_large_image' },
   ],
-  link: [{ rel: 'canonical', href: () => canonical.value }],
 })
+
+// canonical + hreflang + og:url + og:locale — work slugs are identical across locales.
+useLocaleHead(() => `/work/${slug.value}`)
 
 const lightboxIndex = ref<number | null>(null)
 const lightboxEl = ref<HTMLElement | null>(null)

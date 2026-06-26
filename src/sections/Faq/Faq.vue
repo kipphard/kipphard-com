@@ -16,10 +16,11 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 interface Faq { q: string; a: string }
 
 const { t, tm } = useI18n()
-const faq = tm('pricing.faq') as Faq[]
+const faq = computed(() => tm('pricing.faq') as Faq[])
 </script>

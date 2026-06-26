@@ -15,8 +15,9 @@
 </template>
 
 <script setup lang="ts">
-import { useHead, useSeoMeta } from '@unhead/vue'
+import { useSeoMeta } from '@unhead/vue'
 import { useI18n } from 'vue-i18n'
+import { useLocaleHead } from '@/composables/useLocaleHead'
 import Hero from '@/sections/Hero/Hero.vue'
 import Stats from '@/sections/Stats/Stats.vue'
 import Services from '@/sections/Services/Services.vue'
@@ -37,7 +38,6 @@ useSeoMeta({
   ogTitle:            () => t('pages.home.ogTitle'),
   ogDescription:      () => t('pages.home.ogDescription'),
   ogType:             'website',
-  ogUrl:              'https://kipphard.com/',
   ogImage:            'https://kipphard.com/og-image.png',
   twitterCard:        'summary_large_image',
   twitterTitle:       () => t('pages.home.ogTitle'),
@@ -47,7 +47,6 @@ useSeoMeta({
   twitterCreator:     '@TheSharpBook',
 })
 
-useHead({
-  link: [{ rel: 'canonical', href: 'https://kipphard.com/' }],
-})
+// canonical + hreflang + og:url + og:locale
+useLocaleHead(() => '/')
 </script>

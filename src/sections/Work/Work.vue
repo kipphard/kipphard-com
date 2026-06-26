@@ -11,7 +11,7 @@
         <RouterLink
           v-for="item in items"
           :key="item.id"
-          :to="`/work/${item.id}`"
+          :to="localePath(`/work/${item.id}`)"
           :class="['work-card', { 'work-card--featured': item.size === 'featured' }]"
         >
           <div class="work-card__media">
@@ -38,8 +38,10 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { RouterLink } from 'vue-router'
+import { useLocalePath } from '@/composables/useLocalePath'
 
 interface WorkItem {
   id: string; size: string; year: string; client: string; type: string;
@@ -48,5 +50,6 @@ interface WorkItem {
 }
 
 const { t, tm } = useI18n()
-const items = tm('work.items') as WorkItem[]
+const { localePath } = useLocalePath()
+const items = computed(() => tm('work.items') as WorkItem[])
 </script>

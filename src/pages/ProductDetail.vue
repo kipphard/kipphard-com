@@ -4,7 +4,7 @@
       <!-- Hero -->
       <section class="section cs-hero">
         <div class="container">
-          <RouterLink to="/products" class="crumb">{{ t('products.backToProducts') }}</RouterLink>
+          <RouterLink :to="localePath('/products')" class="crumb">{{ t('products.backToProducts') }}</RouterLink>
           <div class="cs-meta">
             <span class="accent">{{ item.category }}</span>
             <span>{{ item.priceFrom }}</span>
@@ -12,7 +12,7 @@
           <h1>{{ item.name }}</h1>
           <p class="cs-hero__lede">{{ item.detail.lede }}</p>
           <div class="cs-hero__actions">
-            <a class="btn btn--primary" href="/#contact">
+            <a class="btn btn--primary" :href="localePath('/#contact')">
               {{ item.detail.ctaPrimary }} <span class="arrow">→</span>
             </a>
             <a class="btn btn--ghost" href="#features">
@@ -74,7 +74,7 @@
               class="pricing-tier"
               :class="{ 'pricing-tier--highlighted': tier.highlighted }"
             >
-              <div v-if="tier.highlighted" class="pricing-tier__badge">Empfohlen</div>
+              <div v-if="tier.highlighted" class="pricing-tier__badge">{{ t('productDetail.recommended') }}</div>
               <p class="pricing-tier__name">{{ tier.name }}</p>
               <p class="pricing-tier__price">
                 {{ tier.price }}
@@ -83,7 +83,7 @@
               <ul class="pricing-tier__features">
                 <li v-for="f in tier.features" :key="f">{{ f }}</li>
               </ul>
-              <a class="btn btn--primary btn--sm" href="/#contact">
+              <a class="btn btn--primary btn--sm" :href="localePath('/#contact')">
                 {{ tier.cta }}
               </a>
             </div>
@@ -114,9 +114,9 @@
       <section class="section--tight">
         <div class="container">
           <div class="cta-panel">
-            <h2>Interesse? Schreib mir — ich beantworte jede Frage.</h2>
-            <RouterLink to="/#contact" class="btn btn--primary">
-              Kontakt aufnehmen <span class="arrow">→</span>
+            <h2>{{ t('productDetail.bottomCtaTitle') }}</h2>
+            <RouterLink :to="localePath('/#contact')" class="btn btn--primary">
+              {{ t('productDetail.bottomCtaButton') }} <span class="arrow">→</span>
             </RouterLink>
           </div>
         </div>
@@ -124,8 +124,8 @@
     </template>
 
     <div v-else class="case-not-found">
-      <p>Produkt nicht gefunden.</p>
-      <RouterLink to="/products" class="btn btn--ghost">← Alle Produkte</RouterLink>
+      <p>{{ t('productDetail.notFound') }}</p>
+      <RouterLink :to="localePath('/products')" class="btn btn--ghost">{{ t('productDetail.allProducts') }}</RouterLink>
     </div>
   </main>
 </template>
@@ -135,6 +135,9 @@ import { computed } from 'vue'
 import { useHead } from '@unhead/vue'
 import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { useLocalePath } from '@/composables/useLocalePath'
+import { useLocaleHead } from '@/composables/useLocaleHead'
+import { localeFromPath, productIdFromSlug } from '@/lib/i18n-routing'
 
 interface Feature {
   title: string
@@ -187,29 +190,29 @@ interface ProductItem {
 
 const { t, tm } = useI18n()
 const route = useRoute()
+const { localePath } = useLocalePath()
 
-const slug = computed(() => {
-  const segments = route.path.split('/')
-  return segments[segments.length - 1]
-})
-
-const canonical = computed(() => `https://kipphard.com/products/${slug.value}`)
+const locale = computed(() => localeFromPath(route.path))
+const urlSlug = computed(() => route.path.split('/').pop() ?? '')
+// Canonical product id (= German slug), resolved from the locale-specific URL slug.
+const productId = computed(() => productIdFromSlug(urlSlug.value, locale.value))
 
 useHead({
-  title: () => t(`pages.${slug.value}.title`),
+  title: () => t(`pages.${productId.value}.title`),
   meta: [
-    { name: 'description',        content: () => t(`pages.${slug.value}.description`) },
-    { property: 'og:title',       content: () => t(`pages.${slug.value}.title`) },
-    { property: 'og:description', content: () => t(`pages.${slug.value}.description`) },
+    { name: 'description',        content: () => t(`pages.${productId.value}.description`) },
+    { property: 'og:title',       content: () => t(`pages.${productId.value}.title`) },
+    { property: 'og:description', content: () => t(`pages.${productId.value}.description`) },
     { property: 'og:type',        content: 'website' },
-    { property: 'og:url',         content: () => canonical.value },
     { name: 'twitter:card',       content: 'summary' },
   ],
-  link: [{ rel: 'canonical', href: () => canonical.value }],
 })
+
+// canonical + hreflang + og:url + og:locale — neutral path uses the German slug.
+useLocaleHead(() => `/products/${productId.value ?? urlSlug.value}`)
 
 const item = computed(() => {
   const items = tm('products.items') as ProductItem[]
-  return items.find((p) => p.id === slug.value) ?? null
+  return productId.value ? items.find((p) => p.id === productId.value) ?? null : null
 })
 </script>

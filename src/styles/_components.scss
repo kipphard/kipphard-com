@@ -336,8 +336,14 @@
   padding: clamp(26px, 2.8vw, 36px);
   box-shadow: var(--shadow);
   position: relative;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
 .price-card--featured { border-color: var(--accent); box-shadow: var(--shadow-lg), 0 0 0 1px var(--accent); }
+/* Whole box clickable + hover highlight (preserve the featured accent ring on hover). */
+.price-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.price-card:not(.price-card--featured):hover { border-color: var(--line-strong); }
+.price-card--featured:hover { box-shadow: var(--shadow-lg), 0 0 0 1px var(--accent); }
+.price-card .btn--block::after { content: ''; position: absolute; inset: 0; z-index: 1; }
 .price-card__badge {
   position: absolute;
   top: -12px; left: clamp(26px, 2.8vw, 36px);
@@ -733,8 +739,12 @@
   flex-direction: column;
   gap: 14px;
   transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+  position: relative;
 }
 .labs-card:hover { border-color: var(--line-strong); transform: translateY(-2px); }
+/* Whole card clickable via the primary (demo) link; secondary (source) link stays on top. */
+.labs-card__actions .btn--primary::after { content: ''; position: absolute; inset: 0; z-index: 1; }
+.labs-card__actions .btn--ghost { position: relative; z-index: 2; }
 .labs-card__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .labs-card__head h3 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.5rem); }
 .labs-badge {
@@ -773,8 +783,11 @@
   flex-direction: column;
   gap: 14px;
   transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  position: relative;
 }
 .product-card:hover { border-color: var(--line-strong); transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+/* Whole card clickable via its primary link. */
+.product-card__actions .btn--primary::after { content: ''; position: absolute; inset: 0; z-index: 1; }
 .product-card__head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .product-card__head h2 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.5rem); }
 .product-card__tagline { margin: 0; color: var(--fg-muted); line-height: 1.6; flex: 1; }

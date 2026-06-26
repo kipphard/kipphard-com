@@ -77,6 +77,7 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
 import { useI18n } from 'vue-i18n'
+import { useLocaleHead } from '@/composables/useLocaleHead'
 
 const { t } = useI18n()
 
@@ -85,6 +86,8 @@ useHead({
   meta: [
     { name: 'description', content: () => t('pages.datenschutz.description') },
   ],
-  link: [{ rel: 'canonical', href: 'https://kipphard.com/datenschutz' }],
 })
+
+// canonical + hreflang + og:url + og:locale
+useLocaleHead(() => '/datenschutz')
 </script>

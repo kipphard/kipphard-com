@@ -673,7 +673,21 @@
     "close": "Schließen",
     "previous": "Vorheriges Bild",
     "next": "Nächstes Bild",
-    "enlarge": "Vergrößern"
+    "enlarge": "Vergrößern",
+    "moreProjects": "Weitere Projekte",
+    "project": "Projekt",
+    "client": "Kunde",
+    "period": "Zeitraum",
+    "type": "Typ",
+    "bottomCtaTitle": "Ein ähnliches Projekt im Kopf? Lass uns sprechen.",
+    "bottomCtaButton": "Projekt anfragen"
+  },
+  "productDetail": {
+    "recommended": "Empfohlen",
+    "notFound": "Produkt nicht gefunden.",
+    "allProducts": "← Alle Produkte",
+    "bottomCtaTitle": "Interesse? Schreib mir — ich beantworte jede Frage.",
+    "bottomCtaButton": "Kontakt aufnehmen"
   },
   "notFound": {
     "eyebrow": "404",

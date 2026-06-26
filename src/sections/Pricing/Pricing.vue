@@ -37,6 +37,7 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Icon from '@/components/ui/Icon/Icon.vue'
 
@@ -46,5 +47,5 @@ interface Tier {
 }
 
 const { t, tm } = useI18n()
-const tiers = tm('pricing.tiers') as Tier[]
+const tiers = computed(() => tm('pricing.tiers') as Tier[])
 </script>

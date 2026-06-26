@@ -4,7 +4,7 @@
       <article class="section blog-post">
         <div class="container blog-layout">
           <div class="blog-main">
-            <RouterLink to="/blog" class="crumb">{{ t('blog.backToBlog') }}</RouterLink>
+            <RouterLink :to="localePath('/blog')" class="crumb">{{ t('blog.backToBlog') }}</RouterLink>
             <div class="blog-post__meta">
               <span class="blog-tag">{{ t('blog.categories.' + post.category) }}</span>
               <span>{{ formatDate(post.publishedAt, lang) }}</span>
@@ -32,7 +32,7 @@
                 <span class="blog-tag">{{ t('blog.categories.' + r.category) }}</span>
                 <span>{{ formatDate(r.publishedAt, lang) }}</span>
               </div>
-              <h3><RouterLink :to="`/blog/${r.slug}`">{{ r[lang].title }}</RouterLink></h3>
+              <h3><RouterLink :to="localePath(`/blog/${r.slug}`)">{{ r[lang].title }}</RouterLink></h3>
               <p class="blog-card__excerpt">{{ r[lang].excerpt }}</p>
             </article>
           </div>
@@ -43,7 +43,7 @@
     <div v-else class="blog-notfound">
       <div class="container">
         <p>{{ t('blog.notFound') }}</p>
-        <RouterLink to="/blog" class="btn btn--ghost">{{ t('blog.backToBlog') }}</RouterLink>
+        <RouterLink :to="localePath('/blog')" class="btn btn--ghost">{{ t('blog.backToBlog') }}</RouterLink>
       </div>
     </div>
   </main>
@@ -63,9 +63,12 @@ import {
   type BlogLang,
 } from '@/lib/blog'
 import BlogSidebar from '@/components/blog/BlogSidebar.vue'
+import { useLocalePath } from '@/composables/useLocalePath'
+import { useLocaleHead } from '@/composables/useLocaleHead'
 
 const route = useRoute()
 const { t, locale } = useI18n()
+const { localePath } = useLocalePath()
 const lang = computed(() => (locale.value === 'en' ? 'en' : 'de') as BlogLang)
 
 const slug = computed(() => {
@@ -79,7 +82,8 @@ const content = computed(() =>
 )
 const related = computed(() => (post.value ? relatedPosts(post.value, 3) : []))
 
-const canonical = computed(() => `https://kipphard.com/blog/${slug.value}`)
+// canonical + hreflang + og:url + og:locale — blog slug is identical across locales.
+const { canonical } = useLocaleHead(() => `/blog/${slug.value}`)
 const jsonLd = computed(() =>
   JSON.stringify({
     '@context': 'https://schema.org',
@@ -104,12 +108,10 @@ useHead({
     { property: 'og:title', content: () => content.value.title },
     { property: 'og:description', content: () => content.value.description },
     { property: 'og:type', content: 'article' },
-    { property: 'og:url', content: () => canonical.value },
     { property: 'og:image', content: 'https://kipphard.com/og-image.png' },
     { property: 'article:published_time', content: () => post.value?.publishedAt ?? '' },
     { name: 'twitter:card', content: 'summary_large_image' },
   ],
-  link: [{ rel: 'canonical', href: () => canonical.value }],
   script: [{ type: 'application/ld+json', innerHTML: () => jsonLd.value }],
 })
 </script>

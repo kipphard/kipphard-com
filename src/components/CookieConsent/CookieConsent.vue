@@ -12,7 +12,7 @@
           <p class="consent__title">{{ t('consent.title') }}</p>
           <p class="consent__body">
             {{ t('consent.body') }}
-            <RouterLink to="/datenschutz" class="consent__link">{{ t('consent.privacyLink') }}</RouterLink>.
+            <RouterLink :to="localePath('/datenschutz')" class="consent__link">{{ t('consent.privacyLink') }}</RouterLink>.
           </p>
         </div>
         <div class="consent__actions">
@@ -33,8 +33,10 @@ import { onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { bannerOpen, initConsent, acceptAnalytics, declineAnalytics } from '@/lib/consent'
+import { useLocalePath } from '@/composables/useLocalePath'
 
 const { t } = useI18n()
+const { localePath } = useLocalePath()
 
 // Cookie reads + GA happen client-side only; SSR renders nothing (bannerOpen=false).
 onMounted(() => initConsent())

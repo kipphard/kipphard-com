@@ -29,10 +29,11 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 interface Step { label: string; desc: string; ai: boolean }
 
 const { t, tm } = useI18n()
-const steps = tm('about.steps') as Step[]
+const steps = computed(() => tm('about.steps') as Step[])
 </script>

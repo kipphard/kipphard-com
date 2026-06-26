@@ -19,7 +19,7 @@
             <span v-for="s in item.stack" :key="s" class="tag">{{ s }}</span>
           </div>
           <div class="product-card__actions">
-            <RouterLink :to="`/products/${item.id}`" class="btn btn--primary btn--sm">
+            <RouterLink :to="localePath(`/products/${item.id}`)" class="btn btn--primary btn--sm">
               {{ t('products.detailsCta') }} <span class="arrow" aria-hidden="true">→</span>
             </RouterLink>
           </div>
@@ -27,7 +27,7 @@
       </div>
 
       <div class="products-all-link">
-        <RouterLink to="/products" class="btn btn--ghost">
+        <RouterLink :to="localePath('/products')" class="btn btn--ghost">
           {{ t('products.viewAll') }} <span class="arrow" aria-hidden="true">→</span>
         </RouterLink>
       </div>
@@ -39,6 +39,7 @@
 import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { useLocalePath } from '@/composables/useLocalePath'
 
 interface ProductItem {
   id: string
@@ -54,6 +55,7 @@ interface ProductItem {
 const FEATURED = ['barrierefrei-check', 'angebotsanfrage', 'wieder-verfuegbar', 'wunschliste']
 
 const { t, tm } = useI18n()
+const { localePath } = useLocalePath()
 const items = computed(() => {
   const all = tm('products.items') as ProductItem[]
   const featured = all.filter((i) => FEATURED.includes(i.id))

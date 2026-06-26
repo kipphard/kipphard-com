@@ -34,9 +34,9 @@
                 <span aria-hidden="true">·</span>
                 <span>{{ t('blog.readingTime', { min: readingMinutes(post[lang].body) }) }}</span>
               </div>
-              <h2><RouterLink :to="`/blog/${post.slug}`">{{ post[lang].title }}</RouterLink></h2>
+              <h2><RouterLink :to="localePath(`/blog/${post.slug}`)">{{ post[lang].title }}</RouterLink></h2>
               <p class="blog-card__excerpt">{{ post[lang].excerpt }}</p>
-              <RouterLink :to="`/blog/${post.slug}`" class="blog-card__more">
+              <RouterLink :to="localePath(`/blog/${post.slug}`)" class="blog-card__more">
                 {{ t('blog.readMore') }} <span class="arrow" aria-hidden="true">→</span>
               </RouterLink>
             </article>
@@ -57,9 +57,12 @@ import { useRoute, RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { publishedPosts, categories, readingMinutes, formatDate, type BlogLang } from '@/lib/blog'
 import BlogSidebar from '@/components/blog/BlogSidebar.vue'
+import { useLocalePath } from '@/composables/useLocalePath'
+import { useLocaleHead } from '@/composables/useLocaleHead'
 
 const route = useRoute()
 const { t, locale } = useI18n()
+const { localePath } = useLocalePath()
 const lang = computed(() => (locale.value === 'en' ? 'en' : 'de') as BlogLang)
 
 const cats = categories()
@@ -85,10 +88,11 @@ useHead({
     { property: 'og:title',       content: () => t('pages.blog.title') },
     { property: 'og:description', content: () => t('pages.blog.description') },
     { property: 'og:type',        content: 'website' },
-    { property: 'og:url',         content: 'https://kipphard.com/blog' },
     { property: 'og:image',       content: 'https://kipphard.com/og-image.png' },
     { name: 'twitter:card',       content: 'summary_large_image' },
   ],
-  link: [{ rel: 'canonical', href: 'https://kipphard.com/blog' }],
 })
+
+// canonical + hreflang + og:url + og:locale
+useLocaleHead(() => '/blog')
 </script>

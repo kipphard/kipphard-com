@@ -1,26 +1,26 @@
 <template>
   <header class="nav">
     <div class="container nav__inner">
-      <RouterLink to="/" class="brand" :aria-label="t('nav.home')">
+      <RouterLink :to="localePath('/')" class="brand" :aria-label="t('nav.home')">
         <span class="brand__mark" aria-hidden="true">AK</span>
         <span>André Kipphard</span>
       </RouterLink>
 
       <nav class="nav__links" :aria-label="t('nav.mobileMenuLabel')">
-        <RouterLink to="/#about">{{ t('nav.about') }}</RouterLink>
-        <RouterLink to="/#services">{{ t('nav.services') }}</RouterLink>
-        <RouterLink to="/#work">{{ t('nav.work') }}</RouterLink>
-        <RouterLink to="/products">{{ t('nav.products') }}</RouterLink>
-        <RouterLink to="/#labs">{{ t('nav.labs') }}</RouterLink>
-        <RouterLink to="/#pricing">{{ t('nav.pricing') }}</RouterLink>
+        <RouterLink :to="localePath('/#about')">{{ t('nav.about') }}</RouterLink>
+        <RouterLink :to="localePath('/#services')">{{ t('nav.services') }}</RouterLink>
+        <RouterLink :to="localePath('/#work')">{{ t('nav.work') }}</RouterLink>
+        <RouterLink :to="localePath('/products')">{{ t('nav.products') }}</RouterLink>
+        <RouterLink :to="localePath('/#labs')">{{ t('nav.labs') }}</RouterLink>
+        <RouterLink :to="localePath('/#pricing')">{{ t('nav.pricing') }}</RouterLink>
       </nav>
 
       <div class="nav__spacer"></div>
 
       <div class="nav__tools">
         <div class="lang-toggle" role="group" :aria-label="t('nav.langLabel')">
-          <button :class="{ active: locale === 'de' }" :aria-pressed="locale === 'de'" @click="locale = 'de'">DE</button>
-          <button :class="{ active: locale === 'en' }" :aria-pressed="locale === 'en'" @click="locale = 'en'">EN</button>
+          <button :class="{ active: locale === 'de' }" :aria-pressed="locale === 'de'" @click="switchTo('de')">DE</button>
+          <button :class="{ active: locale === 'en' }" :aria-pressed="locale === 'en'" @click="switchTo('en')">EN</button>
         </div>
 
         <button
@@ -31,7 +31,7 @@
           <Icon :name="theme === 'dark' ? 'sun' : 'moon'" :size="18" />
         </button>
 
-        <RouterLink to="/#contact" class="btn btn--primary btn--sm nav-cta">
+        <RouterLink :to="localePath('/#contact')" class="btn btn--primary btn--sm nav-cta">
           {{ t('nav.ctaShort') }}
           <span class="arrow" aria-hidden="true">→</span>
         </RouterLink>
@@ -57,19 +57,19 @@
     :aria-label="t('nav.mobileMenuLabel')"
   >
     <ol>
-      <li><RouterLink to="/#about" @click="menuOpen = false">{{ t('nav.about') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/#services" @click="menuOpen = false">{{ t('nav.services') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/#work" @click="menuOpen = false">{{ t('nav.work') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/products" @click="menuOpen = false">{{ t('nav.products') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/#labs" @click="menuOpen = false">{{ t('nav.labs') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/#pricing" @click="menuOpen = false">{{ t('nav.pricing') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink to="/#contact" @click="menuOpen = false">{{ t('nav.contact') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink :to="localePath('/#about')" @click="menuOpen = false">{{ t('nav.about') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink :to="localePath('/#services')" @click="menuOpen = false">{{ t('nav.services') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink :to="localePath('/#work')" @click="menuOpen = false">{{ t('nav.work') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink :to="localePath('/products')" @click="menuOpen = false">{{ t('nav.products') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink :to="localePath('/#labs')" @click="menuOpen = false">{{ t('nav.labs') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink :to="localePath('/#pricing')" @click="menuOpen = false">{{ t('nav.pricing') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink :to="localePath('/#contact')" @click="menuOpen = false">{{ t('nav.contact') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
     </ol>
 
     <div class="mobile-controls">
       <div class="lang-toggle" role="group" :aria-label="t('nav.langLabel')">
-        <button :class="{ active: locale === 'de' }" :aria-pressed="locale === 'de'" @click="locale = 'de'">DE</button>
-        <button :class="{ active: locale === 'en' }" :aria-pressed="locale === 'en'" @click="locale = 'en'">EN</button>
+        <button :class="{ active: locale === 'de' }" :aria-pressed="locale === 'de'" @click="switchTo('de')">DE</button>
+        <button :class="{ active: locale === 'en' }" :aria-pressed="locale === 'en'" @click="switchTo('en')">EN</button>
       </div>
       <button
         class="icon-btn"
@@ -90,11 +90,25 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import Icon from '@/components/ui/Icon/Icon.vue'
+import { useLocalePath } from '@/composables/useLocalePath'
+import { localeFromPath, toLocalePath, type Locale } from '@/lib/i18n-routing'
 
 const { t, locale } = useI18n()
 const route = useRoute()
+const router = useRouter()
+const { localePath } = useLocalePath()
+
+// Switch language by navigating to the equivalent URL in the target locale
+// (preserves hash/query and translates the product slug). The route guard then
+// sets the i18n locale from the URL.
+function switchTo(target: Locale) {
+  localStorage.setItem('ak-lang', target)
+  const current = localeFromPath(route.path)
+  if (current === target) return
+  router.push(toLocalePath(route.fullPath, target, current))
+}
 
 const theme = ref<'dark' | 'light'>('dark')
 const menuOpen = ref(false)

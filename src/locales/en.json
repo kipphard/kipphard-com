@@ -673,7 +673,21 @@
     "close": "Close",
     "previous": "Previous image",
     "next": "Next image",
-    "enlarge": "Enlarge"
+    "enlarge": "Enlarge",
+    "moreProjects": "More projects",
+    "project": "Project",
+    "client": "Client",
+    "period": "Period",
+    "type": "Type",
+    "bottomCtaTitle": "A similar project in mind? Let's talk.",
+    "bottomCtaButton": "Request a project"
+  },
+  "productDetail": {
+    "recommended": "Recommended",
+    "notFound": "Product not found.",
+    "allProducts": "← All products",
+    "bottomCtaTitle": "Questions? Drop me a line — I answer every one.",
+    "bottomCtaButton": "Get in touch"
   },
   "notFound": {
     "eyebrow": "404",
