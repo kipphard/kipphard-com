@@ -846,7 +846,7 @@
           "BFSG",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/barrierefrei-check/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/accessibility-check/main/demo/blueprint.json",
         "detail": {
           "lede": "Prüfe deine Website in Minuten auf Barrierefreiheit nach WCAG 2.2 und BFSG, behebe die wichtigsten Fehler mit konkreten Anleitungen und erstelle eine rechtssichere Barrierefreiheitserklärung. Kein Overlay-Widget, das Probleme nur überdeckt — ein echtes Audit deines gerenderten HTML.",
           "ctaPrimary": "Early Access sichern",
@@ -962,7 +962,7 @@
           "JMStV",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/altersverifikation/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/age-verification/main/demo/blueprint.json",
         "detail": {
           "lede": "Zeige Besuchern eine Altersabfrage, bevor sie deine Seite oder bestimmte Produkte sehen — als einfache Bestätigung oder per Geburtsdatum. DSGVO-konform: Das Geburtsdatum wird ausschließlich im Browser geprüft, es verlässt nie deinen Server.",
           "ctaPrimary": "Early Access sichern",
@@ -1077,7 +1077,7 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/angebotsanfrage/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/request-a-quote/main/demo/blueprint.json",
         "detail": {
           "lede": "Lass Kunden Produkte auf eine Angebotsliste setzen und eine Anfrage senden — statt direkt zu kaufen. Ideal für B2B, Großhandel und Shops mit Preisen auf Anfrage. Jede Anfrage landet im WordPress-Backend und in deinem Postfach.",
           "ctaPrimary": "Early Access sichern",
@@ -1192,7 +1192,7 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wieder-verfuegbar/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/back-in-stock/main/demo/blueprint.json",
         "detail": {
           "lede": "Zeige bei ausverkauften Produkten ein 'Benachrichtige mich'-Formular. Kunden tragen ihre E-Mail ein — und sobald das Produkt wieder lieferbar ist, werden sie automatisch benachrichtigt. So holst du Verkäufe zurück, die sonst verloren gingen.",
           "ctaPrimary": "Early Access sichern",
@@ -1307,7 +1307,7 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wunschliste/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wishlist/main/demo/blueprint.json",
         "detail": {
           "lede": "Lass Kunden Produkte auf eine Wunschliste setzen und später kaufen. Die Liste bleibt erhalten — für eingeloggte Kunden im Konto, für Gäste per Cookie. Mehr Wiederbesuche, mehr Conversions.",
           "ctaPrimary": "Early Access sichern",
@@ -1421,7 +1421,7 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/checkout-felder/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/checkout-fields/main/demo/blueprint.json",
         "detail": {
           "lede": "Passe die Checkout-Felder deines WooCommerce-Shops an: Felder umbenennen, als Pflicht markieren, ausblenden, neu anordnen — und eigene Felder hinzufügen. Die Werte landen automatisch in der Bestellung und in den E-Mails.",
           "ctaPrimary": "Early Access sichern",
@@ -1535,7 +1535,7 @@
           "Datenschutz",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/dsgvo-webfonts/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/gdpr-webfonts/main/demo/blueprint.json",
         "detail": {
           "lede": "Prüfe deine Website auf externe Anfragen, die personenbezogene Daten (z. B. die IP-Adresse) an Dritte übertragen — Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA und mehr. Du bekommst einen nach Risiko sortierten Bericht mit konkreten Empfehlungen und kannst die häufigsten Probleme direkt abstellen. Kein Cookie-Banner — sondern weniger Anfragen an Dritte.",
           "ctaPrimary": "Early Access sichern",
