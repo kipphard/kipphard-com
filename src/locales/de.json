@@ -885,7 +885,7 @@
             }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
+          "pricingNote": "Preise zzgl. MwSt. — wird im Checkout länderabhängig berechnet; Unternehmen mit USt-IdNr. zahlen per Reverse-Charge netto · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
           "pricing": [
             {
               "name": "Free",

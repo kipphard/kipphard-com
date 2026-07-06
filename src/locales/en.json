@@ -885,7 +885,7 @@
             }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Prices incl. German VAT · annual license · 7-day free trial, no payment details required.",
+          "pricingNote": "Prices excl. VAT — added at checkout based on your country; businesses with a VAT ID pay reverse-charge · annual license · 7-day free trial, no payment details required.",
           "pricing": [
             {
               "name": "Free",
