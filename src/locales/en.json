@@ -885,14 +885,15 @@
             }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricingNote": "Prices incl. German VAT · annual license · 7-day free trial, no payment details required.",
           "pricing": [
             {
               "name": "Free",
               "price": "0 EUR",
               "period": "forever",
               "highlighted": false,
-              "cta": "Start for free",
+              "cta": "Install on WordPress.org",
+              "url": "https://wordpress.org/plugins/kipphard-accessibility-audit/",
               "features": [
                 "12 audit rules",
                 "Full-site scan — all pages & posts",
@@ -905,12 +906,14 @@
               "price": "99 EUR",
               "period": "per year",
               "highlighted": true,
-              "cta": "Secure early access",
+              "cta": "Get Pro",
+              "url": "https://checkout.freemius.com/plugin/33847/plan/55637/?billing_cycle=annual&currency=eur",
               "features": [
                 "Scheduled automatic scans",
                 "PDF conformance report",
                 "History monitoring",
-                "Priority support"
+                "Priority support",
+                "1 site"
               ]
             },
             {
@@ -918,12 +921,13 @@
               "price": "299 EUR",
               "period": "per year",
               "highlighted": false,
-              "cta": "Get in touch",
+              "cta": "Get Agency",
+              "url": "https://checkout.freemius.com/plugin/33847/plan/55637/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
+                "Everything in Pro",
+                "Up to 10 sites",
                 "Multisite support",
-                "Multiple client sites",
-                "White-label reports",
-                "Everything in Pro"
+                "Multiple client sites"
               ]
             }
           ],

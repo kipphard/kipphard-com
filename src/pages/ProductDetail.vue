@@ -92,7 +92,16 @@
               <ul class="pricing-tier__features">
                 <li v-for="f in tier.features" :key="f">{{ f }}</li>
               </ul>
-              <a class="btn btn--primary btn--sm" :href="localePath('/#contact')">
+              <a
+                v-if="tier.url"
+                class="btn btn--primary btn--sm"
+                :href="tier.url"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ tier.cta }}
+              </a>
+              <a v-else class="btn btn--primary btn--sm" :href="localePath('/#contact')">
                 {{ tier.cta }}
               </a>
             </div>
@@ -159,6 +168,7 @@ interface PricingTier {
   period: string
   highlighted: boolean
   cta: string
+  url?: string
   features: string[]
 }
 

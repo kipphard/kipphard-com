@@ -885,14 +885,15 @@
             }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
           "pricing": [
             {
               "name": "Free",
               "price": "0 EUR",
               "period": "dauerhaft",
               "highlighted": false,
-              "cta": "Kostenlos starten",
+              "cta": "Auf WordPress.org installieren",
+              "url": "https://wordpress.org/plugins/kipphard-accessibility-audit/",
               "features": [
                 "12 Prüfregeln",
                 "Komplette Website — alle Seiten & Beiträge",
@@ -905,12 +906,14 @@
               "price": "99 EUR",
               "period": "pro Jahr",
               "highlighted": true,
-              "cta": "Early Access sichern",
+              "cta": "Pro holen",
+              "url": "https://checkout.freemius.com/plugin/33847/plan/55637/?billing_cycle=annual&currency=eur",
               "features": [
                 "Geplante automatische Scans",
                 "PDF-Konformitätsbericht",
                 "Verlaufs-Monitoring",
-                "Priority-Support"
+                "Priority-Support",
+                "1 Website"
               ]
             },
             {
@@ -918,12 +921,13 @@
               "price": "299 EUR",
               "period": "pro Jahr",
               "highlighted": false,
-              "cta": "Anfragen",
+              "cta": "Agency holen",
+              "url": "https://checkout.freemius.com/plugin/33847/plan/55637/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
+                "Alles aus Pro",
+                "Bis zu 10 Websites",
                 "Multisite-Support",
-                "Mehrere Kundenseiten",
-                "White-Label-Berichte",
-                "Alles aus Pro"
+                "Mehrere Kundenseiten"
               ]
             }
           ],
