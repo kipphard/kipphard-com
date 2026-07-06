@@ -12,7 +12,16 @@
           <h1>{{ item.name }}</h1>
           <p class="cs-hero__lede">{{ item.detail.lede }}</p>
           <div class="cs-hero__actions">
-            <a class="btn btn--primary" :href="localePath('/#contact')">
+            <a
+              v-if="item.installUrl"
+              class="btn btn--primary"
+              :href="item.installUrl"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ item.detail.ctaPrimary }} <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a v-else class="btn btn--primary" :href="localePath('/#contact')">
               {{ item.detail.ctaPrimary }} <span class="arrow">→</span>
             </a>
             <a class="btn btn--ghost" href="#features">
@@ -185,6 +194,7 @@ interface ProductItem {
   priceFrom: string
   stack: string[]
   demoUrl: string
+  installUrl?: string
   detail: ProductDetail
 }
 

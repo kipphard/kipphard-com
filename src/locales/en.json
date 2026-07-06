@@ -760,10 +760,10 @@
     },
     "products": {
       "title": "Products — WordPress Plugins by André Kipphard",
-      "description": "Focused, well-maintained WordPress plugins for the German market — built by a senior developer. Barrierefrei Check and more tools."
+      "description": "Focused, well-maintained WordPress plugins for the German market — built by a senior developer. Kipphard Accessibility Audit and more tools."
     },
     "barrierefrei-check": {
-      "title": "Barrierefrei Check – BFSG & WCAG Plugin for WordPress",
+      "title": "Kipphard Accessibility Audit – BFSG & WCAG Plugin for WordPress",
       "description": "WordPress plugin for BFSG and WCAG compliance: honest accessibility audit of your rendered HTML, prioritised issues with fixes, and a generator for your accessibility statement."
     },
     "altersverifikation": {
@@ -835,7 +835,7 @@
       {
         "id": "barrierefrei-check",
         "group": "accessibility",
-        "name": "Barrierefrei Check",
+        "name": "Kipphard Accessibility Audit",
         "tagline": "BFSG & WCAG compliance for WordPress — honest audit instead of an overlay.",
         "category": "WordPress Plugin",
         "status": "available",
@@ -846,16 +846,17 @@
           "BFSG",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/accessibility-check/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-accessibility-audit/main/demo/blueprint.json",
+        "installUrl": "https://wordpress.org/plugins/kipphard-accessibility-audit/",
         "detail": {
           "lede": "Check your website for accessibility compliance with WCAG 2.2 and BFSG in minutes, fix the most critical issues with concrete guidance, and generate a legally sound accessibility statement. No overlay widget that merely masks problems — a real audit of your rendered HTML.",
-          "ctaPrimary": "Secure early access",
+          "ctaPrimary": "Install free on WordPress.org",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo coming soon.",
           "problemTitle": "The problem",
           "problem": "Since 28 June 2025, the German Accessibility Strengthening Act (BFSG) requires many online shops and service providers to offer accessible websites — violations can result in legal warnings. Most one-click overlay tools do not meet the requirements: they mask problems via JavaScript instead of solving them, and are rejected by courts and disability advocacy groups.",
           "solutionTitle": "The solution",
-          "solution": "Barrierefrei Check analyses the real, rendered HTML of your pages — exactly as screen readers and assistive technologies see it. You get a prioritised list of concrete issues by severity, each with the corresponding WCAG criterion and a plain-language fix guide. On top of that, you can generate a BFSG-compliant accessibility statement via a simple form.",
+          "solution": "Kipphard Accessibility Audit analyses the real, rendered HTML of your pages — exactly as screen readers and assistive technologies see it. You get a prioritised list of concrete issues by severity, each with the corresponding WCAG criterion and a plain-language fix guide. On top of that, you can generate a BFSG-compliant accessibility statement via a simple form.",
           "featuresTitle": "What it does",
           "features": [
             {
@@ -894,7 +895,7 @@
               "cta": "Start for free",
               "features": [
                 "12 audit rules",
-                "Home + up to 4 pages",
+                "Full-site scan — all pages & posts",
                 "Accessibility statement",
                 "Manual scan"
               ]
@@ -906,7 +907,6 @@
               "highlighted": true,
               "cta": "Secure early access",
               "features": [
-                "Scan all pages",
                 "Scheduled automatic scans",
                 "PDF conformance report",
                 "History monitoring",
@@ -931,7 +931,7 @@
           "faq": [
             {
               "q": "Does this plugin make my website automatically accessible?",
-              "a": "No — and no one can honestly promise that. Automated tests catch a portion of WCAG criteria. Barrierefrei Check shows you exactly what needs doing and helps you fix it. Colour contrast, keyboard navigation and content require additional manual review."
+              "a": "No — and no one can honestly promise that. Automated tests catch a portion of WCAG criteria. Kipphard Accessibility Audit shows you exactly what needs doing and helps you fix it. Colour contrast, keyboard navigation and content require additional manual review."
             },
             {
               "q": "What is BFSG?",
@@ -939,7 +939,7 @@
             },
             {
               "q": "How is it different from overlay tools like UserWay or accessiBe?",
-              "a": "Overlays place a JavaScript layer over your page and mask problems instead of solving them — they are rejected by disability advocacy groups and in court proceedings. Barrierefrei Check audits the actual source code and helps you fix the root causes."
+              "a": "Overlays place a JavaScript layer over your page and mask problems instead of solving them — they are rejected by disability advocacy groups and in court proceedings. Kipphard Accessibility Audit audits the actual source code and helps you fix the root causes."
             },
             {
               "q": "Do I need coding skills?",
@@ -951,7 +951,7 @@
       {
         "id": "altersverifikation",
         "group": "privacy",
-        "name": "Altersverifikation",
+        "name": "Kipphard Age Verification",
         "tagline": "Age gate for WordPress & WooCommerce — GDPR-compliant, no data leakage.",
         "category": "WordPress Plugin",
         "status": "available",
@@ -962,7 +962,7 @@
           "JMStV",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/age-verification/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-age-verification/main/demo/blueprint.json",
         "detail": {
           "lede": "Show visitors an age verification prompt before they see your site or specific products — as a simple confirmation or a date-of-birth check. GDPR-compliant: the date of birth is evaluated exclusively in the browser and never leaves your server.",
           "ctaPrimary": "Secure early access",
@@ -1066,7 +1066,7 @@
       {
         "id": "angebotsanfrage",
         "group": "ecommerce",
-        "name": "Angebotsanfrage",
+        "name": "Kipphard Request a Quote",
         "tagline": "Request a Quote for WooCommerce — quote list & enquiry instead of a cart.",
         "category": "WordPress Plugin",
         "status": "available",
@@ -1077,7 +1077,7 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/request-a-quote/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-request-a-quote/main/demo/blueprint.json",
         "detail": {
           "lede": "Let customers add products to a quote list and submit an enquiry — instead of buying directly. Ideal for B2B, wholesale, and shops with price-on-request products. Every enquiry lands in the WordPress back end and your inbox.",
           "ctaPrimary": "Secure early access",
@@ -1181,7 +1181,7 @@
       {
         "id": "wieder-verfuegbar",
         "group": "ecommerce",
-        "name": "Wieder verfügbar",
+        "name": "Kipphard Back in Stock",
         "tagline": "Back-in-stock notifications for WooCommerce — win back lost sales.",
         "category": "WordPress Plugin",
         "status": "available",
@@ -1192,7 +1192,7 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/back-in-stock/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-back-in-stock/main/demo/blueprint.json",
         "detail": {
           "lede": "Show a 'Notify me' form on out-of-stock product pages. Shoppers leave their email — and the moment the product is back in stock, they get an automatic notification. That's how you recover sales that would otherwise be gone for good.",
           "ctaPrimary": "Secure early access",
@@ -1296,7 +1296,7 @@
       {
         "id": "wunschliste",
         "group": "ecommerce",
-        "name": "Wunschliste",
+        "name": "Kipphard Wishlist",
         "tagline": "WooCommerce Wishlist — save products, buy later, sell more.",
         "category": "WordPress Plugin",
         "status": "available",
@@ -1307,7 +1307,7 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/wishlist/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-wishlist/main/demo/blueprint.json",
         "detail": {
           "lede": "Let shoppers save products to a wishlist and come back to buy later. The list persists — in the account for logged-in customers, via cookie for guests. More return visits, more conversions.",
           "ctaPrimary": "Secure early access",
@@ -1410,7 +1410,7 @@
       {
         "id": "checkout-felder",
         "group": "ecommerce",
-        "name": "Checkout-Felder",
+        "name": "Kipphard Checkout Fields",
         "tagline": "WooCommerce Checkout Field Editor — add, rename, and reorder checkout fields.",
         "category": "WordPress Plugin",
         "status": "available",
@@ -1421,7 +1421,7 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/checkout-fields/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-checkout-fields/main/demo/blueprint.json",
         "detail": {
           "lede": "Customise the checkout fields in your WooCommerce shop: rename fields, mark them as required, hide them, reorder them — and add your own. Values are automatically saved to the order and included in notification emails.",
           "ctaPrimary": "Secure early access",
@@ -1524,7 +1524,7 @@
       {
         "id": "dsgvo-webfonts",
         "group": "privacy",
-        "name": "DSGVO Webfonts",
+        "name": "Kipphard GDPR Web Fonts",
         "tagline": "Find & stop external requests — Google Fonts, trackers, embeds. An honest scan.",
         "category": "WordPress Plugin",
         "status": "available",
@@ -1535,7 +1535,7 @@
           "Privacy",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/gdpr-webfonts/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-gdpr-webfonts/main/demo/blueprint.json",
         "detail": {
           "lede": "Scan your site for external requests that send personal data (such as the visitor's IP address) to third parties — Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA and more. You get a risk-sorted report with concrete recommendations and can fix the most common issues right away. Not a cookie banner — simply fewer requests to third parties.",
           "ctaPrimary": "Get early access",
