@@ -846,7 +846,7 @@
           "BFSG",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-accessibility-audit/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-accessibility-audit.blueprint.json",
         "installUrl": "https://wordpress.org/plugins/kipphard-accessibility-audit/",
         "detail": {
           "lede": "Check your website for accessibility compliance with WCAG 2.2 and BFSG in minutes, fix the most critical issues with concrete guidance, and generate a legally sound accessibility statement. No overlay widget that merely masks problems — a real audit of your rendered HTML.",
@@ -966,10 +966,10 @@
           "JMStV",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-age-verification/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-age-verification.blueprint.json",
         "detail": {
           "lede": "Show visitors an age verification prompt before they see your site or specific products — as a simple confirmation or a date-of-birth check. GDPR-compliant: the date of birth is evaluated exclusively in the browser and never leaves your server.",
-          "ctaPrimary": "Secure early access",
+          "ctaPrimary": "Get in touch",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo in the browser — no installation needed.",
           "problemTitle": "The problem",
@@ -1004,7 +1004,7 @@
             }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricingNote": "Prices excl. VAT — added at checkout based on your country; businesses with a VAT ID pay reverse-charge · annual license · 7-day free trial, no payment details required.",
           "pricing": [
             {
               "name": "Free",
@@ -1024,7 +1024,8 @@
               "price": "39 EUR",
               "period": "per year",
               "highlighted": true,
-              "cta": "Secure early access",
+              "cta": "Get Pro",
+              "url": "https://checkout.freemius.com/plugin/33928/plan/55773/?billing_cycle=annual&currency=eur",
               "features": [
                 "WooCommerce category gating",
                 "Geo-targeting by country",
@@ -1038,7 +1039,8 @@
               "price": "99 EUR",
               "period": "per year",
               "highlighted": false,
-              "cta": "Get in touch",
+              "cta": "Get Agency",
+              "url": "https://checkout.freemius.com/plugin/33928/plan/55773/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Up to 10 websites",
                 "Multisite support",
@@ -1081,10 +1083,10 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-request-a-quote/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-request-a-quote.blueprint.json",
         "detail": {
           "lede": "Let customers add products to a quote list and submit an enquiry — instead of buying directly. Ideal for B2B, wholesale, and shops with price-on-request products. Every enquiry lands in the WordPress back end and your inbox.",
-          "ctaPrimary": "Secure early access",
+          "ctaPrimary": "Get in touch",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo with WooCommerce in the browser.",
           "problemTitle": "The problem",
@@ -1119,7 +1121,7 @@
             }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricingNote": "Prices excl. VAT — added at checkout based on your country; businesses with a VAT ID pay reverse-charge · annual license · 7-day free trial, no payment details required.",
           "pricing": [
             {
               "name": "Free",
@@ -1139,7 +1141,8 @@
               "price": "69 EUR",
               "period": "per year",
               "highlighted": true,
-              "cta": "Secure early access",
+              "cta": "Get Pro",
+              "url": "https://checkout.freemius.com/plugin/33930/plan/55775/?billing_cycle=annual&currency=eur",
               "features": [
                 "Quote to WooCommerce order",
                 "PDF quotes",
@@ -1153,7 +1156,8 @@
               "price": "149 EUR",
               "period": "per year",
               "highlighted": false,
-              "cta": "Get in touch",
+              "cta": "Get Agency",
+              "url": "https://checkout.freemius.com/plugin/33930/plan/55775/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Up to 10 websites",
                 "Multisite support",
@@ -1196,10 +1200,10 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-back-in-stock/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-back-in-stock.blueprint.json",
         "detail": {
           "lede": "Show a 'Notify me' form on out-of-stock product pages. Shoppers leave their email — and the moment the product is back in stock, they get an automatic notification. That's how you recover sales that would otherwise be gone for good.",
-          "ctaPrimary": "Secure early access",
+          "ctaPrimary": "Get in touch",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo with WooCommerce in the browser.",
           "problemTitle": "The problem",
@@ -1234,7 +1238,7 @@
             }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricingNote": "Prices excl. VAT — added at checkout based on your country; businesses with a VAT ID pay reverse-charge · annual license · 7-day free trial, no payment details required.",
           "pricing": [
             {
               "name": "Free",
@@ -1254,7 +1258,8 @@
               "price": "49 EUR",
               "period": "per year",
               "highlighted": true,
-              "cta": "Secure early access",
+              "cta": "Get Pro",
+              "url": "https://checkout.freemius.com/plugin/33931/plan/55778/?billing_cycle=annual&currency=eur",
               "features": [
                 "Double opt-in",
                 "Per-variation notifications",
@@ -1268,7 +1273,8 @@
               "price": "129 EUR",
               "period": "per year",
               "highlighted": false,
-              "cta": "Get in touch",
+              "cta": "Get Agency",
+              "url": "https://checkout.freemius.com/plugin/33931/plan/55778/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Up to 10 websites",
                 "Multisite support",
@@ -1311,10 +1317,10 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-wishlist/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-wishlist.blueprint.json",
         "detail": {
           "lede": "Let shoppers save products to a wishlist and come back to buy later. The list persists — in the account for logged-in customers, via cookie for guests. More return visits, more conversions.",
-          "ctaPrimary": "Secure early access",
+          "ctaPrimary": "Get in touch",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo with WooCommerce in the browser.",
           "problemTitle": "The problem",
@@ -1349,7 +1355,7 @@
             }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricingNote": "Prices excl. VAT — added at checkout based on your country; businesses with a VAT ID pay reverse-charge · annual license · 7-day free trial, no payment details required.",
           "pricing": [
             {
               "name": "Free",
@@ -1369,7 +1375,8 @@
               "price": "49 EUR",
               "period": "per year",
               "highlighted": true,
-              "cta": "Secure early access",
+              "cta": "Get Pro",
+              "url": "https://checkout.freemius.com/plugin/33932/plan/55780/?billing_cycle=annual&currency=eur",
               "features": [
                 "Shareable wishlists (link)",
                 "Variation support",
@@ -1382,7 +1389,8 @@
               "price": "129 EUR",
               "period": "per year",
               "highlighted": false,
-              "cta": "Get in touch",
+              "cta": "Get Agency",
+              "url": "https://checkout.freemius.com/plugin/33932/plan/55780/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Up to 10 websites",
                 "Multisite support",
@@ -1425,10 +1433,10 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-checkout-fields/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-checkout-fields.blueprint.json",
         "detail": {
           "lede": "Customise the checkout fields in your WooCommerce shop: rename fields, mark them as required, hide them, reorder them — and add your own. Values are automatically saved to the order and included in notification emails.",
-          "ctaPrimary": "Secure early access",
+          "ctaPrimary": "Get in touch",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo with WooCommerce in the browser.",
           "problemTitle": "The problem",
@@ -1463,7 +1471,7 @@
             }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Prices incl. German VAT · annual license. Pro is launching soon — secure early-access pricing now.",
+          "pricingNote": "Prices excl. VAT — added at checkout based on your country; businesses with a VAT ID pay reverse-charge · annual license · 7-day free trial, no payment details required.",
           "pricing": [
             {
               "name": "Free",
@@ -1483,7 +1491,8 @@
               "price": "49 EUR",
               "period": "per year",
               "highlighted": true,
-              "cta": "Secure early access",
+              "cta": "Get Pro",
+              "url": "https://checkout.freemius.com/plugin/33933/plan/55782/?billing_cycle=annual&currency=eur",
               "features": [
                 "Field types: select, checkbox, radio, date, number",
                 "Conditional display (conditional logic)",
@@ -1496,7 +1505,8 @@
               "price": "129 EUR",
               "period": "per year",
               "highlighted": false,
-              "cta": "Get in touch",
+              "cta": "Get Agency",
+              "url": "https://checkout.freemius.com/plugin/33933/plan/55782/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Up to 10 websites",
                 "Multisite support",
@@ -1539,10 +1549,10 @@
           "Privacy",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-gdpr-webfonts/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-gdpr-webfonts.blueprint.json",
         "detail": {
           "lede": "Scan your site for external requests that send personal data (such as the visitor's IP address) to third parties — Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA and more. You get a risk-sorted report with concrete recommendations and can fix the most common issues right away. Not a cookie banner — simply fewer requests to third parties.",
-          "ctaPrimary": "Get early access",
+          "ctaPrimary": "Get in touch",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo with a sample report in your browser.",
           "problemTitle": "The problem",
@@ -1577,7 +1587,7 @@
             }
           ],
           "pricingTitle": "Pricing",
-          "pricingNote": "Prices incl. 19% VAT · annual license. The Pro version is coming soon — secure early-access pricing now.",
+          "pricingNote": "Prices excl. VAT — added at checkout based on your country; businesses with a VAT ID pay reverse-charge · annual license · 7-day free trial, no payment details required.",
           "pricing": [
             {
               "name": "Free",
@@ -1597,7 +1607,8 @@
               "price": "39 EUR",
               "period": "per year",
               "highlighted": true,
-              "cta": "Get early access",
+              "cta": "Get Pro",
+              "url": "https://checkout.freemius.com/plugin/33934/plan/55784/?billing_cycle=annual&currency=eur",
               "features": [
                 "Host Google Fonts locally, automatically",
                 "Localize embeds (YouTube, Maps, Vimeo)",
@@ -1610,7 +1621,8 @@
               "price": "99 EUR",
               "period": "per year",
               "highlighted": false,
-              "cta": "Enquire",
+              "cta": "Get Agency",
+              "url": "https://checkout.freemius.com/plugin/33934/plan/55784/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Up to 10 websites",
                 "Multisite support",

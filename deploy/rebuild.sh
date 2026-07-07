@@ -17,5 +17,7 @@ export VITE_TURNSTILE_SITE_KEY=0x4AAAAAADWwWMF9Q4J3AWTt
 cd /opt/kipphard.com
 pnpm install --frozen-lockfile >/dev/null 2>&1
 pnpm build:server
-rsync -a --delete dist/ /var/www/kipphard.com/
+# --exclude /demo/: self-hosted WordPress Playground Pro-demo assets (plugin zips +
+# blueprints) live in the webroot but are NOT part of the site build — never delete them.
+rsync -a --delete --exclude '/demo/' dist/ /var/www/kipphard.com/
 echo "[$(date -u +%FT%TZ)] rebuild OK — $(ls dist/blog/*.html 2>/dev/null | wc -l) blog posts live"

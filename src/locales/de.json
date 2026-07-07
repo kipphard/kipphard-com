@@ -846,7 +846,7 @@
           "BFSG",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-accessibility-audit/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-accessibility-audit.blueprint.json",
         "installUrl": "https://wordpress.org/plugins/kipphard-accessibility-audit/",
         "detail": {
           "lede": "Prüfe deine Website in Minuten auf Barrierefreiheit nach WCAG 2.2 und BFSG, behebe die wichtigsten Fehler mit konkreten Anleitungen und erstelle eine rechtssichere Barrierefreiheitserklärung. Kein Overlay-Widget, das Probleme nur überdeckt — ein echtes Audit deines gerenderten HTML.",
@@ -966,10 +966,10 @@
           "JMStV",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-age-verification/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-age-verification.blueprint.json",
         "detail": {
           "lede": "Zeige Besuchern eine Altersabfrage, bevor sie deine Seite oder bestimmte Produkte sehen — als einfache Bestätigung oder per Geburtsdatum. DSGVO-konform: Das Geburtsdatum wird ausschließlich im Browser geprüft, es verlässt nie deinen Server.",
-          "ctaPrimary": "Early Access sichern",
+          "ctaPrimary": "Kontakt aufnehmen",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo im Browser — keine Installation nötig.",
           "problemTitle": "Das Problem",
@@ -1004,7 +1004,7 @@
             }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricingNote": "Preise zzgl. MwSt. — wird im Checkout länderabhängig berechnet; Unternehmen mit USt-IdNr. zahlen per Reverse-Charge netto · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
           "pricing": [
             {
               "name": "Free",
@@ -1024,7 +1024,8 @@
               "price": "39 EUR",
               "period": "pro Jahr",
               "highlighted": true,
-              "cta": "Early Access sichern",
+              "cta": "Pro holen",
+              "url": "https://checkout.freemius.com/plugin/33928/plan/55773/?billing_cycle=annual&currency=eur",
               "features": [
                 "WooCommerce-Kategorie-Gating",
                 "Geo-Targeting nach Land",
@@ -1038,7 +1039,8 @@
               "price": "99 EUR",
               "period": "pro Jahr",
               "highlighted": false,
-              "cta": "Anfragen",
+              "cta": "Agency holen",
+              "url": "https://checkout.freemius.com/plugin/33928/plan/55773/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Bis zu 10 Websites",
                 "Multisite-Support",
@@ -1081,10 +1083,10 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-request-a-quote/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-request-a-quote.blueprint.json",
         "detail": {
           "lede": "Lass Kunden Produkte auf eine Angebotsliste setzen und eine Anfrage senden — statt direkt zu kaufen. Ideal für B2B, Großhandel und Shops mit Preisen auf Anfrage. Jede Anfrage landet im WordPress-Backend und in deinem Postfach.",
-          "ctaPrimary": "Early Access sichern",
+          "ctaPrimary": "Kontakt aufnehmen",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo mit WooCommerce im Browser.",
           "problemTitle": "Das Problem",
@@ -1119,7 +1121,7 @@
             }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricingNote": "Preise zzgl. MwSt. — wird im Checkout länderabhängig berechnet; Unternehmen mit USt-IdNr. zahlen per Reverse-Charge netto · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
           "pricing": [
             {
               "name": "Free",
@@ -1139,7 +1141,8 @@
               "price": "69 EUR",
               "period": "pro Jahr",
               "highlighted": true,
-              "cta": "Early Access sichern",
+              "cta": "Pro holen",
+              "url": "https://checkout.freemius.com/plugin/33930/plan/55775/?billing_cycle=annual&currency=eur",
               "features": [
                 "Angebot zu WooCommerce-Bestellung",
                 "PDF-Angebote",
@@ -1153,7 +1156,8 @@
               "price": "149 EUR",
               "period": "pro Jahr",
               "highlighted": false,
-              "cta": "Anfragen",
+              "cta": "Agency holen",
+              "url": "https://checkout.freemius.com/plugin/33930/plan/55775/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Bis zu 10 Websites",
                 "Multisite-Support",
@@ -1196,10 +1200,10 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-back-in-stock/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-back-in-stock.blueprint.json",
         "detail": {
           "lede": "Zeige bei ausverkauften Produkten ein 'Benachrichtige mich'-Formular. Kunden tragen ihre E-Mail ein — und sobald das Produkt wieder lieferbar ist, werden sie automatisch benachrichtigt. So holst du Verkäufe zurück, die sonst verloren gingen.",
-          "ctaPrimary": "Early Access sichern",
+          "ctaPrimary": "Kontakt aufnehmen",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo mit WooCommerce im Browser.",
           "problemTitle": "Das Problem",
@@ -1234,7 +1238,7 @@
             }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricingNote": "Preise zzgl. MwSt. — wird im Checkout länderabhängig berechnet; Unternehmen mit USt-IdNr. zahlen per Reverse-Charge netto · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
           "pricing": [
             {
               "name": "Free",
@@ -1254,7 +1258,8 @@
               "price": "49 EUR",
               "period": "pro Jahr",
               "highlighted": true,
-              "cta": "Early Access sichern",
+              "cta": "Pro holen",
+              "url": "https://checkout.freemius.com/plugin/33931/plan/55778/?billing_cycle=annual&currency=eur",
               "features": [
                 "Double-Opt-in",
                 "Varianten-Benachrichtigungen",
@@ -1268,7 +1273,8 @@
               "price": "129 EUR",
               "period": "pro Jahr",
               "highlighted": false,
-              "cta": "Anfragen",
+              "cta": "Agency holen",
+              "url": "https://checkout.freemius.com/plugin/33931/plan/55778/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Bis zu 10 Websites",
                 "Multisite-Support",
@@ -1311,10 +1317,10 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-wishlist/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-wishlist.blueprint.json",
         "detail": {
           "lede": "Lass Kunden Produkte auf eine Wunschliste setzen und später kaufen. Die Liste bleibt erhalten — für eingeloggte Kunden im Konto, für Gäste per Cookie. Mehr Wiederbesuche, mehr Conversions.",
-          "ctaPrimary": "Early Access sichern",
+          "ctaPrimary": "Kontakt aufnehmen",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo mit WooCommerce im Browser.",
           "problemTitle": "Das Problem",
@@ -1349,7 +1355,7 @@
             }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricingNote": "Preise zzgl. MwSt. — wird im Checkout länderabhängig berechnet; Unternehmen mit USt-IdNr. zahlen per Reverse-Charge netto · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
           "pricing": [
             {
               "name": "Free",
@@ -1369,7 +1375,8 @@
               "price": "49 EUR",
               "period": "pro Jahr",
               "highlighted": true,
-              "cta": "Early Access sichern",
+              "cta": "Pro holen",
+              "url": "https://checkout.freemius.com/plugin/33932/plan/55780/?billing_cycle=annual&currency=eur",
               "features": [
                 "Teilbare Wunschlisten (Link)",
                 "Varianten-Unterstützung",
@@ -1382,7 +1389,8 @@
               "price": "129 EUR",
               "period": "pro Jahr",
               "highlighted": false,
-              "cta": "Anfragen",
+              "cta": "Agency holen",
+              "url": "https://checkout.freemius.com/plugin/33932/plan/55780/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Bis zu 10 Websites",
                 "Multisite-Support",
@@ -1425,10 +1433,10 @@
           "WordPress",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-checkout-fields/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-checkout-fields.blueprint.json",
         "detail": {
           "lede": "Passe die Checkout-Felder deines WooCommerce-Shops an: Felder umbenennen, als Pflicht markieren, ausblenden, neu anordnen — und eigene Felder hinzufügen. Die Werte landen automatisch in der Bestellung und in den E-Mails.",
-          "ctaPrimary": "Early Access sichern",
+          "ctaPrimary": "Kontakt aufnehmen",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo mit WooCommerce im Browser.",
           "problemTitle": "Das Problem",
@@ -1463,7 +1471,7 @@
             }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricingNote": "Preise zzgl. MwSt. — wird im Checkout länderabhängig berechnet; Unternehmen mit USt-IdNr. zahlen per Reverse-Charge netto · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
           "pricing": [
             {
               "name": "Free",
@@ -1483,7 +1491,8 @@
               "price": "49 EUR",
               "period": "pro Jahr",
               "highlighted": true,
-              "cta": "Early Access sichern",
+              "cta": "Pro holen",
+              "url": "https://checkout.freemius.com/plugin/33933/plan/55782/?billing_cycle=annual&currency=eur",
               "features": [
                 "Feldtypen: Auswahl, Checkbox, Radio, Datum, Zahl",
                 "Bedingte Anzeige (Conditional Logic)",
@@ -1496,7 +1505,8 @@
               "price": "129 EUR",
               "period": "pro Jahr",
               "highlighted": false,
-              "cta": "Anfragen",
+              "cta": "Agency holen",
+              "url": "https://checkout.freemius.com/plugin/33933/plan/55782/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Bis zu 10 Websites",
                 "Multisite-Support",
@@ -1539,10 +1549,10 @@
           "Datenschutz",
           "PHP"
         ],
-        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/kipphard/kipphard-gdpr-webfonts/main/demo/blueprint.json",
+        "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-gdpr-webfonts.blueprint.json",
         "detail": {
           "lede": "Prüfe deine Website auf externe Anfragen, die personenbezogene Daten (z. B. die IP-Adresse) an Dritte übertragen — Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA und mehr. Du bekommst einen nach Risiko sortierten Bericht mit konkreten Empfehlungen und kannst die häufigsten Probleme direkt abstellen. Kein Cookie-Banner — sondern weniger Anfragen an Dritte.",
-          "ctaPrimary": "Early Access sichern",
+          "ctaPrimary": "Kontakt aufnehmen",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo mit Beispiel-Bericht im Browser.",
           "problemTitle": "Das Problem",
@@ -1577,7 +1587,7 @@
             }
           ],
           "pricingTitle": "Preise",
-          "pricingNote": "Preise inkl. 19 % MwSt. · jährliche Lizenz. Die Pro-Version erscheint in Kürze — sichere dir jetzt Early-Access-Konditionen.",
+          "pricingNote": "Preise zzgl. MwSt. — wird im Checkout länderabhängig berechnet; Unternehmen mit USt-IdNr. zahlen per Reverse-Charge netto · jährliche Lizenz · 7 Tage kostenlos testen, ohne Zahlungsdaten.",
           "pricing": [
             {
               "name": "Free",
@@ -1597,7 +1607,8 @@
               "price": "39 EUR",
               "period": "pro Jahr",
               "highlighted": true,
-              "cta": "Early Access sichern",
+              "cta": "Pro holen",
+              "url": "https://checkout.freemius.com/plugin/33934/plan/55784/?billing_cycle=annual&currency=eur",
               "features": [
                 "Google Fonts automatisch lokal hosten",
                 "Embeds lokalisieren (YouTube, Maps, Vimeo)",
@@ -1610,7 +1621,8 @@
               "price": "99 EUR",
               "period": "pro Jahr",
               "highlighted": false,
-              "cta": "Anfragen",
+              "cta": "Agency holen",
+              "url": "https://checkout.freemius.com/plugin/33934/plan/55784/?licenses=10&billing_cycle=annual&currency=eur",
               "features": [
                 "Bis zu 10 Websites",
                 "Multisite-Support",
