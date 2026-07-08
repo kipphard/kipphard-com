@@ -12,6 +12,7 @@ import '@fontsource/manrope/700.css'
 import '@fontsource/manrope/800.css'
 import './styles/main.scss'
 import Home from './pages/Home.vue'
+import About from './pages/About.vue'
 import Impressum from './pages/Impressum.vue'
 import Datenschutz from './pages/Datenschutz.vue'
 import CaseStudy from './pages/CaseStudy.vue'
@@ -30,6 +31,7 @@ type RouteDesc = { path: string; component: Component }
 
 const baseRoutes: RouteDesc[] = [
   { path: '/', component: Home },
+  { path: '/about', component: About },
   { path: '/impressum', component: Impressum },
   { path: '/datenschutz', component: Datenschutz },
   { path: '/work/wickie', component: CaseStudy },

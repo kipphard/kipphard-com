@@ -7,6 +7,9 @@
         <p>{{ t('about.intro') }}</p>
         <p>{{ t('about.para2') }}</p>
         <p>{{ t('about.para3') }}</p>
+        <RouterLink :to="localePath('/about')" class="work-card__more">
+          {{ t('cv.aboutLink') }} <span class="arrow" aria-hidden="true">→</span>
+        </RouterLink>
       </div>
 
       <div>
@@ -31,9 +34,11 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useLocalePath } from '@/composables/useLocalePath'
 
 interface Step { label: string; desc: string; ai: boolean }
 
 const { t, tm } = useI18n()
+const { localePath } = useLocalePath()
 const steps = computed(() => tm('about.steps') as Step[])
 </script>

@@ -182,6 +182,150 @@
       }
     ]
   },
+  "cv": {
+    "eyebrow": "Über mich",
+    "name": "André Kipphard",
+    "role": "Frontend Engineer · Full-Stack- & Produktentwickler",
+    "location": "Paderborn, Deutschland · Remote",
+    "profile": "Frontend Engineer (Vue 3, Nuxt, TypeScript) mit über 7 Jahren Erfahrung – von Micro-Frontends im großen Maßstab bis zu eigenverantwortlich entwickelten Full-Stack-Produkten. Bei Kaufland Neukonzeption des Startseiten-Layouts (Personalisierung & SSR-Rendering) sowie Leitung einer teamübergreifenden Accessibility-Initiative. Parallel dazu eigenständige Tätigkeit mit Full-Stack-Anwendungen, kommerziellen WordPress-Produkten und einer selbst entwickelten ML-SaaS-Plattform.",
+    "downloadLabel": "Lebenslauf (PDF)",
+    "pdfUrl": "/andre-kipphard-lebenslauf-de.pdf",
+    "getInTouch": "Kontakt aufnehmen",
+    "aboutLink": "Mehr über mich",
+    "stats": [
+      {
+        "num": "7+",
+        "label": "Jahre Erfahrung"
+      },
+      {
+        "num": "40+",
+        "label": "Projekte live"
+      },
+      {
+        "num": "~37M",
+        "label": "wöchentliche Anfragen"
+      },
+      {
+        "num": "7",
+        "label": "WordPress-Produkte"
+      }
+    ],
+    "skillsTitle": "Kernkompetenzen",
+    "skills": [
+      {
+        "icon": "code",
+        "title": "Frontend",
+        "tags": [
+          "Vue 3",
+          "Nuxt",
+          "TypeScript",
+          "single-spa Micro-Frontends",
+          "React",
+          "SCSS"
+        ]
+      },
+      {
+        "icon": "server",
+        "title": "Full-Stack",
+        "tags": [
+          "NestJS/Node",
+          "FastAPI (Python)",
+          "PostgreSQL",
+          "REST & gRPC"
+        ]
+      },
+      {
+        "icon": "gauge",
+        "title": "Qualität & Performance",
+        "tags": [
+          "SSR & Core Web Vitals",
+          "Barrierefreiheit (WCAG 2.2)",
+          "Playwright & Vitest",
+          "Optimizely A/B",
+          "Datadog"
+        ]
+      },
+      {
+        "icon": "cart",
+        "title": "CMS & E-Commerce",
+        "tags": [
+          "WordPress (Theme- & Plugin-Entwicklung)",
+          "WooCommerce",
+          "Shopify"
+        ]
+      }
+    ],
+    "experienceTitle": "Berufserfahrung",
+    "experience": [
+      {
+        "period": "Okt. 2023 – heute",
+        "company": "Kaufland e-commerce",
+        "role": "Frontend Engineer (aus Junior-Rolle)",
+        "location": "Remote · Vollzeit",
+        "current": true,
+        "bullets": [
+          "Neukonzeption der Startseite als serverseitig konfigurierbares Layout-System mit vollständigem SSR-Prefetch und Personalisierung.",
+          "Verantwortlich für die SSR-Zuverlässigkeit der Startseite bei ~37 Mio. Anfragen pro Woche; Timeout-Handling neu konzipiert, sodass eine langsame Abhängigkeit nicht mehr das gesamte Rendering scheitern lässt — mediane TTFB um 34 % gesenkt.",
+          "12-tägige SSR-Personalisierungsregression diagnostiziert und behoben, Postmortem verfasst und einen automatisierten Regressionstest ergänzt.",
+          "Teamübergreifende Accessibility-Initiative (WCAG 2.2) geleitet, ~5 Entwickler koordiniert, externe Deadline zu ~99 % erreicht.",
+          "Frontend-Umsetzung der Seasonal Deals Campaign end-to-end, inklusive Seller-Portal und Kampagnen-UX."
+        ]
+      },
+      {
+        "period": "seit 2019",
+        "company": "Kipphard",
+        "role": "Selbstständiger Full-Stack- & Produktentwickler",
+        "location": "Paderborn · Remote",
+        "current": true,
+        "bullets": [
+          "40+ freiberufliche Projekte für Kunden aus Fintech, E-Learning und Medizin/Beauty — darunter eine Schweizer Krypto-/Banking-Plattform (mehrsprachiger WordPress-Build) und ein vollautomatisiertes Vertriebs- & Affiliate-Backend für eine E-Learning-Plattform.",
+          "Eine Reihe von WordPress-/WooCommerce-Plugins (Barrierefreiheit, DSGVO, Compliance) entwickelt und veröffentlicht über WordPress.org und Freemius, darunter ein Accessibility-Audit-Tool mit kostenpflichtiger Stufe.",
+          "Full-Stack-Sportanalyse-ML-SaaS konzipiert und validiert — eigene Wahrscheinlichkeitsmodelle, Datenpipeline und Abo-Abrechnung."
+        ],
+        "links": [
+          {
+            "label": "Meine Projekte",
+            "to": "/#work"
+          },
+          {
+            "label": "Meine Produkte",
+            "to": "/products"
+          }
+        ]
+      },
+      {
+        "period": "Okt. 2019 – Okt. 2023",
+        "company": "hlprr",
+        "role": "Web Developer · Head of Webdesign · Webdesigner",
+        "location": "Bielefeld · Vollzeit",
+        "current": false,
+        "bullets": [
+          "Vom Praktikanten über Head of Webdesign (Leitung eines 5–7-köpfigen Teams) zum Web Developer entwickelt, mit bewusstem Wechsel von Page-Builder- zu handgecodeter Entwicklung.",
+          "Individuelle WordPress-Themes und WooCommerce-Shops end-to-end für Kunden vom Kleinbetrieb bis zum Großunternehmen umgesetzt — inklusive Anforderungsklärung, Umsetzung und Kundenkommunikation."
+        ]
+      }
+    ],
+    "educationTitle": "Ausbildung",
+    "education": [
+      {
+        "period": "2017–2021",
+        "what": "B.Sc. Angewandte Informatik und soziale Medien",
+        "where": "Hochschule Hamm-Lippstadt · Note 2,2"
+      },
+      {
+        "period": "2014–2017",
+        "what": "Informatik",
+        "where": "Universität Paderborn"
+      }
+    ],
+    "languagesTitle": "Sprachen",
+    "languages": [
+      "Deutsch — Muttersprache",
+      "Englisch — verhandlungssicher"
+    ],
+    "ctaTitle": "Offen für freiberufliche Frontend- & Full-Stack-Arbeit",
+    "ctaText": "Du suchst jemanden, der ein Projekt end-to-end verantwortet — Frontend, Backend, Performance und Umsetzung? Lass uns reden."
+  },
   "services": {
     "eyebrow": "03 / Leistungen",
     "title": "Was ich anbiete.",

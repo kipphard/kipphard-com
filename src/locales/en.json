@@ -182,6 +182,150 @@
       }
     ]
   },
+  "cv": {
+    "eyebrow": "About me",
+    "name": "André Kipphard",
+    "role": "Frontend Engineer · Full-Stack & Product Engineer",
+    "location": "Paderborn, Germany · Remote",
+    "profile": "Frontend Engineer (Vue 3, Nuxt, TypeScript) with 7+ years of experience, from large-scale micro-frontends to full-stack products owned end-to-end. At Kaufland e-commerce I re-architected the homepage layout (personalisation & SSR rendering) and led a cross-team accessibility initiative. In parallel I run an independent practice — full-stack applications, commercial WordPress products, and a self-built ML SaaS platform.",
+    "downloadLabel": "Download CV (PDF)",
+    "pdfUrl": "/andre-kipphard-cv-en.pdf",
+    "getInTouch": "Get in touch",
+    "aboutLink": "Read the full story",
+    "stats": [
+      {
+        "num": "7+",
+        "label": "Years of experience"
+      },
+      {
+        "num": "40+",
+        "label": "Projects shipped"
+      },
+      {
+        "num": "~37M",
+        "label": "Weekly requests owned"
+      },
+      {
+        "num": "7",
+        "label": "WordPress products"
+      }
+    ],
+    "skillsTitle": "Core skills",
+    "skills": [
+      {
+        "icon": "code",
+        "title": "Frontend",
+        "tags": [
+          "Vue 3",
+          "Nuxt",
+          "TypeScript",
+          "single-spa micro-frontends",
+          "React",
+          "SCSS"
+        ]
+      },
+      {
+        "icon": "server",
+        "title": "Full-stack",
+        "tags": [
+          "NestJS/Node",
+          "FastAPI (Python)",
+          "PostgreSQL",
+          "REST & gRPC"
+        ]
+      },
+      {
+        "icon": "gauge",
+        "title": "Quality & performance",
+        "tags": [
+          "SSR & Core Web Vitals",
+          "WCAG 2.2 accessibility",
+          "Playwright & Vitest",
+          "Optimizely A/B",
+          "Datadog"
+        ]
+      },
+      {
+        "icon": "cart",
+        "title": "CMS & e-commerce",
+        "tags": [
+          "WordPress (themes & plugins)",
+          "WooCommerce",
+          "Shopify"
+        ]
+      }
+    ],
+    "experienceTitle": "Professional experience",
+    "experience": [
+      {
+        "period": "Oct 2023 – Present",
+        "company": "Kaufland e-commerce",
+        "role": "Frontend Engineer (from Junior)",
+        "location": "Remote · Full-time",
+        "current": true,
+        "bullets": [
+          "Re-architected the homepage into a server-driven, configurable layout system with full SSR prefetch and personalisation.",
+          "Own homepage SSR reliability across ~37M weekly requests; redesigned timeout handling so one slow dependency no longer fails the whole render — median TTFB −34%.",
+          "Diagnosed and resolved a 12-day SSR personalisation regression, wrote the postmortem, and added an automated regression guard.",
+          "Led a cross-team accessibility initiative (WCAG 2.2), coordinating ~5 engineers to deliver against an external deadline at ~99%.",
+          "End-to-end frontend delivery of the Seasonal Deals Campaign, including a seller portal and campaign UX."
+        ]
+      },
+      {
+        "period": "Since 2019",
+        "company": "Kipphard",
+        "role": "Independent Full-Stack & Product Engineer",
+        "location": "Paderborn · Remote",
+        "current": true,
+        "bullets": [
+          "40+ freelance projects for clients in fintech, e-learning and medical/beauty — including a Swiss crypto/banking platform (multi-language WordPress build) and a fully automated sales & affiliate backend for an e-learning platform.",
+          "Built and published a line of WordPress/WooCommerce plugins (accessibility, GDPR, compliance) via WordPress.org and Freemius, including an accessibility-audit tool with a paid tier.",
+          "Designed and validated a full-stack sports-analytics ML SaaS — proprietary probability models, a data pipeline, and subscription billing."
+        ],
+        "links": [
+          {
+            "label": "See my work",
+            "to": "/#work"
+          },
+          {
+            "label": "My products",
+            "to": "/products"
+          }
+        ]
+      },
+      {
+        "period": "Oct 2019 – Oct 2023",
+        "company": "hlprr",
+        "role": "Web Developer · Head of Webdesign · Webdesigner",
+        "location": "Bielefeld · Full-time",
+        "current": false,
+        "bullets": [
+          "Progressed from intern to Head of Webdesign (leading a 5–7 person team) to Web Developer, deliberately shifting from page-builder to hand-coded development.",
+          "Delivered custom WordPress themes and WooCommerce shops end-to-end for clients from small businesses to large companies — owning requirements, build and client communication."
+        ]
+      }
+    ],
+    "educationTitle": "Education",
+    "education": [
+      {
+        "period": "2017–2021",
+        "what": "B.Sc. Applied Computer Science & Social Media",
+        "where": "Hochschule Hamm-Lippstadt · Grade 2.2 (German scale)"
+      },
+      {
+        "period": "2014–2017",
+        "what": "Computer Science",
+        "where": "Universität Paderborn"
+      }
+    ],
+    "languagesTitle": "Languages",
+    "languages": [
+      "German — native",
+      "English — fluent"
+    ],
+    "ctaTitle": "Open to freelance frontend & full-stack work",
+    "ctaText": "Looking for someone who can own a project end-to-end — frontend, backend, performance and delivery? Let's talk."
+  },
   "services": {
     "eyebrow": "03 / Services",
     "title": "What I do.",

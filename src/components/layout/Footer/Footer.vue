@@ -14,7 +14,7 @@
         <div class="footer__col">
           <h4>{{ t('footer.pagesTitle') }}</h4>
           <ul>
-            <li><RouterLink :to="localePath('/#about')">{{ t('nav.about') }}</RouterLink></li>
+            <li><RouterLink :to="localePath('/about')">{{ t('nav.about') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/#services')">{{ t('nav.services') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/#work')">{{ t('nav.work') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/products')">{{ t('nav.products') }}</RouterLink></li>
