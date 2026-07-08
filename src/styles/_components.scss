@@ -282,7 +282,7 @@
   font-size: 1.05rem;
 }
 /* CV timelines (experience/education): period pill needs a wider left column than the 44px circle. */
-.step--period { grid-template-columns: minmax(110px, auto) 1fr; }
+.step--period { grid-template-columns: 180px 1fr; }
 .step__label { font-weight: 700; letter-spacing: -0.01em; }
 .step__label .ai {
   font-size: 0.68rem;
@@ -308,6 +308,7 @@
   font-size: 0.82rem;
   padding: 7px 14px;
   align-self: start;
+  justify-self: start;
   white-space: nowrap;
 }
 .exp-bullets { margin-top: 12px; display: grid; gap: 8px; }
