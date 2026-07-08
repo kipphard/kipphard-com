@@ -101,7 +101,7 @@
     "ctaGhost": "Arbeiten ansehen",
     "stats": [
       {
-        "num": "8+",
+        "num": "7+",
         "label": "Jahre Erfahrung"
       },
       {
@@ -122,7 +122,7 @@
   "about": {
     "eyebrow": "02 / Über mich",
     "title": "Ein Entwickler. Ein Ansprechpartner. Der gesamte Stack.",
-    "intro": "Hallo, ich bin André. Seit über acht Jahren baue ich Webseiten und Shops — hauptberuflich als Frontend Engineer bei Deutschlands größter E-Commerce-Plattform, nebenbei als Freelancer für Unternehmen, die einen verlässlichen Partner suchen.",
+    "intro": "Hallo, ich bin André. Seit über sieben Jahren baue ich Webseiten und Shops — hauptberuflich als Frontend Engineer bei Deutschlands größter E-Commerce-Plattform, nebenbei als Freelancer für Unternehmen, die einen verlässlichen Partner suchen.",
     "para2": "Keine Agentur-Pipeline, keine Zwischenebenen. Design, Frontend, Backend, SEO, Hosting — ich mache alles selbst. Das bedeutet kürzere Wege, transparente Kommunikation und Entscheidungen, die tatsächlich zum Projekt passen.",
     "para3": "Ich arbeite KI-gestützt. Nicht als Gimmick, sondern weil es mir erlaubt, mit der Sorgfalt eines Teams in der Zeit einer einzelnen Person zu liefern.",
     "credentials": [
