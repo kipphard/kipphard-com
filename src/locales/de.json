@@ -1739,7 +1739,8 @@
               "price": "0 EUR",
               "period": "dauerhaft",
               "highlighted": false,
-              "cta": "Kostenlos starten",
+              "cta": "Auf WordPress.org installieren",
+              "url": "https://wordpress.org/plugins/kipphard-gdpr-webfonts/",
               "features": [
                 "Scan & Risiko-Bericht aller externen Anfragen",
                 "Google Fonts entfernen",
