@@ -1694,9 +1694,10 @@
           "PHP"
         ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-gdpr-webfonts.blueprint.json",
+        "installUrl": "https://wordpress.org/plugins/kipphard-gdpr-webfonts/",
         "detail": {
           "lede": "Scan your site for external requests that send personal data (such as the visitor's IP address) to third parties — Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA and more. You get a risk-sorted report with concrete recommendations and can fix the most common issues right away. Not a cookie banner — simply fewer requests to third parties.",
-          "ctaPrimary": "Get in touch",
+          "ctaPrimary": "Install free on WordPress.org",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo with a sample report in your browser.",
           "problemTitle": "The problem",

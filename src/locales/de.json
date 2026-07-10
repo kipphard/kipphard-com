@@ -1694,9 +1694,10 @@
           "PHP"
         ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-gdpr-webfonts.blueprint.json",
+        "installUrl": "https://wordpress.org/plugins/kipphard-gdpr-webfonts/",
         "detail": {
           "lede": "Prüfe deine Website auf externe Anfragen, die personenbezogene Daten (z. B. die IP-Adresse) an Dritte übertragen — Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA und mehr. Du bekommst einen nach Risiko sortierten Bericht mit konkreten Empfehlungen und kannst die häufigsten Probleme direkt abstellen. Kein Cookie-Banner — sondern weniger Anfragen an Dritte.",
-          "ctaPrimary": "Kontakt aufnehmen",
+          "ctaPrimary": "Kostenlos auf WordPress.org",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo mit Beispiel-Bericht im Browser.",
           "problemTitle": "Das Problem",
