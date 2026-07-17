@@ -1,13 +1,16 @@
 // Single source of truth for locale-prefixed routing.
 //
 // German is the canonical/neutral locale and lives at the root (`/...`).
-// English lives under `/en/...`. Only product slugs are translated between
-// locales; every other path segment (work, blog, top-level) is identical and
-// merely gains the `/en` prefix.
+// English lives under `/en/...`. Product slugs and the services family
+// (`/leistungen/<slug>` <-> `/services/<slug>`) are translated between locales;
+// every other path segment (work, blog, top-level) is identical and merely
+// gains the `/en` prefix.
 //
-// The product-slug map is kept in product-slugs.json so the (non-TS) sitemap
-// script can read the same data — keep that file as the only place to edit slugs.
+// The slug maps are kept in product-slugs.json / service-slugs.json so the
+// (non-TS) sitemap script can read the same data — keep those files as the
+// only place to edit slugs.
 import EN_SLUG from './product-slugs.json'
+import SERVICE_EN_SLUG from './service-slugs.json'
 
 export type Locale = 'de' | 'en'
 export const LOCALES: Locale[] = ['de', 'en']
@@ -18,6 +21,29 @@ const EN_SLUGS: Record<string, string> = EN_SLUG
 
 // Canonical product ids (= German slugs), in declaration order. Used to build routes.
 export const PRODUCT_IDS: string[] = Object.keys(EN_SLUGS)
+
+// Canonical service ids (= German slugs). The path segment itself is also
+// localized: /leistungen/<de-slug> <-> /en/services/<en-slug>.
+const SERVICE_EN_SLUGS: Record<string, string> = SERVICE_EN_SLUG
+export const SERVICE_IDS: string[] = Object.keys(SERVICE_EN_SLUGS)
+
+export function serviceSegment(locale: Locale): string {
+  return locale === 'en' ? 'services' : 'leistungen'
+}
+
+// canonical id -> URL slug in the given locale
+export function serviceSlug(id: string, locale: Locale): string {
+  return locale === 'en' ? SERVICE_EN_SLUGS[id] ?? id : id
+}
+
+// URL slug (in the given locale) -> canonical id, or null if it isn't a known service
+export function serviceIdFromSlug(slug: string, locale: Locale): string | null {
+  if (locale === 'en') {
+    for (const [id, en] of Object.entries(SERVICE_EN_SLUGS)) if (en === slug) return id
+    return null
+  }
+  return Object.prototype.hasOwnProperty.call(SERVICE_EN_SLUGS, slug) ? slug : null
+}
 
 export function localeFromPath(path: string): Locale {
   return path === '/en' || path.startsWith('/en/') ? 'en' : 'de'
@@ -53,6 +79,18 @@ function translateProductSegment(path: string, from: Locale, to: Locale): string
   return `/products/${productSlug(id, to)}${m[2] ?? ''}`
 }
 
+// Translate the services family: the segment (leistungen <-> services) always,
+// the slug only when it's a known service.
+function translateServiceSegment(path: string, from: Locale, to: Locale): string {
+  const m = path.match(new RegExp(`^/${serviceSegment(from)}(?:/([^/]+))?(/.*)?$`))
+  if (!m) return path
+  const seg = serviceSegment(to)
+  if (!m[1]) return `/${seg}${m[2] ?? ''}`
+  const id = serviceIdFromSlug(m[1], from)
+  const slug = id ? serviceSlug(id, to) : m[1]
+  return `/${seg}/${slug}${m[2] ?? ''}`
+}
+
 // Build a path in `target` locale given a path written in `current` locale.
 // Preserves `?query` and `#hash`. Internal `to=` strings are authored in neutral
 // (German) form, so components call this with current='de'.
@@ -66,11 +104,17 @@ export function toLocalePath(rawPath: string, target: Locale, current: Locale): 
 
   // 1. Normalise to the canonical neutral path (German slug, no prefix).
   let neutral = current === 'en' ? stripPrefix(pathOnly) : pathOnly
-  if (current === 'en') neutral = translateProductSegment(neutral, 'en', 'de')
+  if (current === 'en') {
+    neutral = translateProductSegment(neutral, 'en', 'de')
+    neutral = translateServiceSegment(neutral, 'en', 'de')
+  }
 
   // 2. Emit in the target locale.
   let out = neutral
-  if (target === 'en') out = translateProductSegment(out, 'de', 'en')
+  if (target === 'en') {
+    out = translateProductSegment(out, 'de', 'en')
+    out = translateServiceSegment(out, 'de', 'en')
+  }
   const prefixed = target === 'en' ? (out === '/' ? '/en' : '/en' + out) : out
 
   return prefixed + query + hash

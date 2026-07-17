@@ -15,6 +15,11 @@ const BLOG_SRC = 'src/content/blog'
 const EN_SLUG = JSON.parse(readFileSync('src/lib/product-slugs.json', 'utf8'))
 const DE_BY_EN = Object.fromEntries(Object.entries(EN_SLUG).map(([de, en]) => [en, de]))
 
+// Shared service-slug map — the path segment is localized too:
+// /leistungen/<de-slug> <-> /en/services/<en-slug>.
+const SVC_EN_SLUG = JSON.parse(readFileSync('src/lib/service-slugs.json', 'utf8'))
+const SVC_DE_BY_EN = Object.fromEntries(Object.entries(SVC_EN_SLUG).map(([de, en]) => [en, de]))
+
 function translateProductSeg(path, dir) {
   const m = path.match(/^\/products\/([^/]+)(\/.*)?$/)
   if (!m) return path
@@ -24,17 +29,27 @@ function translateProductSeg(path, dir) {
   return DE_BY_EN[slug] ? `/products/${DE_BY_EN[slug]}${rest}` : path
 }
 
+function translateServiceSeg(path, dir) {
+  const from = dir === 'de2en' ? 'leistungen' : 'services'
+  const to = dir === 'de2en' ? 'services' : 'leistungen'
+  const map = dir === 'de2en' ? SVC_EN_SLUG : SVC_DE_BY_EN
+  const m = path.match(new RegExp(`^/${from}(?:/([^/]+))?(/.*)?$`))
+  if (!m) return path
+  if (!m[1]) return `/${to}${m[2] ?? ''}`
+  return `/${to}/${map[m[1]] ?? m[1]}${m[2] ?? ''}`
+}
+
 // Neutral (German, no prefix) form of any path.
 function neutralOf(path) {
   if (path === '/en') return '/'
-  if (path.startsWith('/en/')) return translateProductSeg(path.slice(3), 'en2de')
+  if (path.startsWith('/en/')) return translateServiceSeg(translateProductSeg(path.slice(3), 'en2de'), 'en2de')
   return path
 }
 function dePath(path) {
   return neutralOf(path)
 }
 function enPath(path) {
-  const en = translateProductSeg(neutralOf(path), 'de2en')
+  const en = translateServiceSeg(translateProductSeg(neutralOf(path), 'de2en'), 'de2en')
   return en === '/' ? '/en' : '/en' + en
 }
 

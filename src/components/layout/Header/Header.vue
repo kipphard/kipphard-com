@@ -8,7 +8,7 @@
 
       <nav class="nav__links" :aria-label="t('nav.mobileMenuLabel')">
         <RouterLink :to="localePath('/about')">{{ t('nav.about') }}</RouterLink>
-        <RouterLink :to="localePath('/#services')">{{ t('nav.services') }}</RouterLink>
+        <RouterLink :to="localePath('/leistungen')">{{ t('nav.services') }}</RouterLink>
         <RouterLink :to="localePath('/#work')">{{ t('nav.work') }}</RouterLink>
         <div class="nav__drop">
           <RouterLink :to="localePath('/products')">{{ t('nav.products') }}</RouterLink>
@@ -68,7 +68,7 @@
   >
     <ol>
       <li><RouterLink :to="localePath('/about')" @click="menuOpen = false">{{ t('nav.about') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
-      <li><RouterLink :to="localePath('/#services')" @click="menuOpen = false">{{ t('nav.services') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
+      <li><RouterLink :to="localePath('/leistungen')" @click="menuOpen = false">{{ t('nav.services') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink :to="localePath('/#work')" @click="menuOpen = false">{{ t('nav.work') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li><RouterLink :to="localePath('/products')" @click="menuOpen = false">{{ t('nav.products') }} <span class="arrow" aria-hidden="true">→</span></RouterLink></li>
       <li class="mobile-sub">

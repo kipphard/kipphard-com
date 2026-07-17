@@ -18,12 +18,22 @@ import Datenschutz from './pages/Datenschutz.vue'
 import CaseStudy from './pages/CaseStudy.vue'
 import Products from './pages/Products.vue'
 import ProductDetail from './pages/ProductDetail.vue'
+import ServicesIndex from './pages/ServicesIndex.vue'
+import ServiceDetail from './pages/ServiceDetail.vue'
 import Blog from './pages/Blog.vue'
 import BlogPost from './pages/BlogPost.vue'
 import NotFound from './pages/NotFound.vue'
 import { trackPageview } from './lib/consent'
 import { publishedPosts } from './lib/blog'
-import { LOCALES, PRODUCT_IDS, localeFromPath, productSlug } from './lib/i18n-routing'
+import {
+  LOCALES,
+  PRODUCT_IDS,
+  SERVICE_IDS,
+  localeFromPath,
+  productSlug,
+  serviceSegment,
+  serviceSlug,
+} from './lib/i18n-routing'
 
 // Neutral (German/root) route descriptors. English variants are derived by
 // prefixing `/en` and translating the product slug — see buildRoutes().
@@ -55,6 +65,12 @@ function buildRoutes(): RouteRecordRaw[] {
     // Product detail: one route per product, with the locale's slug.
     for (const id of PRODUCT_IDS) {
       routes.push({ path: `${prefix}/products/${productSlug(id, loc)}`, component: ProductDetail })
+    }
+    // Services: localized segment (/leistungen vs /services) + slug per page.
+    const seg = serviceSegment(loc)
+    routes.push({ path: `${prefix}/${seg}`, component: ServicesIndex })
+    for (const id of SERVICE_IDS) {
+      routes.push({ path: `${prefix}/${seg}/${serviceSlug(id, loc)}`, component: ServiceDetail })
     }
   }
   // 404 / catch-alls — English first, root global last.

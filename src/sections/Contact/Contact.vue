@@ -18,6 +18,7 @@
                 :href="link.href"
                 :target="link.href.startsWith('http') ? '_blank' : undefined"
                 :rel="link.href.startsWith('http') ? 'noopener noreferrer' : undefined"
+                @click="onInfoLinkClick(link)"
               >{{ link.value }}</a>
               <span v-else>{{ link.value }}</span>
             </dd>
@@ -157,6 +158,7 @@
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { trackEvent } from '@/lib/consent'
 
 interface ContactLink {
   label: string
@@ -239,6 +241,10 @@ async function handleSubmit(e: Event) {
     const data = await res.json().catch(() => ({}))
     if (res.ok && (data as { ok?: boolean }).ok) {
       status.value = 'success'
+      trackEvent('generate_lead', {
+        project_type: selectedType.value ?? '',
+        budget: selectedBudget.value ?? '',
+      })
     } else {
       status.value = 'error'
       errorKey.value = (data && (data as { error?: string }).error) || 'send-failed'
@@ -247,6 +253,14 @@ async function handleSubmit(e: Event) {
   } catch {
     status.value = 'error'; errorKey.value = 'network'
     resetTurnstile()
+  }
+}
+
+function onInfoLinkClick(link: ContactLink) {
+  if (link.href.startsWith('mailto:')) {
+    trackEvent('contact_click', { method: 'email', location: 'contact_section' })
+  } else if (link.href.startsWith('http')) {
+    trackEvent('outbound_click', { destination: link.href, location: 'contact_section' })
   }
 }
 

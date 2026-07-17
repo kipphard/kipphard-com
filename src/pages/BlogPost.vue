@@ -13,7 +13,7 @@
             </div>
             <h1>{{ content.title }}</h1>
             <!-- eslint-disable-next-line vue/no-v-html -->
-            <div class="blog-prose" v-html="content.body"></div>
+            <div class="blog-prose" v-html="content.body" @click="onProseClick"></div>
             <div v-if="post.tags.length" class="tags blog-post__tags">
               <span v-for="tg in post.tags" :key="tg" class="tag">{{ tg }}</span>
             </div>
@@ -65,6 +65,20 @@ import {
 import BlogSidebar from '@/components/blog/BlogSidebar.vue'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { useLocaleHead } from '@/composables/useLocaleHead'
+import { trackEvent } from '@/lib/consent'
+
+// Blog bodies are raw HTML (v-html), so in-content links are plain anchors —
+// track contact CTAs and WP.org outbounds via delegation.
+function onProseClick(e: MouseEvent) {
+  const a = (e.target as HTMLElement).closest?.('a')
+  if (!a) return
+  const href = a.getAttribute('href') ?? ''
+  if (href.includes('#contact')) {
+    trackEvent('cta_click', { location: 'blog_prose', page: route.path })
+  } else if (href.startsWith('https://wordpress.org/')) {
+    trackEvent('outbound_click', { destination: 'wordpress_org', location: 'blog_prose', page: route.path })
+  }
+}
 
 const route = useRoute()
 const { t, locale } = useI18n()

@@ -8,14 +8,18 @@
             <span>André Kipphard</span>
           </RouterLink>
           <p>{{ t('footer.tagline') }}</p>
-          <a href="mailto:andre@kipphard.com" class="footer__mail">andre@kipphard.com <span class="arrow" aria-hidden="true">→</span></a>
+          <a
+            href="mailto:andre@kipphard.com"
+            class="footer__mail"
+            @click="trackEvent('contact_click', { method: 'email', location: 'footer' })"
+          >andre@kipphard.com <span class="arrow" aria-hidden="true">→</span></a>
         </div>
 
         <div class="footer__col">
           <h4>{{ t('footer.pagesTitle') }}</h4>
           <ul>
             <li><RouterLink :to="localePath('/about')">{{ t('nav.about') }}</RouterLink></li>
-            <li><RouterLink :to="localePath('/#services')">{{ t('nav.services') }}</RouterLink></li>
+            <li><RouterLink :to="localePath('/leistungen')">{{ t('nav.services') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/#work')">{{ t('nav.work') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/products')">{{ t('nav.products') }}</RouterLink></li>
             <li><RouterLink :to="localePath('/#labs')">{{ t('nav.labs') }}</RouterLink></li>
@@ -56,7 +60,7 @@
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n'
-import { openConsentSettings } from '@/lib/consent'
+import { openConsentSettings, trackEvent } from '@/lib/consent'
 import { useLocalePath } from '@/composables/useLocalePath'
 
 const { t } = useI18n()

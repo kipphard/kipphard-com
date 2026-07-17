@@ -1,0 +1,17 @@
+{
+  "category": "accessibility",
+  "tags": ["BFSG", "Abmahnung", "Barrierefreiheit", "Checkliste"],
+  "publishedAt": "2099-01-01",
+  "de": {
+    "title": "BFSG-Abmahnung vermeiden: Die Checkliste für Website-Betreiber",
+    "seoTitle": "BFSG-Abmahnung vermeiden: Checkliste mit den 10 häufigsten Verstößen",
+    "description": "Abmahnungen wegen fehlender Barrierefreiheit vermeiden: Die 10 häufigsten BFSG-Verstöße auf Websites und Online-Shops als Checkliste — mit konkreten Fixes und Priorisierung nach Risiko.",
+    "excerpt": "Die 10 häufigsten BFSG-Verstöße als praktische Checkliste — was Abmahn-Anwälte zuerst prüfen und wie du die Lücken schließt."
+  },
+  "en": {
+    "title": "Avoiding BFSG Warning Letters: A Checklist for Website Owners",
+    "seoTitle": "Avoid BFSG Warning Letters: Checklist of the 10 Most Common Violations",
+    "description": "Avoid warning letters over missing accessibility: the 10 most common BFSG violations on websites and online shops as a checklist — with concrete fixes and risk-based prioritization.",
+    "excerpt": "The 10 most common BFSG violations as a practical checklist — what warning-letter lawyers check first and how to close the gaps."
+  }
+}

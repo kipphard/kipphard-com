@@ -1,0 +1,17 @@
+{
+  "category": "accessibility",
+  "tags": ["Overlay", "Barrierefreiheit", "WCAG", "BFSG"],
+  "publishedAt": "2099-01-01",
+  "de": {
+    "title": "Overlay-Tools vs. echtes Accessibility-Audit: Was wirklich schützt",
+    "seoTitle": "Accessibility-Overlay vs. Audit: Warum Widgets nicht BFSG-konform machen",
+    "description": "Accessibility-Overlays versprechen Barrierefreiheit per Ein-Zeilen-Skript. Warum das technisch nicht funktioniert, welche Risiken Overlays bergen und was ein echtes Audit stattdessen leistet.",
+    "excerpt": "Ein Skript-Snippet macht keine Website barrierefrei. Der technische Vergleich: Was Overlays wirklich tun — und was ein Audit mit Behebung im Code leistet."
+  },
+  "en": {
+    "title": "Overlay Tools vs. a Real Accessibility Audit: What Actually Protects You",
+    "seoTitle": "Accessibility Overlay vs. Audit: Why Widgets Don't Make You BFSG-Compliant",
+    "description": "Accessibility overlays promise compliance via a one-line script. Why that doesn't work technically, the risks overlays carry, and what a real audit delivers instead.",
+    "excerpt": "A script snippet doesn't make a website accessible. The technical comparison: what overlays really do — and what an audit with fixes in code delivers."
+  }
+}

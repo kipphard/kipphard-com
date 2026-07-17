@@ -97,6 +97,13 @@ export function openConsentSettings(): void {
   bannerOpen.value = true
 }
 
+/** Custom GA4 event (CTA clicks, lead form submits, outbound clicks). Same
+ *  gate as trackPageview: silently a no-op without consent or off-domain. */
+export function trackEvent(name: string, params: Record<string, unknown> = {}): void {
+  if (consent.value !== 'granted' || !gaLoaded || !window.gtag) return
+  window.gtag('event', name, params)
+}
+
 /** SPA page_view for client-side route changes (deduped against the path GA's
  *  initial config already counted). No-op unless consent is granted + GA loaded. */
 export function trackPageview(path: string): void {

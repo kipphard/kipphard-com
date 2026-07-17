@@ -42,7 +42,8 @@
       "performance": "Performance",
       "frontend": "Frontend",
       "seo": "SEO",
-      "ecommerce": "E-Commerce"
+      "ecommerce": "E-Commerce",
+      "accessibility": "Accessibility"
     }
   },
   "labs": {
@@ -324,7 +325,13 @@
       "English — fluent"
     ],
     "ctaTitle": "Open to freelance frontend & full-stack work",
-    "ctaText": "Looking for someone who can own a project end-to-end — frontend, backend, performance and delivery? Let's talk."
+    "ctaText": "Looking for someone who can own a project end-to-end — frontend, backend, performance and delivery? Let's talk.",
+    "focusTitle": "Current focus: accessibility",
+    "focusBfsgTitle": "BFSG consulting & remediation",
+    "focusBfsgText": "Since June 2025, accessibility is mandatory for many websites in Germany. I audit, fix and keep your site BFSG-compliant.",
+    "focusPluginTitle": "Kipphard Accessibility Audit",
+    "focusPluginText": "My WordPress plugin for honest accessibility audits — including a generator for the accessibility statement.",
+    "focusMore": "Learn more"
   },
   "services": {
     "eyebrow": "03 / Services",
@@ -332,6 +339,7 @@
     "intro": "From landing page to complex webshop — a complete offering, no handoffs to third parties.",
     "items": [
       {
+        "id": "frontend-entwicklung",
         "icon": "code",
         "title": "Frontend development",
         "desc": "Vue 3, Nuxt, TypeScript. Accessible, fast, maintainable.",
@@ -343,6 +351,7 @@
         ]
       },
       {
+        "id": "backend-apis",
         "icon": "server",
         "title": "Backend & APIs",
         "desc": "Node, Laravel, PHP. Custom solutions over toolkit compromises.",
@@ -354,6 +363,7 @@
         ]
       },
       {
+        "id": "e-commerce",
         "icon": "cart",
         "title": "E-commerce",
         "desc": "Shopify, WooCommerce, custom plugins. From small to scaled.",
@@ -364,6 +374,7 @@
         ]
       },
       {
+        "id": "wordpress-elementor",
         "icon": "wordpress",
         "title": "WordPress & Elementor",
         "desc": "Custom themes, ACF, custom blocks. No off-the-shelf templates.",
@@ -374,6 +385,7 @@
         ]
       },
       {
+        "id": "seo-analytics",
         "icon": "search",
         "title": "SEO & analytics",
         "desc": "Technical SEO, structured data, content architecture.",
@@ -384,6 +396,7 @@
         ]
       },
       {
+        "id": "performance",
         "icon": "gauge",
         "title": "Performance",
         "desc": "Audit and optimization. Sub-second load is not a coincidence.",
@@ -391,6 +404,488 @@
           "Lighthouse",
           "CWV",
           "CDN"
+        ]
+      }
+    ],
+    "more": "Learn more"
+  },
+  "servicesIndex": {
+    "eyebrow": "Services",
+    "title": "Services at a glance.",
+    "intro": "Web development from a single source — frontend, backend, e-commerce and WordPress through to SEO, performance and accessibility. Each service in detail, with matching real-world projects.",
+    "more": "Learn more"
+  },
+  "servicesDetail": {
+    "backTo": "← All services",
+    "eyebrow": "Service",
+    "toFaq": "Common questions",
+    "relatedTitle": "Related projects",
+    "faqTitle": "Common questions",
+    "notFound": "Service not found.",
+    "allServices": "← All services",
+    "items": [
+      {
+        "id": "bfsg-barrierefreiheit",
+        "icon": "check",
+        "title": "BFSG & Accessibility: Get Your Website Compliant",
+        "teaser": "Germany's BFSG has applied since June 2025: audit, remediation and ongoing compliance — WCAG 2.1 AA without overlay tricks.",
+        "lede": "Since 28 June 2025, Germany's Accessibility Strengthening Act (BFSG) has been in force. If you sell products or consumer services online in Germany, your website must be accessible — or you risk fines and competitor warning letters. I audit your site, fix the issues in code and keep it compliant.",
+        "ctaPrimary": "Request a BFSG audit",
+        "sections": [
+          {
+            "h2": "Who the law applies to",
+            "paras": [
+              "The BFSG transposes the European Accessibility Act (EU Directive 2019/882) into German law. It covers online shops, booking flows, banking services and many other B2C digital services — regardless of company size. Only micro-enterprises (fewer than 10 employees and at most €2M annual turnover) are exempt for services.",
+              "The technical benchmark is EN 301 549, which for websites points to WCAG 2.1 level AA: contrast, keyboard operability, alt texts, form labels, understandable error messages and a published accessibility statement. Violations can trigger market-surveillance proceedings, fines of up to €100,000 — and in practice, above all, warning letters from competitors."
+            ]
+          },
+          {
+            "h2": "Avoid warning letters: audit first, then fix precisely",
+            "paras": [
+              "The fastest route to compliance is not an overlay widget but an honest finding: what exactly on your site is not accessible, how critical is it, and what does fixing it cost? That is what my audit delivers — a prioritized list of real WCAG violations in your rendered HTML, explained in plain language with a concrete fix for each.",
+              "For WordPress sites I built a dedicated plugin: Kipphard Accessibility Audit checks your pages right in the admin and can generate the accessibility statement. And for everything the plugin finds, I offer remediation as a service — from a single contrast fix to a fully accessible relaunch."
+            ]
+          },
+          {
+            "h2": "My offer: audit, remediation, ongoing compliance",
+            "paras": [
+              "I work in three stages. First, the audit: a technical WCAG 2.1 AA assessment prioritized by risk. Second, remediation: I fix violations directly in the code — semantics, focus management, contrast, forms, ARIA only where genuinely needed. Third, ongoing compliance: every new feature and piece of content is checked against the requirements so the site stays compliant and the accessibility statement stays current.",
+              "As a senior frontend engineer I implement accessibility where it lives: in your site's HTML, CSS and JavaScript — not in a bolted-on script. That is the difference between real compliance and an overlay that will not hold up in court."
+            ]
+          }
+        ],
+        "features": {
+          "title": "What you get",
+          "items": [
+            {
+              "title": "BFSG audit",
+              "desc": "Prioritized WCAG 2.1 AA assessment of your website — real violations, plainly explained, with effort estimates."
+            },
+            {
+              "title": "Fixes in code",
+              "desc": "Remediation directly in the theme or frontend: semantics, contrast, keyboard support, forms, focus management."
+            },
+            {
+              "title": "Accessibility statement",
+              "desc": "The legally required statement, written and linked — including a feedback mechanism."
+            },
+            {
+              "title": "WCAG consulting",
+              "desc": "Training and guidelines for your team so new content stays compliant."
+            },
+            {
+              "title": "WordPress plugin",
+              "desc": "Kipphard Accessibility Audit: continuous checks right in the WordPress admin."
+            },
+            {
+              "title": "Ongoing compliance",
+              "desc": "A maintenance agreement with regular re-audits so updates and new content don't create new barriers."
+            }
+          ]
+        },
+        "faq": [
+          {
+            "q": "Does the BFSG apply to my website?",
+            "a": "If you sell products or services to consumers through your website — an online shop, a booking flow, or a contract-initiating contact form — very likely yes. For services, only micro-enterprises with fewer than 10 employees and at most €2M annual turnover are exempt. Pure B2B offerings are out of scope. If in doubt, I clarify this in the audit — as a technical assessment, not legal advice."
+          },
+          {
+            "q": "Isn't an accessibility overlay tool enough?",
+            "a": "No. Overlay widgets layer a script over existing barriers without fixing them in code. Studies and statements from accessibility organizations show overlays fail to fix many WCAG violations and sometimes create new ones. For BFSG compliance, what counts is the actual state of your website."
+          },
+          {
+            "q": "What does it cost to make my website accessible?",
+            "a": "The audit is a fixed price depending on the size of the site. Remediation depends on the findings — from a few hours for contrast and alt-text fixes to a larger rebuild for deep structural issues. After the audit you get a concrete fixed-price quote for the remediation."
+          },
+          {
+            "q": "How soon do fines or warning letters become a risk?",
+            "a": "The BFSG has applied since 28 June 2025. Market surveillance is ramping up, and competitors can send warning letters over violations. The more visible your offering, the higher the risk. A documented audit plus remediation plan shows, in case of a dispute, that you are addressing the issue seriously."
+          }
+        ],
+        "caseStudies": []
+      },
+      {
+        "id": "frontend-entwicklung",
+        "icon": "code",
+        "title": "Frontend Development with Vue, Nuxt & TypeScript",
+        "teaser": "Modern, accessible web frontends with Vue 3, Nuxt and TypeScript — fast, maintainable, built to last.",
+        "lede": "Your frontend is what customers see, click and judge. I build web interfaces with Vue 3, Nuxt and TypeScript that load fast, work on every device and remain maintainable for years — no throwaway codebases.",
+        "ctaPrimary": "Start a project",
+        "sections": [
+          {
+            "h2": "Solid craft instead of framework hopping",
+            "paras": [
+              "I have been building frontends professionally for over seven years — most of it in the Vue ecosystem, currently as a senior frontend engineer in e-commerce. I know the patterns that carry a codebase through the years: strict TypeScript, component-based architecture, clear state management and tests where they actually prevent bugs.",
+              "Accessibility and performance are not afterthoughts but part of the craft: semantic HTML, keyboard operability and Core Web Vitals budgets from day one."
+            ]
+          },
+          {
+            "h2": "From landing page to web app",
+            "paras": [
+              "The range spans multilingual marketing sites with static rendering for maximum speed to complex web applications with real-time data and role logic. Modernizing existing frontends — migrating from Vue 2, jQuery or a legacy theme to a modern stack — is part of it too."
+            ]
+          }
+        ],
+        "features": {
+          "title": "Typical work",
+          "items": [
+            {
+              "title": "Web apps with Vue 3 & Nuxt",
+              "desc": "SPA, SSR or SSG — whatever SEO and user experience demand."
+            },
+            {
+              "title": "TypeScript architecture",
+              "desc": "Strict types, clear module boundaries, code the next team can understand."
+            },
+            {
+              "title": "Design implementation",
+              "desc": "Pixel-accurate, responsive builds from Figma & co. — design system included."
+            },
+            {
+              "title": "Legacy modernization",
+              "desc": "Migrating old frontends to modern stacks without big-bang risk."
+            }
+          ]
+        },
+        "faq": [
+          {
+            "q": "Do you also work with React or other frameworks?",
+            "a": "My focus and recommendation is the Vue ecosystem — that is where I am fastest and deliver the highest quality. I take over existing projects in other frameworks by arrangement."
+          },
+          {
+            "q": "Do you take over existing projects?",
+            "a": "Yes. Code review and an honest status report first, then a plan: what is worth refactoring, what should be rebuilt."
+          }
+        ],
+        "caseStudies": [
+          "wickie",
+          "profit-prime"
+        ]
+      },
+      {
+        "id": "backend-apis",
+        "icon": "server",
+        "title": "Backend Development & APIs with Node and PHP",
+        "teaser": "Custom backends, REST and GraphQL APIs, integrations — real solutions instead of website-builder compromises.",
+        "lede": "When off-the-shelf plugins and builders stop being enough, you need a backend that models your actual processes: APIs, payment and webhook integrations, automation. I build with Node.js, PHP and Laravel — pragmatic and secure.",
+        "ctaPrimary": "Start a project",
+        "sections": [
+          {
+            "h2": "Integrations that survive daily use",
+            "paras": [
+              "Payment providers, licensing systems, CRM, newsletters, inventory: most projects fail not on code but on interfaces. Among other things, I have wired Digistore24 webhooks into multi-tier affiliate systems and connected learning platforms to payment logic — systems that have run in production for years.",
+              "My rule: as little custom code as possible, as much as necessary. Where a proven package exists I use it; where your business process is special, clean custom code with tests and monitoring is what you get."
+            ]
+          },
+          {
+            "h2": "APIs as the foundation",
+            "paras": [
+              "REST or GraphQL: a good API is documented, versioned and predictable. I design interfaces frontend teams enjoy using — and that remain extensible five years on."
+            ]
+          }
+        ],
+        "features": {
+          "title": "Typical work",
+          "items": [
+            {
+              "title": "REST & GraphQL APIs",
+              "desc": "Design, implementation and documentation — with a clean auth concept."
+            },
+            {
+              "title": "Payment integrations",
+              "desc": "Digistore24, Stripe, PayPal — including webhooks, refunds and error handling."
+            },
+            {
+              "title": "Automation",
+              "desc": "Cron jobs, queues, data synchronization between systems."
+            },
+            {
+              "title": "WordPress backends",
+              "desc": "Custom plugins, REST endpoints and admin workflows beyond the standard."
+            }
+          ]
+        },
+        "faq": [
+          {
+            "q": "Do you host the systems too?",
+            "a": "I set up hosting and deployments (e.g. on Hetzner) and can take on maintenance. Hosting itself runs on your account — you remain the owner of your infrastructure."
+          }
+        ],
+        "caseStudies": [
+          "profit-prime",
+          "wickie"
+        ]
+      },
+      {
+        "id": "e-commerce",
+        "icon": "cart",
+        "title": "E-Commerce Development: WooCommerce, Shopify & Custom",
+        "teaser": "Online shops that sell: WooCommerce, Shopify and bespoke platforms with clean integrations.",
+        "lede": "A shop is more than a theme with a cart: checkout optimization, payment and shipping integrations, performance under load — and, since 2025, accessibility under Germany's BFSG. I build and optimize shops on WooCommerce, Shopify and custom platforms.",
+        "ctaPrimary": "Start a project",
+        "sections": [
+          {
+            "h2": "From first shop to platform",
+            "paras": [
+              "For getting started, WooCommerce or Shopify is usually the right call — fast to launch, proven flows. It gets interesting when your business model deviates from the standard: digital products with licensing, member areas, affiliate structures or multi-tier pricing. That custom logic is my specialty — for example a learning-and-sales platform with Digistore24 integration and a multi-tier affiliate system.",
+              "As the developer of my own WooCommerce plugins (checkout fields, wishlist, back-in-stock notifications) I know the platform from the inside — not just as a user."
+            ]
+          },
+          {
+            "h2": "Conversion, performance and BFSG",
+            "paras": [
+              "Every second of load time costs revenue; every unclear checkout step costs orders. I optimize shops measurably: Core Web Vitals, structured data for product rich results and accessible checkout flows — which the BFSG now mandates for most B2C shops anyway."
+            ]
+          }
+        ],
+        "features": {
+          "title": "Typical work",
+          "items": [
+            {
+              "title": "Shop builds",
+              "desc": "WooCommerce or Shopify — theme, payments, shipping, taxes, legally sound setup."
+            },
+            {
+              "title": "Custom plugins",
+              "desc": "Bespoke shop logic as a clean plugin instead of theme hacks."
+            },
+            {
+              "title": "Checkout optimization",
+              "desc": "Fewer abandonments through leaner forms and clear error guidance."
+            },
+            {
+              "title": "BFSG compliance",
+              "desc": "Accessible checkout flows — a legal requirement for B2C shops since June 2025."
+            }
+          ]
+        },
+        "faq": [
+          {
+            "q": "WooCommerce or Shopify — which do you recommend?",
+            "a": "Shopify if you want to sell quickly without your own hosting and can live with platform limits. WooCommerce if you need full control, custom logic or particular privacy requirements. I advise honestly — even when the answer is 'no custom build needed'."
+          }
+        ],
+        "caseStudies": [
+          "profit-prime"
+        ]
+      },
+      {
+        "id": "wordpress-elementor",
+        "icon": "wordpress",
+        "title": "WordPress Development: Custom Themes, ACF & Elementor",
+        "teaser": "Bespoke WordPress themes, ACF architectures and professional Elementor builds — no off-the-shelf templates.",
+        "lede": "WordPress can do far more than website-builder sites — if you take it seriously as a development platform. I build bespoke themes with clean code, editor-friendly ACF architectures and, where it fits, professional Elementor setups.",
+        "ctaPrimary": "Start a project",
+        "sections": [
+          {
+            "h2": "Custom theme or Elementor — depending on the project",
+            "paras": [
+              "For sites with a clear design and an editorial team I build custom themes with ACF Flexible Content: editors maintain content in structured modules while the frontend stays fast and consistent. Multilingual practice and company websites built this way have been maintained for years without agency lock-in.",
+              "Where a client wants to design themselves, I set up Elementor Pro properly: global styles instead of click chaos, lean setups without plugin bloat and custom CSS only where the builder hits its limits."
+            ]
+          },
+          {
+            "h2": "Plugins, maintenance and security",
+            "paras": [
+              "I develop my own WordPress plugins — including accessibility audits and GDPR-compliant webfonts — and know what clean plugin code looks like: security, performance, update safety. I also take over existing sites including maintenance: updates, backups, security hardening and monitoring."
+            ]
+          }
+        ],
+        "features": {
+          "title": "Typical work",
+          "items": [
+            {
+              "title": "Custom themes",
+              "desc": "Bespoke themes with ACF Flexible Content — fast, maintainable, editor-friendly."
+            },
+            {
+              "title": "Elementor Pro",
+              "desc": "Professional setups: global styles, clean structure, performance under control."
+            },
+            {
+              "title": "Plugin development",
+              "desc": "Custom functionality as standalone, update-safe plugins."
+            },
+            {
+              "title": "Maintenance & care",
+              "desc": "Updates, backups, security monitoring — your site stays current and secure."
+            }
+          ]
+        },
+        "faq": [
+          {
+            "q": "Can you take over our existing WordPress site?",
+            "a": "Yes. A technical check first (plugins, theme quality, security, performance), then an honest report and a maintenance or modernization plan."
+          }
+        ],
+        "caseStudies": [
+          "pigmentfrei",
+          "augusta-beauty",
+          "lipold"
+        ]
+      },
+      {
+        "id": "seo-analytics",
+        "icon": "search",
+        "title": "Technical SEO & Analytics",
+        "teaser": "Technical SEO, structured data and GDPR-compliant tracking — so good content actually gets found.",
+        "lede": "The best website is worthless if Google cannot understand it — and marketing decisions are worthless without reliable data. I handle technical SEO, structured data and a tracking setup that measures what matters, GDPR-compliantly.",
+        "ctaPrimary": "Start a project",
+        "sections": [
+          {
+            "h2": "Technical SEO: the foundation",
+            "paras": [
+              "Crawlability, indexing, clean information architecture, meta data, hreflang for multilingual sites, structured data for rich results: these are levers I implement directly in code as a developer — instead of handing a recommendations list to an agency. Core Web Vitals are part of it, because page speed is a ranking factor."
+            ]
+          },
+          {
+            "h2": "Analytics without privacy risk",
+            "paras": [
+              "Tracking needs a proper consent solution and a configuration that only measures what you actually need: inquiries, purchases, relevant click paths. I set up Google Analytics 4 with Search Console, define key events for your conversion goals and build dashboards that enable decisions instead of producing numbers graveyards."
+            ]
+          }
+        ],
+        "features": {
+          "title": "Typical work",
+          "items": [
+            {
+              "title": "SEO audit",
+              "desc": "Technical assessment: indexing, structure, meta data, load time — with a prioritized action list."
+            },
+            {
+              "title": "Structured data",
+              "desc": "Schema.org markup for rich results: products, FAQs, articles, local businesses."
+            },
+            {
+              "title": "GA4 & consent",
+              "desc": "GDPR-compliant tracking setup with cookie banner and key events."
+            },
+            {
+              "title": "Search Console",
+              "desc": "Setup, monitoring and turning the data into concrete action."
+            }
+          ]
+        },
+        "faq": [
+          {
+            "q": "Do you write SEO copy too?",
+            "a": "My focus is technical SEO and content structure — making sure good content can rank optimally. I advise on structure and keyword targeting; pure copywriting I leave to specialists."
+          }
+        ],
+        "caseStudies": [
+          "wickie",
+          "pigmentfrei"
+        ]
+      },
+      {
+        "id": "performance",
+        "icon": "gauge",
+        "title": "Website Performance: Audit & Optimization",
+        "teaser": "Core Web Vitals, sub-second load times, measurable improvements — performance is not luck.",
+        "lede": "Slow websites cost visitors, rankings and revenue. I analyze why your site is slow and fix the causes in code — not with a caching plugin as a band-aid, but with measurable Core Web Vitals results.",
+        "ctaPrimary": "Request a performance audit",
+        "sections": [
+          {
+            "h2": "Measure first, then optimize",
+            "paras": [
+              "Every performance project starts with an audit: Lighthouse, Core Web Vitals from real user data (CrUX), network waterfall and render analysis. The result is a prioritized list — which measure gains how much, at what effort. Typical findings: oversized images, blocking JavaScript, unused CSS, missing caching, too many plugins and slow server response times."
+            ]
+          },
+          {
+            "h2": "Fixing the cause",
+            "paras": [
+              "Remediation happens in code and infrastructure: image pipelines with modern formats, code splitting, critical CSS, font strategies, CDN configuration and — on WordPress — decluttering theme and plugins. The goal: stable green scores for LCP, CLS and INP, documented before and after."
+            ]
+          }
+        ],
+        "features": {
+          "title": "Typical work",
+          "items": [
+            {
+              "title": "Performance audit",
+              "desc": "Full assessment with Lighthouse, CrUX data and a prioritized action list."
+            },
+            {
+              "title": "Core Web Vitals",
+              "desc": "LCP, CLS and INP stable in the green — documented and verifiable."
+            },
+            {
+              "title": "WordPress tuning",
+              "desc": "Theme and plugin diet, caching strategy, database optimization."
+            },
+            {
+              "title": "Asset optimization",
+              "desc": "Images, fonts and JavaScript bundles reduced to what is needed."
+            }
+          ]
+        },
+        "faq": [
+          {
+            "q": "Isn't a caching plugin enough?",
+            "a": "Caching speeds up delivery but fixes no structural problems — a 4 MB hero image is still 4 MB when cached. Sustainable performance is built at the source: assets, render path, code quality. Caching is the cherry on top afterwards."
+          }
+        ],
+        "caseStudies": [
+          "wickie",
+          "augusta-beauty"
+        ]
+      },
+      {
+        "id": "webentwickler-paderborn",
+        "icon": "globe",
+        "title": "Web Developer in Paderborn, Germany",
+        "teaser": "Senior web developer based in Paderborn: websites, shops and web apps for businesses in the region — personal, without agency overhead.",
+        "lede": "Looking for a web developer in Paderborn who handles your project personally — no agency overhead, no subcontracting? I am a senior frontend engineer based in Paderborn, building websites, online shops and web applications for businesses in the Ostwestfalen-Lippe region and beyond.",
+        "ctaPrimary": "Start a project",
+        "sections": [
+          {
+            "h2": "One contact, full responsibility",
+            "paras": [
+              "With me you talk directly to the developer building your project — from the first conversation through concept to ongoing operation. That means short paths, honest assessments and no misunderstandings between sales, project management and engineering. Meetings in person in Paderborn or remote, as you prefer.",
+              "My profile: over seven years of professional web development, currently as a senior frontend engineer in e-commerce. Focus areas are modern frontends (Vue, Nuxt, TypeScript), WordPress development and online shops — including BFSG accessibility and technical SEO."
+            ]
+          },
+          {
+            "h2": "Who I work with",
+            "paras": [
+              "My clients are medical practices, service businesses, startups and mid-sized companies — many from the region. For them I have built multilingual company websites, practice sites and sales platforms, some of which I have maintained for years. You will find references in my projects; on request I am happy to connect you with existing clients."
+            ]
+          }
+        ],
+        "features": {
+          "title": "Services at a glance",
+          "items": [
+            {
+              "title": "Websites",
+              "desc": "Company websites on WordPress or a modern stack — fast, maintainable, accessible."
+            },
+            {
+              "title": "Online shops",
+              "desc": "WooCommerce and Shopify, including payment integrations and BFSG compliance."
+            },
+            {
+              "title": "Web apps",
+              "desc": "Custom applications with Vue, Nuxt and TypeScript."
+            },
+            {
+              "title": "Maintenance & support",
+              "desc": "Updates, security, performance — lasting support instead of project hand-off."
+            }
+          ]
+        },
+        "faq": [
+          {
+            "q": "Do you only work with businesses from Paderborn?",
+            "a": "No — most of my work is remote anyway. But if you are based in Paderborn or the OWL region, I am happy to meet in person for a kickoff or project review."
+          },
+          {
+            "q": "What does a website cost?",
+            "a": "It depends on scope: a focused company website starts in the low four figures; shops and web apps accordingly higher. After a free initial conversation you get a fixed-price quote — no open-ended hourly billing."
+          }
+        ],
+        "caseStudies": [
+          "augusta-beauty",
+          "lipold",
+          "pigmentfrei"
         ]
       }
     ]
@@ -933,6 +1428,42 @@
     "dsgvo-webfonts": {
       "title": "DSGVO Webfonts – Self-host Google Fonts & audit external requests",
       "description": "WordPress plugin that finds external requests (Google Fonts, Analytics, YouTube, Maps, Gravatar, reCAPTCHA) and rates them by risk — and helps remove or self-host them for GDPR. An honest scan, not a cookie banner."
+    },
+    "leistungen": {
+      "title": "Services — Web Development, WordPress, SEO & Accessibility | André Kipphard",
+      "description": "Web development from a single source: frontend, backend, e-commerce, WordPress, technical SEO, performance and BFSG accessibility. Senior developer from Paderborn, Germany — direct, no agency overhead."
+    },
+    "bfsg-barrierefreiheit": {
+      "title": "BFSG: Make Your Website Accessible — Audit & Remediation | André Kipphard",
+      "description": "Germany's BFSG accessibility law has applied since June 2025. I make your website compliant: WCAG 2.1 AA audit, fixes in code and the accessibility statement. Avoid warning letters instead of overlay risk."
+    },
+    "frontend-entwicklung": {
+      "title": "Frontend Development with Vue, Nuxt & TypeScript | André Kipphard",
+      "description": "Senior frontend developer for Vue 3, Nuxt and TypeScript: fast, accessible and maintainable web frontends — from landing pages to complex web apps."
+    },
+    "backend-apis": {
+      "title": "Backend Development & APIs — Node.js, PHP, Laravel | André Kipphard",
+      "description": "Custom backends, REST and GraphQL APIs, payment and webhook integrations with Node.js, PHP and Laravel. Bespoke solutions instead of website-builder compromises."
+    },
+    "e-commerce": {
+      "title": "E-Commerce Development: WooCommerce, Shopify & Custom Shops | André Kipphard",
+      "description": "Online shops that sell: WooCommerce and Shopify development, checkout optimization, payment integrations and BFSG-compliant purchase flows from a senior developer."
+    },
+    "wordpress-elementor": {
+      "title": "WordPress Development: Custom Themes, ACF & Elementor | André Kipphard",
+      "description": "Bespoke WordPress themes with ACF, professional Elementor setups and custom plugin development — plus maintenance, security and performance. No off-the-shelf templates."
+    },
+    "seo-analytics": {
+      "title": "Technical SEO & Analytics — Structured Data, GA4, Core Web Vitals | André Kipphard",
+      "description": "Technical SEO implemented directly in code: indexing, structured data, hreflang and Core Web Vitals — plus GDPR-compliant GA4 tracking with clean key events."
+    },
+    "performance": {
+      "title": "Website Performance Optimization — Improve Core Web Vitals | André Kipphard",
+      "description": "Performance audit and optimization at the source: LCP, CLS and INP stable in the green — for WordPress and modern stacks. Documented and measurable."
+    },
+    "webentwickler-paderborn": {
+      "title": "Web Developer Paderborn, Germany — Websites, Shops & Web Apps | André Kipphard",
+      "description": "Senior web developer in Paderborn: websites, online shops and web applications for businesses in the OWL region. Personal service, fixed prices, 7+ years of experience."
     }
   },
   "cta": {
@@ -1093,7 +1624,13 @@
               "q": "Do I need coding skills?",
               "a": "Not for the audit or the accessibility statement. Fixing some issues is easier with basic HTML knowledge and familiarity with your theme — but the guides are written so that editors can handle most fixes themselves."
             }
-          ]
+          ],
+          "bridge": {
+            "title": "Need help with the fixes?",
+            "text": "The plugin shows you what to do — but no time or team to do it? I make your website BFSG-compliant: audit, fixes directly in code and the accessibility statement.",
+            "cta": "Start a project",
+            "href": "/leistungen/bfsg-barrierefreiheit"
+          }
         }
       },
       {

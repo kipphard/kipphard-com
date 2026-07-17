@@ -1,0 +1,17 @@
+{
+  "category": "accessibility",
+  "tags": ["BFSG", "Barrierefreiheit", "WCAG", "E-Commerce"],
+  "publishedAt": "2099-01-01",
+  "de": {
+    "title": "BFSG: Was Online-Shops und Dienstleister jetzt tun müssen",
+    "seoTitle": "BFSG-Pflicht für Online-Shops: Anforderungen, Fristen, erste Schritte",
+    "description": "Das BFSG gilt seit Juni 2025: Welche Online-Shops und Dienstleister betroffen sind, welche WCAG-Anforderungen gelten und wie du pragmatisch konform wirst — ohne Panik, aber ohne Aufschieben.",
+    "excerpt": "Wen die BFSG-Pflicht wirklich trifft, was konkret gefordert ist und in welcher Reihenfolge du die Umsetzung angehst."
+  },
+  "en": {
+    "title": "Germany's BFSG: What Online Shops and Service Providers Must Do Now",
+    "seoTitle": "BFSG Compliance for Online Shops: Requirements, Deadlines, First Steps",
+    "description": "Germany's BFSG accessibility law has applied since June 2025: which online shops and service providers are covered, which WCAG requirements apply, and how to reach compliance pragmatically.",
+    "excerpt": "Who the BFSG really affects, what is concretely required, and the order in which to tackle remediation."
+  }
+}

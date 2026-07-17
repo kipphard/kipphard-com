@@ -18,10 +18,16 @@
               :href="item.installUrl"
               target="_blank"
               rel="noopener"
+              @click="trackEvent('outbound_click', { destination: 'wordpress_org', product: item.id })"
             >
               {{ item.detail.ctaPrimary }} <span class="arrow" aria-hidden="true">↗</span>
             </a>
-            <a v-else class="btn btn--primary" :href="localePath('/#contact')">
+            <a
+              v-else
+              class="btn btn--primary"
+              :href="localePath('/#contact')"
+              @click="trackEvent('cta_click', { location: 'product_hero', product: item.id })"
+            >
               {{ item.detail.ctaPrimary }} <span class="arrow">→</span>
             </a>
             <a class="btn btn--ghost" href="#features">
@@ -33,6 +39,7 @@
               :href="item.demoUrl"
               target="_blank"
               rel="noopener"
+              @click="trackEvent('outbound_click', { destination: 'playground_demo', product: item.id })"
             >
               Demo <span class="arrow" aria-hidden="true">↗</span>
             </a>
@@ -66,6 +73,25 @@
               <h3>{{ f.title }}</h3>
               <p>{{ f.desc }}</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bridge: plugin users -> consulting service -->
+      <section v-if="item.detail.bridge" class="section--tight">
+        <div class="container">
+          <div class="cta-panel">
+            <div class="cta-panel__copy">
+              <h2>{{ item.detail.bridge.title }}</h2>
+              <p>{{ item.detail.bridge.text }}</p>
+            </div>
+            <RouterLink
+              :to="localePath(item.detail.bridge.href)"
+              class="btn btn--primary"
+              @click="trackEvent('cta_click', { location: 'product_bridge_features', product: item.id })"
+            >
+              {{ item.detail.bridge.cta }} <span class="arrow" aria-hidden="true">→</span>
+            </RouterLink>
           </div>
         </div>
       </section>
@@ -107,6 +133,25 @@
             </div>
           </div>
           <p class="product-pricing-note">{{ item.detail.pricingNote }}</p>
+        </div>
+      </section>
+
+      <!-- Bridge (second placement, near the FAQ) -->
+      <section v-if="item.detail.bridge" class="section--tight">
+        <div class="container">
+          <div class="cta-panel">
+            <div class="cta-panel__copy">
+              <h2>{{ item.detail.bridge.title }}</h2>
+              <p>{{ item.detail.bridge.text }}</p>
+            </div>
+            <RouterLink
+              :to="localePath(item.detail.bridge.href)"
+              class="btn btn--primary"
+              @click="trackEvent('cta_click', { location: 'product_bridge_faq', product: item.id })"
+            >
+              {{ item.detail.bridge.cta }} <span class="arrow" aria-hidden="true">→</span>
+            </RouterLink>
+          </div>
         </div>
       </section>
 
@@ -156,6 +201,7 @@ import { useI18n } from 'vue-i18n'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { useLocaleHead } from '@/composables/useLocaleHead'
 import { localeFromPath, productIdFromSlug } from '@/lib/i18n-routing'
+import { trackEvent } from '@/lib/consent'
 
 interface Feature {
   title: string
@@ -177,6 +223,13 @@ interface FaqEntry {
   a: string
 }
 
+interface BridgeCta {
+  title: string
+  text: string
+  cta: string
+  href: string
+}
+
 interface ProductDetail {
   lede: string
   ctaPrimary: string
@@ -193,6 +246,7 @@ interface ProductDetail {
   pricing: PricingTier[]
   faqTitle: string
   faq: FaqEntry[]
+  bridge?: BridgeCta
 }
 
 interface ProductItem {

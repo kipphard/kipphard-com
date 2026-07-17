@@ -10,7 +10,11 @@
           <p>{{ t('cv.profile') }}</p>
 
           <div class="tags cv-contact">
-            <a href="mailto:andre@kipphard.com" class="tag">andre@kipphard.com</a>
+            <a
+              href="mailto:andre@kipphard.com"
+              class="tag"
+              @click="trackEvent('contact_click', { method: 'email', location: 'about' })"
+            >andre@kipphard.com</a>
             <a href="https://de.linkedin.com/in/andr%C3%A9-kipphard-2653991b3" target="_blank" rel="noopener noreferrer" class="tag">LinkedIn ↗</a>
             <a href="https://github.com/kipphard" target="_blank" rel="noopener noreferrer" class="tag">GitHub ↗</a>
           </div>
@@ -117,6 +121,26 @@
       </div>
     </section>
 
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section-head">
+          <h2>{{ t('cv.focusTitle') }}</h2>
+        </div>
+        <div class="grid-2">
+          <RouterLink :to="localePath('/leistungen/bfsg-barrierefreiheit')" class="card">
+            <h3>{{ t('cv.focusBfsgTitle') }}</h3>
+            <p>{{ t('cv.focusBfsgText') }}</p>
+            <span class="work-card__more">{{ t('cv.focusMore') }} <span class="arrow" aria-hidden="true">→</span></span>
+          </RouterLink>
+          <RouterLink :to="localePath('/products/barrierefrei-check')" class="card">
+            <h3>{{ t('cv.focusPluginTitle') }}</h3>
+            <p>{{ t('cv.focusPluginText') }}</p>
+            <span class="work-card__more">{{ t('cv.focusMore') }} <span class="arrow" aria-hidden="true">→</span></span>
+          </RouterLink>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <div class="cta-panel">
@@ -143,6 +167,7 @@ import { useI18n } from 'vue-i18n'
 import Icon from '@/components/ui/Icon/Icon.vue'
 import { useLocalePath } from '@/composables/useLocalePath'
 import { useLocaleHead } from '@/composables/useLocaleHead'
+import { trackEvent } from '@/lib/consent'
 
 interface Stat { num: string; label: string }
 interface Skill { icon: string; title: string; tags: string[] }

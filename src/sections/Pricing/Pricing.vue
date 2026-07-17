@@ -27,6 +27,7 @@
           <a
             href="#contact"
             :class="['btn', 'btn--block', tier.featured ? 'btn--primary' : 'btn--ghost']"
+            @click="trackEvent('cta_click', { location: 'pricing', tier: tier.name })"
           >{{ tier.cta }}</a>
         </article>
       </div>
@@ -40,6 +41,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Icon from '@/components/ui/Icon/Icon.vue'
+import { trackEvent } from '@/lib/consent'
 
 interface Tier {
   name: string; price: string; desc: string; features: string[];

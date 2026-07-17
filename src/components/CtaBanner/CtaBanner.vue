@@ -3,7 +3,11 @@
     <div class="container">
       <div class="cta-panel">
         <h2>{{ t('cta.title') }}</h2>
-        <a :href="localizedHref" class="btn btn--primary">
+        <a
+          :href="localizedHref"
+          class="btn btn--primary"
+          @click="trackEvent('cta_click', { location: 'cta_banner', page: $route.path })"
+        >
           {{ t('cta.button') }}
           <span class="arrow" aria-hidden="true">→</span>
         </a>
@@ -16,6 +20,7 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useLocalePath } from '@/composables/useLocalePath'
+import { trackEvent } from '@/lib/consent'
 
 const props = withDefaults(defineProps<{ href?: string }>(), {
   href: '/#contact',

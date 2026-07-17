@@ -15,6 +15,9 @@
           <div class="tags">
             <span v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</span>
           </div>
+          <RouterLink v-if="item.id" :to="localePath(`/leistungen/${item.id}`)" class="work-card__more">
+            {{ t('services.more') }} <span class="arrow" aria-hidden="true">→</span>
+          </RouterLink>
         </article>
       </div>
     </div>
@@ -25,9 +28,11 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import Icon from '@/components/ui/Icon/Icon.vue'
+import { useLocalePath } from '@/composables/useLocalePath'
 
-interface ServiceItem { icon: string; title: string; desc: string; tags: string[] }
+interface ServiceItem { id?: string; icon: string; title: string; desc: string; tags: string[] }
 
 const { t, tm } = useI18n()
+const { localePath } = useLocalePath()
 const services = computed(() => tm('services.items') as ServiceItem[])
 </script>
