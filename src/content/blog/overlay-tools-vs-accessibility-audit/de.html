@@ -1,17 +1,41 @@
-<!-- ENTWURF / OUTLINE — publishedAt steht auf 2099-01-01, damit der Stub nicht
-     live geht. Vor Veröffentlichung: Copy ausschreiben, Datum setzen. -->
-
 <h2>Das Versprechen: Barrierefreiheit per Skript-Snippet</h2>
-<p><em>[Outline: Wie Overlays vermarktet werden ("eine Zeile Code, sofort konform"). Warum das Angebot gerade seit dem BFSG so verlockend ist.]</em></p>
 
-<h2>Was Overlays technisch wirklich tun</h2>
-<p><em>[Outline: Client-seitige DOM-Manipulation nach dem Laden: Kontrast-Filter, Schriftgrößen-Regler, teils automatische Alt-Texte per KI. Was sie NICHT können: Semantik reparieren, Tastatur-Fallen lösen, Formular-Logik fixen, PDF-Inhalte, strukturelle Probleme.]</em></p>
+<p>Seit das BFSG in Kraft ist, boomt ein bestimmtes Angebot: Overlay-Tools wie accessiBe, UserWay oder EqualWeb versprechen, deine Website mit einer einzigen Zeile Code „sofort barrierefrei“ zu machen – meist gegen eine monatliche Gebühr. Für viele Betreiber klingt das nach der perfekten Lösung: kein Umbau, kein Entwickler, kein Aufwand. Genau deshalb lohnt sich ein nüchterner Blick darauf, was diese Werkzeuge technisch wirklich tun.</p>
+
+<h2>Wie Overlays technisch funktionieren</h2>
+
+<p>Ein Overlay ist ein JavaScript, das nach dem Laden der Seite im Browser des Besuchers ausgeführt wird. Es legt sich über die bestehende Seite und verändert das DOM nachträglich: Es blendet ein Bedien-Widget ein (Schriftgröße, Kontrastmodi, Vorlese-Funktion) und versucht teilweise, per Automatik und KI fehlende Attribute zu ergänzen – etwa Alternativtexte oder ARIA-Rollen zu „erraten“.</p>
+
+<p>Der entscheidende Punkt: All das passiert clientseitig und oberflächlich. Das Overlay repariert nicht deinen Quellcode, sondern manipuliert das Ergebnis im Nachhinein. Die zugrunde liegenden Probleme bleiben bestehen – sie werden nur überdeckt.</p>
+
+<h2>Was Overlays nicht können</h2>
+
+<ul>
+  <li><strong>Semantik reparieren</strong>: Ein automatisch geratener Alternativtext („Bild“, „grafik123.jpg“) ist kein sinnvoller Alternativtext. Kontext, den nur ein Mensch kennt, kann eine Automatik nicht erfinden.</li>
+  <li><strong>Tastaturfallen lösen</strong>: Wenn ein selbstgebautes Modal den Fokus einsperrt, hilft ein Overlay-Widget nicht – die Falle bleibt.</li>
+  <li><strong>Formular-Logik korrigieren</strong>: Falsch verknüpfte Labels oder rein farbliche Fehlermeldungen erfordern Eingriffe im Code, nicht ein zusätzliches Skript.</li>
+  <li><strong>PDFs und eingebettete Inhalte</strong>: Downloads, Iframes und Drittanbieter-Widgets erreicht ein Overlay in der Regel gar nicht.</li>
+  <li><strong>Neue Barrieren vermeiden</strong>: In der Praxis kollidieren Overlay-Widgets selbst mit Screenreadern und erzeugen zusätzliche Probleme.</li>
+</ul>
 
 <h2>Die Faktenlage: Studien und Positionen</h2>
-<p><em>[Outline: Overlay Fact Sheet der Accessibility-Community, Positionen von Behinderten-Verbänden, dokumentierte Fälle in den USA, in denen Websites MIT Overlay verklagt wurden. Für DE: Overlay ersetzt keine WCAG-Konformität nach EN 301 549.]</em></p>
 
-<h2>Was ein echtes Audit leistet</h2>
-<p><em>[Outline: Befund am gerenderten HTML, Priorisierung, Behebung im Code, Nachweis-Dokumentation. Abgrenzung: Tools wie <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> sind Diagnose-Werkzeuge, keine Auto-Fixer — und genau deshalb ehrlich.]</em></p>
+<p>Die Kritik an Overlays kommt nicht von Wettbewerbern, sondern aus der Barrierefreiheits-Community selbst. Das von hunderten Accessibility-Fachleuten unterzeichnete <em>Overlay Fact Sheet</em> lehnt diese Tools ausdrücklich ab. Behindertenverbände – darunter die National Federation of the Blind in den USA – haben sich klar gegen sie positioniert. Und in den USA gab es bereits zahlreiche Klagen gegen Betreiber, deren Websites <em>trotz</em> installiertem Overlay nicht bedienbar waren.</p>
+
+<p>Für Deutschland heißt das: Maßstab des BFSG ist die Norm EN 301 549, die im Web auf die WCAG 2.1 Stufe AA verweist. Bewertet wird der tatsächliche Zustand deiner Website – nicht die Anwesenheit eines Widgets. Ein Overlay ersetzt diese Konformität nicht und schützt damit auch nicht zuverlässig vor Abmahnungen.</p>
+
+<h2>Was ein echtes Audit stattdessen leistet</h2>
+
+<p>Ein echtes Audit prüft das tatsächlich gerenderte HTML – so, wie eine Tastaturnavigation oder ein Screenreader die Seite erlebt. Das Ergebnis ist kein Widget, sondern ein Befund: eine priorisierte Liste konkreter Verstöße, jeweils mit Ort, Schweregrad und Lösungsweg. Behoben wird anschließend im Code, dauerhaft und nachweisbar. Genau hier liegt der Unterschied zwischen „sieht barrierefrei aus“ und „ist barrierefrei“.</p>
+
+<p>Wichtig zur Einordnung: Diagnose-Werkzeuge wie mein Plugin <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> sind kein Widerspruch dazu – im Gegenteil. Sie sind ehrliche Prüfwerkzeuge, die dir zeigen, wo Handlungsbedarf besteht, statt Probleme automatisch zu „überdecken“. Sie ersetzen also nicht die Behebung, sondern machen sie erst planbar.</p>
 
 <h2>Entscheidungshilfe: Wann welches Werkzeug</h2>
-<p><em>[Outline: Kleine Tabelle/Liste: Overlay (Bedienhilfen als Zusatz: ok / Konformitäts-Ersatz: nein), Audit-Plugin (laufende Diagnose), manuelles Audit + Umsetzung (Konformität). CTA: <a href="/leistungen/bfsg-barrierefreiheit">BFSG-Leistung</a>, <a href="/#contact">Projekt anfragen</a>.]</em></p>
+
+<ul>
+  <li><strong>Overlay-Widget</strong>: als zusätzliche Bedienhilfe (z. B. Kontrast- oder Schriftgrößen-Umschalter) in Ordnung – als Ersatz für Konformität ungeeignet.</li>
+  <li><strong>Audit-Plugin</strong>: ideal für die laufende Diagnose und die Barrierefreiheitserklärung, besonders auf WordPress.</li>
+  <li><strong>Manuelles Audit + Umsetzung</strong>: der einzige Weg zu belastbarer BFSG-Konformität, weil nur so semantische und strukturelle Probleme behoben werden.</li>
+</ul>
+
+<p>Wenn du wissen willst, wo deine Website wirklich steht – jenseits von Marketingversprechen – übernehme ich das <a href="/leistungen/bfsg-barrierefreiheit">BFSG-Audit und die Umsetzung</a>. <a href="/#contact">Schreib mir</a>, und wir schauen uns deinen konkreten Fall an.</p>

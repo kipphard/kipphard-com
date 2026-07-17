@@ -1,17 +1,41 @@
-<!-- DRAFT / OUTLINE — publishedAt is set to 2099-01-01 so this stub never goes
-     live. Before publishing: write full copy, set a real date. -->
-
 <h2>The promise: accessibility via a script snippet</h2>
-<p><em>[Outline: How overlays are marketed ("one line of code, instantly compliant"). Why the offer is so tempting since the BFSG took effect.]</em></p>
 
-<h2>What overlays technically do</h2>
-<p><em>[Outline: Client-side DOM manipulation after load: contrast filters, font-size controls, sometimes AI-generated alt texts. What they CANNOT do: repair semantics, fix keyboard traps, fix form logic, PDFs, structural issues.]</em></p>
+<p>Since the BFSG took effect, one particular offer has boomed: overlay tools such as accessiBe, UserWay or EqualWeb promise to make your website "instantly accessible" with a single line of code – usually for a monthly fee. To many owners that sounds like the perfect solution: no rebuild, no developer, no effort. That is exactly why a sober look at what these tools technically do is worth it.</p>
+
+<h2>How overlays technically work</h2>
+
+<p>An overlay is JavaScript that runs in the visitor's browser after the page loads. It layers itself over the existing page and modifies the DOM after the fact: it injects a control widget (font size, contrast modes, read-aloud) and in part tries to fill in missing attributes automatically, using heuristics and AI – for instance "guessing" alt texts or ARIA roles.</p>
+
+<p>The decisive point: all of this happens client-side and superficially. The overlay does not repair your source code; it manipulates the result afterwards. The underlying problems remain – they are merely covered up.</p>
+
+<h2>What overlays cannot do</h2>
+
+<ul>
+  <li><strong>Repair semantics</strong>: an automatically guessed alt text ("image", "graphic123.jpg") is not a meaningful alt text. Context that only a human knows cannot be invented by automation.</li>
+  <li><strong>Resolve keyboard traps</strong>: if a hand-built modal locks focus in place, an overlay widget doesn't help – the trap remains.</li>
+  <li><strong>Fix form logic</strong>: mis-linked labels or colour-only error messages require changes in code, not an additional script.</li>
+  <li><strong>PDFs and embedded content</strong>: downloads, iframes and third-party widgets are usually out of an overlay's reach entirely.</li>
+  <li><strong>Avoid new barriers</strong>: in practice, overlay widgets themselves collide with screen readers and create additional problems.</li>
+</ul>
 
 <h2>The evidence: studies and positions</h2>
-<p><em>[Outline: The community Overlay Fact Sheet, positions of disability organizations, documented US cases where sites WITH overlays were sued. For Germany: an overlay does not substitute WCAG conformance under EN 301 549.]</em></p>
 
-<h2>What a real audit delivers</h2>
-<p><em>[Outline: Findings on rendered HTML, prioritization, fixes in code, documentation as evidence. Distinction: tools like <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> are diagnostic tools, not auto-fixers — which is exactly why they are honest.]</em></p>
+<p>The criticism of overlays comes not from competitors but from the accessibility community itself. The <em>Overlay Fact Sheet</em>, signed by hundreds of accessibility professionals, explicitly rejects these tools. Disability organisations – including the National Federation of the Blind in the US – have taken a clear stand against them. And in the US there have already been numerous lawsuits against operators whose sites were unusable <em>despite</em> an installed overlay.</p>
+
+<p>For Germany this means: the BFSG's benchmark is the standard EN 301 549, which for the web points to WCAG 2.1 level AA. What is assessed is the actual state of your website – not the presence of a widget. An overlay does not substitute this conformance and therefore does not reliably protect against warning letters.</p>
+
+<h2>What a real audit delivers instead</h2>
+
+<p>A real audit examines the actually-rendered HTML – the way keyboard navigation or a screen reader experiences the page. The result is not a widget but a finding: a prioritised list of concrete violations, each with location, severity and a route to a fix. Remediation then happens in code, permanently and verifiably. That is precisely the difference between "looks accessible" and "is accessible".</p>
+
+<p>An important clarification: diagnostic tools like my plugin <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> are not a contradiction to this – quite the opposite. They are honest checking tools that show you where action is needed, instead of automatically "covering up" problems. They don't replace remediation; they make it plannable in the first place.</p>
 
 <h2>Decision guide: which tool when</h2>
-<p><em>[Outline: Small table/list: overlay (assistive extras: fine / compliance substitute: no), audit plugin (ongoing diagnosis), manual audit + remediation (compliance). CTA: <a href="/leistungen/bfsg-barrierefreiheit">BFSG service</a>, <a href="/#contact">start a project</a>.]</em></p>
+
+<ul>
+  <li><strong>Overlay widget</strong>: fine as an additional assistive control (e.g. a contrast or font-size toggle) – unsuitable as a substitute for compliance.</li>
+  <li><strong>Audit plugin</strong>: ideal for ongoing diagnosis and the accessibility statement, especially on WordPress.</li>
+  <li><strong>Manual audit + remediation</strong>: the only route to solid BFSG compliance, because only this fixes semantic and structural problems.</li>
+</ul>
+
+<p>If you want to know where your website really stands – beyond marketing promises – I handle the <a href="/leistungen/bfsg-barrierefreiheit">BFSG audit and remediation</a>. <a href="/#contact">Get in touch</a> and we'll look at your specific case.</p>

@@ -1,18 +1,43 @@
-<!-- ENTWURF / OUTLINE — publishedAt steht auf 2099-01-01, damit der Stub nicht
-     live geht. Vor Veröffentlichung: Copy ausschreiben, Datum setzen. -->
+<h2>Warum Online-Shops und Dienstleister im Zentrum des BFSG stehen</h2>
 
-<h2>Seit Juni 2025 ist Barrierefreiheit Pflicht — für wen genau?</h2>
-<p><em>[Outline: Einstieg mit dem Stichtag 28.06.2025. BFSG = deutsche Umsetzung des European Accessibility Act. Betroffen: B2C-E-Commerce, Terminbuchung, Banking, E-Books u. a. Kleinstunternehmer-Ausnahme (unter 10 MA, max. 2 Mio. € Umsatz) nur für Dienstleistungen. B2B außen vor.]</em></p>
+<p>Seit dem 28. Juni 2025 gilt in Deutschland das Barrierefreiheitsstärkungsgesetz (BFSG). Es ist kein reines Behörden-Thema: Im Kern richtet es sich an Unternehmen, die Verbrauchern digitale Produkte und Dienstleistungen anbieten. Online-Shops, Terminbuchungen, Kundenkonten, Banking und Buchungsstrecken nennt das Gesetz ausdrücklich – also genau die Angebote, mit denen die meisten kommerziellen Websites ihr Geld verdienen.</p>
 
-<h2>Was konkret gefordert ist: EN 301 549 und WCAG 2.1 AA</h2>
-<p><em>[Outline: Die Norm-Kette verständlich erklären. Praktische Beispiele: Kontraste, Tastaturbedienung, Alt-Texte, Formular-Labels, Fehlermeldungen, Barrierefreiheitserklärung. Keine Vollständigkeits-Checkliste, sondern die häufigsten Lücken in echten Shops.]</em></p>
+<p>Wenn du einen Shop betreibst oder Leistungen online verkaufst, anbahnst oder buchbar machst, bist du mit hoher Wahrscheinlichkeit betroffen. Eine Ausnahme gilt nur für Kleinstunternehmen im Dienstleistungsbereich – weniger als zehn Beschäftigte und höchstens zwei Millionen Euro Jahresumsatz. Reine B2B-Angebote ohne Verbraucherbezug fallen dagegen grundsätzlich nicht unter das Gesetz. Wichtig: Das ist eine technische Einordnung, keine Rechtsberatung – im Zweifel kläre den Geltungsbereich mit einem Fachanwalt.</p>
 
-<h2>Was bei Verstößen droht</h2>
-<p><em>[Outline: Marktüberwachung, Bußgelder bis 100.000 €, realistisch vor allem Abmahnungen durch Wettbewerber. Einordnung ohne Panikmache: dokumentiertes Vorgehen zählt.]</em></p>
+<h2>Welche Teile deines Shops konkret betroffen sind</h2>
 
-<h2>Der pragmatische Fahrplan in vier Schritten</h2>
-<p><em>[Outline: 1. Ist-Zustand messen (Audit), 2. nach Risiko priorisieren, 3. im Code beheben statt Overlay, 4. Erklärung veröffentlichen + laufend prüfen. Interne Links einbauen:]</em></p>
-<p>Für WordPress-Websites übernimmt Schritt 1 mein Plugin <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a>. Wenn du die Umsetzung nicht selbst stemmen willst: Ich biete <a href="/leistungen/bfsg-barrierefreiheit">BFSG-Audit und Umsetzung als Leistung</a> an.</p>
+<p>Barrierefreiheit endet nicht auf der Startseite. Beim BFSG geht es um den gesamten Weg, den ein Kunde von der ersten Seite bis zur Bestellbestätigung nimmt. Diese Punkte stehen bei einem Shop im Fokus:</p>
+
+<ul>
+  <li><strong>Produktlisten und Filter</strong>: Kategorien, Sortierung und Filter müssen per Tastatur bedienbar und für Screenreader verständlich sein – nicht nur per Maus und Farbe.</li>
+  <li><strong>Produktdetailseiten</strong>: Bilder brauchen aussagekräftige Alternativtexte, Varianten-Auswahl (Größe, Farbe) muss korrekt beschriftet sein.</li>
+  <li><strong>Warenkorb und Checkout</strong>: Jeder Schritt muss ohne Maus funktionieren, Pflichtfelder müssen klar gekennzeichnet und Fehlermeldungen eindeutig mit dem betroffenen Feld verknüpft sein.</li>
+  <li><strong>Kundenkonto und Formulare</strong>: Registrierung, Login und Adressformulare gehören zu den häufigsten Stolperstellen.</li>
+  <li><strong>Bestätigungen und Rechnungen</strong>: Auch Bestätigungsseiten, E-Mails und PDF-Rechnungen fallen unter die Anforderungen.</li>
+</ul>
+
+<h2>Die typischen Barrieren im E-Commerce</h2>
+
+<p>Aus der Praxis wiederholen sich dieselben Muster – und fast alle davon lassen sich beheben:</p>
+
+<ul>
+  <li><strong>Fehlermeldungen nur in Rot</strong>: „Bitte Feld ausfüllen“ allein über die Farbe zu signalisieren, hilft niemandem mit einer Sehschwäche. Die Meldung muss als Text vorhanden und dem Feld zugeordnet sein.</li>
+  <li><strong>Tastaturfallen in Modals</strong>: Warenkorb-Layer oder Cookie-Banner, aus denen man per Tastatur nicht mehr herauskommt.</li>
+  <li><strong>Zahlungs-Iframes</strong>: Eingebettete Bezahlfelder (Kreditkarte, PayPal) müssen ebenfalls bedienbar und beschriftet sein.</li>
+  <li><strong>Status nur über Farbe</strong>: „Auf Lager“ grün, „Ausverkauft“ rot – ohne Text oder Symbol nicht wahrnehmbar für alle.</li>
+  <li><strong>Kontraste im Sale-Design</strong>: Hellgraue Preise, dünne Rabatt-Badges und Low-Contrast-Buttons fallen bei jedem Audit durch.</li>
+</ul>
+
+<h2>WooCommerce, Shopify &amp; Co. – was das für dich heißt</h2>
+
+<p>Kein Shop-System ist „von Haus aus barrierefrei“. WooCommerce, Shopify und andere liefern eine solide Grundlage, aber die tatsächliche Konformität hängt an deinem Theme, deinen Plugins und deinen Inhalten. Gerade bei stark angepassten Themes oder vielen Drittanbieter-Plugins entstehen die meisten Barrieren erst durch die Kombination. Ein Standard-Theme ist kein Freifahrtschein – entscheidend ist, was am Ende tatsächlich im Browser ankommt.</p>
+
+<h2>Was jetzt zu tun ist</h2>
+
+<p>Der pragmatische Weg besteht aus drei Schritten: erst den Ist-Zustand ehrlich messen, dann nach Risiko priorisieren, dann im Code beheben – nicht mit einem nachträglichen Overlay-Skript, das die eigentlichen Probleme nicht löst. Warum das so ist, habe ich in <a href="/blog/overlay-tools-vs-accessibility-audit">Overlay-Tools vs. echtes Accessibility-Audit</a> ausführlich erklärt. Und welche Punkte Abmahner zuerst prüfen, findest du in meiner <a href="/blog/bfsg-abmahnung-vermeiden-checkliste">BFSG-Checkliste</a>.</p>
+
+<p>Für WordPress-Shops prüft mein Plugin <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> dein tatsächlich gerendertes HTML direkt im Backend und hilft bei der Barrierefreiheitserklärung. Wenn du die Umsetzung nicht selbst stemmen willst, übernehme ich sie als <a href="/leistungen/bfsg-barrierefreiheit">BFSG-Audit und Umsetzung</a> – vom einzelnen Checkout-Fix bis zum barrierefreien Relaunch.</p>
 
 <h2>Fazit</h2>
-<p><em>[Outline: Wer jetzt strukturiert startet, ist mit überschaubarem Aufwand konform. CTA auf <a href="/#contact">Projekt anfragen</a>.]</em></p>
+
+<p>Für Online-Shops und Dienstleister ist Barrierefreiheit seit Juni 2025 keine Kür mehr, sondern Pflicht – und der Checkout ist dabei die kritischste Strecke. Wer den Weg von der Produktseite bis zur Bestellbestätigung strukturiert prüft und behebt, ist mit überschaubarem Aufwand konform. <a href="/#contact">Schreib mir</a>, wenn du wissen willst, wo dein Shop steht.</p>

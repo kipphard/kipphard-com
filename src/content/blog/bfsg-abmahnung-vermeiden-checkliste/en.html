@@ -1,17 +1,32 @@
-<!-- DRAFT / OUTLINE — publishedAt is set to 2099-01-01 so this stub never goes
-     live. Before publishing: write full copy, set a real date. -->
-
 <h2>Why accessibility is becoming a warning-letter topic</h2>
-<p><em>[Outline: BFSG in force since 28 June 2025; violations are externally visible (unlike internal privacy processes) and automatically checkable — attractive for warning-letter senders. Brief framing, no scaremongering.]</em></p>
 
-<h2>The checklist: 10 violations that stand out immediately</h2>
-<p><em>[Outline: Numbered list, each item: violation → how to check it yourself → fix. Candidates: missing alt texts, contrast below 4.5:1, no keyboard operability, missing form labels, no focus indicator, videos without captions, missing accessibility statement, unclear checkout error messages, language markup, moving content without pause.]</em></p>
+<p>Germany's Accessibility Strengthening Act (BFSG) has applied since 28 June 2025. Unlike many internal obligations, accessibility violations are visible from the outside and in part even automatically checkable – a missing alt text or insufficient contrast can be spotted without insider knowledge. That is exactly what makes the topic attractive to warning-letter senders and competitors. Alongside market surveillance, which can impose fines of up to €100,000, the realistic day-to-day risk is the competition-law warning letter (Abmahnung).</p>
+
+<p>This checklist walks through the ten points that stand out first in a surface-level review. It does not replace a full audit – but getting these under control removes the basis for the most common warning letters. Note: this is a technical assessment, not legal advice.</p>
+
+<h2>The checklist: 10 points that get checked first</h2>
+
+<ul>
+  <li><strong>1. Alt text for images</strong>: does every content-relevant image have a meaningful <code>alt</code> attribute? Purely decorative images should be hidden with <code>alt=""</code>.</li>
+  <li><strong>2. Colour contrast</strong>: does text reach at least a 4.5:1 ratio (normal text) or 3:1 (large text)? Buttons, placeholder text and badges fail here especially often.</li>
+  <li><strong>3. Keyboard operability</strong>: can the entire page – including menus, sliders and forms – be operated without a mouse?</li>
+  <li><strong>4. Visible focus</strong>: is it always clear where the keyboard focus currently is? A focus ring removed via CSS is a classic violation.</li>
+  <li><strong>5. Form labels</strong>: does every input field have a visible, programmatically linked <code>&lt;label&gt;</code>? Placeholders alone are not enough.</li>
+  <li><strong>6. Unambiguous error messages</strong>: are form errors output as text and tied to the field concerned – not signalled by colour alone?</li>
+  <li><strong>7. Heading structure</strong>: is there exactly one <code>&lt;h1&gt;</code> and a logical hierarchy with no skipped levels?</li>
+  <li><strong>8. Language markup</strong>: does the <code>&lt;html&gt;</code> element carry a correct <code>lang</code> attribute? Are foreign-language passages marked up?</li>
+  <li><strong>9. Video and motion content</strong>: do videos have captions? Can auto-playing animations or sliders be paused?</li>
+  <li><strong>10. Accessibility statement</strong>: is there a publicly linked statement with a feedback mechanism? Its absence is particularly easy to prove.</li>
+</ul>
 
 <h2>Check yourself or get audited?</h2>
-<p><em>[Outline: Automated tools find ~30-40% of violations — a good start, no substitute for a full audit. WordPress users: <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> checks right in the admin. For the rest: manual audit.]</em></p>
+
+<p>You can test some of these points yourself: navigate your site entirely by keyboard, check contrast with a free tool, and run an automated scan. Automated tools, however, find only around 30 to 40 percent of barriers – the semantic problems (mis-linked labels, illogical structure) are caught only by manual review. For WordPress sites, my plugin <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> handles the first diagnosis, checking right in the admin and generating the statement.</p>
 
 <h2>If the warning letter has already arrived</h2>
-<p><em>[Outline: Stay calm, take deadlines seriously, involve a lawyer (disclaimer: not legal advice), start documented technical remediation in parallel — it improves the negotiating position.]</em></p>
 
-<h2>Conclusion: documented action beats hoping</h2>
-<p><em>[Outline: CTA paragraph: I handle <a href="/leistungen/bfsg-barrierefreiheit">audits and BFSG remediation</a> — <a href="/#contact">start a project</a>.]</em></p>
+<p>Stay calm and take the deadlines seriously. A warning letter usually contains a cease-and-desist declaration and a short deadline – this is where a specialist lawyer belongs (again, not legal advice from me). In parallel, start documented technical remediation: a demonstrable action plan improves your position and shows you are taking the matter seriously. Overlay tools are not a solution here – I explain why in <a href="/blog/overlay-tools-vs-accessibility-audit">Overlay tools vs. a real accessibility audit</a>.</p>
+
+<h2>Conclusion</h2>
+
+<p>Most warning letters target the same, highly visible points. Working through this checklist and closing the gaps in code lowers your risk considerably. I handle the full path from audit to remediation as a <a href="/leistungen/bfsg-barrierefreiheit">BFSG service</a> – <a href="/#contact">just get in touch</a> if you need a solid assessment of your website.</p>

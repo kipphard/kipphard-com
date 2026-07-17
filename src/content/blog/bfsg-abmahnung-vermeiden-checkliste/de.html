@@ -1,17 +1,32 @@
-<!-- ENTWURF / OUTLINE — publishedAt steht auf 2099-01-01, damit der Stub nicht
-     live geht. Vor Veröffentlichung: Copy ausschreiben, Datum setzen. -->
+<h2>Warum Barrierefreiheit zum Abmahn-Thema wird</h2>
 
-<h2>Warum gerade Barrierefreiheit zum Abmahn-Thema wird</h2>
-<p><em>[Outline: BFSG seit 28.06.2025 in Kraft, Verstöße sind von außen sichtbar (anders als z. B. interne Datenschutz-Prozesse) — automatisiert prüfbar, daher attraktiv für Abmahner. Kurze Einordnung, keine Angstmache.]</em></p>
+<p>Das Barrierefreiheitsstärkungsgesetz (BFSG) gilt seit dem 28. Juni 2025. Anders als bei vielen internen Pflichten sind Verstöße gegen die Barrierefreiheit von außen sichtbar und teilweise sogar automatisiert prüfbar – ein fehlender Alternativtext oder ein zu geringer Kontrast lässt sich ohne Insiderwissen feststellen. Genau das macht das Thema für Abmahner und Wettbewerber attraktiv. Neben der Marktüberwachung, die Bußgelder bis zu 100.000 Euro verhängen kann, ist in der Praxis vor allem die wettbewerbsrechtliche Abmahnung das realistische Risiko.</p>
 
-<h2>Die Checkliste: 10 Verstöße, die sofort auffallen</h2>
-<p><em>[Outline: Als nummerierte Liste, je Punkt: Verstoß → wie man ihn selbst prüft → Fix. Kandidaten: fehlende Alt-Texte, Kontrast unter 4,5:1, keine Tastaturbedienung, fehlende Formular-Labels, kein Fokus-Indikator, Videos ohne Untertitel, fehlende Barrierefreiheitserklärung, unklare Fehlermeldungen im Checkout, Sprachauszeichnung, bewegte Inhalte ohne Pause-Funktion.]</em></p>
+<p>Diese Checkliste geht die zehn Punkte durch, die bei einer oberflächlichen Prüfung zuerst auffallen. Sie ersetzt kein vollständiges Audit – aber wer diese Punkte im Griff hat, nimmt den häufigsten Abmahnungen die Grundlage. Hinweis: Das ist eine technische Einschätzung, keine Rechtsberatung.</p>
+
+<h2>Die Checkliste: 10 Punkte, die zuerst geprüft werden</h2>
+
+<ul>
+  <li><strong>1. Alternativtexte für Bilder</strong>: Hat jedes inhaltlich relevante Bild ein aussagekräftiges <code>alt</code>-Attribut? Rein dekorative Bilder gehören mit <code>alt=""</code> ausgeblendet.</li>
+  <li><strong>2. Farbkontrast</strong>: Erreicht Text mindestens ein Verhältnis von 4,5:1 (normaler Text) bzw. 3:1 (große Schrift)? Besonders Buttons, Platzhaltertexte und Badges fallen hier durch.</li>
+  <li><strong>3. Tastaturbedienung</strong>: Lässt sich die gesamte Seite – inklusive Menüs, Slider und Formulare – ohne Maus bedienen?</li>
+  <li><strong>4. Sichtbarer Fokus</strong>: Ist immer erkennbar, wo der Tastaturfokus gerade steht? Ein per CSS entfernter Fokusring ist ein klassischer Verstoß.</li>
+  <li><strong>5. Formular-Labels</strong>: Ist jedes Eingabefeld mit einem sichtbaren, programmatisch verknüpften <code>&lt;label&gt;</code> versehen? Platzhalter allein reichen nicht.</li>
+  <li><strong>6. Eindeutige Fehlermeldungen</strong>: Werden Formularfehler als Text ausgegeben und dem betroffenen Feld zugeordnet – nicht nur durch Farbe?</li>
+  <li><strong>7. Überschriftenstruktur</strong>: Gibt es genau eine <code>&lt;h1&gt;</code> und eine logische Hierarchie ohne übersprungene Ebenen?</li>
+  <li><strong>8. Sprachauszeichnung</strong>: Hat das <code>&lt;html&gt;</code>-Element ein korrektes <code>lang</code>-Attribut? Sind fremdsprachige Passagen ausgezeichnet?</li>
+  <li><strong>9. Videos und Bewegtinhalte</strong>: Haben Videos Untertitel? Lassen sich automatisch startende Animationen oder Slider pausieren?</li>
+  <li><strong>10. Barrierefreiheitserklärung</strong>: Existiert eine öffentlich verlinkte Erklärung mit Feedback-Mechanismus? Ihr Fehlen ist besonders leicht nachweisbar.</li>
+</ul>
 
 <h2>Selbst prüfen oder prüfen lassen?</h2>
-<p><em>[Outline: Automatisierte Tools finden ~30-40% der Verstöße — gut als Start, kein Ersatz für ein vollständiges Audit. WordPress-Nutzer: <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> prüft direkt im Backend. Für den Rest: manuelles Audit.]</em></p>
+
+<p>Einen Teil dieser Punkte kannst du selbst testen: Navigiere deine Seite komplett per Tastatur, prüfe Kontraste mit einem kostenlosen Tool und lass einen automatisierten Scan laufen. Automatisierte Tools finden allerdings nur rund 30 bis 40 Prozent der Barrieren – gerade die semantischen Probleme (falsch verknüpfte Labels, unlogische Struktur) erkennt nur eine manuelle Prüfung. Für WordPress-Seiten übernimmt die erste Diagnose mein Plugin <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a>, das direkt im Backend prüft und die Erklärung generiert.</p>
 
 <h2>Wenn die Abmahnung schon da ist</h2>
-<p><em>[Outline: Ruhe bewahren, Fristen ernst nehmen, Anwalt einschalten (Disclaimer: keine Rechtsberatung), parallel technische Behebung dokumentiert starten — das verbessert die Verhandlungsposition.]</em></p>
 
-<h2>Fazit: Dokumentiert handeln schlägt hoffen</h2>
-<p><em>[Outline: CTA-Absatz: Ich übernehme <a href="/leistungen/bfsg-barrierefreiheit">Audit und BFSG-Umsetzung</a> — <a href="/#contact">Projekt anfragen</a>.]</em></p>
+<p>Ruhe bewahren und Fristen ernst nehmen. Eine Abmahnung enthält in der Regel eine Unterlassungserklärung und eine kurze Frist – hier gehört ein Fachanwalt eingeschaltet (auch das ist keine Rechtsberatung von mir). Parallel solltest du die technische Behebung dokumentiert starten: Ein nachweisbarer Maßnahmenplan verbessert deine Position und zeigt, dass du das Thema ernst nimmst. Overlay-Tools sind dabei keine Lösung – warum, erkläre ich in <a href="/blog/overlay-tools-vs-accessibility-audit">Overlay-Tools vs. echtes Accessibility-Audit</a>.</p>
+
+<h2>Fazit</h2>
+
+<p>Die meisten Abmahnungen setzen an denselben, gut sichtbaren Punkten an. Wer diese Checkliste abarbeitet und die Lücken im Code schließt, senkt sein Risiko deutlich. Den vollständigen Weg von der Prüfung bis zur Umsetzung übernehme ich als <a href="/leistungen/bfsg-barrierefreiheit">BFSG-Leistung</a> – <a href="/#contact">frag einfach an</a>, wenn du eine belastbare Einschätzung deiner Website brauchst.</p>

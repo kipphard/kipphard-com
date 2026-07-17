@@ -1,18 +1,43 @@
-<!-- DRAFT / OUTLINE — publishedAt is set to 2099-01-01 so this stub never goes
-     live. Before publishing: write full copy, set a real date. -->
+<h2>Why online shops and service providers are at the centre of the BFSG</h2>
 
-<h2>Accessibility has been mandatory since June 2025 — for whom exactly?</h2>
-<p><em>[Outline: Open with the 28 June 2025 date. BFSG = Germany's implementation of the European Accessibility Act. Covered: B2C e-commerce, booking, banking, e-books etc. Micro-enterprise exemption (under 10 employees, max €2M turnover) for services only. B2B out of scope.]</em></p>
+<p>Since 28 June 2025, Germany's Accessibility Strengthening Act (BFSG) has been in force. It is not a niche public-sector topic: at its core it targets companies that offer digital products and services to consumers. Online shops, appointment booking, customer accounts, banking and reservation flows are named explicitly – exactly the features most commercial websites earn their money with.</p>
 
-<h2>What is concretely required: EN 301 549 and WCAG 2.1 AA</h2>
-<p><em>[Outline: Explain the chain of standards plainly. Practical examples: contrast, keyboard operation, alt texts, form labels, error messages, accessibility statement. Focus on the most common gaps in real shops.]</em></p>
+<p>If you run a shop or sell, initiate or enable bookings for services online, you are very likely covered. An exemption applies only to micro-enterprises in the service sector – fewer than ten employees and at most €2M annual turnover. Pure B2B offerings without a consumer relationship are generally out of scope. Important: this is a technical assessment, not legal advice – if in doubt, clarify the scope with a specialist lawyer.</p>
 
-<h2>What happens on violations</h2>
-<p><em>[Outline: Market surveillance, fines up to €100,000, realistically above all competitor warning letters. Balanced framing: documented effort counts.]</em></p>
+<h2>Which parts of your shop are actually affected</h2>
 
-<h2>The pragmatic four-step plan</h2>
-<p><em>[Outline: 1. measure (audit), 2. prioritize by risk, 3. fix in code instead of overlays, 4. publish the statement + keep checking. Internal links:]</em></p>
-<p>For WordPress sites, step 1 is what my plugin <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> does. If you don't want to handle remediation yourself: I offer <a href="/leistungen/bfsg-barrierefreiheit">BFSG audits and remediation as a service</a>.</p>
+<p>Accessibility doesn't end on the homepage. The BFSG is about the entire path a customer takes from the first page to the order confirmation. For a shop, these are the focus areas:</p>
+
+<ul>
+  <li><strong>Product lists and filters</strong>: categories, sorting and filters must be keyboard-operable and understandable to screen readers – not driven by mouse and colour alone.</li>
+  <li><strong>Product detail pages</strong>: images need meaningful alt text, and variant selectors (size, colour) must be correctly labelled.</li>
+  <li><strong>Cart and checkout</strong>: every step must work without a mouse, required fields must be clearly marked, and error messages must be unambiguously tied to the field they concern.</li>
+  <li><strong>Customer account and forms</strong>: registration, login and address forms are among the most common stumbling blocks.</li>
+  <li><strong>Confirmations and invoices</strong>: confirmation pages, emails and PDF invoices fall under the requirements too.</li>
+</ul>
+
+<h2>The typical barriers in e-commerce</h2>
+
+<p>The same patterns recur in practice – and nearly all of them are fixable:</p>
+
+<ul>
+  <li><strong>Errors signalled only in red</strong>: conveying "please complete this field" through colour alone helps no one with low vision. The message must exist as text and be linked to the field.</li>
+  <li><strong>Keyboard traps in modals</strong>: cart layers or cookie banners you cannot escape with the keyboard.</li>
+  <li><strong>Payment iframes</strong>: embedded payment fields (credit card, PayPal) must also be operable and labelled.</li>
+  <li><strong>Status by colour only</strong>: "in stock" green, "sold out" red – imperceptible to some without text or an icon.</li>
+  <li><strong>Contrast in sale designs</strong>: light-grey prices, thin discount badges and low-contrast buttons fail every audit.</li>
+</ul>
+
+<h2>WooCommerce, Shopify &amp; co. – what it means for you</h2>
+
+<p>No shop system is "accessible out of the box". WooCommerce, Shopify and others give you a solid foundation, but actual compliance depends on your theme, your plugins and your content. Especially with heavily customised themes or many third-party plugins, most barriers emerge only from the combination. A standard theme is no free pass – what matters is what actually reaches the browser in the end.</p>
+
+<h2>What to do now</h2>
+
+<p>The pragmatic path has three steps: measure the current state honestly, prioritise by risk, then fix in code – not with a bolted-on overlay script that leaves the real problems untouched. I explain why in detail in <a href="/blog/overlay-tools-vs-accessibility-audit">Overlay tools vs. a real accessibility audit</a>. And the points warning-letter senders check first are in my <a href="/blog/bfsg-abmahnung-vermeiden-checkliste">BFSG checklist</a>.</p>
+
+<p>For WordPress shops, my plugin <a href="/products/barrierefrei-check">Kipphard Accessibility Audit</a> checks your actually-rendered HTML right in the admin and helps with the accessibility statement. If you don't want to handle remediation yourself, I take it on as a <a href="/leistungen/bfsg-barrierefreiheit">BFSG audit and remediation</a> service – from a single checkout fix to a fully accessible relaunch.</p>
 
 <h2>Conclusion</h2>
-<p><em>[Outline: Starting structured now means compliance at manageable cost. CTA to <a href="/#contact">start a project</a>.]</em></p>
+
+<p>For online shops and service providers, accessibility has been mandatory since June 2025 – and the checkout is the most critical stretch. If you audit and fix the path from product page to order confirmation in a structured way, compliance is achievable at manageable cost. <a href="/#contact">Get in touch</a> if you want to know where your shop stands.</p>
