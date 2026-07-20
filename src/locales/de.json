@@ -1648,9 +1648,10 @@
           "PHP"
         ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-age-verification.blueprint.json",
+        "installUrl": "https://wordpress.org/plugins/kipphard-age-verification/",
         "detail": {
           "lede": "Zeige Besuchern eine Altersabfrage, bevor sie deine Seite oder bestimmte Produkte sehen — als einfache Bestätigung oder per Geburtsdatum. DSGVO-konform: Das Geburtsdatum wird ausschließlich im Browser geprüft, es verlässt nie deinen Server.",
-          "ctaPrimary": "Kontakt aufnehmen",
+          "ctaPrimary": "Kostenlos auf WordPress.org",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo im Browser — keine Installation nötig.",
           "problemTitle": "Das Problem",
@@ -1693,6 +1694,7 @@
               "period": "dauerhaft",
               "highlighted": false,
               "cta": "Kostenlos starten",
+              "url": "https://wordpress.org/plugins/kipphard-age-verification/",
               "features": [
                 "Bestätigung oder Geburtsdatum",
                 "Seitenweit oder pro Seite",
