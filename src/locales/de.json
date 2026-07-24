@@ -1884,9 +1884,10 @@
           "PHP"
         ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-back-in-stock.blueprint.json",
+        "installUrl": "https://wordpress.org/plugins/kipphard-back-in-stock/",
         "detail": {
           "lede": "Zeige bei ausverkauften Produkten ein 'Benachrichtige mich'-Formular. Kunden tragen ihre E-Mail ein — und sobald das Produkt wieder lieferbar ist, werden sie automatisch benachrichtigt. So holst du Verkäufe zurück, die sonst verloren gingen.",
-          "ctaPrimary": "Kontakt aufnehmen",
+          "ctaPrimary": "Kostenlos auf WordPress.org",
           "ctaSecondary": "So funktioniert's",
           "demoNote": "Live-Demo mit WooCommerce im Browser.",
           "problemTitle": "Das Problem",
@@ -1929,6 +1930,7 @@
               "period": "dauerhaft",
               "highlighted": false,
               "cta": "Kostenlos starten",
+              "url": "https://wordpress.org/plugins/kipphard-back-in-stock/",
               "features": [
                 "Benachrichtige-mich-Formular",
                 "Automatische E-Mail bei Verfügbarkeit",

@@ -1884,9 +1884,10 @@
           "PHP"
         ],
         "demoUrl": "https://playground.wordpress.net/?blueprint-url=https://kipphard.com/demo/kipphard-back-in-stock.blueprint.json",
+        "installUrl": "https://wordpress.org/plugins/kipphard-back-in-stock/",
         "detail": {
           "lede": "Show a 'Notify me' form on out-of-stock product pages. Shoppers leave their email — and the moment the product is back in stock, they get an automatic notification. That's how you recover sales that would otherwise be gone for good.",
-          "ctaPrimary": "Get in touch",
+          "ctaPrimary": "Install free on WordPress.org",
           "ctaSecondary": "How it works",
           "demoNote": "Live demo with WooCommerce in the browser.",
           "problemTitle": "The problem",
@@ -1929,6 +1930,7 @@
               "period": "forever",
               "highlighted": false,
               "cta": "Start for free",
+              "url": "https://wordpress.org/plugins/kipphard-back-in-stock/",
               "features": [
                 "Notify-me form",
                 "Automatic email on restock",
